@@ -14,6 +14,8 @@ Monserrat Paredes / [Monserrat-Paredes](https://github.com/Monserrat-Paredes) / 
 
 Katalina Riquelme / [riyakatalinaa](https://github.com/riyakatalinaa) / Diagrama de flujo, documentación.
 
+---
+
 ## Importante 
 
 Todas las imágenes y gifs son de nuestra autoría.
@@ -24,7 +26,7 @@ Códigos subidos por fecha en la carpeta "codigos".
 
 Conversaciones con Claude al final del ReadMe.
 
-[Wokwi proyecto-02](https://wokwi.com/projects/478683034244407297)
+Visualizar proyecto [Wokwi proyecto-02](https://wokwi.com/projects/478683034244407297)
 
 ---
 
@@ -51,6 +53,8 @@ Bajo esta idea, queremos generar una máquina en donde en una pantalla se pueden
 Funciona a través de un selector de caracteres (perilla), que nos permite escoger las letras para formar palabras o no y finalmente seleccionarlas con un botón que puede ser presionado 1 o 2 veces.
 
 También podemos editar el texto que imprimimos en una segunda pantalla con una segunda perilla que puede recorrer el texto para añadir un carácter, borrarlo, o borrar todo lo digitado si se mantiene presionado.
+
+---
 
 ## Proceso
 
@@ -88,7 +92,57 @@ Perilla 1: elegir la letra
 
 Perilla 2: recorrer el texto
 
-## Código y clases
+---
+
+## Clases y código del proyecto
+
+Cada clase está en sus propios archivos: el `.h` dice qué tiene y el `.cpp` dice cómo lo hace.
+
+En clase Boton encontramos:
+
+- **Botón genérico:** lo usan ambos grupos.
+- **04:** solo el Grupo 04 (máquina multitap).
+- **03:** solo el Grupo 03 (máquina de emociones).
+
+| Clase | Qué es | Qué hace en el proyecto | Archivos |
+|---|---|---|---|
+| **Botón genérico** (parte común) | Un botón físico, para los dos grupos | Detecta si está apretado, y si fue clic simple, doble, triple o pulsación larga. Se puede cambiar el cableado y los tiempos | `Boton.h`, `Boton.cpp` (carpeta `boton_proyecto02`) |
+| **Botón Grupo 04** (multitap) | El botón de nuestro proyecto | Agrega `permitirDoble`: el botón de borrar no espera un segundo clic. Instancias: `botonSelector` (1 clic = minúscula, 2 clics = MAYÚSCULA) y `botonBorrar` (1 clic borra un carácter, mantenerlo borra todo) | Misma clase `Boton` |
+| **Botón Grupo 03** (emociones) | El botón de la máquina de emociones | Agrega `pin`, `estado` y `funcion`, y los métodos `esta_presionado()` y `fue_presionado()`. Puede alternar entre encendido y apagado. Instancias: `boton_encendido` y `boton_salto` | Misma clase `Boton` |
+| `Perilla` | Un potenciómetro | Dice en qué tramo está la perilla, para elegir un carácter o mover el cursor | `Perilla.h`, `Perilla.cpp` |
+| `Pantalla` | Una pantalla LCD 20x4 | Escribe líneas de texto y mueve el cursor | `Pantalla.h`, `Pantalla.cpp` |
+| `Selector` | La lista de caracteres | Guarda las 37 opciones (letras, símbolos, TAB y ENTER) y cuál está elegida | `Selector.h`, `Selector.cpp` |
+| `Editor` | El texto digitado | Guarda el texto y el cursor, inserta y borra caracteres, y los reparte en 4 filas de 20 | `Editor.h`, `Editor.cpp` |
+
+---
+
+### Qué hace cada archivo
+
+Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y el main no es una clase, pero es el programa principal que junta todo y hace que funcione.
+
+| Archivos | Qué contienen |
+|---|---|
+| `main.cpp` | El programa principal, que conecta todas las clases |
+| `Boton.h` · `Boton.cpp` | El botón: clic simple, doble y pulsación larga |
+| `Perilla.h` · `Perilla.cpp` | El potenciómetro: lee su posición |
+| `Pantalla.h` · `Pantalla.cpp` | El LCD 20x4: escribe en la pantalla |
+| `Selector.h` · `Selector.cpp` | La lista de caracteres y el elegido |
+| `Editor.h` · `Editor.cpp` | El texto digitado y el cursor |
+| `diagram.json` | El cableado de Wokwi |
+
+
+### Conexiones
+
+| Componente | Pines Raspberry |
+|---|---|
+| Pantalla de texto (I2C0) | SDA GP4, SCL GP5 |
+| Pantalla del selector (I2C1) | SDA GP6, SCL GP7 |
+| Potenciómetro selector | SIG GP26 |
+| Potenciómetro cursor | SIG GP27 |
+| Botón borrar | GP20 (a GND, con pull-up interno) |
+| Botón selector | GP21 (a GND, con pull-up interno) |
+
+
 
 ## Diagramas de flujo
 

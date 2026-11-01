@@ -11,33 +11,26 @@
 
 ## Commodore 64 Ultimate 
 
-Empresa más importante de la historia de la computación personal
+El Commodore 64 Ultimate representa el renacimiento de uno de los ordenadores clásicos, siendo una recreación física y fiel de la máquina original. Donde su principal objetivo es ofrecer la misma experiencia nostálgica, recuperando carcasa clásico, pero adaptándola a las necesidades tecnológicas de hoy en día.
 
-Acercar tecnología, videojuegos, programación a los hogares
+Para lograr el parecido a la máquina original, en su interior alberga una placa equipada con un chip AMD Xilinx Artix-7 FPGA, una tecnología que le permite replicar el comportamiento del hardware clásico ciclo a ciclo. Gracias a esto, el equipo alcanza un 99% de compatibilidad con todo el software que se lanzó para el ordenador, al mismo tiempo que incorpora mejoras modernas, como mayor capacidad de memoria y un modo turbo de 48 MHz para optimizar el rendimiento. Finalmente envolviéndose en una carcasa que recupera la estética y esencia clásica del Commodore, integrando interruptores mecánicos Gateron Pro 3.0 de 55 gramos, teclado de 66 teclas y un soporte para macros y tecnología NKRO garantizando escritura fluida.
 
-La evolución de este muestra cómo los computadores pasaron de ser equipos destinados al aprendizaje y al trabajo, a convertirse en herramientas para jugar, crear música, experimentar gráficos 
-
-
-Commodore 64 ultimate 
-
-Cómo el commodore se recuperó y actualizó, este busca reproducir funcionamiento del computador original. Esta nueva versión recupera carcasa y la experiencia del teclado clásico. Tecnología FPGA para tener el mismo funcionamiento que el hardware original. Utiliza software clásico del C64
-
-Cada Commodore 64 Ultimate incluye una memoria USB exclusiva con más de 100 juegos, demos, colecciones de música y otros extras precargados.
+Este equipo destaca su versatilidad al realizar la conexión entre dos épocas distintas, la evolución de este muestra cómo los computadores pasaron de ser equipos destinados al aprendizaje y al trabajo, a convertirse en herramientas para jugar, crear música, experimentar gráficos, acercando la tecnología y programación a los hogares. Aunque es compatible con cintas de casete, unidades de disco y con televisores de tubo (CRT). Afortunadamente, no todo el mundo está dispuesto a utilizar una consola retro con un monitor CRT (especialmente por el tamaño que ocupa y su elevado peso). Estos usuarios pueden utilizar la salida HDMI a 1080p para conectarlo a monitores y Smart TV actuales (el cable viene incluido junto con el equipo). 
 
 Dentro de su sistema operativo incluye las suite GEOS, como el GEOWrite, que fue uno de los primeros procesadores de texto modernos, con capacidad de edición WYSIWYG, múltiples fuentes y estilos, escribir documentos, dar forma al texto, e inserción de imágenes. Ahora, es un entorno de escritura sin conexión, ideal para diarios personales, ensayos y redacción sin distracciones. También el GEOPaint era un editor gráfico para dibujar y pintar, crear ilustraciones digitales, con patrones, rellenos y pinceles. Se utilizó para crear tarjetas de felicitación, diseños de boletines informativos y muchísimos proyectos de arte digital para principiantes. Ahora es una herramienta creativa sin distracciones, perfecta para artistas digitales emergentes. Y el GEOPublish fue una de las primeras herramientas modernas de autoedición, combinar texto e imágenes. Fue responsable de innumerables periódicos escolares, boletines parroquiales, folletos de pequeños negocios y carteles de bandas musicales. Y también el resto de la suite como GEOSpell, GEOPile, GEOCalc, GEOGif, GEOS Deskpack Plus, Fuentes GEOS, GEODemo.
-
-En cuanto a sus especificaciones, su teclado incorpora interruptores Gateron Pro 3.0 55 gramos, es compatible con NKRO (rollover), permite ejecutar macros y cuenta con un total de 66 teclas. 
-
-En su interior se encuentra una placa FPGA con un chip AMD Xilinx Artix-7 FPGA, que recrea ciclo a ciclo el hardware original del Commodore 64 permitiendo a los usuarios volver a disfrutar de los juegos que todavía conserven, pero con más memoria y un modo turbo de 48 MHz para ofrecer mejor rendimiento. Según afirma el fabricante es capaz de leer el 99% de todos los títulos que se lanzaron a para ordenador. 
-
-Es compatible con cintas de casete, unidades de disco y con televisores de tubo (CRT). Afortunadamente, no todo el mundo está dispuesto a utilizar una consola retro con un monitor CRT (especialmente por el tamaño que ocupa y su elevado peso). Estos usuarios pueden utilizar la salida HDMI a 1080p para conectarlo a monitores y Smart TV actuales (el cable viene incluido junto con el equipo). 
 
 
 ## Descripción del proyecto
 
-**DORE 8** es un videojuego retro inspirado en el Commodore 64, desarrollado en C++ con Raspberry Pi Pico y prototipado en Wokwi. El juego consiste en ayudar a un estudiante a llegar a la universidad, superando diferentes desafíos, como recorrer un laberinto para alcanzar la micro, esquivar vehículos durante el trayecto y llegar a su sala de clases.
+**DORE 8** es un videojuego retro inspirado en la estética del Commodore 64. El proyecto cuenta con una factura técnica desarrollada en C++, luego ejecutada en el microcontrolador Raspberry Pi Pico, tras ser prototipado de forma virtual en la plataforma Wokwi. El relato material sostiene los componentes físicos, tales como: dos perillas, dos botones, una pantalla y buzzer, el cual reproduce música retro y efectos de sonido. Buscando evocar los paneles de control de los microcomputadores en los años ochenta, incluyendo lo físico por parte del jugador con la narraativa digital. El juego tiene como objetivo acompañar y ayudar a un estudiante a llegar a la universidad, superando diferentes desafíos, como recorrer un laberinto para alcanzar la micro, esquivar vehículos durante el trayecto y llegar a su sala de clases. 
 
-Para interactuar con el juego utilizamos dos perillas, dos botones, una pantalla y un buzzer que reproduce música retro y efectos de sonido. Los gráficos se construyen mediante figuras geométricas para optimizar el uso de memoria. Nuestro objetivo es combinar la estética de los videojuegos antiguos con una experiencia interactiva sencilla y entretenida.
+En el ámbito visual, adoptamos un estilo de pantallas retro, bloques marcados y delimitados, además de una tipografía geométrica estilo "arcade". Los gráficos se construyen mediante figuras geométricas para optimizar el uso de memoria. Nuestro objetivo es combinar la estética de los videojuegos antiguos con una experiencia interactiva sencilla y entretenida.
+
+Los controles parecen intuitivos, pero al momento de jugar se invierte la usabilidad en momentos clave para simular el estrés y la emoción que se genera el camino a la universidad. En cuanto a estructura, nos centramos en Slides, reforzando la narrativa del sistema de etapas.
+
+### ¿Por qué Dore 8?
+
+El nombre de nuestro proyecto nace como una síntesis conceptual y un homenaje directo. Este se extrae de la terminación ```commodore``` y el número 8 hace referencia a la ```era de los 8 bits```, ya que este es el período en donde los videojuegos y la informática estaba dominada por consolas y microcomputadores cuyos procesadores manejaba la información en bloques de 8 bits por ciclo. De esta forma encapsulamos de manera general los gráficos con figuras geométricas, sonido y uso de controles mecánicos. Y además porque somos el grupo 08 jaja.
 
 ### Inspiración: La Influencia del Commodore 64
 
@@ -66,19 +59,28 @@ El flujo interactivo se estructura en **5 Slides correlativos**:
 
 * **Slide 5 — Conclusión y Reflexión:** Pantalla de cierre al completar la meta. Muestra el mensaje *"¡Lo lograste!"* acompañado de una frase reflexiva sobre la resiliencia y la impredecibilidad de la vida diaria (*"Las cosas no siempre son como uno espera... pero igual se logra"*).
 
+## Controles
 
+## Pseudocódigo
 
+## Diagramas
+### experiencia usuario
+### hardware
+### software
+## Esquemático 
 ### Tabla de materiales
 
 |Componente|Cantidad|Precio|Link|
 |---|---|---|---|
 |Raspberry Pi Pico|1|$14.990|<https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers>|
-|Pantalla |1|$22.000|<https://afel.cl/products/pantalla-tft-3-5-para-arduino-mega?_pos=10&_sid=5d442d2bf&_ss=r>|
+|Pantalla |1|$3.554|<https://a.aliexpress.com/_mKfPMoB>|
 |Protoboard|1|$1.500|<https://afel.cl/products/mini-protoboard-400-puntos>|
-|Botón Táctil|2|$1.000|<https://afel.cl/products/kit-boton-tactil-6x6x5-interruptor-5-unidades?_pos=5&_sid=a64e3623f&_ss=r>|
+|Botón Táctil|2|$200|<https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=1&_sid=cf59c1e34&_ss=r>|
 |Cables dupont pack 20|x|$1.000|<https://afel.cl/products/pack-20-cables-de-conexion-macho-macho>|
+|Kit 10 Cables Caiman a Dupont Hembra|x|$2.500|<https://afel.cl/products/kit-10-cables-caiman-a-dupont-hembra?_pos=2&_sid=aec538813&_ss=r>|
+|Pack 20 Cables de Conexión Macho Hembra|x|$1.000|<https://afel.cl/products/pack-20-cables-de-conexion-macho-hembra?_pos=1&_sid=bff72fae6&_ss=r>
 |Potenciómetro B100k|2|$1.000|<https://afel.cl/products/potenciometro-10k-ohm>|
-|Cable USB-C|1| $1.800|<https://altronics.cl/cable-usb-tipo-c-datos-alimentacion>
+|Cable USB-C|1| $1.800|<https://altronics.cl/cable-usb-tipo-c-datos-alimentacion>|
 
 ## Pruebas y error
 
@@ -111,6 +113,8 @@ Otro aspecto positivo fue establecer que el jugador solamente pudiera avanzar cu
 También fue importante identificar que algunos elementos necesitaban ajustes, como ocurrió con la velocidad de la micro. Esto nos llevó a mejorar el planteamiento del nivel y hacer más visible la meta.
 
 En general, consideramos que uno de nuestros mayores aciertos fue avanzar de manera progresiva, probando, identificando errores y realizando modificaciones. Gracias a este proceso logramos pasar de un circuito básico en Wokwi a un prototipo de videojuego que integra gráficos, controles, música y diferentes desafíos.
+
+## Carcasa 
 
 ## Documentación IA
 

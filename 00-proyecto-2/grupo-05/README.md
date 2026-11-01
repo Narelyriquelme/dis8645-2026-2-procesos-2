@@ -52,7 +52,7 @@ Del primero, tomamos su mecánica, en la que el jugador debe presionar el botón
 
 Es así como nace **Altiro Hero**, una máquina de entretenimiento compuesta por dos botones y dos perillas, en la que el jugador debe seguir un patrón de luces al ritmo de la música.
 
-El dispositivo se enciende con un interruptor ubicado en [lugar]. Su pantalla es una matriz de 8x8 LEDs, que dividimos en cuatro columnas de dos LEDs de ancho cada una. Por estas columnas descienden los rectángulos de luz que conforman el patrón del juego. Bajo la matriz, a la izquierda, se encuentra una perilla, y a la derecha, un botón. Con la perilla, el jugador se desplaza horizontalmente para elegir la columna en la que se posicionará, y con el botón responde al patrón en el momento en que el rectángulo llega a la fila delimitada para el jugador de 1 LED de altura y 8 de ancho que está en la parte inferior de la matriz. Si acierta, la casilla se ilumina de verde; si falla, de rojo. 
+El dispositivo se enciende con un interruptor ubicado en la parte inferior del costado derecho de la máquina. Su pantalla es una matriz de 8x8 LEDs, que dividimos en cuatro columnas de dos LEDs de ancho cada una. Por estas columnas descienden los rectángulos de luz que conforman el patrón del juego. Bajo la matriz, a la izquierda, se encuentra una perilla, y a la derecha, un botón. Con la perilla, el jugador se desplaza horizontalmente para elegir la columna en la que se posicionará, y con el botón responde al patrón en el momento en que el rectángulo llega a la fila delimitada para el jugador de 1 LED de altura y 8 de ancho que está en la parte inferior de la matriz. Si acierta, la casilla se ilumina de verde; si falla, de rojo. 
 
 El juego cuenta con tres niveles, que se eligen desde el menú con el segundo botón, ubicado en el costado derecho: una pulsación avanza entre nivel 1, 2 y 3, y para seleccionar el nivel deseado se presiona el botón que está debajo de la matriz LED cuando el número del nivel se muestre en la pantalla. Debajo del botón que se encuentra al costado derecho hay una segunda perilla que permite aumentar o disminuir la velocidad de descenso del patrón, lo que ajusta la dificultad a tu gusto. Cada nivel dura un máximo de dos minutos y al superarlo sin cometer ningún error, comienza el siguiente de manera automática, mientras que si cometes un error vuelves al menú de selección de niveles. Una vez completados los tres niveles, el dispositivo regresa al menú inicial.
 
@@ -131,10 +131,14 @@ flowchart TD
     I --> J["Leer perilla 2<br/>Asignar camino al LED jugador<br/>1 de 4 rangos"]
     J --> K["Generar y desplazar luces<br/>por los 4 caminos"]
 
-    K --> L{"¿Hay una luz<br/>en la zona de captura?"}
-    L -- No --> R
-    L -- Sí --> M{"¿Botón 2 presionado<br/>y camino del LED = camino de la luz?"}
-    M -- No --> N["Detener canción<br/>Registrar derrota"]
+    K --> L{"¿Botón 2<br/>presionado?"}
+    L -- No --> V{"¿Hay una luz que pasó<br/>la zona de captura<br/>sin ser atrapada?"}
+    V -- Sí --> N
+    V -- No --> R
+    L -- Sí --> Q{"¿Hay una luz<br/>en la zona de captura?"}
+    Q -- No --> N["Detener canción<br/>Registrar derrota"]
+    Q -- Sí --> M{"¿Camino del LED =<br/>camino de la luz?"}
+    M -- No --> N
     N --> C
     M -- Sí --> O["Registrar nota atrapada<br/>Eliminar luz"]
     O --> R
@@ -153,7 +157,7 @@ flowchart TD
     classDef menu fill:#F5F5F5,stroke:#A247D3,stroke-width:2px,color:#005968;
 
     class A inicio;
-    class D,L,M,R,S decision;
+    class D,L,V,Q,M,R,S decision;
     class B,E,F,G,H,I,J,K,O,T proceso;
     class C,N,U menu;
 
@@ -169,28 +173,12 @@ flowchart TD
  ```mermaid
 %%{init: {'theme':'base','themeVariables':{'fontFamily':'Arial','lineColor':'#A247D3','primaryTextColor':'#005968'}}}%%
 flowchart TD
-    A([Ciclo principal llama a update]) --> B{"¿La persona está<br/>presionando el botón?"}
-
-    B -- Sí --> C["Estado: estaSiendoPresionado"]
-    C --> A
-
-    B -- No --> D{"¿Estaba presionado<br/>en el ciclo anterior?"}
-    D -- Sí --> E["Estado: soltado<br/>Cuenta UNA pulsación<br/>Anota la hora"]
-    E --> F["Estado: noPresionado"]
-    D -- No --> F
-
-    F --> G{"¿Hay pulsaciones<br/>esperando respuesta?"}
-    G -- No --> A
-    G -- Sí --> H{"¿Ya van<br/>2 pulsaciones?"}
-
-    H -- Sí --> I["Avisa: DOS pulsaciones<br/>Significa: SELECCIONAR el nivel"]
-    H -- No --> J{"¿Pasaron 0,6 segundos<br/>desde la pulsación?"}
-    J -- No, sigue esperando --> A
-    J -- Sí --> K["Avisa: UNA pulsación<br/>Significa: CAMBIAR de nivel"]
-
-    I --> L["Reiniciar contador<br/>Botón listo para empezar de nuevo"]
-    K --> L
-    L --> A
+    A([La máquina revisa<br/>el botón 1]) --> B{"¿La persona<br/>lo presionó?"}
+    B -- No --> A
+    B -- Sí --> C["Se registra una pulsación<br/>(mantenerlo apretado<br/>no cuenta más veces)"]
+    C --> D["El nivel cambia<br/>1 → 2 → 3 → 1"]
+    D --> E["La matriz de LEDs<br/>muestra el nuevo nivel"]
+    E --> A
 
     classDef inicio fill:#005968,stroke:#A247D3,stroke-width:2px,color:#F5F5F5;
     classDef decision fill:#4BC7CF,stroke:#A247D3,stroke-width:2px,color:#005968;
@@ -198,9 +186,9 @@ flowchart TD
     classDef aviso fill:#F5F5F5,stroke:#A247D3,stroke-width:2px,color:#005968;
 
     class A inicio;
-    class B,D,G,H,J decision;
-    class C,E,F,L proceso;
-    class I,K aviso;
+    class B decision;
+    class C,D proceso;
+    class E aviso;
 
     linkStyle default stroke:#A247D3,stroke-width:2px;
 ```
@@ -213,37 +201,28 @@ Botón 2
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'fontFamily':'Arial','lineColor':'#A247D3','primaryTextColor':'#005968'}}}%%
 flowchart TD
-    A([Ciclo principal llama a update]) --> B{"¿La persona está<br/>presionando el botón?"}
+    A([La máquina revisa<br/>el botón 2]) --> B{"¿La persona<br/>lo presionó?"}
+    B -- No --> A
+    B -- Sí --> C{"¿Está en el menú<br/>o está jugando?"}
 
-    B -- Sí --> C{"¿Ya estaba presionado<br/>en el ciclo anterior?"}
-    C -- Sí --> D["Estado: estaSiendoPresionado<br/>No avisa nada nuevo<br/>(no se repite sola)"]
-    C -- No --> E["Avisa de inmediato:<br/>intentó atrapar"]
-    E --> F["Estado: estaSiendoPresionado"]
+    C -- En el menú --> D["Con un clic se selecciona<br/>el nivel que se ve"]
+    D --> E(["Empieza el nivel<br/>y suena la canción"])
 
-    B -- No --> G{"¿Estaba presionado<br/>en el ciclo anterior?"}
-    G -- Sí --> H["Estado: soltado"]
-    H --> I["Estado: noPresionado"]
-    G -- No --> I
-
-    D --> A
-    F --> A
-    I --> A
-
-    E --> M{"Programa principal:<br/>¿hay una luz en la<br/>zona de captura?"}
-    M -- No --> P
-    M -- Sí --> N{"¿El LED está en el<br/>mismo camino que la luz?"}
-    N -- Sí --> O(["La luz se atrapa<br/>El juego sigue"])
-    N -- No --> P(["La jugadora pierde<br/>Regresa al menú de niveles"])
+    C -- Jugando --> F{"¿Hay una luz en<br/>la zona de captura?"}
+    F -- No --> G(["Pierde<br/>Vuelve al menú de niveles"])
+    F -- Sí --> H{"¿El LED está en el<br/>mismo camino que la luz?"}
+    H -- Sí --> I(["Atrapa la luz<br/>La casilla se ilumina verde"])
+    H -- No --> J(["Falla<br/>La casilla se ilumina roja<br/>y vuelve<br/>al menú de niveles"])
 
     classDef inicio fill:#005968,stroke:#A247D3,stroke-width:2px,color:#F5F5F5;
     classDef decision fill:#4BC7CF,stroke:#A247D3,stroke-width:2px,color:#005968;
     classDef proceso fill:#BCEDE5,stroke:#A247D3,stroke-width:2px,color:#005968;
     classDef aviso fill:#F5F5F5,stroke:#A247D3,stroke-width:2px,color:#005968;
 
-    class A,O,P inicio;
-    class B,C,G,M,N decision;
-    class D,F,H,I proceso;
-    class E aviso;
+    class A inicio;
+    class B,C,F,H decision;
+    class D proceso;
+    class E,G,I,J aviso;
 
     linkStyle default stroke:#A247D3,stroke-width:2px;
 ```
