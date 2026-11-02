@@ -36,6 +36,10 @@
    - Perillas
 - Esquemático
 - Construcción tangible de Altiro hero
+   - Circuito
+   - Carcasa
+   - Equipo de trabajo
+- Prompt y Cluade
 - Referentes
 
 # Génesis del proyecto
