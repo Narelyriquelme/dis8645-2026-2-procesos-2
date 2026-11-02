@@ -8,8 +8,8 @@
 *Tomás Antonio Catrileo Curihual (tomascatri)*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
  <br>
-
-**Principios de diseño**
+ 
+ **Principios de diseño**
 - Fuente abierta
 
  **Entregables:**   
@@ -36,6 +36,9 @@
 <details>
 
 ![génesis](./imagenes/genesis.jpeg)
+![niveles](./imagenes/niveles.gif)
+![pierde](./imagenes/pierde.gif)
+    
 
 ## Contexto del proyecto:
 
@@ -235,8 +238,75 @@ flowchart TD
 ## Diagrama de flujo, perillas 
 
 <details> 
- holi
-</details>
+    
+Perilla 1 (velocidad)
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Arial','lineColor':'#A247D3','primaryTextColor':'#005968'}}}%%
+flowchart TD
+    A([La máquina revisa la perilla 1]) --> B{"¿La persona<br/>está jugando?"}
+    B -- No, está en el menú --> C(["No hace nada"])
+    C --> A
+
+    B -- Sí --> D["Las luces bajan a la<br/>velocidad estándar del nivel"]
+    D --> E{"¿Hacia dónde<br/>giró la perilla?"}
+    E -- A la derecha --> F["Las luces bajan<br/>más rápido"]
+    E -- A la izquierda --> G["Las luces bajan<br/>más lento"]
+    E -- No la movió --> H["La velocidad<br/>se mantiene igual"]
+
+    F --> A
+    G --> A
+    H --> A
+
+    classDef inicio fill:#005968,stroke:#A247D3,stroke-width:2px,color:#F5F5F5;
+    classDef decision fill:#4BC7CF,stroke:#A247D3,stroke-width:2px,color:#005968;
+    classDef proceso fill:#BCEDE5,stroke:#A247D3,stroke-width:2px,color:#005968;
+    classDef aviso fill:#F5F5F5,stroke:#A247D3,stroke-width:2px,color:#005968;
+
+    class A inicio;
+    class B,E decision;
+    class D,F,G,H proceso;
+    class C aviso;
+
+    linkStyle default stroke:#A247D3,stroke-width:2px;
+```
+
+</details>   
+    
+Perilla 2 (mueve el LED)
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Arial','lineColor':'#A247D3','primaryTextColor':'#005968'}}}%%
+flowchart TD
+    A([La máquina revisa la perilla 2]) --> B{"¿La persona<br/>está jugando?"}
+    B -- No, está en el menú --> C(["No hace nada"])
+    C --> A
+
+    B -- Sí --> D{"¿En qué parte del giro<br/>está la perilla?"}
+    D -- Todo a la izquierda --> E["El LED morado<br/>queda en la columna 1"]
+    D -- Un poco a la izquierda --> F["El LED morado<br/>queda en la columna 2"]
+    D -- Un poco a la derecha --> G["El LED morado<br/>queda en la columna 3"]
+    D -- Todo a la derecha --> H["El LED morado<br/>queda en la columna 4"]
+
+    E --> I(["La persona ve el LED morado<br/>en la columna elegida"])
+    F --> I
+    G --> I
+    H --> I
+    I --> A
+
+    classDef inicio fill:#005968,stroke:#A247D3,stroke-width:2px,color:#F5F5F5;
+    classDef decision fill:#4BC7CF,stroke:#A247D3,stroke-width:2px,color:#005968;
+    classDef proceso fill:#BCEDE5,stroke:#A247D3,stroke-width:2px,color:#005968;
+    classDef aviso fill:#F5F5F5,stroke:#A247D3,stroke-width:2px,color:#005968;
+
+    class A inicio;
+    class B,D decision;
+    class E,F,G,H proceso;
+    class C,I aviso;
+
+    linkStyle default stroke:#A247D3,stroke-width:2px;
+```
+    
 </details>
 
 # Factura de materiales:
@@ -338,163 +408,6 @@ Paleta de colores: Colours Cafe
  
 ---
 </details>
-
-# Pseudo no tan pseudos (? son reales pero idk
-
-```cpp
-// perillas:)
-
-// esto es Perilla.h
-class Perilla {
-
-  public:
-
-  int patita;              // atributos 
-  int posicion = 0
-
-  Perilla (int nuevaPatita);    // esto es constructor
-
-  void leer();    // estos son metodos
-
-  };
-
-  #endif
-
- // ---- hola ------ separo h de cpp ------ hola(?)
-      
- // esto es Perila.cpp
-
-  #include "Perilla.h"
-
-  Perilla::Perilla (int nuevaPatita) {
-
-    Perilla::patita = nuevaPatita;
-
-    adc_init();
-    adc_gpio_init(Perilla::patita);
-  }
-
-  void Perilla::leer() {
-
-    adc_select_input(Perilla::patita - pinPerilla) // en pinPerilla 
-                                                  // poner el pin en donde está el pote
-    Perilla::posicion = adc_read();
-  }
-
- // ----- hola lo de abajo es santi creo para explicar qué hacen nuestros botones al grupo que se encargará de nuestra clase Boton
-
-// ============================================================
-// BOTÓN 1: moverse por los niveles y elegir uno
-// (solo se usa en el menú de niveles, la acción de navegar
-// y seleccionar el nivel con el que la persona va a jugar)
-// ============================================================
-// Este botón va a tener estados:
-// noPresionado
-// estaSiendoPresionado
-// soltado
-//
-// **Atributos**
-//
-// Qué necesita saber este botón:
-//  - En qué pin está conectado de la raspberry.
-//  - Si en este momento está presionado o noPresionado.
-//  - Soltado.
-//  - Cuánto tiempo esperar para decidir si fue una o dos pulsaciones:
-//    0,6 segundos desde la primera pulsación.
-//    (Debe quedar como una constante fácil de cambiar en el .h,
-//    por si al probar con personas reales hay que ajustarla.)
-//  - Cuántas veces lo han presionado en este intento (0, 1 o 2).
-//  - Cuándo fue la última vez que lo presionaron.
-
-// Qué hace:
-//  Cuando la persona presiona el botón por primera vez, el botón pasa
-//  de noPresionado a estaSiendoPresionado. Cuando ella lo suelta,
-//  pasa a soltado, cuenta UNA pulsación, anota la hora y vuelve
-//  a noPresionado. En ese momento el botón todavía no avisa nada:
-//  empieza a esperar 0,6 segundos para ver si viene una segunda
-//  pulsación.
-//
-//  Si dentro de esos 0,6 segundos la persona lo presiona otra vez
-//  (y lo suelta), el botón avisa: "fueron DOS pulsaciones". Eso
-//  significa que ella quiere SELECCIONAR el nivel en el que está.
-//
-//  Si pasan los 0,6 segundos y no hubo segunda pulsación, el botón
-//  avisa: "fue UNA pulsación". Eso significa que ella quiere
-//  CAMBIAR al siguiente nivel.
-//
-//  Para que cuente una nueva pulsación, el botón primero debe soltarse
-//  y volver a ser presionado. Si la persona lo deja presionado, cuenta
-//  como una sola pulsación y no se repite sola.
-//
-//  Después de avisar, el botón se reinicia y queda listo para empezar
-//  de nuevo. Si la persona presiona tres veces o más, se cuentan solo
-//  las dos primeras y lo demás se ignora.
-
-// Cómo debe reaccionar el programa principal:
-//  - Si el aviso es UNA pulsación: pasar al siguiente nivel
-//    (del 1 al 2, del 2 al 3, y del 3 vuelve al 1).
-//  - Si el aviso es DOS pulsaciones: confirmar el nivel y empezar el juego.
-//  - Mientras se juega, este botón no se consulta, no hace nada.
-//
-// Nota importante:
-//  Como la máquina espera 0,6 segundos para estar segura de que no viene
-//  una segunda pulsación, el cambio de nivel tarda ese tiempo en notarse.
-//  Para que la persona no sienta que el botón "no responde", hacer 
-//  que esta acción de un feedback inmediata al primer clic
-//  por medio de un parpadeo corto de una LED o un sonido, aunque el
-//  cambio de nivel se confirme después.
-
-
-// ============================================================
-// BOTÓN 2: atrapar la luz
-// (solo se usa durante el juego, la acción de jugar y atrapar
-// la luz del LED)
-// ============================================================
-// Este botón va a tener estados:
-// noPresionado
-// estaSiendoPresionado
-// soltado
-//
-// **Atributos**
-//
-// Qué necesita saber este botón:
-//  - En qué pin está conectado de la raspberry.
-//  - Si en este momento está presionado o noPresionado.
-//  - Soltado.
-//  No tiene límite de tiempo ni tiempo de descanso, a propósito.
-
-// Qué hace:
-//  Cada vez que la persona presiona el botón, el botón avisa de
-//  inmediato: "intentó atrapar". Sin esperas y sin límite de
-//  pulsaciones por segundo.
-//
-//  Esto es importante porque en los niveles rápidos, o cuando la persona
-//  sube la velocidad con la perilla 1, las luces bajan muy rápido
-//  y ella necesita presionar muy rápido también.
-//  El botón tiene que poder seguirle el ritmo.
-//
-//  Para que cuente una nueva pulsación, el botón primero debe soltarse
-//  y volver a ser presionado. Si la persona lo deja presionado, cuenta
-//  como un solo intento y no se repite solo.
-//  No importa cuánto tiempo lo mantenga presionado: el botón no se
-//  bloquea ni da error por eso.
-
-// Cómo debe reaccionar el programa principal:
-//  El botón NO decide si la luz fue atrapada. Solo avisa que la persona
-//  presionó. Quien decide es el programa principal, y revisa dos cosas:
-//    1. ¿Había una luz en la zona de captura?
-//    2. ¿El LED de la jugadora estaba en el mismo camino que esa luz?
-//       (El LED siempre está en uno de los 4 caminos, según
-//       dónde esté la perilla 2.)
-//
-//  Si las dos respuestas son sí, la luz se atrapa y el juego sigue.
-//  Si alguna respuesta es no, la jugadora pierde y regresa
-//  al menú de niveles.
-//
-//  Durante el menú de niveles, este botón no hace nada.
-```
-
----
 
 # Referentes
 
