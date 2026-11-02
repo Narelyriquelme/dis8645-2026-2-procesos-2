@@ -45,8 +45,21 @@ Otro aspecto interesante reside en las opciones de personalización. Sharp X6800
 
 la Sharp X68000 lideró el mercado de los sistemas informáticos japoneses, finalizando su reinado alrededor de 1996. Gracias al chip de sonido Yamaha YM2151, la computadora pudo reproducir algunas de las mejores bandas sonoras de videojuegos (VGM) basadas en síntesis FM jamás lanzadas. 
 
-https://www.youtube.com/channel/UC202eItEazdvnMRK09RTtaw
-https://xvgmradio.com/episode-119-the-sounds-of-the-sharp-x68000/
+> Links relevantes
+>
+>> https://www.youtube.com/channel/UC202eItEazdvnMRK09RTtaw
+>>
+>> https://xvgmradio.com/episode-119-the-sounds-of-the-sharp-x68000/
+
+<br>
+
+### referentes
+
+1. Bleep-Drum
+
+![bleep-drum](./imagenes/bleep-drum.jpg)
+
+![bleep-drum](./imagenes/bleep-drum01.jpg)
 
 <br>
 
@@ -60,6 +73,26 @@ https://xvgmradio.com/episode-119-the-sounds-of-the-sharp-x68000/
 
 La elección de cinco sonidos responde a la intención de representar distintas transformaciones tecnológicas en la historia del audio de los videojuegos. Cada sonido corresponde a una etapa que permite reconocer cómo evolucionaron la generación, síntesis y reproducción del sonido, desde los primeros tonos electrónicos hasta el audio digital. 
 
+### sonido 0
+
+fecha:
+
+### sonido 1
+
+fecha:
+
+### sonido 2
+
+fecha:
+
+### sonido 3
+
+fecha:
+
+### sonido 4
+
+fecha:
+
 ## Presentación del Proyecto
 
 **Implementación física**: Este proyecto se presentará en formato de prototipo funcional en protoboard con carcasa. 
@@ -69,6 +102,12 @@ La interacción principal y la salida de audio I2S se demostrarán directamente 
 La idea de presentar la solución en protoboard con una carcasa permite verificar directamente el protocolo de comunicación **I2S** utilizado entre la Raspberry Pi Pico 2 W y el amplificador MAX98357A, así como la lectura analógica por ADC (potenciómetro) y digital (encoder KY-040 y pulsadores).
 
 La prueba física es esencial para validar el muestro y la fidelidad de los 5 audios representativos, debido a que realizar el proyecto de manera virtual no permitiría escuchar los sonidos.
+
+![carcasa frontal](./imagenes/carcasa1.jpg)
+
+![protoboard](./imagenes/carcasa2.jpg)
+
+![proto y tapa frontal](./imagenes/carcasa3.jpg)
 
 ## Controles e interacciones
 
@@ -967,3 +1006,5 @@ Leyendo el código, esto es lo que **hace hoy** el programa en cada caso. Si alg
 | ¿Dos sonidos al mismo tiempo? | No. `Ampli` guarda un solo `datosAudio`, así que cargar uno reemplaza al otro. |
 
 **Orden sugerido para corregir:** 2 y 3 (antes de soldar, porque son de circuito) → 1 → 4 → 5 → 6 (al probar en la placa) → 7.
+
+## Bibliografía
