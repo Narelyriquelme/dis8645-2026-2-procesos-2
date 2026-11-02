@@ -396,6 +396,11 @@ void leer
 
  </details>
 
+# Esquemático 
+
+ <details>
+ </details>
+
 # Construcción tangible de Altiro hero
 
 <details>
