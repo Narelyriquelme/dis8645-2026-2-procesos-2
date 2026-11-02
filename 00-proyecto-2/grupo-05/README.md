@@ -16,6 +16,10 @@
  - *Simulación digital en wokwi*
  - *Prototipo físico tangible de altiro hero*
 
+**Descargables**
+- Carcasa
+- Esquemático en Kicad 
+
 **Indice:**   
 - Génesis del proyecto
    - Contexto / investigación / referentes.
@@ -25,20 +29,24 @@
    - Perillas
    - Botones
 - Factura de materiales
+   - Horas de trabajo
 - Pseudocódigo del rol de los componentes
    - Switch
    - Botones
    - Perillas
+- Esquemático
+- Simulación digital en wokwi
 - Construcción tangible de Altiro hero
+   - Circuito
+   - Carcasa
+   - Equipo de trabajo
+- Prompt y Cluade
+- Agradecimientos 
 - Referentes
 
 # Génesis del proyecto
-<details>
 
-![génesis](./imagenes/genesis.jpeg)
-![niveles](./imagenes/niveles.gif)
-![pierde](./imagenes/pierde.gif)
-    
+<details>
 
 ## Contexto del proyecto:
 
@@ -63,12 +71,27 @@ El dispositivo se enciende con un interruptor ubicado en la parte inferior del c
 El juego cuenta con tres niveles, que se eligen desde el menú con el segundo botón, ubicado en el costado derecho: una pulsación avanza entre nivel 1, 2 y 3, y para seleccionar el nivel deseado se presiona el botón que está debajo de la matriz LED cuando el número del nivel se muestre en la pantalla. Debajo del botón que se encuentra al costado derecho hay una segunda perilla que permite aumentar o disminuir la velocidad de descenso del patrón, lo que ajusta la dificultad a tu gusto. Cada nivel dura un máximo de dos minutos y al superarlo sin cometer ningún error, comienza el siguiente de manera automática, mientras que si cometes un error vuelves al menú de selección de niveles. Una vez completados los tres niveles, el dispositivo regresa al menú inicial.
 
 </details>
+
+## El nacimiento
+
+<details>
+
+![génesis](./imagenes/genesis.jpeg)
+![niveles](./imagenes/niveles.gif)
+![pierde](./imagenes/pierde.gif)
+    
+</details>
+
+## Feedback
+
+<details>
+</details>
 </details>
 
 # Diagramas de flujo 
 <details> 
  
-## Mapa de flujo Experiencia de usuario
+## Experiencia de usuario
 
 <details> 
 
@@ -115,7 +138,7 @@ flowchart TD
 ```
 </details>
 
-## Mapa de flujo Máquina
+## Máquina
 
 <details> 
 
@@ -171,7 +194,7 @@ flowchart TD
 ```
 </details>
 
-## Diagrama de flujo, botones 
+## Botones 
 
 <details> 
  
@@ -235,7 +258,7 @@ flowchart TD
  
 </details>
 
-## Diagrama de flujo, perillas 
+## Perillas 
 
 <details> 
     
@@ -272,6 +295,8 @@ flowchart TD
 ```
 
 </details>   
+
+<details> 
     
 Perilla 2 (mueve el LED)
 
@@ -306,11 +331,16 @@ flowchart TD
 
     linkStyle default stroke:#A247D3,stroke-width:2px;
 ```
+</details>   
     
 </details>
 
 # Factura de materiales:
 
+<details> 
+
+ ## Precios
+ 
 <details> 
 
 Nuestro proyecto será un juego de ritmo el cual tendrá los siguientes componentes:
@@ -326,6 +356,36 @@ Nuestro proyecto será un juego de ritmo el cual tendrá los siguientes componen
 
 ---
 
+</details>
+
+## Registro de horas de trabajo
+
+<details> 
+
+# Registro de horas de trabajo
+
+| Fecha | Día | Tiempo trabajado |
+|-------|-----|------------------|
+| 2026-10-17 | Sáb | 10 min |
+| 2026-10-18 | Dom | 0 |
+| 2026-10-19 | Lun | 2 h |
+| 2026-10-20 | Mar | 4 h |
+| 2026-10-21 | Mié | 0 |
+| 2026-10-22 | Jue | 2 h |
+| 2026-10-23 | Vie | 5 h |
+| 2026-10-24 | Sáb | 8 h |
+| 2026-10-25 | Dom | 0 |
+| 2026-10-26 | Lun | 0 |
+| 2026-10-27 | Mar | 12 h |
+| 2026-10-28 | Mié | 10 h |
+| 2026-10-29 | Jue | 6 h 30 min |
+| 2026-10-30 | Vie | 6 h |
+| 2026-10-31 | Sáb | 13 h |
+| 2026-11-01 | Dom | 5 h 30 min |
+| 2026-11-02 | Lun | 0 |
+| **Total** | | **74 h 10 min** |
+
+</details>
 </details>
 
 # Pseudocódigo del rol de los componentes:
@@ -396,17 +456,109 @@ void leer
 
  </details>
 
+# Esquemático 
+
+ <details>
+ </details>
+ 
+# Simulación digital en wokwi
+
+<details>
+ </details>
+
 # Construcción tangible de Altiro hero
 
 <details>
 
-Paleta de colores: Colours Cafe
- 
-![paleta de colores](./imagenes/paleta-de-colores.jpg)
-
-![proceso1](./imagenes/proceso.jpg)
+![proceso3](./imagenes/proceso3.png)
+![proceso1](./imagenes/proceso1.png)
+![proceso2](./imagenes/processo2.png)
+![presentación del grupo](./imagenes/processo4.png)
  
 ---
+</details>
+
+# Prompt y Cluade
+
+<details>
+
+Todo comenzó con la explicación del proyecto a Claude escrito a manera de prosa para la creación de los diagramas de flujo en código de mermaid para ser puestos en este repositorio.
+
+A partir de este contexto general con el cual se crearon los diagramas de flujo, utilizamos este ejemplo [2026-10-06-clases](https://wokwi.com/projects/477335809803977729) para tomar la estructura y manera de proceso del código en lenguaje c++ que se nos fue enseñada en el taller, y en base a ello, comenzamos junto a Claude, a escribir las clases y luego comenzar a tejer el proyecto. 
+
+Usamos el ingles para encaminar de manera precisa lo que se quería obtener, y el español para narrar el proyecto.
+
+> Diagrama de flujo experiencia de usuario.
+Hey claude i’m doing a proyect, with my team and it consists of creating an interactive computational machine that combines analog and digital elements, inspired by various entertainment devices such as the Game Boy, Guitar Hero, and DJ Hero.
+This is how (name of our baby, still doesn’t have a name) came to life: a pocket-sized entertainment device equipped with two buttons and two knobs. It works as follows:
+The game has four lanes along which lights of different colors continuously descend, similar to Piano Tiles. The player must move between these lanes and match the color of each descending light to continue playing. If they fail to match the correct color in the corresponding lane, they lose. And I want you to help me creating the code for the flowchart for mermaid and github. 
+Imma tell u how it works in spanish because is easier for me to explain how it works:
+
+> Se comienza por el inicio (inicio), donde la persona comienza el recorrido por el programa y luego llega a una decisión donde debe decidir si enciende la máquina o no (encender): si escoge no (no), no continua y debe volver al inicio.
+Sí escoge sí (sí), debe seleccionar un nivel entre los siguientes para comenzar el juego:
+nivel: 1, 2 y 3 (nivel 1: fácil, nivel 2: medio, nivel 3: difícil):
+
+> Comentario:  El nivel se cambia y se selecciona con botón 1; 
+> Cambiar: oprimir una vez. 
+> Seleccionar; oprimir dos veces.
+
+> y luego de escoger el nivel se inicia el juego dependiendo del cual se haya escogido (inicio del juego), y funciona de esta manera:
+
+> Con el botón 2, se puede mover entre los cuatro caminos para atrapar la luz que va bajando, y con la perilla 2 se cambia el color de la led que se mueve entre los cuatro caminos que es equivalente al color de la luz que va bajando para hacer match. 
+
+> Para aumentar o disminuir la velocidad de bajada de las luces, se utiliza la perilla 1.
+
+> ¿Qué pasa si pierde? le regresa a la selección de niveles para seleccionar uno volver a comenzar.
+
+> ¿Qué pasa si continua sin perder? después de pasar 2:00 min, pasa al siguiente nivel, y así sucede con todos los niveles. Cuando se termina el nivel 3, se termina el juego y vuelve otra vez a la selección de niveles. 
+
+> Funcionamiento de botones y perillas:
+
+> Botones:
+> boton 1: 
+
+> * Oprimir una vez: cambiar de nivel, navegar en ese menú.
+> * Oprimir dos veces: seleccionar el nivel. 
+
+> boton 2: cambiarse de camino, navegar entre los 4 caminos.
+
+> Perillas: 
+> perilla 1: aumenta o disminuye la velocidad de las luces que bajan.
+> perilla 2: solo se mueve entre cuatro rangos, los cuales son los cuatro caminos del juego.
+
+
+> Now that you know how it works, create the flowachart whit code for mermaid flowchart and github.
+
+Luego de esto, se creó el documento `.h` de la clase Perilla siguiendo paso a paso los ejemplos de clase, ejemplo con el cual se encamino la simplificación de atributos y métodos en el código ya que Claude aunque lo había hecho bien, estaba haciendo de más (comparábamos con como era la estructura de los ejemplos de clase y nos percatábamos de ello), y eso hacia que el código fuera más complejo para nuestro entendimiento, así que luego le dimos la instrucción de que tomara como referencia la clase que se creó. 
+
+Después, para que Claude tuviera un mayor contexto, le mencionamos los elementos que estábamos utilizando para que si bien el código funcionara en wokwi, también funcionara en Visual Studio Code para el prototipo físico y tangible.  
+
+> Hey claude, now that u have the context and how is the language of the c++ I'm using, the order or the files, clasess etc..., I want you to the help me creating the code for this work in my microcontroller. I'm using a raspberry pi pico 2 w. 
+
+> Let's go step by step, but I want to make an aclaration, that is that with button 1 we are moving trough the levels, and with button 2 we are selecting  the level.
+
+> The elements we are using are:
+> Matriz LED RGB 8×8 con WS2812B. For the ligths, and we are couting 2 files as a one.
+> Parlante 36mm 8Ω (for the sound)
+> Max98357A (for the sound)
+> Botones pulsador
+> Potenciómetros b500k
+> Protoboard.
+
+Let's write the library, and prototiping it first in wokwi, and then we can do it in visual studio code, for the real life prototyping.
+ 
+</details>
+
+# Agradecimientos
+
+<details>
+ 
+- Camila Delgado: por su disposición, asesoría y atención para con las impresiones 3d, el equipo, y mantener el LID súper ordenado siempre.
+- Camila Ramirez: Porque en medio de una conversación nos ayudo a aterrizar la idea del proyecto, y por regalarnos el Max98357A para el audio de nuestro proyecto.
+- Camila Parada: Por prestarnos el filamento de impresión **trans**parente 
+- Vania Paredes (sleye) y Caro alegria: Por donarnos filamentos para pruebas.
+- El LID: Por las impresoras 3D, el wifi, los cautines, el espacio, la comodidad, y las herramientas necesarias para la creación tangible de nuestro proyecto.
+
 </details>
 
 # Referentes
