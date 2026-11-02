@@ -71,6 +71,7 @@ La misión principal del juego es ayudar al estudiante a llegar a la universidad
 
 1. Propósito
 El pseudocódigo describe qué decisiones toma el programa, sin depender de la sintaxis exacta de C++. Es una guía para entender el funcionamiento del videojuego y relacionarlo con las funciones reales del archivo main.cpp.
+
 2. Pseudocódigo general de DORE 8
 INICIO DORE 8
 
@@ -103,6 +104,7 @@ INICIO DORE 8
 
 FIN
 Funciones relacionadas: main(), controlarBotonContinuar(), actualizarNivel().
+
 3. Flujo de pantallas
 PANTALLA 0: INICIO
     Clic de continuar -> PANTALLA 1: INSTRUCCIONES
@@ -130,6 +132,7 @@ PANTALLA 6: VICTORIA
 PANTALLA 7: REFLEXIÓN
     Clic de continuar -> PANTALLA 0: INICIO
 Función relacionada: iniciarSlide() restablece las variables y dibuja la escena antes de jugar.
+
 4. Pseudocódigo de lectura de perillas
 FUNCIÓN DIRECCIÓN_DE_PERILLA(GPIO)
     Seleccionar entrada ADC asociada al GPIO
@@ -147,6 +150,7 @@ En cada actualización de un nivel:
     dx = dirección de perilla horizontal × tamaño del paso
     dy = dirección de perilla vertical × tamaño del paso
 Funciones relacionadas: Perilla::leer(), Perilla::direccion(), actualizarNivel().
+
 5. Pseudocódigo del nivel 1: laberinto
 AL INICIAR LABERINTO:
     Posicionar estudiante en el punto de partida
@@ -170,6 +174,7 @@ MIENTRAS el desafío esté EN CURSO:
         Mostrar mensaje para continuar
 FIN
 Funciones relacionadas: colisionLaberinto(), interseccion(), cambiarEstado().
+
 6. Pseudocódigo del nivel 2: carretera
 AL INICIAR CARRETERA:
     Colocar micro al lado izquierdo, en el carril central
@@ -200,6 +205,7 @@ MIENTRAS el desafío esté EN CURSO:
     Redibujar micro, automóviles y líneas del camino
 FIN
 Funciones relacionadas: dibujarMetaCarretera(), dibujarMoviles(), dibujarMovimiento(), interseccion().
+
 7. Pseudocódigo del nivel 3: sala de clases
 AL INICIAR SALA:
     Colocar estudiante en la esquina superior izquierda
@@ -214,6 +220,7 @@ MIENTRAS el desafío esté EN CURSO:
         Mostrar mensaje para continuar
 FIN
 Función relacionada: actualizarNivel().
+
 8. Pseudocódigo de Boton2
 AL CREAR Boton2:
     Configurar GPIO como entrada con resistencia pull-up
@@ -241,6 +248,7 @@ CADA VUELTA:
 AL CONSULTAR leerGesto():
     Entregar el gesto pendiente y limpiarlo
 En la versión actual: el programa solo ejecuta una acción con PULSADO1VEZ del botón continuar (GP11); el resto de gestos se conserva como posibilidad de ampliación.
+
 9. Pseudocódigo del dibujo de pantalla
 AL INICIAR PANTALLA:
     Configurar SPI0 (GP18 reloj, GP19 datos)
@@ -260,6 +268,7 @@ AL DIBUJAR UNA ESCENA:
     Dibujar estudiante, micro o autos con figuras geométricas
     Escribir textos usando la fuente retro 5x7
 Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLine(), fillCircle(), PantallaUI::dibujarSlide().
+
 10. Decisiones técnicas que explica este pseudocódigo
 - El programa está escrito en C++ con Pico SDK, sin el entorno Arduino.
 - Los gráficos utilizan primitivas inspiradas en Adafruit GFX, adaptadas para el controlador físico ST7789V. No se trata de incorporar la biblioteca oficial Adafruit de Arduino tal cual.
