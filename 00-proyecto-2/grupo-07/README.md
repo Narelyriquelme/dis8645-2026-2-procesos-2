@@ -24,7 +24,7 @@ Lo que nos interesa es experimentar con una forma distinta de dibujar, donde deb
 
 ## 02. Investigación y referente: MacPaint (1984)
 
-<img src="./imagenes/CREADORES.jpg" alt="Creadores" width="300">
+<img src="./imagenes/creadores.jpg" alt="creadores" width="300">
 
 Nuestra investigación comenzó explorando cómo los dispositivos digitales transforman movimientos físicos en representaciones gráficas.
 
