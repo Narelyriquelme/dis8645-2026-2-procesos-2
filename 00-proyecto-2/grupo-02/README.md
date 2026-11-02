@@ -221,7 +221,7 @@ Finalmente, también se tomó la decisión de construir una carcasa representati
 *(Agregar aquí los prompts utilizados para los códigos.)*
 
 # Esquemáticos
-*(Agregar aquí los esquemáticos kicad.)*
+![esquemáticoconexiones](./imagenes/esquemáticoconexiones.png)
 
 ## Bibliografía
 
