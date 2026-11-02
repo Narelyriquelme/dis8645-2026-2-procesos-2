@@ -973,3 +973,5 @@ Leyendo el código, esto es lo que **hace hoy** el programa en cada caso. Si alg
 | ¿Dos sonidos al mismo tiempo? | No. `Ampli` guarda un solo `datosAudio`, así que cargar uno reemplaza al otro. |
 
 **Orden sugerido para corregir:** 2 y 3 (antes de soldar, porque son de circuito) → 1 → 4 → 5 → 6 (al probar en la placa) → 7.
+
+## Bibliografía
