@@ -79,7 +79,7 @@ El juego cuenta con tres niveles, que se eligen desde el menú con el segundo bo
 # Diagramas de flujo 
 <details> 
  
-## Mapa de flujo Experiencia de usuario
+## Experiencia de usuario
 
 <details> 
 
@@ -126,7 +126,7 @@ flowchart TD
 ```
 </details>
 
-## Mapa de flujo Máquina
+## Máquina
 
 <details> 
 
@@ -182,7 +182,7 @@ flowchart TD
 ```
 </details>
 
-## Diagrama de flujo, botones 
+## Botones 
 
 <details> 
  
@@ -246,7 +246,7 @@ flowchart TD
  
 </details>
 
-## Diagrama de flujo, perillas 
+## Perillas 
 
 <details> 
     
@@ -283,6 +283,8 @@ flowchart TD
 ```
 
 </details>   
+
+<details> 
     
 Perilla 2 (mueve el LED)
 
@@ -317,6 +319,7 @@ flowchart TD
 
     linkStyle default stroke:#A247D3,stroke-width:2px;
 ```
+</details>   
     
 </details>
 
