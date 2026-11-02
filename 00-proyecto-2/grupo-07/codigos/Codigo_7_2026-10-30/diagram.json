@@ -10,8 +10,8 @@
       "left": -130.8,
       "attrs": { "builder": "pico-sdk" }
     },
-    { "type": "wokwi-potentiometer", "id": "pot1", "top": 56.3, "left": -19.4, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "pot2", "top": -39.7, "left": -19.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -164.5, "left": -9.8, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -164.5, "left": -257.05, "attrs": {} },
     {
       "type": "wokwi-pushbutton",
       "id": "btn1",
@@ -52,29 +52,29 @@
     {
       "type": "wokwi-text",
       "id": "text1",
-      "top": 19.2,
-      "left": -374.4,
-      "attrs": { "text": "Dibujar / Mover" }
+      "top": 9.6,
+      "left": -326.4,
+      "attrs": { "text": "Dibujar/\nMover" }
     },
     {
       "type": "wokwi-text",
       "id": "text2",
-      "top": 76.8,
-      "left": -364.8,
+      "top": 86.4,
+      "left": -316.8,
       "attrs": { "text": "Borrar" }
     },
     {
       "type": "wokwi-text",
       "id": "text3",
-      "top": -19.2,
-      "left": 67.2,
+      "top": -190.26,
+      "left": -250.56,
       "attrs": { "text": "Vertical" }
     },
     {
       "type": "wokwi-text",
       "id": "text4",
-      "top": 86.4,
-      "left": 67.2,
+      "top": -192,
+      "left": -9.6,
       "attrs": { "text": "Horizontal" }
     }
   ],
@@ -87,13 +87,13 @@
     [ "btn2:1.l", "pico:3V3", "red", [] ],
     [ "pot1:GND", "pico:GND.5", "black", [ "v19.2", "h-48", "v-9.6" ] ],
     [ "pot1:SIG", "pico:GP26", "blue", [ "v28.8", "h-67.6", "v-124.8" ] ],
-    [ "pot1:VCC", "oled1:VCC", "red", [ "v38.4", "h-58.4", "v-364.8", "h-67.2" ] ],
+    [ "pot1:VCC", "oled1:VCC", "red", [ "v38.4", "h-58.4", "v-144", "h-76.95" ] ],
     [ "pot2:VCC", "pico:3V3", "red", [ "v19.2", "h-58.4", "v-67.2" ] ],
     [ "pot2:GND", "pico:GND.7", "black", [ "v9.6", "h-48", "v-28.8" ] ],
     [ "oled1:GND", "pico:GND.1", "black", [ "v-19.2", "h-48", "v153.6" ] ],
     [ "oled1:SCL", "pico:GP5", "gold", [ "v-9.6", "h-86.1", "v172.8" ] ],
-    [ "oled1:SDA", "pico:GP4", "limegreen", [ "v-38.4", "h-115.13", "v57.6" ] ],
-    [ "pot2:SIG", "pico:GP27", "violet", [ "v9.6", "h-58", "v-19.2" ] ],
+    [ "oled1:SDA", "pico:GP4", "limegreen", [ "v-38.4", "h-86.33", "v201.6" ] ],
+    [ "pot2:SIG", "pico:GP27", "violet", [ "v9.6", "h-58", "v76.8", "h219.6" ] ],
     [ "r1:1", "pico:GP14", "cyan", [] ],
     [ "r1:2", "pico:GND.3", "black", [] ],
     [ "r2:1", "pico:GP15", "violet", [] ],
