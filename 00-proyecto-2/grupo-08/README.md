@@ -2,7 +2,9 @@
 
 
 <p align="center">
-  <img src="./imagenes/animaciondore8.gif" alt="Animación Dore 8" width="600">
+  <img src="./imagenes/animaciondore8.gif"
+       alt="Dore 8"
+       width="100%">
 </p>
 
 
