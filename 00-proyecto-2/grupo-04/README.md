@@ -142,6 +142,11 @@ Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y
 | Botón borrar | GP20 (a GND, con pull-up interno) |
 | Botón selector | GP21 (a GND, con pull-up interno) |
 
+![seleccionar](./videos/seleccionar.gif)
+![escribir](./videos/escribir.gif)
+![borrar](./videos/borrar.gif)
+![buscar](./videos/buscar.gif) 
+
 ## Diagramas de flujo
 
 ![imagen del diagrama de flujo de proyecto 2](./imagenes/diagramadeflujo-proyecto02-grupo04.jpg)
