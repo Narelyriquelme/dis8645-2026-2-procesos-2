@@ -1,0 +1,13 @@
+﻿Referencia;Cantidad;Valor
+A1;1;Raspberry Pi Pico 2 W
+LS1;1;8 ohm / 1 W
+M1;1;WS2812B 8x8 / 64 LED
+R1;1;10k
+R2;1;10k
+R3;1;10k
+RV1;1;500k lineal / velocidad
+RV2;1;500k lineal / posicion
+SW1;1;Encendido logico / GP9
+SW2;1;Boton 1 / navegar
+SW3;1;Boton 2 / seleccionar-atrapar
+U1;1;Modulo MAX98357A
