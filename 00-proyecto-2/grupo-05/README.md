@@ -339,6 +339,10 @@ flowchart TD
 
 <details> 
 
+ ## Precios
+ 
+<details> 
+
 Nuestro proyecto será un juego de ritmo el cual tendrá los siguientes componentes:
 
 | Componentes | Cantidad | Precio unitario | Link |
@@ -352,6 +356,36 @@ Nuestro proyecto será un juego de ritmo el cual tendrá los siguientes componen
 
 ---
 
+</details>
+
+## Registro de horas de trabajo
+
+<details> 
+
+# Registro de horas de trabajo
+
+| Fecha | Día | Tiempo trabajado |
+|-------|-----|------------------|
+| 2026-10-17 | Sáb | 10 min |
+| 2026-10-18 | Dom | 0 |
+| 2026-10-19 | Lun | 2 h |
+| 2026-10-20 | Mar | 4 h |
+| 2026-10-21 | Mié | 0 |
+| 2026-10-22 | Jue | 2 h |
+| 2026-10-23 | Vie | 5 h |
+| 2026-10-24 | Sáb | 8 h |
+| 2026-10-25 | Dom | 0 |
+| 2026-10-26 | Lun | 0 |
+| 2026-10-27 | Mar | 12 h |
+| 2026-10-28 | Mié | 10 h |
+| 2026-10-29 | Jue | 6 h 30 min |
+| 2026-10-30 | Vie | 6 h |
+| 2026-10-31 | Sáb | 13 h |
+| 2026-11-01 | Dom | 5 h 30 min |
+| 2026-11-02 | Lun | 0 |
+| **Total** | | **74 h 10 min** |
+
+</details>
 </details>
 
 # Pseudocódigo del rol de los componentes:
