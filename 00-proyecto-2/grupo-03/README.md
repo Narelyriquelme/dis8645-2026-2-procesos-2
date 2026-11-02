@@ -601,7 +601,7 @@ Como resultado logramos hacer funcionar todo en protoboard, y pudimos modelar la
 ![resultados](./imagenes/resultados-2.png)
 ![resultados](./imagenes/resultados-3.png)
 ![resultados](./imagenes/resultados-4.png)
-![resultados](./gifs/resultados-5.gif)
+![resultados](./gifs/resultado.gif)
 
 ### Aprendizajes
 
