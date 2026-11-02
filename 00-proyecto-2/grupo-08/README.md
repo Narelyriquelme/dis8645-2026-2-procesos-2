@@ -1,7 +1,7 @@
 # Proyecto-02
 *Integrantes*
 
-☆ Vanessa García /
+☆ Vanessa García / <https://github.com/vanessagarciaM>
 
 ☆ Isidora Pérez / <https://github.com/isipm08>
 
@@ -10,7 +10,6 @@
 ☆ Angel Sabogal / <https://github.com/angel-udp>
 
 ## Commodore 64 Ultimate 
-
 El Commodore 64 Ultimate representa el renacimiento de uno de los ordenadores clásicos, siendo una recreación física y fiel de la máquina original. Donde su principal objetivo es ofrecer la misma experiencia nostálgica, recuperando carcasa clásico, pero adaptándola a las necesidades tecnológicas de hoy en día.
 
 Para lograr el parecido a la máquina original, en su interior alberga una placa equipada con un chip AMD Xilinx Artix-7 FPGA, una tecnología que le permite replicar el comportamiento del hardware clásico ciclo a ciclo. Gracias a esto, el equipo alcanza un 99% de compatibilidad con todo el software que se lanzó para el ordenador, al mismo tiempo que incorpora mejoras modernas, como mayor capacidad de memoria y un modo turbo de 48 MHz para optimizar el rendimiento. Finalmente envolviéndose en una carcasa que recupera la estética y esencia clásica del Commodore, integrando interruptores mecánicos Gateron Pro 3.0 de 55 gramos, teclado de 66 teclas y un soporte para macros y tecnología NKRO garantizando escritura fluida.
@@ -22,7 +21,6 @@ Dentro de su sistema operativo incluye las suite GEOS, como el GEOWrite, que fue
 ![alt](./imagenes/commodore-64ultimate.png)
 
 ## Descripción del proyecto
-
 **DORE 8** es un videojuego retro inspirado en la estética del Commodore 64. El proyecto cuenta con una factura técnica desarrollada en C++, luego ejecutada en el microcontrolador Raspberry Pi Pico, tras ser prototipado de forma virtual en la plataforma Wokwi. El relato material sostiene los componentes físicos, tales como: dos perillas, dos botones, una pantalla y buzzer, el cual reproduce música retro y efectos de sonido. Buscando evocar los paneles de control de los microcomputadores en los años ochenta, incluyendo lo físico por parte del jugador con la narraativa digital. El juego tiene como objetivo acompañar y ayudar a un estudiante a llegar a la universidad, superando diferentes desafíos, como recorrer un laberinto para alcanzar la micro, esquivar vehículos durante el trayecto y llegar a su sala de clases. 
 
 En el ámbito visual, adoptamos un estilo de pantallas retro, bloques marcados y delimitados, además de una tipografía geométrica estilo "arcade". Los gráficos se construyen mediante figuras geométricas para optimizar el uso de memoria. Nuestro objetivo es combinar la estética de los videojuegos antiguos con una experiencia interactiva sencilla y entretenida.
@@ -30,11 +28,9 @@ En el ámbito visual, adoptamos un estilo de pantallas retro, bloques marcados y
 Los controles parecen intuitivos, pero al momento de jugar se invierte la usabilidad en momentos clave para simular el estrés y la emoción que se genera el camino a la universidad. En cuanto a estructura, nos centramos en Slides, reforzando la narrativa del sistema de etapas.
 
 ### ¿Por qué Dore 8?
-
 El nombre de nuestro proyecto nace como una síntesis conceptual y un homenaje directo. Este se extrae de la terminación ```commodore``` y el número 8 hace referencia a la ```era de los 8 bits```, ya que este es el período en donde los videojuegos y la informática estaba dominada por consolas y microcomputadores cuyos procesadores manejaba la información en bloques de 8 bits por ciclo. De esta forma encapsulamos de manera general los gráficos con figuras geométricas, sonido y uso de controles mecánicos. Y además porque somos el grupo 08 jaja.
 
 ### Inspiración: La Influencia del Commodore 64
-
 La referencia al Commodore 64 Ultimate se manifiesta en cuatro pilares fundamentales del proyecto:
 
 1. **Estética Gráfica y Lenguaje Visual:** Uso de bloques visuales marcados, bordes delimitados en pantalla y tipografía geométrica estilo monospaciado, emulando el modo de texto y la construcción de sprites característicos de la época de los 8 bits.
@@ -57,7 +53,6 @@ La misión principal del juego es ayudar al estudiante a llegar a la universidad
 - **Slide 5 — Conclusión y reflexión:** Pantalla de cierre que aparece al completar la meta. Muestra el mensaje *«¡Lo lograste!»*, acompañado de una frase reflexiva sobre la resiliencia.
 
 ## Controles e interacciones
-
 | Elemento / interacción | Componente | Especificación | Acción |
 |---|---|---|---|
 | Botón: cambio de escena | Botón pulsador | Momentáneo, 12 × 12 × 7,3 mm | Permite avanzar a la siguiente escena del juego. |
@@ -68,7 +63,6 @@ La misión principal del juego es ayudar al estudiante a llegar a la universidad
 | Visualización del juego | Pantalla LCD TFT | 2,0 pulgadas, controlador ST7789, interfaz SPI, resolución 240 × 320 píxeles, 8 pines | Muestra el entorno del juego, los elementos gráficos y el desarrollo de la partida. |
 
 ## Pseudocódigo
-
 1. Propósito
 El pseudocódigo describe qué decisiones toma el programa, sin depender de la sintaxis exacta de C++. Es una guía para entender el funcionamiento del videojuego y relacionarlo con las funciones reales del archivo main.cpp.
 
@@ -277,19 +271,37 @@ Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLi
 - El sonido no está activo en esta versión; el GPIO GP13 queda reservado para una futura solución con amplificador adecuado.
 - Las frases y textos actuales se mantienen provisionales hasta que el equipo establezca los definitivos.
 
+## Organización del código: Clases
+| Clases/Archivo | Descripción |
+|---|---|
+| **diagram.json** | Definición de los componentes del circuito y sus conexiones. |
+| **Audio.cpp** | Implementación de las funciones encargadas de controlar el sonido del buzzer. |
+| **Audio.h** | Declaración de las funciones y estructuras utilizadas para el control del audio. |
+| **main.cpp** | Archivo principal encargado de inicializar y coordinar el funcionamiento del proyecto. |
+| **AdafruitGFX_Pico.cpp** | Implementación de las funciones gráficas para el manejo de la pantalla. |
+| **AdafruitGFX_Pico.h** | Declaración de las funciones y estructuras gráficas utilizadas. |
+| **Boton.cpp** | Implementación de las funciones encargadas de gestionar los botones. |
+| **Boton.h** | Declaración de las funciones y estructuras utilizadas para controlar los botones. |
+| **FuenteRetro.h** | Definición de una tipografía personalizada de estilo retro. |
+| **PantallaUI.cpp** | Implementación de las funciones que gestionan la interfaz gráfica, mostrando textos y elementos visuales. |
+| **PantallaUI.h** | Declaración de las funciones relacionadas con la interfaz gráfica. |
+| **Perilla.cpp** | Implementación de las funciones encargadas de leer y gestionar los valores de los potenciómetros. |
+| **Perilla.h** | Declaración de las funciones y estructuras utilizadas para controlar los potenciómetros. |
+
 ## Diagramas
 ### Experiencia usuario
 > La experiencia del usuario consiste en interactuar físicamente con el proyecto a través de su carcasa, las perillas y los botones, generando una experiencia de juego dinámica y entretenida. El usuario deberá cumplir distintas misiones, superar desafíos y resolver cada nivel utilizando los controles del dispositivo. Además de la entretención, el juego busca transmitir una reflexión final: aunque el camino para alcanzar una meta pueda presentar dificultades, lo importante es perseverar, seguir intentándolo y confiar en que, con esfuerzo y constancia, es posible llegar hasta el final.
 
-### flujo del juego
+### Flujo del juego
+![alt](./imagenes/juego.jpeg)
 ### Hardware
+![alt](./imagenes/hardware.jpeg)
 ### Software
+![alt](./imagenes/software.jpeg)
 ## Esquemático
-
 ![imagen](imagenes/esquematico.png)
 
 ### Tabla de materiales
-
 |Componente|Cantidad|Precio|Link|
 |---|---|---|---|
 |Raspberry Pi Pico|1|$14.990|<https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers>|
@@ -303,7 +315,6 @@ Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLi
 |Cable USB-C|1| $1.800|<https://altronics.cl/cable-usb-tipo-c-datos-alimentacion>|
 
 ## Pruebas y error
-
 Durante el desarrollo de DORE 8 fuimos realizando diferentes pruebas en Wokwi para comprobar que los componentes y el código funcionaran correctamente. Al principio comenzamos con un proyecto vacío, donde incorporamos la Raspberry Pi Pico, una pantalla, dos potenciómetros, dos botones, un buzzer y un LED. Realizamos las conexiones manualmente, siguiendo la distribución que queríamos para nuestro prototipo.
 
 Una de las primeras pruebas fue comprobar el funcionamiento del sonido, ya que queríamos que el videojuego tuviera música retro de fondo y efectos sonoros. Para esto trabajamos con una clase llamada Audio, utilizando C++ y Pico SDK, sin Arduino. También probamos las perillas para verificar que permitieran mover un objeto en la pantalla y que los botones respondieran correctamente.
@@ -319,7 +330,6 @@ Otra dificultad que encontramos fue durante la prueba del nivel de la micro. Not
 Estas pruebas nos ayudaron a identificar aspectos que debíamos mejorar, tanto en el funcionamiento del código como en la experiencia del jugador. También nos permitieron entender la importancia de probar cada componente por separado antes de integrarlo al videojuego completo.
 
 ## Aciertos 
-
 Uno de los principales aciertos durante el desarrollo de DORE 8 fue comenzar probando los componentes de manera individual antes de trabajar en el videojuego completo. Esto nos permitió comprobar que las perillas, los botones, la pantalla, el buzzer y el LED funcionaran correctamente, facilitando la identificación de errores.
 
 Otro acierto fue utilizar C++ con Pico SDK, ya que era uno de los requisitos del proyecto. También decidimos trabajar con clases para mantener el código organizado y poder reutilizar algunas de las desarrolladas anteriormente, como las de las perillas y los botones.
@@ -334,15 +344,16 @@ También fue importante identificar que algunos elementos necesitaban ajustes, c
 
 En general, consideramos que uno de nuestros mayores aciertos fue avanzar de manera progresiva, probando, identificando errores y realizando modificaciones. Gracias a este proceso logramos pasar de un circuito básico en Wokwi a un prototipo de videojuego que integra gráficos, controles, música y diferentes desafíos.
 
-## Carcasa 
+## Proceso
+![alt](./imagenes/proceso.png)
 
+## Carcasa 
 La carcasa la realizamos en impresión 3D, realizando bocetos previos, quisimos enfocarnos en la forma del commodore, en donde, de acuerdo a nuestro juego y objetivo del proyecto 02, adaptamos los botones y perillas para que se pudiese realizar el juego de manera cómoda.
 
 ## Documentación IA
 
 
 ## Bibliografía
-
 https://commodore.net/computer/ 
 
 https://www.commodore.ca/commodore-history/chronological-history-of-commodore-computer/?utm
