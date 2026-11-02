@@ -20,9 +20,11 @@ Se distribuye bajo la licencia [Creative Commons Atribución-CompartirIgual 4.0 
 
 ## Concepto
 
-Se plantea que el sonido de un computador está condicionado por la tecnología de su época, desde los chips de síntesis que generaban melodías y efectos electrónicos hasta la incorporación de audio digital y música grabada.
+Para elegir el computador, quisimos partir de una premisas: un sistema que permitiera ejecutar videojuegos. A partir de esto, decidimos centrarnos en el sonido y en cómo sus posibilidades de reproducción y volumen fueron evolucionando a lo largo del tiempo.
 
-A partir de esta exploración, surge la pregunta: ¿cómo ha evolucionado el sonido de los videojuegos a medida que cambian las capacidades tecnológicas de los computadores? El proyecto busca reconocer estas transformaciones y comprender cómo las características sonoras permiten identificar distintas etapas.
+Para delimitar la exploración, elegimos Japón como contexto de estudio, debido a su importante desarrollo en la industria de los videojuegos y la tecnología computacional. Dentro de este contexto, seleccionamos el Sharp X68000 como caso de estudio y punto de referencia central para analizar la evolución del sonido en los videojuegos.
+
+Asi surge la pregunta: ¿cómo ha evolucionado el sonido de los videojuegos a medida que cambian las capacidades tecnológicas de los computadores? El proyecto busca reconocer estas transformaciones y comprender cómo las características sonoras permiten identificar distintas etapas.
 
 La evolución del sonido y la música en los videojuegos japoneses ha transitado desde los simples tonos monofónicos de los arcades y consolas de 8 bits hasta complejas bandas sonoras dinámicas e integradas con tecnología binaural y orquestal.
 
@@ -34,7 +36,7 @@ Era del CD-ROM y 32 bits (Mediados de los 90): Con la llegada de soportes como l
 
 Era moderna y el sonido interactivo (Siglo XXI - Presente): La música y los efectos dejaron de ser simples archivos lineales para volverse adaptativos y dinámicos, reaccionando en tiempo real a las acciones del jugador, la exploración o el combate. Además, géneros como el jazz, la música electrónica y fusiones culturales pasaron a ser sellos distintivos en sagas como Persona o Sonic the Hedgehog
 
-<br>
+
 
 ### Inspiración - Sharp X68000
 
