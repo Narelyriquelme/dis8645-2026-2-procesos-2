@@ -401,6 +401,7 @@ void leer
 <details>
 
 ![proceso1](./imagenes/proceso1.png)
+![proceso2](./imagenes/proceso2.png)
  
 ---
 </details>
