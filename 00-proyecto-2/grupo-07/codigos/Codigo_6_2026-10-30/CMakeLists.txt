@@ -5,8 +5,8 @@ project(trazo C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 pico_sdk_init()
-# Código 7: agregamos Pantallita.cpp a la lista de archivos que se compilan.
-add_executable(trazo main.cpp Perilla.cpp BotonGrupo1.cpp Pantallita.cpp ssd1306.c)
+# Código 5: compilamos las perillas, botones y el controlador de la pantalla.
+add_executable(trazo main.cpp Perilla.cpp BotonGrupo1.cpp ssd1306.c)
 target_include_directories(trazo PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 target_link_libraries(trazo pico_stdlib hardware_adc hardware_i2c)
 pico_enable_stdio_uart(trazo 1)
