@@ -72,13 +72,11 @@ El juego cuenta con tres niveles, que se eligen desde el menú con el segundo bo
 
 </details>
 
-## El nacimiento
+## La idea
 
 <details>
 
 ![génesis](./imagenes/genesis.jpeg)
-![niveles](./imagenes/niveles.gif)
-![pierde](./imagenes/pierde.gif)
     
 </details>
 </details>
@@ -455,7 +453,7 @@ void leer
 # Esquemático 
     
  <details>
-![Esquematico](.esquematicos/altiro-hero/vista-previa.png)
+![Esquematico](./imegenes/vista-previa.png)
  </details>
  
 # Simulación digital en wokwi
