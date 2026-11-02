@@ -10,6 +10,8 @@ Durante esta clase nos enfocamos en terminar las partes que aún estaban pendien
 
 Durante la semana también había avanzado el esquemático en KiCad, considerando los componentes que habíamos definido para el proyecto. 
 
+![IMG1](./imagenes/esquematico.png/)
+
 ### BOM: Lista de componentes
 
 | **Control / Elemento** | **Componente** | **Especificación** | **Acción** |
@@ -30,10 +32,17 @@ Algo que me preocupaba era que las partes más complejas, especialmente el juego
 
 Con el código funcionando en Wokwi, comenzamos a llevarlo a los componentes físicos. Armé la protoboard, pero en el primer intento no conseguimos que funcionara. Seba nos aconsejó comenzar nuevamente desde cero y me ayudó a ordenar mejor las conexiones, mientras Mai y Cata continuaban revisando el código y Marce terminaba el diseño de la carcasa para impresión 3D.
 
+![IMG2](./imagenes/componentes.png/)
+
+![IMG3](./imagenes/componentes2.png/)
+
 - Después de reorganizar la protoboard, conseguimos conectar los componentes al código, pero todavía teníamos problemas con la pantalla OLED. Tuvimos que realizar algunos ajustes en el código hasta conseguir que funcionara correctamente.
+  
 - También detectamos que las perillas eran demasiado sensibles, por lo que las reemplazamos por otros potenciómetros. El LED tampoco encendía debido a una equivocación en los pines definidos en el código, que finalmente corregimos.
 
 Una vez solucionados estos detalles, pudimos probar el funcionamiento completo de la máquina y comprobar que los modos, las perillas, los botones, la pantalla y el LED respondían correctamente. Fue un momento importante porque conseguimos integrar todas las partes que habíamos trabajado por separado.
+
+![IMG3](./imagenes/soldadura.png/)
 
 ## Armado de la carcasa y cierre
 
@@ -42,6 +51,13 @@ Para finalizar, comenzamos a preparar el montaje de los componentes dentro de la
 Intentamos preparar las extensiones de los componentes, soldar las conexiones y ajustarlas a la carcasa, pero algunas medidas no coincidían y ya no teníamos material suficiente para corregirlas. Por este motivo, decidimos presentar el proyecto con el modelado 3D de la carcasa, aunque nos habría encantado mostrar el prototipo completamente armado.
 
 Reflexión: Pensé que esta etapa sería mucho más complicada, especialmente por la cantidad de código que faltaba y los problemas que podían aparecer al conectar los componentes físicos. Sin embargo, logramos resolverlos trabajando en equipo, distribuyendo las tareas y ayudándonos entre todas. Me quedé muy orgullosa de haber conseguido que el código funcionara completamente, aunque nos faltó tiempo para ver el resultado final dentro de la carcasa.
+
+![IMG4](./imagenes/carcasa1.png/)
+
+![IMG5](./imagenes/carcasa2.png/)
+
+![IMG6](./imagenes/carcasa3.png/)
+
 
 ## encargos
 
