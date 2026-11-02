@@ -143,6 +143,7 @@ Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y
 | Botón selector | GP21 (a GND, con pull-up interno) |
 
 ![seleccionar](./videos/seleccionar.gif)
+![escribir](./videos/escribir.gif)
 ![borrar](./videos/borrar.gif)
 ![buscar](./videos/buscar.gif) 
 
