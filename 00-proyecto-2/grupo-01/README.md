@@ -60,6 +60,26 @@ https://xvgmradio.com/episode-119-the-sounds-of-the-sharp-x68000/
 
 La elección de cinco sonidos responde a la intención de representar distintas transformaciones tecnológicas en la historia del audio de los videojuegos. Cada sonido corresponde a una etapa que permite reconocer cómo evolucionaron la generación, síntesis y reproducción del sonido, desde los primeros tonos electrónicos hasta el audio digital. 
 
+### sonido 0
+
+fecha:
+
+### sonido 1
+
+fecha:
+
+### sonido 2
+
+fecha:
+
+### sonido 3
+
+fecha:
+
+### sonido 4
+
+fecha:
+
 ## Presentación del Proyecto
 
 **Implementación física**: Este proyecto se presentará en formato de prototipo funcional en protoboard con carcasa. 
