@@ -424,12 +424,22 @@ void leer
 ---
 </details>
 
+# Prompt y Cluade
+
+<details>
+</details>
+
 # Agradecimientos
+
+<details>
+ 
 - Camila Delgado: por su disposición, asesoría y atención para con las impresiones 3d, el equipo, y mantener el LID súper ordenado siempre.
 - Camila Ramirez: Porque en medio de una conversación nos ayudo a aterrizar la idea del proyecto 
 - Camila Parada: Por prestarnos el filamento de impresión **trans**parente 
 - Vania Paredes (sleye) y Caro alegria: Por donarnos filamentos para pruebas.
 - El LID: Por las impresoras 3D, el wifi, los cautines, el espacio, la comodidad, y las herramientas necesarias para la creación tangible de nuestro proyecto.
+
+</details>
 
 # Referentes
 
