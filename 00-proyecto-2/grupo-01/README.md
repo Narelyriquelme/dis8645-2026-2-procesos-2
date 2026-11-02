@@ -276,9 +276,8 @@ Todas comienzan con la pregunta ¿que pasa si...
 | Imagen 13 | Imagen 14 | Imagen 15 | Imagen 16 |
 | ![13](./imagenes/carcasa13.jpg) | ![14](./imagenes/carcasa14.jpg) | ![15](./imagenes/carcasa15.jpg) | ![16](./imagenes/carcasa16.jpg) | 
 | Imagen 17 | Imagen 18 | Imagen 19 | Imagen 20 |
-| ![17](./imagenes/carcasa17.png) | ![18](./imagenes/carcasa18.jpg) | ![19](./imagenes/carcasa19.png) | [![Ver el video](https://youtube.com/shorts/KGOoIZoSN1o)](https://youtube.com/shorts/KGOoIZoSN1o) |
-| [![Ver el video](https://youtu.be/gKS3x0eWUlA)](https://youtu.be/gKS3x0eWUlA) | [![Ver el video](https://youtu.be/3ZkmGP23_4A)](https://youtu.be/3ZkmGP23_4A) | [![Ver el video](https://youtube.com/shorts/kHsovLrT-w8?feature=share)](https://youtube.com/shorts/kHsovLrT-w8?feature=share)
-
+| ![17](./imagenes/carcasa17.png) | ![18](./imagenes/carcasa18.jpg) | ![19](./imagenes/carcasa19.png) | [![Ver el video](./imagenes/test00.png)](https://youtube.com/shorts/KGOoIZoSN1o) |
+| [![Ver el video](./imagenes/test00.png)](https://youtu.be/gKS3x0eWUlA) | [![Ver el video](./imagenes/test00.png)](https://youtu.be/3ZkmGP23_4A) | [![Ver el video](./imagenes/test00.png)](https://youtube.com/shorts/kHsovLrT-w8?feature=share)
 
 <br>
 
@@ -385,6 +384,8 @@ Para lograr introducir cualquier sonido para reproducir en nuestra Raspi
 ![class audio](./imagenes/sc-22.png)
 
 ![class audio](./imagenes/sc-24.png)
+
+##### 
 
 - nombrar el formato que debe tener el archivo
 - como cargarlo
