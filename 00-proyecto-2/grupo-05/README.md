@@ -35,7 +35,7 @@
    - Botones
    - Perillas
 - Esquemático
-- Construcción en Wokwi
+- Simulación digital en wokwi
 - Construcción tangible de Altiro hero
    - Circuito
    - Carcasa
@@ -416,7 +416,7 @@ void leer
  <details>
  </details>
  
-# Construcción en Wokwi
+# Simulación digital en wokwi
 
 <details>
  </details>
