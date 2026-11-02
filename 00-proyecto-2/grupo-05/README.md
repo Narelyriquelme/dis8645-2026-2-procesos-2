@@ -9,6 +9,9 @@
 
  <br>
 
+**Principios de diseño**
+- Fuente abierta
+
  **Entregables:**   
  - *Simulación digital en wokwi*
  - *Prototipo físico tangible de altiro hero*
