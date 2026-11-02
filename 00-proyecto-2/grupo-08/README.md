@@ -1,7 +1,7 @@
 # Proyecto-02
 *Integrantes*
 
-☆ Vanessa García /
+☆ Vanessa García / <https://github.com/vanessagarciaM>
 
 ☆ Isidora Pérez / <https://github.com/isipm08>
 
