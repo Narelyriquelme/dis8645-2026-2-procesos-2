@@ -58,67 +58,6 @@ El caso del regreso de Steve Jobs a Apple parece muy interesante para analizar. 
 
 El iMac G3 revolucionó el lenguaje visual de la época. Pasar del clásico bloque beige sobrio e industrial a un volumen orgánico con carcasa translúcida fue una jugada genial: no solo aplicaron el concepto de "honestidad del objeto" al mostrar los componentes internos y su forma terminaron creando una conexión emocional con el usuario. Además, en la parte funcional se arriesgaron muchísimo al eliminar la disquetera y apostar por completo por los puertos USB y Ethernet, anticipándose a lo que venía con internet.
 
-# Atributos/Metodos/Constructores 
-
- ```cpp
-//constructor del botón
-//boton1:
-//botón seleccionador
-//boton2: 
-//botón de Movimiento
-
-//métodos del botón
-//boton1:
-//puede encender
-//puede apagar
-//puede seleccionar
-//tiempo de antirrebote 
-//boton2:
-//puede subir - se mueve en el eje y
-// mientras no se aprieta, el personaje cae 
-
-//atributos del botón
-//boton1:
-// noPresionado a estaSiendoPresionado
-//está presionado por 2sg
-//tiempoParaMantener (2000ms) 
-//está encendido
-//está apagado
-//está presionado por menos de 2sg
-//está seleccionando una opción
-
-//boton2:
-// noPresionado a estaSiendoPresionado
-//está presionado 
-//constructor de las perillas
-//perilla1:
-//perilla seleccionadora de 4 personajes
-//número de patita, deduce a qué canal del lector analógico 
-//perilla2: 
-//Encargada de regular la velocidad del mapa / juego 
-//Recibe el número del pin físico al que está conectada esta perilla 
-
-
-//métodos de la perilla
-//perilla1:
-//Divide el rango total del potenciómetro entre el número de personajes. 
-//calcular el tamaño que le toca a cada personaje en el giro. 
-//Determina en qué "casilla" cae la lectura filtrada actual. 
-//perilla2:
-//Toma la lectura filtrada interna 
-//Cuando la perilla está al mínimo (0.0), el mapa avanza a la velocidad mínima (por ejemplo, 20 píxeles por segundo). 
-//Cuando la perilla está al máximo (1.0), el mapa avanza a la velocidad máxima (por ejemplo, 90 píxeles por segundo).
-//En cualquier punto intermedio, calcula la velocidad proporcional exacta para acelerar o frenar el avance del escenario suavemente.
-
-//atributos de la perilla
-//perilla1:
-//Para recordar en qué patita físicamente está conectada la perilla y qué canal del lector analógico le toca consultar. 
-//Un entero que recuerde qué opción (0, 1, 2 o 3) estaba seleccionada en la última comprobación.    
-//perilla2:
-//Un número entero que almacena la posición física limpia de la perilla tras procesar la señal del convertidor 
-
- ```
-
 # Materiales 
 | Componentes | Cantidad | Precio unitario | Link |
 | --- | --- | --- | --- |
@@ -147,6 +86,7 @@ Proyecto simulado en [Wokwi](https://wokwi.com) con una **Raspberry Pi Pico**, u
 | `3V3` | 36 | OLED, perillas y riel `+` de la protoboard | Alimentación 3,3 V |
 | `GND` | varios | OLED, perillas y riel `-` de la protoboard | Tierra |
 
+# Código 
 
 ---
 
@@ -454,7 +394,9 @@ flowchart TD
 
 # Botones Grupo 05
 
-Cuando comenzamos trabajando con los botones del grupo 05 presentamos varios problemas ( detalles más adelante). Ya solucionados los problemas, el grupo 5 cambió las funcionalidades de cada botón, por lo que nos toca cambiar y adaptar lo que ya tenemos para que los botones funcionen. La distribución cambió de la siguiente manera: 
+Para comenzar a trabajar en la clase botón de nuestros compañeros, ordenamos las especificaciones e instrucciones que nos compartieron acerca de su trabajo, las cuales ya estaban inicialmente muy ordenadas y detalladas en un pseudocódigo para poder desarrollar el proyecto. Llevamos a Claude todas estas indicaciones especificando nuestro método de trabajo, lenguaje de programación y más detalles acerca del tipo de código que buscábamos obtener, especificando que se separaría en clases, en varios archivos .h y .cpp para mantener la estructura esperada. 
+
+Cuando comenzamos trabajando con los botones del grupo 05 presentamos varios problemas (detalles más adelante). Ya solucionados los problemas, el grupo 5 cambió las funcionalidades de cada botón, por lo que nos toca cambiar y adaptar lo que ya tenemos para que los botones funcionen. La distribución cambió de la siguiente manera: 
 
 Botón 1: Su función es cambiar de nivel 1>2>3 y seleccionar con un doble clic con un tiempo límite entre clicks de 0.6ms —--> su función es cambiar de nivel 1>2>3 y al recibir un cuarto clic, se reinicia el ciclo volviendo al nivel 1 
 
@@ -466,7 +408,7 @@ Al quitar estos archivos, se adaptó el main, quitando las condicionales if que 
 
 ---
 
-**Problemas en el trabajo**
+**Problemas en el trabajo botones grupo 05**
 
 Al entregar la primera versión de los botones antes de los cambios de grupo 05, aparecia un error que no permitía iniciar la simulación:
 
@@ -516,6 +458,7 @@ a
 Como grupo se decidio entregar el proyecto de manera digital todo el proceso de los codígos, igualmente se genero un modelado 3D en Rhino 8 de la carcasa del proyecto, adaptando el modelo a las piezas reales que se deseaban trabajar
 ![render](./imagenes/render-proyecto-dos.png)
 ![render](./imagenes/render-proyecto-dos-dos.png)
+![render](./imagenes/personajes-proyecto.png)
 
 
 # Bibliografia
