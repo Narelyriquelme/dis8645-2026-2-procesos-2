@@ -48,6 +48,34 @@
       "left": -278.95,
       "rotate": 270,
       "attrs": { "value": "10000" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 19.2,
+      "left": -374.4,
+      "attrs": { "text": "Dibujar / Mover" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 76.8,
+      "left": -364.8,
+      "attrs": { "text": "Borrar" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": -19.2,
+      "left": 67.2,
+      "attrs": { "text": "Vertical" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": 86.4,
+      "left": 67.2,
+      "attrs": { "text": "Horizontal" }
     }
   ],
   "connections": [
