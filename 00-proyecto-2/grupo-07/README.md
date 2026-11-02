@@ -391,13 +391,11 @@ El recorrido completo está en el [diagrama de flujo del usuario](#diagrama-de-f
 - Raspberry Pi. *Pico SDK*. https://github.com/raspberrypi/pico-sdk
 - Wokwi. *SSD1306 OLED*. https://docs.wokwi.com/parts/board-ssd1306
 - daschr. *pico-ssd1306*. https://github.com/daschr/pico-ssd1306
-- piruetasxyz. *Perilla*. https://github.com/piruetasxyz/Perilla (repositorio del profesor sobre perilla y encoder).
+- piruetasxyz. *Perilla*. https://github.com/piruetasxyz/Perilla (repositorio del profesor sobre perilla y encoder cumpliendo ambas funciones en una sola clase).
 - disenoUDP. *mi-primer-esquematico*. https://github.com/disenoUDP/mi-primer-esquematico (apunte de la sesión 09a, base de nuestro esquemático).
 - KiCad EDA. *KiCad 10*. https://www.kicad.org/
 - Grupo 1 (Camila Ramírez, Bianka Vilchez y Dayana Pañitrur). *BotonGrupo1*, en [`00-proyecto-2/grupo-01`](../grupo-01/).
 - disenoUDP. *dis8645-2026-2-procesos-2*, repositorio del curso (sesión 08a: ejemplo de perilla con potenciómetro). https://github.com/disenoUDP/dis8645-2026-2-procesos-2
-- Material docente de Procesos.
-- Registro de avances y versiones de TRAZO.
 
 ## 13. Registro de uso de IA
 
