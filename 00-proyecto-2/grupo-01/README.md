@@ -38,6 +38,8 @@ Era moderna y el sonido interactivo (Siglo XXI - Presente): La música y los efe
 
 ### Inspiración - Sharp X68000
 
+![bleep-drum](./imagenes/sharp-x68000.jpg)
+
 El proyecto consiste en un dispositivo sonoro inspirado en las configuraciones y el sistema del computador Sharp X68000. La interacción se realizará mediante dos botones y dos perillas, cada uno con una función específica para seleccionar, reproducir y controlar los sonidos.
 
 Otro aspecto interesante reside en las opciones de personalización. Sharp X68000 se puede ampliar gracias a sus puertos, permitiendo añadir cosas como un sintetizador MIDI Roland MT32 para mejorar las melodías del chip Yamaha YM2151 que trae de serie
