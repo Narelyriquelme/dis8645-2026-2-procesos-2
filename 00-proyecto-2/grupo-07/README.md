@@ -9,290 +9,190 @@
 - Carlo Martínez [@zaaaiko](https://github.com/zaaaiko)
 - Natalia Pilar [@sz-mada](https://github.com/sz-mada)
 
-## Descripción del proyecto
+## 01. ¿Qué es TRAZO?
 
-### 01. ¿Qué es TRAZO?
+TRAZO es una máquina de dibujo digital que funciona mediante dos perillas. La idea es poder crear dibujos sobre una pantalla, pero en lugar de utilizar un mouse o un lápiz digital, los trazos se forman a partir del movimiento de estos controles.
 
-TRAZO es un proyecto de dibujo digital que funciona a través de dos perillas. La idea es que podamos crear dibujos en una pantalla, pero en vez de utilizar un mouse o un lápiz digital, los trazos se van formando a partir del movimiento de estos controles.
+Para desarrollarlo utilizamos una Raspberry Pi Pico, dos potenciómetros, dos botones y una pantalla OLED de 128 × 64 píxeles.
 
-Para hacerlo utilizamos dos potenciómetros, una Raspberry Pi Pico y una pantalla. Cada potenciómetro controla un eje diferente: uno mueve el cursor de forma horizontal (X) y el otro de forma vertical (Y).
+Cada potenciómetro controla un eje diferente: uno permite mover el cursor horizontalmente (X) y el otro verticalmente (Y).
 
-Al girar las perillas podemos ir cambiando la posición del cursor y, al activar el dibujo, generar líneas que siguen ese recorrido.
+Además, incorporamos dos estados: **MOVER**, que permite desplazarnos sin dejar marcas, y **DIBUJAR**, que conecta las posiciones del cursor para crear líneas. Un segundo botón permite borrar el dibujo y comenzar nuevamente.
 
-Además, incorporamos dos modos: MOVER, que permite desplazarnos por la pantalla sin dibujar, y DIBUJAR, que conecta las posiciones del cursor para formar los trazos. También tenemos un botón para borrar y comenzar de nuevo.
+Lo que nos interesa es experimentar con una forma distinta de dibujar, donde debemos coordinar dos movimientos independientes para construir una imagen.
 
-Lo que nos interesa de TRAZO es experimentar con otra manera de dibujar. Estamos acostumbradas a utilizar herramientas que siguen directamente los movimientos de nuestra mano, pero aquí tenemos que coordinar dos perillas para lograr el recorrido que queremos.
 
-Esto hace que el proceso sea distinto, porque no se trata solamente del dibujo que aparece en pantalla, sino también de cómo llegamos a hacerlo.
+## 02. Investigación y referente: MacPaint (1984)
 
-### 02. ¿De dónde nace la idea?
+<img src="./imagenes/CREADORES.jpg" alt="Creadores" width="300">
 
-Para comenzar con el proyecto nos pusimos a investigar distintas formas de dibujar digitalmente y cómo los dispositivos pueden interpretar movimientos físicos para transformarlos en imágenes.
+Nuestra investigación comenzó explorando cómo los dispositivos digitales transforman movimientos físicos en representaciones gráficas.
 
-Dentro de esta búsqueda encontramos MacPaint, un programa de dibujo que Apple lanzó en 1984 junto con el primer Macintosh.
+Dentro de esta búsqueda encontramos **MacPaint**, un programa desarrollado por Bill Atkinson y lanzado por Apple en 1984 junto al primer Macintosh.
 
-Nos llamó la atención porque, aunque actualmente estamos muy acostumbradas a dibujar en computadores, en ese momento poder hacerlo directamente con un mouse era algo bastante novedoso.
+MacPaint permitía dibujar mediante un mouse, utilizando herramientas como lápices, pinceles, borradores y figuras geométricas. Su lenguaje visual estaba basado en píxeles y representaciones en blanco y negro.
 
-Nos interesó especialmente entender cómo funcionaba: la persona movía el mouse y ese movimiento podía convertirse en una línea dentro de la pantalla.
+También utilizaba QuickDraw, un sistema gráfico que permitía representar elementos visuales en pantalla.
 
-A partir de eso comenzamos a pensar cómo podríamos hacer algo parecido, pero cambiando la forma de interactuar con el dispositivo.
+<img src="./imagenes/interior.png" alt="Interior" width="300">
 
-En lugar de utilizar un mouse, quisimos probar qué pasaría si el dibujo dependiera de dos movimientos de rotación.
+Lo que más nos interesó fue comprender cómo el movimiento del mouse podía convertirse en una línea digital.
 
-Así llegamos a los potenciómetros, que nos permitían controlar dos coordenadas distintas y utilizarlas para generar trazos en una pantalla.
+De este referente rescatamos:
 
-De esta manera comenzamos a desarrollar TRAZO, tomando como referencia la relación entre el movimiento físico y el dibujo digital, pero explorándola a través de controles diferentes.
+- **El movimiento convertido en dibujo:** una acción física que genera una representación gráfica.
+- **La simplicidad:** controles y herramientas fáciles de comprender.
+- **La experimentación:** dibujar, equivocarse, borrar y volver a comenzar.
+- **La respuesta visual:** observar el resultado mientras interactuamos.
 
-### 03. Nuestro referente: MacPaint (1984)
+En TRAZO reinterpretamos estos principios reemplazando el mouse por dos potenciómetros.
 
-MacPaint fue un programa de dibujo digital desarrollado por Bill Atkinson y lanzado por Apple en enero de 1984, junto con el primer computador Macintosh.
+<img src="./imagenes/macpaint.webp" alt="MacPaint" width="300">
 
-En esa época los computadores no funcionaban de la misma manera en que los conocemos hoy. Muchas interacciones todavía dependían de escribir comandos, por lo que comenzar a utilizar interfaces gráficas y dispositivos como el mouse permitió que las personas interactuaran con ellos de una manera mucho más visual.
+## 03. ¿Cómo llevamos la idea a TRAZO?
 
-MacPaint fue uno de los programas que ayudó a mostrar estas posibilidades, permitiendo dibujar directamente sobre una pantalla.
+Para transformar el movimiento de las perillas en dibujo, utilizamos los valores analógicos de dos potenciómetros.
 
-Tenía herramientas como lápices, pinceles, borradores, figuras geométricas y diferentes patrones en blanco y negro.
+Al girarlos, cambia el voltaje que recibe la Raspberry Pi Pico. El programa interpreta estos valores y los convierte en coordenadas dentro de la pantalla.
 
-Aunque ahora parecen herramientas bastante básicas, nos pareció interesante pensar que muchas de las funciones que utilizamos actualmente en programas de dibujo ya estaban presentes en MacPaint.
+El funcionamiento se organiza en cuatro etapas:
 
-Lo importante era que no necesitabas saber programar para generar una imagen. Podías seleccionar una herramienta, mover el mouse y comenzar a dibujar.
+1. **Entrada:** movimiento de las perillas y pulsaciones de botones.
+2. **Lectura:** la Raspberry Pi Pico recibe los valores.
+3. **Procesamiento:** el código calcula coordenadas y determina qué acción realizar.
+4. **Salida:** la pantalla representa el cursor, los trazos y el estado.
 
-#### 3.1. ¿Cómo nació MacPaint?
+La diferencia principal con MacPaint es que el movimiento no depende de una sola herramienta, sino de la coordinación de dos ejes independientes.
 
-MacPaint fue desarrollado por Bill Atkinson, quien ya había trabajado en sistemas gráficos para los computadores de Apple.
+## 04. Componentes y circuito
 
-Antes de MacPaint, Atkinson había participado en el desarrollo de herramientas gráficas para Lisa, otro computador de la empresa.
+| Componente | Función |
+|---|---|
+| Raspberry Pi Pico | Procesar las entradas y ejecutar el programa. |
+| Dos potenciómetros | Controlar los ejes X e Y. |
+| Pantalla OLED SSD1306 | Mostrar cursor, líneas y estado. |
+| Botón TRAZO | Alternar MOVER y DIBUJAR. |
+| Botón BORRAR | Limpiar el dibujo. |
 
-En febrero de 1983 comenzó a trabajar en MacPaint para el Macintosh.
+**Conexiones utilizadas:**
 
-Algo que nos pareció interesante es que su desarrollo no estuvo enfocado solamente en tener muchas herramientas, sino en que el programa fuera sencillo y entretenido de utilizar.
+- Perilla X: GP26.
+- Perilla Y: GP27.
+- Botón TRAZO: GP14.
+- Botón BORRAR: GP15.
+- OLED: SDA GP4 y SCL GP5.
 
-Según los relatos de Andy Hertzfeld, integrante del equipo original del Macintosh, Atkinson prefería desarrollar una aplicación intuitiva que permitiera dibujar libremente, en lugar de una herramienta demasiado compleja.
+**[IMAGEN: KICAD]**
 
-El programa estuvo terminado en octubre de 1983 y llegó al público en enero de 1984.
+https://wokwi.com/projects/479331745306537985
 
-Nos parece interesante este proceso porque muestra cómo, a partir de explorar nuevas tecnologías, pueden aparecer formas diferentes de hacer actividades que ya conocíamos, como dibujar.
+## 05. Investigación de bibliotecas
 
-### 04. ¿Cómo funcionaba MacPaint?
+Durante el proceso investigamos bibliotecas que nos permitieran controlar los componentes electrónicos sin tener que programar todas sus funciones desde cero.
 
-MacPaint trabajaba con un sistema llamado *bitmap*, donde las imágenes estaban formadas por pequeños puntos llamados píxeles.
+Inicialmente revisamos **Adafruit SSD1306 y Adafruit GFX**, utilizadas para trabajar con pantallas y elementos gráficos.
 
-En el Macintosh original estos píxeles se representaban en blanco y negro.
+Sin embargo, nuestro proyecto utiliza C++ con Pico SDK, por lo que necesitábamos herramientas compatibles con ese entorno.
 
-El funcionamiento era bastante sencillo de entender. Al mover el mouse, el computador registraba ese movimiento y actualizaba la posición del cursor en pantalla.
+Finalmente trabajamos con:
 
-Si la persona seleccionaba la herramienta de lápiz y mantenía presionado el botón del mouse mientras lo movía, el programa transformaba ese recorrido en una línea.
+| Biblioteca o módulo | Función |
+|---|---|
+| `pico/stdlib.h` | Funciones generales del programa. |
+| `hardware/adc.h` | Lectura de los potenciómetros. |
+| `hardware/i2c.h` | Comunicación con la OLED. |
+| `pico-ssd1306` | Control de la pantalla y representación gráfica. |
 
-Esto ocurría a través de cuatro etapas:
+Esta investigación nos permitió comprender que las bibliotecas deben seleccionarse según su compatibilidad y las necesidades reales del proyecto.
 
-1. **Movimiento:** la persona desplazaba el mouse.
-2. **Lectura:** el computador recibía la información del movimiento y los botones.
-3. **Procesamiento:** el programa interpretaba esos datos según la herramienta seleccionada.
-4. **Resultado:** el dibujo aparecía en la pantalla.
+## 06. Proceso de programación
 
-También utilizaba QuickDraw, un sistema gráfico desarrollado por Atkinson que permitía representar elementos visuales en la pantalla del Macintosh.
+Desarrollamos TRAZO mediante diferentes versiones para comprender cada parte del funcionamiento antes de integrarlas.
 
-Lo que nos pareció más interesante de todo esto fue entender que el dibujo digital funciona a partir de información que el computador interpreta.
+| Código | Avance principal |
+|---|---|
+| **1** | Planificamos el funcionamiento mediante comentarios. |
+| **2** | Organizamos la estructura inicial del programa. |
+| **3** | Incorporamos las perillas y estudiamos un error de conversión ADC. |
+| **4** | Corregimos la conversión de valores analógicos. |
+| **5** | Integramos los botones recibidos y las funciones de dibujo. |
+| **6** | Reorganizamos el programa y trabajamos con la pantalla integrada en `main.cpp`. |
+| **7** | Creamos una clase independiente para administrar la pantalla. |
 
-En otras palabras, el mouse no está dibujando directamente sobre la pantalla, sino que el programa recibe datos, los procesa y genera una representación visual.
+### Corrección de los Códigos 3 y 4
 
-Esa fue una de las ideas que más nos sirvió para empezar a pensar TRAZO.
+En el Código 3 introdujimos intencionalmente un error de división entera para estudiar cómo afectaba la conversión de los valores analógicos.
 
-### 05. ¿Qué rescatamos de MacPaint?
+Al dividir antes de multiplicar, se perdía la parte decimal y el cursor no podía representar correctamente las posiciones intermedias.
 
-Después de investigar su funcionamiento, identificamos algunas características que queríamos rescatar para nuestro proyecto.
+En el Código 4 corregimos la operación, multiplicando primero y dividiendo después.
 
-#### El movimiento convertido en dibujo
+Esto nos permitió comprender mejor cómo el orden de las operaciones afecta el resultado del programa.
 
-Lo que más nos interesó fue cómo una acción física podía transformarse en una línea digital.
+### Integración del Código 5
 
-En MacPaint esto sucedía al mover el mouse. En TRAZO quisimos probar el mismo principio, pero utilizando el giro de potenciómetros.
+En esta versión incorporamos la clase de botones que recibimos de otro grupo.
 
-#### La simpleza de los controles
+Con esto pudimos reunir las funciones principales: mover el cursor, activar y desactivar el dibujo y borrar los trazos.
 
-Otra cosa que nos gustó fue que MacPaint permitía dibujar sin necesitar demasiados conocimientos técnicos.
+También incorporamos una franja superior para indicar el estado y un sistema de memoria gráfica para conservar los dibujos mientras el cursor se desplaza.
 
-Nosotras también queríamos que TRAZO se entendiera desde la interacción, que una persona pudiera probar las perillas y comenzar a descubrir cómo controlar el dibujo.
+### Cambios del Código 6 al Código 7
 
-#### Poder experimentar libremente
+Uno de los cambios más importantes fue **crear una clase específica para la pantalla: `Pantallita.h` y `Pantallita.cpp`.**
 
-MacPaint no estaba pensado para producir un único tipo de imagen. Permitía probar herramientas, crear formas, equivocarse, borrar y volver a empezar.
+Anteriormente, `main.cpp` contenía tanto las decisiones del programa como gran parte de las instrucciones relacionadas con la pantalla.
 
-En TRAZO también queremos mantener esa posibilidad de experimentar y construir dibujos a partir de los movimientos que vamos realizando.
+Al separar estas responsabilidades, conseguimos organizar mejor el código.
 
-#### La respuesta inmediata
+La nueva clase reúne funciones para:
 
-Nos interesó especialmente que el resultado visual apareciera mientras la persona interactuaba con el dispositivo.
+- Inicializar la pantalla.
+- Limpiar el dibujo.
+- Dibujar líneas.
+- Mostrar el cursor y el estado actual.
 
-Por eso, en TRAZO buscamos que el movimiento de las perillas se refleje en la posición del cursor y que podamos observar cómo se construyen los trazos.
+Así, `main.cpp` queda encargado principalmente de coordinar las entradas, los estados y las acciones.
 
-### 06. ¿Cómo llevamos esto a TRAZO?
+Este cambio nos ayudó a comprender mejor la programación mediante clases y la importancia de mantener cada responsabilidad separada.
 
-Una vez que entendimos el funcionamiento de MacPaint, comenzamos a investigar cómo podíamos aplicar ese principio utilizando los componentes electrónicos del proyecto.
+<img src="./imagenes/codigo6.png" alt="Código 6" width="300">
+<img src="./imagenes/codigo7.png" alt="Código 7" width="300">
 
-Decidimos trabajar con dos potenciómetros porque nos permitían controlar dos valores de manera independiente.
+## 07. Intercambio de clases con el Grupo 1
 
-Un potenciómetro funciona como una resistencia variable. Cuando giramos la perilla, cambia el voltaje de su señal de salida.
+Una parte importante del proyecto fue el intercambio de clases entre grupos.
 
-La Raspberry Pi Pico puede leer esos cambios y transformarlos en valores digitales.
+Nuestro equipo desarrolló una clase para trabajar con perillas, mientras que también recibimos una clase de botones para incorporar a TRAZO.
 
-A partir de estos valores podemos calcular una posición dentro de la pantalla.
+### Adaptación de nuestra clase Perilla
 
-Por ejemplo, cuando giramos el primer potenciómetro cambia la coordenada X y el punto se mueve hacia la izquierda o derecha.
+Inicialmente trabajamos con las clases `Perilla` y `Encoder` por separado.
 
-Cuando giramos el segundo cambia la coordenada Y, moviendo el punto hacia arriba o abajo.
+Sin embargo, al conversar con el **Grupo 1**, nos explicaron que su proyecto necesitaba utilizar un encoder para seleccionar sonidos y un potenciómetro para controlar el volumen.
 
-Al combinar los dos movimientos podemos recorrer diferentes posiciones de la pantalla.
+Además, nos compartieron un repositorio del profesor que nos permitió investigar cómo reunir ambos comportamientos en una sola clase.
 
-Después, utilizando las funciones gráficas del código, podemos conectar esos puntos para generar líneas.
+A partir de esto desarrollamos una segunda versión de `Perilla`, capaz de trabajar con los dos tipos de controles.
 
-Lo interesante es que, a diferencia de MacPaint, no estamos moviendo un mouse libremente sobre una superficie, sino que tenemos que coordinar el giro de dos perillas.
+En TRAZO seguimos utilizando la parte correspondiente a los potenciómetros, mientras que el Grupo 1 necesitaba también las funciones del encoder.
 
-Esto cambia la manera de dibujar y también los tipos de recorridos que podemos hacer.
+Este intercambio nos llevó a adaptar una clase a necesidades diferentes de las de nuestro propio proyecto.
 
-## Proceso
+### Clase de botones recibida
 
-### 07. Componentes que estamos utilizando
+También incorporamos `BotonGrupo1.h` y `BotonGrupo1.cpp`, desarrollados por otro grupo.
 
-Para desarrollar el funcionamiento de TRAZO estamos trabajando con distintos componentes que cumplen funciones específicas dentro del dispositivo.
+Esta clase nos permitió detectar las pulsaciones y controlar el rebote de los botones.
 
-#### Raspberry Pi Pico
+La integración fue importante porque tuvimos que comprender código que no habíamos escrito nosotras y adaptarlo a la estructura de TRAZO.
 
-Es la encargada de recibir la información de los potenciómetros y botones, procesarla mediante el código y controlar lo que aparece en pantalla.
 
-#### Dos potenciómetros
+## 08. Diagramas de flujo
 
-Son nuestros controles principales. Cada uno modifica una coordenada y nos permite mover el cursor dentro de la pantalla.
+Para organizar el funcionamiento desarrollamos dos diagramas: uno que representa la experiencia del usuario y otro que explica las decisiones internas del programa.
 
-#### Pantalla
-
-Es donde podemos ver la posición del cursor y los dibujos que vamos creando.
-
-#### Botón de trazo
-
-Nos permite cambiar entre los modos MOVER y DIBUJAR sin tener que detener el programa.
-
-#### Botón de borrado
-
-Sirve para limpiar la pantalla y empezar un nuevo dibujo.
-
-### 08. Bibliotecas de programación
-
-Una de las cosas que investigamos durante el desarrollo del código fue el uso de bibliotecas.
-
-Las bibliotecas son conjuntos de funciones que otras personas ya han desarrollado y que podemos incorporar a nuestros proyectos.
-
-Esto nos sirve porque no tenemos que programar absolutamente todo desde cero, especialmente cuando trabajamos con componentes como las pantallas.
-
-Por ejemplo, las bibliotecas gráficas pueden incluir funciones para dibujar puntos, líneas y figuras, además de facilitar la comunicación entre la pantalla y el microcontrolador.
-
-Nos interesó trabajar de esta manera porque podemos aprovechar herramientas que ya existen y adaptarlas a lo que necesitamos para TRAZO.
-
-Además, comenzamos a familiarizarnos con el uso de bibliotecas disponibles gratuitamente, como las desarrolladas por Adafruit, y con repositorios de código que permiten investigar cómo funcionan distintos componentes.
-
-#### Bibliotecas del código final
-
-En este apartado debemos incorporar los nombres exactos de las bibliotecas que quedaron en nuestra versión final, explicar brevemente para qué utilizamos cada una y añadir sus enlaces de documentación.
-
-También queremos dejar registro de las primeras opciones que investigamos, para mostrar cómo fuimos eligiendo las herramientas que necesitábamos.
-
-### 09. Primeros códigos y pruebas
-
-Antes de llegar al código final de esta etapa, comenzamos probando cómo podíamos hacer funcionar los componentes y relacionarlos entre sí.
-
-Al principio necesitábamos entender cómo obtener información de los potenciómetros.
-
-La idea era comprobar que, al girar una perilla, pudiéramos obtener un valor que cambiara según su posición.
-
-Después comenzamos a trabajar con esos valores para convertirlos en coordenadas y utilizarlos dentro de una pantalla.
-
-Una vez que teníamos esa lógica, el siguiente paso fue pensar cómo generar trazos en lugar de mostrar solamente un punto.
-
-Para eso necesitábamos guardar la posición anterior y conectarla con la nueva posición.
-
-También nos dimos cuenta de que era importante poder mover el cursor sin dibujar todo el tiempo.
-
-Por eso comenzamos a organizar el funcionamiento en dos estados distintos: MOVER y DIBUJAR.
-
-Otra función que incorporamos fue la posibilidad de borrar, para que se pudieran crear nuevos dibujos sin reiniciar manualmente el dispositivo.
-
-Así fuimos pasando de pruebas individuales a un código que reúne las distintas funciones que necesitamos para TRAZO.
-
-#### Registro de las primeras versiones
-
-Aquí incorporaremos los códigos iniciales conservados en el documento, acompañados de una explicación de qué estábamos intentando hacer con cada uno y qué cambios realizamos después.
-
-### 10. Código final de esta etapa
-
-Actualmente ya tenemos una versión final del código para este avance del proyecto.
-
-Lo que hicimos fue organizar las funciones para que el programa pudiera leer los controles, procesar los valores y decidir si tiene que mover el cursor, dibujar una línea o borrar la pantalla.
-
-#### 10.1. Leer las perillas y los botones
-
-Primero, el programa revisa los valores de los dos potenciómetros y el estado de los botones.
-
-Esto se repite continuamente para que pueda responder a los movimientos que vamos haciendo.
-
-#### 10.2. Calcular la posición
-
-Después utilizamos los valores de los potenciómetros para calcular las coordenadas X e Y.
-
-Como los valores originales no corresponden directamente al tamaño de la pantalla, tenemos que adaptarlos.
-
-Para esto el código contempla tres operaciones:
-
-- **Mapear:** convertir los valores de los potenciómetros en coordenadas de la pantalla.
-- **Limitar:** evitar que el cursor se salga del espacio disponible.
-- **Filtrar ruido:** reducir pequeñas variaciones de las señales que podrían generar movimientos involuntarios.
-
-#### 10.3. Modo MOVER
-
-Cuando iniciamos el programa, el dispositivo se encuentra en modo MOVER.
-
-Esto significa que podemos girar las perillas y cambiar la posición del cursor sin dejar una línea.
-
-Nos sirve para elegir desde dónde queremos empezar a dibujar.
-
-#### 10.4. Modo DIBUJAR
-
-Cuando presionamos el botón de trazo, el programa cambia de estado.
-
-Si activamos DIBUJAR, comienza a conectar las posiciones del cursor y se forman las líneas.
-
-Algo importante es que, al activar este modo, el programa debe tomar la posición actual como punto de inicio. Así evitamos que aparezca una línea desde una posición anterior.
-
-Si volvemos a presionar el botón, regresamos al modo MOVER.
-
-#### 10.5. Botón BORRAR
-
-También incorporamos una función que permite limpiar el dibujo.
-
-Cuando presionamos el botón de borrado, el programa limpia la pantalla y vuelve al modo MOVER.
-
-Esto permite comenzar una nueva composición sin tener que reiniciar todo el sistema.
-
-## Diagramas de flujo
-
-### 11. Diagrama de flujo del código
-
-Para entender mejor cómo estaba funcionando nuestro código, también hicimos un diagrama de flujo.
-
-Nos sirvió para ordenar todas las acciones que tiene que realizar el programa y ver qué sucede cuando presionamos cada botón.
-
-Primero se inicia el dispositivo, dejando la pantalla vacía y el modo MOVER activado.
-
-Después comienza a leer las perillas y botones.
-
-Si presionamos BORRAR, limpia la pantalla.
-
-Si presionamos TRAZO, cambia entre los dos modos.
-
-Luego calcula las coordenadas de las perillas y revisa si corresponde dibujar una línea o solamente actualizar la posición del cursor.
-
-Una vez completado el proceso, vuelve a leer los controles para seguir respondiendo a los movimientos.
-
-#### Diagrama de flujo del usuario
+### Diagrama de flujo del usuario
 
 ```mermaid
 %%{ init : { "theme" : "redux-color", "flowchart" : { "curve" : "linear" }}}%%
@@ -308,13 +208,17 @@ C-->D{¿Dibujar?};
 D-->|Si|E(<b>Pulsar TRAZO</b>\n Activa DIBUJAR);
 E-->F(<b>Mover perillas</b>\nSe dibuja una línea contínua);
 F-->G{¿Qué sigue?};
-G-->H(<b>Desplazarse sin marca</b>\nPulsar TRAZO: vuelve a MOVER)-->C;
+G-->H(<b>Desplazarse sin marca</b>\nPulsar TRAZO: vuelve a MOVER);
 D--->|No|C;
+H-->C;
 G--->|Continuar|F;
-G-->I(<b>Borrar</b>\nLimpia y vuelve a MOVER)-->B;
+G-->I(<b>Borrar</b>\nLimpia y vuelve a MOVER);
+I-->B;
 ```
 
-#### Diagrama de flujo del programa
+Este diagrama muestra cómo la persona comienza en MOVER, posiciona el cursor, activa DIBUJAR y decide si continuar, desplazarse sin marcar o borrar.
+
+### Diagrama de flujo del programa
 
 ```mermaid
 %%{ init : { "theme" : "redux-color", "flowchart" : { "curve" : "linear" }}}%%
@@ -340,152 +244,106 @@ H--->|Sí|N(<b>Agregar segmento</b>\nDe anterior a actual)-->I;
 K-->|Repite|C;
 ```
 
-Este diagrama nos ayuda a visualizar la estructura del código sin tener que revisar todas las instrucciones.
+Este segundo diagrama representa las lecturas de los controles, la conversión de coordenadas, las decisiones de los botones y la actualización de pantalla.
 
-También nos permite identificar con mayor facilidad dónde se realizan las lecturas, cuándo se procesan los datos y qué condiciones determinan las acciones del dispositivo.
+Ambos nos ayudaron a ordenar la interacción y comprender la relación entre entradas, procesamiento y salida.
 
-### 12. ¿En qué estamos ahora?
+## 09. Simulación y pruebas
 
-Por ahora ya tenemos definida la propuesta de TRAZO, investigamos referentes que nos ayudaron a comprender el funcionamiento del dibujo digital y desarrollamos el código correspondiente a esta etapa.
+Utilizamos Wokwi para representar el circuito y trabajar con los componentes de manera virtual.
 
-También comenzamos a trabajar con bibliotecas, exploramos las funciones de los componentes y organizamos la lógica del programa mediante un diagrama de flujo.
+Durante el desarrollo revisamos especialmente:
 
-En esta etapa estamos enfocadas en relacionar todo lo que hemos investigado con el funcionamiento del dispositivo y en comprobar cómo responde el código al utilizar los controles.
+- La lectura independiente de ambas perillas.
+- La conversión de los valores analógicos.
+- El movimiento del cursor.
+- La diferencia entre MOVER y DIBUJAR.
+- La conservación de las líneas.
+- El funcionamiento de los botones.
+- La actualización de la pantalla.
 
-Todavía estamos trabajando en el desarrollo de TRAZO, por lo que este registro reúne las decisiones, pruebas y avances que hemos realizado hasta el momento.
+Las pruebas de conversión ADC quedaron registradas en las versiones anteriores. Las pruebas integrales del Código 7 deben documentarse con sus resultados y evidencias.
 
-## 13. Código 5 — Integración de los componentes 30-10-2026
+<img src="./imagenes/wokwi.png" alt="Simulación Wokwi" width="300">
 
-En este avance reunimos las distintas funciones que veníamos trabajando por separado.
+## 10. Diseño de carcasa
 
-Ya teníamos desarrollado el movimiento con las perillas, pero nos faltaba incorporar los botones que preparó el otro grupo.
+Esta etapa corresponde al desarrollo físico de TRAZO.
 
-Para esto utilizamos nuestra clase `Perilla` y agregamos la clase `BotonGrupo1` dentro del programa principal.
+Hasta ahora hemos trabajado principalmente con la simulación y el funcionamiento electrónico. La carcasa nos permitirá explorar cómo integrar los componentes en un objeto que pueda utilizarse cómodamente.
 
-Así dejamos reunidas las funciones para mover el cursor, cambiar entre MOVER y DIBUJAR y borrar los trazos.
+### 10.1. Investigación de referentes
 
-### Integración de los botones
+Para comenzar a diseñar la carcasa de TRAZO, buscamos referentes de dispositivos electrónicos interactivos que tuvieran una distribución sencilla de controles y una forma cómoda de utilizar sobre un escritorio.
 
-El otro grupo nos compartió sus archivos `BotonGrupo1.h` y `BotonGrupo1.cpp`, que incorporamos a nuestro código.
+Nos interesaron especialmente los computadores compactos de los años 80, los sintetizadores y algunos controladores electrónicos que utilizan perillas como principal forma de interacción.
 
-Utilizamos dos botones:
+De estos referentes rescatamos tres características principales:
 
-**TRAZO (GP14):** permite cambiar entre MOVER y DIBUJAR con una pulsación, sin necesidad de mantenerlo apretado.
+Diseño retro tecnológico
 
-**BORRAR (GP15):** permite limpiar el dibujo y volver al estado MOVER.
+Nos inspiramos en los primeros computadores personales, especialmente en sus formas compactas, superficies redondeadas y combinaciones de colores claros. Queríamos que TRAZO tuviera una apariencia tecnológica, pero que al mismo tiempo se sintiera como un objeto cercano y fácil de utilizar.
 
-La clase también incluye un filtro de rebote de 50 milisegundos para evitar que una misma pulsación se registre varias veces.
+Controles físicos protagonistas
 
-### Ajustes de las perillas
+También observamos dispositivos como sintetizadores y controladores musicales, donde las perillas tienen un papel importante tanto en el funcionamiento como en la apariencia del objeto. Nos interesó utilizar controles grandes, fáciles de identificar y con suficiente separación para manipularlos cómodamente.
 
-Seguimos utilizando nuestra clase `Perilla` para controlar los ejes X e Y.
+Inclinación y ergonomía
 
-Mantuvimos el promedio de cuatro lecturas para que los valores fueran más estables y la fórmula de conversión que corregimos en las versiones anteriores.
+Otro aspecto que rescatamos fue la inclinación de las superficies de control. Esto permite que la pantalla y los botones queden orientados hacia la persona que utiliza el dispositivo, facilitando su lectura e interacción.
 
-Las perillas están conectadas a GP26 y GP27.
+A partir de estas referencias decidimos desarrollar una carcasa compacta, con una superficie superior inclinada, dos perillas principales y dos botones independientes.
 
-### Cambios en la pantalla
+### 10.2. Bocetos y propuestas
 
-También organizamos la pantalla OLED de 128 × 64 píxeles.
+**[BOCETO]**
 
-Reservamos las primeras 8 filas para mostrar si estamos en MOVER o DIBUJAR, dejando el resto disponible para crear los trazos.
+A partir de la investigación comenzamos a explorar distintas formas para la carcasa. Queríamos evitar una caja rectangular tradicional y conseguir una forma que se sintiera más cercana a un pequeño instrumento de escritorio.
 
-Además, incorporamos un cursor con forma de cruz para identificar mejor su posición.
+La propuesta que seleccionamos tiene una base rectangular con esquinas redondeadas y una estructura inclinada que aumenta su altura hacia la parte posterior.
 
-### Cómo conservamos los dibujos
+Esta forma nos permite distribuir los componentes en una misma superficie, manteniendo una separación visual entre ellos.
 
-Para que el cursor pudiera moverse sin dejar marcas, utilizamos dos espacios de memoria.
+Distribución de los componentes:
 
-Uno guarda los trazos que vamos haciendo y el otro prepara la imagen que aparece en pantalla, incluyendo el cursor y el estado actual.
+Pantalla OLED: ubicada en la zona superior y ligeramente inclinada hacia la persona que utiliza TRAZO. Es el espacio donde se visualiza el cursor y los dibujos.
 
-Así podemos desplazarnos sin modificar el dibujo que ya tenemos.
+Perilla X: ubicada en la zona inferior izquierda. Controla el movimiento horizontal.
 
-También incorporamos una función que conecta las posiciones del cursor para formar líneas continuas cuando estamos en DIBUJAR.
+Perilla Y: ubicada en la zona inferior derecha. Controla el movimiento vertical.
 
-### Organización del programa
+Botón TRAZO: ubicado entre las dos perillas. Permite alternar entre los modos MOVER y DIBUJAR.
 
-Los botones se revisan en cada vuelta del programa y las perillas cada 20 milisegundos.
+Botón BORRAR: ubicado junto al botón TRAZO. Permite limpiar la pantalla y comenzar un nuevo dibujo.
 
-La pantalla se actualiza cuando hay algún cambio que mostrar.
+Decidimos mantener las dos perillas como los elementos principales de la superficie, ya que son los controles que se utilizan constantemente durante la interacción.
 
-Además, utilizamos el monitor serial para revisar los valores de las perillas, las coordenadas y el estado del dibujo durante las pruebas.
+Visualmente, propusimos una carcasa color crema con una franja inferior naranja, detalles naranjos alrededor de las perillas y botones diferenciados por color.
 
-## 14. Archivos y simulación
+### 10.3. Resultado de la carcasa
 
-Para mantener el proyecto ordenado, trabajamos con diferentes archivos:
+<img src="./imagenes/trazo.png" alt="TRAZO" width="300">
 
-- `main.cpp`: reúne el funcionamiento principal.
-- `Perilla.h` y `Perilla.cpp`: contienen nuestra clase para los potenciómetros.
-- `BotonGrupo1.h` y `BotonGrupo1.cpp`: contienen la clase que nos compartió el otro grupo.
-- `ssd1306.h`, `ssd1306.c` y `font.h`: permiten trabajar con la pantalla.
-- `diagram.json`: contiene el circuito de Wokwi.
-- `CMakeLists.txt`: contiene la configuración de compilación.
+## 12. Bibliografía
 
-**Código 5 en Wokwi:**
-Subido código 5.
+- Computer History Museum. *MacPaint and QuickDraw Source Code*. https://computerhistory.org/blog/macpaint-and-quickdraw-source-code/
+- Hertzfeld, A. *MacPaint Evolution*. https://www.folklore.org/MacPaint_Evolution.html
+- Raspberry Pi. *Pico SDK*. https://github.com/raspberrypi/pico-sdk
+- Wokwi. *SSD1306 OLED*. https://docs.wokwi.com/parts/board-ssd1306
+- daschr. *pico-ssd1306*. https://github.com/daschr/pico-ssd1306
+- Material docente de Procesos.
+- Registro de avances y versiones de TRAZO.
 
-## 15. KiCad — Pendiente
+## 13. Registro de uso de IA
 
-Con el Código 5 integrado, la parte que nos queda por desarrollar es el esquemático del circuito en KiCad.
+Durante el desarrollo utilizamos ChatGPT como apoyo para organizar la estructura del programa, comprender errores, revisar compatibilidad de bibliotecas y documentar el proceso.
 
-Para esto vamos a tomar como referencia las conexiones que ya tenemos definidas en Wokwi.
+Entre los usos registrados se encuentran:
 
-Necesitamos representar la Raspberry Pi Pico, las dos perillas, la pantalla OLED, los botones y sus resistencias, revisando que cada componente esté conectado al pin correspondiente.
+- Código 1: planificación del funcionamiento mediante comentarios.
+- Código 2: estructura inicial de Pico SDK.
+- Códigos 3 y 4: estudio y corrección de la conversión ADC.
+- Intercambio de clases: adaptación de Perilla y Encoder a una sola clase.
+- Códigos 5 a 7: apoyo para comprender la integración, reorganización y separación de responsabilidades.
 
-Por ahora tenemos el código integrado y las conexiones organizadas en Wokwi. Nos falta trasladarlas al esquemático de KiCad.
-
-## 16. Bibliografía
-
-**Computer History Museum (2010).** *MacPaint and QuickDraw Source Code.*
-<https://computerhistory.org/blog/macpaint-and-quickdraw-source-code/>
-
-**Hertzfeld, A.** *MacPaint Evolution.* Folklore.org.
-<https://www.folklore.org/MacPaint_Evolution.html>
-
-**Computer History Museum.** *Historical Source Code — MacPaint.*
-<https://github.com/computerhistory/Historical-Source-Code-MacPaint-Repository>
-
-**Apple Computer (1984).** *Using MacWrite and MacPaint.*
-<https://vintageapple.org/macbooks/pdf/Using_MacWrite_and_MacPaint_1984.pdf>
-
-**Raspberry Pi.** *Pico-series Microcontrollers Documentation.*
-<https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html>
-
-## 17. Prompts usados (chatGPT)
-
-### Código 1 (25-10-2026): plan en comentarios
-- **Qué pedimos (aprox):** Primero le explicamos qué es la máquina: TRAZO, un proyecto de
-  dibujo digital con una Raspberry Pi Pico, dos potenciómetros (uno para el eje X y otro
-  para el Y) y una pantalla OLED de 128 x 64, con modos MOVER y DIBUJAR y un botón para
-  borrar. Después le pedimos que nos ayudara a hacer el primer código declarando solamente
-  qué queremos que haga sin programar todavía.
-- **Qué nos dio la IA:** un archivo solo con comentarios, ordenado en secciones. 
-
-### Código 2 (26-10-2026): estructura
-- **Qué pedimos (aprox.):** A partir de ese plan, la estructura mínima del programa:
-  iniciar el ADC y un ciclo que muestre que el programa sigue activo, sin leer las perillas
-  todavía.
-- **Qué nos dio la IA:** `main.cpp` y `CMakeLists.txt` básicos.
-
-### Código 3 y 4 (26-10-2026): perillas X/Y y corrección
-- **Contexto:** ya habíamos pensado la clase Perilla y cómo se conectaría con el resto.
-  Quedó pendiente integrar la clase Botón, que aun no teniamos; por eso
-  estas versiones solo deberían mover un punto en la pantalla.
-- **Qué pedimos (aprox.):** una clase Perilla basada en el ejemplo de la sesión 08a que
-  lea los dos potenciómetros y mueva un punto en la pantalla OLED.
-- **Sobre el error de la versión 3:** el error de conversión (`valor / 4095` antes de
-  multiplicar) lo introdujimos **a propósito**. Queríamos entender por qué la conversión
-  funciona cuando está bien hecha y qué pasaría si estuviera mal: con la división entera,
-  la posición se queda en 0 salvo cuando la lectura llega al máximo. La versión 3 queda
-  como ejemplo del error y la versión 4 como la corrección.
-- **Corrección (versión 4):** multiplicar primero y luego dividir, con redondeo.
-
-### Clase 1 y 2 (27 y 28-10-2026): Perilla y Encoder
-- **Contexto:** al comienzo hicimos Perilla y Encoder como dos clases separadas. Al
-  conversarlo con el grupo 1, que sí necesita un encoder, nos pasaron muy amorosamente <3 el enlace a un
-  repositorio del profesor que muestra cómo unir ambas funciones en una sola clase.
-- **Qué pedimos (aprox.):** adaptar ese ejemplo para que una sola clase Perilla sirva
-  como potenciómetro y como encoder.
-- **Resultado:** la versión de `clase_2` junta todo en una clase. Nosotras solo usamos la
-  parte de Perilla porque no necesitamos encoder; el encoder se mantiene en el código
-  porque lo usa el grupo 1.
+Los prompts completos y las respuestas utilizadas deben conservarse en el registro de desarrollo del proyecto.
