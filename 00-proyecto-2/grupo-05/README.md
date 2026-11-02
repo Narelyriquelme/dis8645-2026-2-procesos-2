@@ -400,11 +400,7 @@ void leer
 
 <details>
 
-Paleta de colores: Colours Cafe
- 
-![paleta de colores](./imagenes/paleta-de-colores.jpg)
-
-![proceso1](./imagenes/proceso.jpg)
+![proceso1](./imagenes/proceso1.png)
  
 ---
 </details>
