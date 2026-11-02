@@ -180,8 +180,7 @@ Este cambio nos ayudó a comprender mejor la programación mediante clases y la 
 
 Al terminar el Código 7 nos dimos cuenta de que sí necesitábamos que la pantalla mostrara el estado (MOVER o DIBUJAR), porque faciitaba mucho la experiencia del usuario, sin eso era difícil reconocer en que estado estaba. Recuperamos `Font.h` y las funciones de texto del Código 5 y las incorporamos a `Pantallita`, reservando de nuevo una franja de 8 píxeles arriba. Por eso, en el Código 7, el cursor recorre Y de 0 a 55 y se dibuja desde la fila 8.
 
-<img src="./imagenes/codigo6.png" alt="Código 6" width="300">
-<img src="./imagenes/codigo7.png" alt="Código 7" width="300">
+<img src="./imagenes/codigo6.png" alt="Código 6" width="300"> <img src="./imagenes/codigo7.png" alt="Código 7" width="300">
 
 ## 07. Intercambio de clases con el Grupo 1
 
