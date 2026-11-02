@@ -6,6 +6,8 @@ En esta clase aún estábamos complicadas con poder desarrollar el proyecto porq
 
 No necesitaban tener grandes capacidades ni funciones complejas. Bastaba con presionar un botón para descubrir algo nuevo, cambiar una expresión, recibir un mensaje o comenzar un juego. A partir de esta idea, quisimos recuperar esa experiencia de exploración y descubrimiento, reinterpretándola a través de una máquina de acompañamiento emocional. La intención es que el dispositivo no sea solamente una herramienta, sino también un objeto que invite a interactuar, jugar y explorar las emociones de una manera sencilla.
 
+![IMG1](./imagenes/idea.png/)
+
 ### ¿En qué consiste nuestro proyecto?
 "La Máquina de Emociones" es un dispositivo interactivo que permite explorar distintas experiencias a través de una pantalla OLED, dos perillas y dos botones.
 
@@ -40,7 +42,8 @@ También quisimos conservar la idea de tener tres modos de interacción, reinter
 Más que reproducir el funcionamiento del computador original, buscamos rescatar su lenguaje visual y la manera en que invitaba a explorar mediante acciones simples.
 
 
-imagen referente
+![IMG2](./imagenes/referente.png/)
+
 
 ### 6. ¿Cómo funciona el computador por dentro?
 
