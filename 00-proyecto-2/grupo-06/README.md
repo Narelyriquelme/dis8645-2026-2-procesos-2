@@ -16,16 +16,7 @@
 
 # Space Float 
 
-Space Float es un juego de nave, la cual hay que mantener volando la nave por el mayor tiempo que pueda sin chocar con obstáculos ni caer en el espacio. Tendrá 2 botones y 2 perillas para su uso, el primer botón es seleccionador de personajes, al mantenerse presionado durante 2 segundos, prende y apaga el juego, el segundo botón volador es el que sirve para mantener la nave volando, ya que al presionarlo la nave sube hasta que el botón se suelta y la nave comienza a caer, por lo que se debe intercalar el presionar y soltar para evitar que la nave caiga. Las perillas manejan dos aspectos distintos, la perilla derecha es una selección de diferentes naves para que el usuario escoja, son cuatro naves: 1-calabaza, 2-chango, 3-gato alien y 4-vaca. La perilla izquierda  regula la velocidad de juego, pudiendo subir o bajar la dificultad para ajustarla a sus capacidades. 
-
-| Control | Acción |
-|---|---|
-| **Botón 1 (seleccionador)**, mantenido 2 segundos | Enciende o apaga la pantalla |
-| **Botón 1 (seleccionador)**, una pulsación | Confirma la nave elegida y comienza la partida |
-| **Botón 2 (volador)**, mantenido | La nave sube (eje Y) |
-| **Botón 2 (volador)**, soltado | La nave cae (eje Y) |
-| **Perilla izquierda** | Aumenta o disminuye la velocidad del mapa (eje X) |
-| **Perilla derecha** | Cambia la nave seleccionada en el menú |
+Nuestro proyecto Space Float es un juego de nave, la cual hay que mantener volando la nave por el mayor tiempo que pueda sin chocar con obstáculos ni caer en el espacio. Tendrá 2 botones y 2 perillas para su uso, el primer botón es seleccionador de personajes, al mantenerse presionado durante 2 segundos, prende y apaga el juego, el segundo botón volador es el que sirve para mantener la nave volando, ya que al presionarlo la nave sube hasta que el botón se suelta y la nave comienza a caer, por lo que se debe intercalar el presionar y soltar para evitar que la nave caiga. Las perillas manejan dos aspectos distintos, la perilla derecha es una selección de diferentes naves para que el usuario escoja, son cuatro naves: 1-calabaza, 2-chango, 3-gato alien y 4-vaca. La perilla izquierda  regula la velocidad de juego, pudiendo subir o bajar la dificultad para ajustarla a sus capacidades. 
 
 ----
 
@@ -73,36 +64,88 @@ El iMac G3 revolucionó el lenguaje visual de la época. Pasar del clásico bloq
 
 Proyecto simulado en [Wokwi](https://wokwi.com) con una **Raspberry Pi Pico**, una pantalla OLED, 2 botones y 2 perillas. Los números de pin son los del archivo `diagram.json`.
 
-### Resumen de pines de la Pico
+### Función de los elementos
 
-| Pin Pico | Nº físico | Conectado a | Función |
-|---|---|---|---|
-| `GP4` | 6 | OLED `SDA` | I2C0 datos |
-| `GP5` | 7 | OLED `SCL` | I2C0 reloj |
-| `GP14` | 19 | Botón *Seleccionar* | Entrada digital (activo en bajo) |
-| `GP15` | 20 | Botón *Volar* | Entrada digital (activo en bajo) |
-| `GP26` | 31 | Perilla *Velocidad* (`SIG`) | ADC0 |
-| `GP27` | 32 | Perilla *Personaje* (`SIG`) | ADC1 |
-| `3V3` | 36 | OLED, perillas y riel `+` de la protoboard | Alimentación 3,3 V |
-| `GND` | varios | OLED, perillas y riel `-` de la protoboard | Tierra |
+| Control | Acción |
+|---|---|
+| **Botón 1 (seleccionador)**, mantenido 2 segundos | Enciende o apaga la pantalla |
+| **Botón 1 (seleccionador)**, una pulsación | Confirma la nave elegida y comienza la partida |
+| **Botón 2 (volador)**, mantenido | La nave sube (eje Y) |
+| **Botón 2 (volador)**, soltado | La nave cae (eje Y) |
+| **Perilla izquierda** | Aumenta o disminuye la velocidad del mapa (eje X) |
+| **Perilla derecha** | Cambia la nave seleccionada en el menú |
+
+## Conexión 
+| Pin Pico | Conectado a | Función |
+|---|---|---|
+| `GP4` | OLED `SDA` | I2C0 datos |
+| `GP5` | OLED `SCL` | I2C0 reloj |
+| `GP14` | Botón *Seleccionar* | Entrada digital (activo en bajo) |
+| `GP15` | Botón *Volar* | Entrada digital (activo en bajo) |
+| `GP26` |  Perilla *Velocidad* (`SIG`) | ADC0 |
+| `GP27` |  Perilla *Personaje* (`SIG`) | ADC1 |
+| `3V3` |  OLED, perillas y riel `+` de la protoboard | Alimentación 3,3 V |
+| `GND` |  OLED, perillas y riel `-` de la protoboard | Tierra |
 
 # Código 
+Empezamos escribiendo todo lo que queríamos que hiciera cada parte del proyecto, antes de escribir código real: 
+
+## Estructura del proyecto
+
+| Archivo | Qué hace |
+|---|---|
+| `Boton.h` / `Boton.cpp` | Detecta toque corto, toque largo y botón mantenido |
+| `Perilla.h` / `Perilla.cpp` | Lee la perilla y la convierte en velocidad o en una opción |
+| `Mapa` | Dibujo, mueve el fondo y sabe dónde hay obstáculos |
+| `Personajes` | Dibujos de los 4 personajes |
+| `Juego` / `Juego.cpp` | Une todo: estados, movimiento y choques |
+| `main.cpp` | Crea los objetos y arranca el juego |
+
+Luego comenzamos a escribir detalladamente las promesas de cada uno de los componentes.
+ ```cpp
+//promesas de lo que queremos que el botón haga
+
+//uno de los botones servirá como
+//encendido o apagado / mantener apretado
+//y seleccionador / un toque
+
+//el otro botón servirá para mantener al personaje volando
+
+//atributos
+  //encendido
+  //presionado 
+  //mantenido
+
+//botón1: dos variables
+//if boton presionado >= 2sg
+//la pantalla se inicia
+//si se vuelve a apretar por 2sg 
+//la pantalla se apaga
+
+//la segunda opción de este botón
+//if boton presionado <= 2sg
+//recorrer personajes con perilla2
+//presionar botón <= 2sg
+
+//botón2: una variable
+//si presionado = true
+//el personaje baja
+//si presionado = false
+//el personaje sube
+ ```
+Con las promesas escritas, le compartimos los archivos a la IA (Claude) para que nos ayudará a formalizar los códigos y poder hacer que el juego cobrara vida. En el proceso comenzó a crear más archivos : “pantalla.h/.cpp” separó los archivos de mapa en el dibujo del fondo, un .h y un .cpp para tener todo más ordenado y en caso de generar algún error, poder identificarlo y cambiarlo más rápido. 
+
+Escribimos los detalles de cada botón,(método,constructor y atributos) del juego, después se proceso la parte donde sacamos los códigos de los personajes y se armó la estructura del juego.
+
+problemas:
+
+Tuvimos problemas en nombres de archivos, como que el archivo se llamaba “Boton.h” pero al incluirlo en otro archivo estaba escrito “boton.h” y no nos permitía compilar. 
+
+Cuando logramos que el código comenzará a funcionar en wokwi, intentamos jugar pero los personajes y obstáculos eran muy grandes, entonces era muy fácil chocar con ellos y perder. Por ello tuvimos que editar nuevamente el mapa y los personajes que tendría nuestro juego para que funcionara de mejor manera para el usuario. 
+
+También tuvimos problemas con la visualización de los personajes en el juego, los colores estaban invertidos y no se apreciaba de manera clara la forma de los personajes.
 
 ---
-
-
-### Paso a paso
-
-
-1. Conecta la Raspberry Pi Pico a la corriente.
-2. Mantén presionado el **botón 1** durante 2 segundos para encender la pantalla.
-3. Gira la **perilla derecha** para ver las 4 naves disponibles.
-4. Presiona **una vez el botón 1** para elegir tu nave.
-5. Ajusta la dificultad con la **perilla izquierda**.
-6. Presiona y suelta el **botón 2** de forma alternada para mantener la nave en el aire y esquivar obstáculos.
-7. Si chocas, el juego se reinicia y vuelves al menú de selección.
-
-
 
 ## Diagramas de flujo
 
@@ -391,20 +434,24 @@ flowchart TD
 
 
 </details>
+## Paso a paso
+
+
+1. Conecta la Raspberry Pi Pico a la corriente.
+2. Mantén presionado el **botón 1** durante 2 segundos para encender la pantalla.
+3. Gira la **perilla derecha** para ver las 4 naves disponibles.
+4. Presiona **una vez el botón 1** para elegir tu nave.
+5. Ajusta la dificultad con la **perilla izquierda**.
+6. Presiona y suelta el **botón 2** de forma alternada para mantener la nave en el aire y esquivar obstáculos.
+7. Si chocas, el juego se reinicia y vuelves al menú de selección.
 
 # Botones Grupo 05
 
-Para comenzar a trabajar en la clase botón de nuestros compañeros, ordenamos las especificaciones e instrucciones que nos compartieron acerca de su trabajo, las cuales ya estaban inicialmente muy ordenadas y detalladas en un pseudocódigo para poder desarrollar el proyecto. Llevamos a Claude todas estas indicaciones especificando nuestro método de trabajo, lenguaje de programación y más detalles acerca del tipo de código que buscábamos obtener, especificando que se separaría en clases, en varios archivos .h y .cpp para mantener la estructura esperada. 
+Para comenzar a trabajar en la clase botón de nuestros compañeros, ordenamos las especificaciones e instrucciones que nos compartieron acerca de su trabajo, las cuales ya estaban inicialmente muy ordenadas y detalladas en un pseudocódigo para poder desarrollar el proyecto. Llevamos a la IA Claude todas estas indicaciones de nuestro método de trabajo, lenguaje de programación y más detalles acerca del tipo de código que crearemos, especificando que se separaría en clases, en varios archivos .h y .cpp para mantener la estructura esperada. 
 
-Cuando comenzamos trabajando con los botones del grupo 05 presentamos varios problemas (detalles más adelante). Ya solucionados los problemas, el grupo 5 cambió las funcionalidades de cada botón, por lo que nos toca cambiar y adaptar lo que ya tenemos para que los botones funcionen. La distribución cambió de la siguiente manera: 
+Teniendo la estructura del código, y probando ejecutarla en Wokwi, nos arrojó un error por una de las funciones del main, donde una de las soluciones temporales que obtuvimos fue eliminar la función, y así, la simulación se podría reproducir. Los botones respondían junto con el LED, pero no se ejecutaba el sector de la simulación donde vemos los textos que se imprimen al presionar los botones, por lo que no podíamos saber si funcionaban correctamente para el proyecto. 
 
-Botón 1: Su función es cambiar de nivel 1>2>3 y seleccionar con un doble clic con un tiempo límite entre clicks de 0.6ms —--> su función es cambiar de nivel 1>2>3 y al recibir un cuarto clic, se reinicia el ciclo volviendo al nivel 1 
-
-Botón 2: Su función es atrapar notas —---> su función atrapar notas y se le suma la función de seleccionar nivel. El botón comienza actuando con la función de seleccionar nivel y una vez seleccionado, la función del botón cambia a atrapar para su uso en el juego. 
-
-Al cambiar esto, se eliminaron las variables y funciones que manejaban el tiempo entre clics, puesto que ya no utilizarían doble clic como una acción en el proyecto. Nuestro código presentaba tres archivos distintos para los botones, un archivo Botón que saltaba de nivel, BotónAtrapar (para el juego) y BotónNivel que seleccionaba con doble click y que traía todas las variables y funciones para ello. Ese último archivo fue el que eliminamos. 
-
-Al quitar estos archivos, se adaptó el main, quitando las condicionales if que trabajaban con variables de tiempo para leer los intervalos de tiempo entre clics y que distinguían entre una pulsación y dos pulsaciones. Reemplazándolas por una lectura de estados directa de los botones que simplifican las respuestas en el sistema. 
+Continuamos buscando la razón de la falla del código, y un posible error era que Wokwi estaba interpretando el código como un proyecto estándar de Arduino en lugar de un proyecto de Pico SDK, ignorando el archivo CMakeLists.txt y fallaba al buscar las funciones presentes. 
 
 ---
 
@@ -450,15 +497,37 @@ a
   ],
  ```
 - Para poder ver el texto de printf
+----
+Ya solucionados los problemas, el grupo 5 cambió las funcionalidades de cada botón, por lo que nos toca cambiar y adaptar lo que ya tenemos para que los botones funcionen. La distribución cambió de la siguiente manera: 
+
+Botón 1: Su función es cambiar de nivel 1>2>3 y seleccionar con un doble clic con un tiempo límite entre clicks de 0.6ms —--> su función es cambiar de nivel 1>2>3 y al recibir un cuarto clic, se reinicia el ciclo volviendo al nivel 1 
+
+Botón 2: Su función es atrapar notas —---> su función atrapar notas y se le suma la función de seleccionar nivel. El botón comienza actuando con la función de seleccionar nivel y una vez seleccionado, la función del botón cambia a atrapar para su uso en el juego. 
+
+Al cambiar esto, se eliminaron las variables y funciones que manejaban el tiempo entre clics, puesto que ya no utilizarían doble clic como una acción en el proyecto. Nuestro código presentaba tres archivos distintos para los botones, un archivo Botón que saltaba de nivel, BotónAtrapar (para el juego) y BotónNivel que seleccionaba con doble click y que traía todas las variables y funciones para ello. Ese último archivo fue el que eliminamos. 
+
+Al quitar estos archivos, se adaptó el main, quitando las condicionales if que trabajaban con variables de tiempo para leer los intervalos de tiempo entre clics y que distinguían entre una pulsación y dos pulsaciones. Reemplazándolas por una lectura de estados directa de los botones que simplifican las respuestas en el sistema. 
 
 
+# Trabajo de Carcasa y elementos gráficos 
+Para hacer el modelado del computador elegido, utilicé un stl que ya existiera y se me hiciera fácil de modificar en Rhino8.
+La malla delantera del stl venía con problemas así que empecé a tapar los bordes desnudos a mano y a usar el comando “ShrinkWrap” lo cual permitió que mi malla se vea bastante lisa y sin una cantidad exagerada de polígonos.
 
+La malla trasera venía bien y no tuve que cambiar casi nada de ella.
 
-# Carcasa/ Renders
-Como grupo se decidio entregar el proyecto de manera digital todo el proceso de los codígos, igualmente se genero un modelado 3D en Rhino 8 de la carcasa del proyecto, adaptando el modelo a las piezas reales que se deseaban trabajar
+Modelé la pantalla, los botones, potenciómetros y protoboard a usar para lograr un encaje lo más perfecto posible. Todo fue medido con pie de metro.
+
+Solo tuve que hacer diferencia booleana de malla, dejando un margen de 0.2 mm por pieza para que efectivamente entren en la carcasa sin dificultad.
+
+En cuanto a los dibujos en pixel, los hice en mi programa de dibujo Krita, manteniendo una capa de 128x64 px (tamaño de nuestra pantalla), en esta capa dibujé a los 4 personajes, 1 por cada integrante. Dibujados en blanco y negro y asegurandome de que el tamaño de los dibujos no fuera un problema para el juego, finalmente los pasé a código en image2cpp.
+
+El mapa fue más fácil lo hice de 600x64px para que alcanzara una cantidad decente de obstáculos tales como: planetas, asteroides, estrellas, cometas y agujeros negros, los cuales también están incluidos en en el mapa (o fondo)
+![render](./imagenes/personajes-proyecto.png)
+
+# Renders Carcasa
 ![render](./imagenes/render-proyecto-dos.png)
 ![render](./imagenes/render-proyecto-dos-dos.png)
-![render](./imagenes/personajes-proyecto.png)
+
 
 
 # Bibliografia
