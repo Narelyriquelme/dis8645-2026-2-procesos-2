@@ -19,6 +19,7 @@ Este equipo destaca su versatilidad al realizar la conexión entre dos épocas d
 
 Dentro de su sistema operativo incluye las suite GEOS, como el GEOWrite, que fue uno de los primeros procesadores de texto modernos, con capacidad de edición WYSIWYG, múltiples fuentes y estilos, escribir documentos, dar forma al texto, e inserción de imágenes. Ahora, es un entorno de escritura sin conexión, ideal para diarios personales, ensayos y redacción sin distracciones. También el GEOPaint era un editor gráfico para dibujar y pintar, crear ilustraciones digitales, con patrones, rellenos y pinceles. Se utilizó para crear tarjetas de felicitación, diseños de boletines informativos y muchísimos proyectos de arte digital para principiantes. Ahora es una herramienta creativa sin distracciones, perfecta para artistas digitales emergentes. Y el GEOPublish fue una de las primeras herramientas modernas de autoedición, combinar texto e imágenes. Fue responsable de innumerables periódicos escolares, boletines parroquiales, folletos de pequeños negocios y carteles de bandas musicales. Y también el resto de la suite como GEOSpell, GEOPile, GEOCalc, GEOGif, GEOS Deskpack Plus, Fuentes GEOS, GEODemo.
 
+![alt](./imagenes/commodore-64ultimate.png)
 
 ## Descripción del proyecto
 
@@ -43,30 +44,36 @@ La referencia al Commodore 64 Ultimate se manifiesta en cuatro pilares fundament
 
 ## Funcionamiento y Dinámica del Juego
 
-El flujo interactivo se estructura en **5 Slides correlativos**:
+La misión principal del juego es ayudar al estudiante a llegar a la universidad, superando correctamente cada uno de los niveles. Como dificultad adicional, el juego activa la inversión de los controles en las perillas.
 
-* **Slide 1 — Inicio e Instrucciones:** Pantalla de bienvenida con el título del juego, la explicación general de los controles y el planteamiento del desafío: *"Llega a la universidad"*.
+- **Slide 1 — Inicio e instrucciones:** Pantalla de bienvenida que presenta el título del juego, una explicación general de los controles y el planteamiento del desafío: *«Llega a la universidad»*.
 
+- **Slide 2 — Etapa 1 (El laberinto hacia la micro):** El jugador debe guiar al personaje a través de un laberinto para alcanzar la micro antes de que el temporizador llegue a cero.
 
-* **Slide 2 — Etapa 1 (El Laberinto de la Micro):** El jugador debe mover al personaje a través de un laberinto vectorial para alcanzar el paradero de la micro antes de que el temporizador llegue a cero.
+- **Slide 3 — Etapa 2 (La micro en el tráfico):** Nivel en el que el jugador debe controlar la micro en una vía multicarril, esquivando el flujo de autos en movimiento.
 
+- **Slide 4 — Etapa 3 (Llegar a la sala):** Nivel final en el que el estudiante debe avanzar hasta ingresar por la puerta de la sala de clases.
 
-* **Slide 3 — Etapa 2 (La Micro en el Tráfico):** Control del vehículo de transporte público en una vía multicarril. El jugador debe esquivar el flujo de autos en movimiento. Como condicionante de dificultad en esta etapa, el juego activa la **inversión de controles** en las perillas.
+- **Slide 5 — Conclusión y reflexión:** Pantalla de cierre que aparece al completar la meta. Muestra el mensaje *«¡Lo lograste!»*, acompañado de una frase reflexiva sobre la resiliencia.
 
+## Controles e interacciones
 
-* **Slide 4 — Etapa 3 (El Pasillo a la Sala):** Nivel final donde el estudiante transita el pasillo de la universidad para ingresar por la puerta de la sala de clases.
-
-
-* **Slide 5 — Conclusión y Reflexión:** Pantalla de cierre al completar la meta. Muestra el mensaje *"¡Lo lograste!"* acompañado de una frase reflexiva sobre la resiliencia y la impredecibilidad de la vida diaria (*"Las cosas no siempre son como uno espera... pero igual se logra"*).
-
-## Controles
-
-## Pseudocódigo
+| Elemento / interacción | Componente | Especificación | Acción |
+|---|---|---|---|
+| Botón: cambio de escena | Botón pulsador | Momentáneo, 12 × 12 × 7,3 mm | Permite avanzar a la siguiente escena del juego. |
+| Botón: selección de música | Botón pulsador | Momentáneo, 12 × 12 × 7,3 mm | Alterna entre dos pistas musicales y el modo silencio. |
+| Potenciómetro: movimiento horizontal | Potenciómetro | Tipo B, lineal | Controla el movimiento del personaje hacia la izquierda y derecha. |
+| Potenciómetro: movimiento vertical | Potenciómetro | Tipo B, lineal | Controla el movimiento del personaje hacia arriba y abajo. |
+| Indicador de tiempo | LED | LED indicador | Advierte que el tiempo de juego está próximo a finalizar. |
+| Visualización del juego | Pantalla LCD TFT | 2,0 pulgadas, controlador ST7789, interfaz SPI, resolución 240 × 320 píxeles, 8 pines | Muestra el entorno del juego, los elementos gráficos y el desarrollo de la partida. |
 
 ## Diagramas
-### experiencia usuario
-### hardware
-### software
+### Experiencia usuario
+> La experiencia del usuario consiste en interactuar físicamente con el proyecto a través de su carcasa, las perillas y los botones, generando una experiencia de juego dinámica y entretenida. El usuario deberá cumplir distintas misiones, superar desafíos y resolver cada nivel utilizando los controles del dispositivo. Además de la entretención, el juego busca transmitir una reflexión final: aunque el camino para alcanzar una meta pueda presentar dificultades, lo importante es perseverar, seguir intentándolo y confiar en que, con esfuerzo y constancia, es posible llegar hasta el final.
+
+### flujo del juego 
+### Hardware
+### Software
 ## Esquemático
 
 ![imagen](imagenes/esquematico.png)
@@ -76,7 +83,7 @@ El flujo interactivo se estructura en **5 Slides correlativos**:
 |Componente|Cantidad|Precio|Link|
 |---|---|---|---|
 |Raspberry Pi Pico|1|$14.990|<https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers>|
-|Pantalla |1|$3.554|<https://a.aliexpress.com/_mKfPMoB>|
+|Pantalla LCD TFT |1|$3.554|<https://a.aliexpress.com/_mKfPMoB>|
 |Protoboard|1|$1.500|<https://afel.cl/products/mini-protoboard-400-puntos>|
 |Botón Táctil|2|$200|<https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=1&_sid=cf59c1e34&_ss=r>|
 |Cables dupont pack 20|x|$1.000|<https://afel.cl/products/pack-20-cables-de-conexion-macho-macho>|
@@ -123,189 +130,6 @@ La carcasa la realizamos en impresión 3D, realizando bocetos previos, quisimos 
 
 ## Documentación IA
 
-### Organización del Proyecto por Clases: Juego Arcade (Raspberry Pi Pico)
-
-Para mantener el código ordenado, eficiente en memoria y fácil de presentar, dividiremos el proyecto en **6 Clases independientes**, asignando a cada una su "Lista de supermercado" (**Atributos/Variables**) y sus "Acciones" (**Métodos/Funciones**).
-
----
-
-```text
-                        ┌────────────────────────┐
-                        │    GameController      │
-                        │ (Cerebro del Juego)    │
-                        └───────────┬────────────┘
-                                    │
-    ┌──────────────┬────────────────┼────────────────┬──────────────┬──────────────┐
-    ▼              ▼                ▼                ▼              ▼              ▼
-┌─────────┐   ┌─────────┐     ┌───────────┐    ┌───────────┐  ┌───────────┐  ┌───────────┐
-│ Botón 1 │   │ Botón 2 │     │ Perilla X │    │ Perilla Y │  │ Audio     │  │PantallaUI │
-│ (Slide) │   │ (Audio) │     │ (Horiz.)  │    │ (Vert.)   │  │(Canciones)│  │ (Gráficos)│
-└─────────┘   └─────────┘     └───────────┘    └───────────┘  └───────────┘  └───────────┘
-
-```
-
----
-
-#### 1. Clase `Boton` (Hardware)
-
-* **Responsabilidad:** Lee un botón físico y elimina falsos toques por rebote mecánico (*debounce*).
-
-
-* **Instancias en el proyecto:** 2 objetos (`botonSlide` y `botonAudio`).
-
-
-* **Atributos (Variables):**
-* `pin`: Pin GPIO de la Pico donde se conecta.
-* `ultimoTiempoRebote`: Tiempo en milisegundos para filtrar lecturas erróneas.
-
-
-* **Métodos (Funciones):**
-* `begin()`: Configura el pin en modo entrada digital (`INPUT_PULLUP`).
-* `fuePresionado()`: Retorna `true` solo cuando el usuario presiona el botón.
-
----
-
-#### 2. Clase `Perilla` (Hardware)
-
-* **Responsabilidad:** Lee un potenciómetro analógico, lo traduce a coordenadas de pantalla ($X$ o $Y$) y permite invertir los controles en ciertas etapas.
-
-
-* **Instancias en el proyecto:** 2 objetos (`perillaX` y `perillaY`).
-
-
-* **Atributos (Variables):**
-* `pinAnalogico`: Pin ADC de la Pico.
-* `invertida`: Interruptor booleano (`true`/`false`) para cambiar la dirección de movimiento.
-
-
-
-
-* **Métodos (Funciones):**
-* `begin()`: Configura la lectura del puerto analógico.
-* `setInvertida(estado)`: Activa o desactiva la inversión de giro según la etapa.
-
-
-* `obtenerPosicion(min, max)`: Convierte el voltaje en la posición en píxeles de la pantalla.
-
-
-
-
-
----
-
-#### 3. Clase `AudioPlayer` (Sonido)
-
-* **Responsabilidad:** Administra el zumbador y reproduce las 3 melodías arcade de forma secuencial sin pausar el juego.
-
-
-* **Atributos (Variables):**
-* `pinBuzzer`: Pin PWM asignado al altavoz.
-* `cancionActual`: Número de melodía activa ($1, 2 \text{ o } 3$).
-
-
-
-
-* **Métodos (Funciones):**
-* `siguienteCancion()`: Alterna a la siguiente melodía al presionar el botón de audio.
-
-
-* `actualizar()`: Toca las notas de la melodía en segundo plano.
-
-
-
----
-
-#### 4. Clase `PantallaUI` (Gráficos y Renderizado)
-
-* **Responsabilidad:** Maneja toda la parte visual (pantalla TFT), dibujando textos, gráficos vectoriales e imágenes sin recargar el procesamiento del juego.
-
-
-* **Atributos (Variables):**
-* `tft`: Referencia al objeto del controlador de la pantalla.
-
-
-* **Métodos (Funciones):**
-* `dibujarSlide(numeroSlide)`: Renderiza el fondo y textos fijos para cada una de las 5 etapas (Inicio, Laberinto micro, Esquivar autos, Sala y Conclusión).
-
-
-* `dibujarEstudiante(x, y)`: Renderiza el gráfico vectorial del personaje en su coordenada actual.
-* `dibujarTiempo(segundos)`: Muestra el contador en pantalla.
-
-
-
-
-
----
-
-#### 5. Clase `Player` (Personaje)
-
-* **Responsabilidad:** Almacena los datos del estudiante en el mapa y comprueba su estado.
-
-
-* **Atributos (Variables):**
-* `x`, `y`: Coordenadas actuales en pantalla.
-* `ancho`, `alto`: Dimensiones del personaje.
-
-
-* **Métodos (Funciones):**
-* `actualizarPosicion(nuevaX, nuevaY)`: Actualiza las coordenadas recibidas desde las perillas.
-
-
-
-
-
----
-
-#### 6. Clase `GameController` (El Cerebro)
-
-* **Responsabilidad:** Coordina todo el juego, administra el paso entre los 5 slides, controla el tiempo límite y evalúa si el personaje choca o gana.
-
-
-* **Atributos (Variables):**
-* `slideActual`: Número del slide activo ($0 \text{ a } 4$).
-
-
-* `tiempoRestante`: Temporizador para las etapas con tiempo límite.
-
-
-
-
-* **Métodos (Funciones):**
-* `siguienteSlide()`: Avanza de escena cuando se pulsa el botón correspondiente.
-
-
-* `actualizar()`: Evalúa si los controles se invierten en el slide actual, actualiza las posiciones, verifica colisiones y le pide a `PantallaUI` que redibuje.
-
-
-* `verificarColisiones()`: Revisa si el estudiante chocó con paredes/autos o si tocó la meta.
-
-
-
-
-
----
-
-####  Flujo de Ejecución del Programa (`main.cpp`)
-
-1. **Creación de Objetos:** Se instancia cada componente (`botonSlide`, `botonAudio`, `perillaX`, `perillaY`, `audio`, `pantalla` y `juego`).
-
-
-2. **`setup()`:** Se inician las configuraciones de pines con el método `.begin()` de cada objeto.
-3. **`loop()`:** Bucle continuo que ejecuta 4 pasos en milisegundos:
-* Revisa si se presionó el botón de cambiar slide $\rightarrow$ pasa al siguiente slide.
-
-
-* Revisa si se presionó el botón de audio $\rightarrow$ cambia la canción.
-
-
-* Lee el movimiento de las 2 perillas $\rightarrow$ calcula la nueva posición del estudiante.
-
-
-* Llama a `juego.actualizar()` y `audio.actualizar()` para actualizar gráficos, reglas de juego y música.
-
-wokwi 
-
-https://wokwi.com/projects/479061199676387329 
 
 ## Bibliografía
 
