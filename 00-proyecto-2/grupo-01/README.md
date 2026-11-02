@@ -52,11 +52,34 @@ la Sharp X68000 lideró el mercado de los sistemas informáticos japoneses, fina
 
 <br>
 
+### sonidos 
+
+Se va a tomar la decisión de mantener al Sharp X68000 como referente central del proyecto, utilizando los sonidos de sus videojuegos como base para la exploración sonora. Esta elección considera sus capacidades de audio, principalmente la síntesis FM mediante el chip Yamaha YM2151 y la reproducción de muestras digitales ADPCM mediante el OKI MSM6258.
+
+ tomando el Sharp X68000 como punto central de comparación, aparecen dos preguntas:
+
+¿Cómo eran los sonidos de los videojuegos antes del Sharp X68000?
+¿Cómo evolucionó el sonido de los videojuegos después del Sharp X68000?
+
+Para esto, se buscarán sonidos a los que les haremos una abstracción, modificándolos, pero manteniendo su sonido característico, originado por las especificaciones técnicas de cada época.
+
+2. Dos referentes anteriores Computadores de 8 bits: sonidos de generaciones previas, caracterizados por ondas simples, canales limitados y melodías electrónicas.
+
+Sonido0: 
+Sonido1: 
+
+1. Referente central Sharp X68000: sonidos característicos de sus videojuegos, combinando síntesis FM y audio ADPCM.
+
+Sonido2: 
+
+3. Dos referentes posteriores  Computadores y plataformas más actuales: sonidos que incorporan audio digital, muestras grabadas, mayor complejidad musical y procesamiento de audio en tiempo real.
+
+Sonido3:
+Sonido4:
+
 ### Referentes
 
 1. Bleep-Drum
-
-
 
 ![bleep-drum](./imagenes/bleep-drum.jpg)
 
@@ -66,35 +89,6 @@ la Sharp X68000 lideró el mercado de los sistemas informáticos japoneses, fina
 
 <br>
 
-### ¿Por qué 5 sonidos?
-
-- Un tono simple.
-- Una secuencia rítmica.
-- Una melodía sintetizada.
-- Un sonido percusivo.
-- Una muestra de audio digital.
-
-La elección de cinco sonidos responde a la intención de representar distintas transformaciones tecnológicas en la historia del audio de los videojuegos. Cada sonido corresponde a una etapa que permite reconocer cómo evolucionaron la generación, síntesis y reproducción del sonido, desde los primeros tonos electrónicos hasta el audio digital.
-
-### Sonido0
-
-fecha:
-
-### Sonido1
-
-fecha:
-
-### Sonido2
-
-fecha:
-
-### Sonido3
-
-fecha:
-
-### Sonido4
-
-fecha:
 
 ### SonidoInicio
 
