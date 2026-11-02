@@ -548,8 +548,11 @@ Se relaciona con: `main.cpp` (le entrega el botón y la dificultad) y Pantalla (
 
 ------
 
-#### Prompts usados:
-Utilizamos Chat GPT y Claude para ayudarnos a realizar los códigos. Para esto, primero se realizó un documento donde se explicó lo que queríamos que hiciera la máquina, qué haría cada componente, y qué clases queríamos crear, con sus respectivos métodos y atributos que considerábamos necesarios. A partir de esto, creamos maquetas de los archivos `.h` donde nuestros [2026-10-29](https://github.com/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-03/codigos/2026-10-29) 
+#### Metodología, proceso y uso de IA:
+Utilizamos Chat GPT y Claude para ayudarnos a realizar los códigos. Para esto, primero se realizó un documento donde se explicó lo que queríamos que hiciera la máquina, qué haría cada componente, y qué clases queríamos crear, con sus respectivos métodos y atributos que considerábamos necesarios. A partir de esto, creamos maquetas de los archivos `.h` con lo mínimo que necesitábamos [(2026-10-29)](https://github.com/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-03/codigos/2026-10-29) , acompañándonos de las sugerencias de Copilot de VS Code. Estas maquetas se las pasamos a la IA, y le fuimos pidiendo ayuda con la estructura del código y sintaxis para que funcionara de manera correcta. A partir de estas respuestas, íbamos corrigiendo de manera manual lo que fuera necesario, comentando, y también guiándonos con los códigos de nuestros compañeros de otros grupos. Fuimos probando constantemente en Wokwi, retroalimentando, y corrigiendo.
+
+Algunos de los prompts utilizados:
+
 
 ------
 
@@ -592,10 +595,31 @@ Constructor:
 Se relaciona con: `main.cpp`. El botón de encendido (GP14, sin doble clic) usa clicSimple; el botón de salto (GP15) usa seAcabaDePresionar, que se le entrega a `Juego`.
 
 # Resultados
-fotos, videos
+Como resultado logramos hacer funcionar todo en protoboard, y pudimos modelar la carcasa. En cuanto a la impresión de esta, tuvimos un problema que no anticipamos, y fue que el espacio de la botonera quedó demasiado justo, por lo que no pudimos sacar los cables por la salida que teníamos predestinada para conectar esta parte con la de la pantalla.
+
+![resultados](./imagenes/resultados-1.png)
+![resultados](./imagenes/resultados-2.png)
+![resultados](./imagenes/resultados-3.png)
+![resultados](./imagenes/resultados-4.png)
+![resultados](./videos/resultados-4.gif)
 
 ### Aprendizajes
-conclusiones, reflexiones del proceso
+
+**Habilidades:**
+- Entendimos como funcionaba una clase, para qué servía cada archivo de esta (el `.h` es el que indica qué hace y el `.cpp` cómo lo hace), y que luego en el `main.cpp` se establece en qué orden ocurre cada paso.
+- A utilizar a la IA como una herramienta con cual tener una constante iteración, siempre revisando y dándonos el tiempo de entender sus resultados.
+- Logramos definir un sistema computacional donde cada componente logra una función.
+- Pudimos trabajar con bitmaps, texto y realizar un juego animado desde 0.
+
+**Aciertos:**
+- Antes de empezar a hacer algo con el código, planificamos muy bien qué queríamos lograr, qué haría cada componente, la estructura que buscábamos del código y qué necesitaba cada clase.
+- Organizamos todo constantemente en listas de las cosas que debíamos hacer, ya que era mucha información, para mantenernos informadas y poder dividirnos.
+- A partir de una buena comunicación logramos distribuir tareas de manera equitativa, donde todas pudimos poner de nuestra parte en las áreas de nuestro interés y aprender cosas nuevas, siempre explicándonos si la otra no entendía.
+
+**Errores:**
+- Nos demoramos en empezar a planificar y trabajar, por lo que el tiempo que tuvimos nos jugó en contra para la carcasa que teníamos planeada.
+
+
 
 ### Bibliografía:
 - kp_mcclard. (s. f.). Vtg KB Learning Toys 90s desktop kids educational toy computer keyboard mouse [Anuncio de venta con fotografías]. eBay. https://www.ebay.es/itm/407262442228
