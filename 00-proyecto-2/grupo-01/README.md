@@ -45,8 +45,21 @@ Otro aspecto interesante reside en las opciones de personalización. Sharp X6800
 
 la Sharp X68000 lideró el mercado de los sistemas informáticos japoneses, finalizando su reinado alrededor de 1996. Gracias al chip de sonido Yamaha YM2151, la computadora pudo reproducir algunas de las mejores bandas sonoras de videojuegos (VGM) basadas en síntesis FM jamás lanzadas. 
 
-https://www.youtube.com/channel/UC202eItEazdvnMRK09RTtaw
-https://xvgmradio.com/episode-119-the-sounds-of-the-sharp-x68000/
+> Links relevantes
+>
+>> https://www.youtube.com/channel/UC202eItEazdvnMRK09RTtaw
+>>
+>> https://xvgmradio.com/episode-119-the-sounds-of-the-sharp-x68000/
+
+<br>
+
+### referentes
+
+1. Bleep-Drum
+
+![bleep-drum](./imagenes/bleep-drum.jpg)
+
+![bleep-drum](./imagenes/bleep-drum01.jpg)
 
 <br>
 
