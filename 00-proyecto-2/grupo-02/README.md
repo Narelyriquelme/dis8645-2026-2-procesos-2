@@ -3,6 +3,7 @@
   <img src="./imagenes/applemacintosh.gif" alt="Apple Macintosh" />
 </p>
 
+<h2 align="center">Remanencia</h2>
 
 ## Integrantes
 
@@ -28,6 +29,11 @@ Nuestro proyecto retoma este lenguaje visual y lo combina con un anacronismo con
   <em>Figura 1. Macintosh 128K. Imagen obtenida de Wikipedia:
   https://es.wikipedia.org/wiki/Macintosh_128K</em>
 </p>
+
+
+## Remanencia
+La remanencia es aquello que permanece después de que algo ha pasado. El nombre representa la forma en que los recuerdos siguen existiendo tanto en nuestra memoria como en los dispositivos digitales que utilizamos para almacenarlos.
+El proyecto busca explorar esa permanencia mediante una interfaz inspirada en los primeros computadores personales, permitiendo navegar recuerdos personales almacenados en un entorno digital.
 
 ## Concepto
 
@@ -56,6 +62,14 @@ parte de nuestra clase:
 - **Mantener presionado durante 5 segundos:** volver al escritorio, independientemente de la posición de las perillas.
 
 Al abrir una carpeta, se muestra inicialmente su primera imagen. El usuario puede avanzar entre fotografías y activar su reproducción secuencial. Una pulsación prolongada permite regresar al escritorio y explorar otra carpeta.
+
+# Relato de uso de la máquina
+Al encender el dispositivo, el usuario observa un escritorio digital con cuatro carpetas.
+Utilizando la perilla horizontal y la perilla vertical puede desplazar el cursor sobre la pantalla hasta posicionarse sobre la carpeta que desea explorar.
+Una vez seleccionada, mantiene presionado el botón principal durante un segundo para abrirla.
+Al abrir una carpeta, se muestra una fotografía representativa. El usuario puede avanzar entre imágenes o activar una reproducción automática mediante distintas combinaciones de pulsaciones.
+Cuando desea regresar al menú principal, puede mantener presionado el botón durante cinco segundos para volver al escritorio y explorar nuevas carpetas.
+La experiencia busca recrear la sensación de recorrer recuerdos digitales mediante una interfaz inspirada en los primeros computadores personales.
 
 ## Desarrollo técnico
 
@@ -157,6 +171,12 @@ Fin y haz loop como quieras:)
 
 
 ## Carcasa
+La propuesta considera una carcasa inspirada en el Macintosh 1984.
+Su diseño busca representar visualmente el computador histórico mientras integra pantalla y controles físicos compuestos por dos perillas y dos botones.
+La forma general toma como referencia la estética compacta del Macintosh, reinterpretándola como un objeto destinado a la exploración de recuerdos digitales.
+
+![fotopropuesta](./imagenes/fotopropuesta.png)
+![fotopropuesta2](./imagenes/fotopropuesta2.png)
 
 ## Referentes
 
@@ -184,6 +204,24 @@ Susan Kare fue la diseñadora gráfica responsable de crear gran parte de los el
 </p>
 
 > **Fuente:** [99% Invisible – Designed with Kare](https://99percentinvisible.org/article/designed-with-kare-influential-macintosh-graphics-of-early-apple-computers/)
+
+
+# Problemas y decisiones durante el proceso 
+El viernes 30 de octubre nos quedamos trabajando hasta tarde en la universidad para intentar finalizar el proyecto.
+Durante gran parte de la tarde, Sebastián Sáez nos ayudó revisando el código y orientándonos sobre cómo implementarlo utilizando la Raspberry Pi Pico 2W.
+Hasta ese momento ya contábamos con una versión funcional del código y nuestro objetivo era transferirlo a la placa física para comenzar las pruebas finales.
+Alrededor de las 18:00 horas, Sebastián detectó un problema importante. El código había sido desarrollado considerando una configuración distinta a la del hardware que teníamos físicamente. Las placas utilizadas durante el proceso no correspondían exactamente a la misma configuración, generando incompatibilidades.
+Al descubrir esta situación entendimos que gran parte del trabajo realizado no podía trasladarse directamente a la Raspberry Pi Pico 2W. Además, adaptar el proyecto y traspasar correctamente el código al entorno de Visual Studio Code resultó mucho más complejo de lo esperado.
+En ese momento nos encontrábamos cansados y preocupados, ya que habíamos dedicado varias horas de trabajo antes de detectar el problema.
+Después de analizar distintas alternativas, decidimos presentar el funcionamiento mediante una simulación en Wokwi, lo que nos permitía demostrar la lógica de navegación, las interacciones y el comportamiento esperado del sistema.
+Finalmente, también se tomó la decisión de construir una carcasa representativa para la entrega final. Aunque no incluiría los componentes electrónicos funcionando en su interior, permitiría mostrar la propuesta formal, la experiencia de uso y la referencia al Macintosh original.
+
+# Prompts utilizados
+*(Agregar aquí los prompts utilizados para los códigos.)*
+
+# Esquemáticos
+*(Agregar aquí los esquemáticos kicad.)*
+
 ## Bibliografía
 
 - Wikipedia. Macintosh 128K. Wikipedia, la enciclopedia libre.<https://es.wikipedia.org/wiki/Macintosh_128K>
