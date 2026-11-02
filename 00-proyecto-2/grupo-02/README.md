@@ -82,7 +82,7 @@ Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almac
 
 ![imagenes](./imagenes/diagrama.png)
 
-## Boom
+## Bom
 
 | Componentes | Cantidad | Precio unitario | Link |
 | --- | --- | --- | --- |
