@@ -78,13 +78,13 @@ Este computador nos parece un referente interesante por la manera en que transfo
 A partir de este referente, destacamos sus características como pantallas LCD, los botones físicos, colores vívidos, el teclado, los gráficos de baja resolución y que cuenta con estos tres modos (word games, math games y fun games). Decidimos mantener la estructura del monitor, ocupar el recurso del teclado para tener nuestros botones y perillas separadas de la pantalla, para proponer una experiencia similar a la de este tipo de computador, y tener 3 modos de "juego", reinterpretándolo con nuestro objetivo.
 
 ### Materialidad e interfaz
-Planeamos realizar la carcasa en impresión 3d, para mantenernos fiel a las formas y materiales de nuestro referente. Mientras que la interfaz, mantenemos esta estética pixelada inspirada en el diseño 
-
-#### Boceto
-![boceto](./imagenes/boceto.png)
+Planeamos realizar la carcasa en impresión 3d, para mantenernos fiel a las formas y materiales de nuestro referente. Mientras que con la interfaz, teníamos como propósito mostrar distintas formas de presentar la información, por lo que en cada modo se utiliza un lenguaje distinto para expresar el contenido: ilustraciones fijas para las emociones, texto para los mensajes y animación para el juego, utilizando como criterio de diseño forzar aún más la estética pixelada, manteniendo formas simples.
 
 #### Interfaz
-![interfaz](./imagenes/interfaz.png)
+![interfaz](./imagenes/pantallas.png)
+
+#### Boceto
+![boceto](./imagenes/boceto-2.png)
 
 #### Modelado
 ![modelado](./imagenes/modelado.png)
@@ -109,15 +109,25 @@ Planeamos realizar la carcasa en impresión 3d, para mantenernos fiel a las form
 
 ### Esquemático
 
-![esquematico](./esquematicos/2026-10-31.jpg)
+![esquematico](./esquematicos/2026-11-01.jpg)
 
 ### Diagramas de flujos
 Definen la experiencia del usuario y cómo funciona cada componente.
 
-#### Usuario:
+#### Experiencia de uso
+Encender el dispositivo: la persona presiona el botón de encendido para iniciar la máquina y activar la pantalla.
+
+1. Encender el dispositivo: presionar botón de encendido para empezar la interacción.
+2. Seleccionar un modo: gira la perilla de navegación para recorrer los tres modos disponibles: Mensajes, Emociones y Juego.
+3. Explorar los mensajes (Modo 01): gira la perilla de navegación hasta el primer modo. La pantalla muestra mensajes motivacionales breves como afirmaciones y reflexiones. Se exploran los cinco disponibles con la perilla de selección de mensajes.
+4. Explorar las emociones (Modo 02): gira la perilla de navegación hasta el segundo modo. Girar la perilla de selección emocional para navegar y seleccionar las cuatro expresiones disponibles.
+5. Iniciar el juego (Modo 03): gira la perilla de navegación hasta el tercer modo. La pantalla presenta el juego y se enciende una luz LED que indica que el botón de salto está habilitado. 
+6. Interactuar con el juego: presiona el botón de salto para que el personaje esquive los obstáculos. La dificultad del juego varía dependiendo de la emoción seleccionada en el Modo 02. 
+7. Cambiar de modo: gira nuevamente la perilla de navegación para acceder a cualquiera de los tres modos. La máquina conserva la última emoción seleccionada para utilizarla en juego. 
+8. Apagar el dispositivo: presiona nuevamente el botón de encendido para desactivar la pantalla y finalizar la interacción. 
+
 ```mermaid
-flowchart TB
-  ---
+---
 config:
  theme: default
 ---
@@ -287,17 +297,6 @@ flowchart TB
    style H color:#000000
    style I color:#000000
 ```
-## Experiencia de uso
-Encender el dispositivo: la persona presiona el botón de encendido para iniciar la máquina y activar la pantalla.
-
-1. Seleccionar un modo: gira la perilla de navegación para recorrer los tres modos disponibles: Expresiones, Mensajes y Minijuego. 
-2. Explorar las emociones (Modo 01): gira la perilla de emociones para seleccionar una de las cuatro expresiones disponibles. El rostro de la pantalla cambia según la emoción seleccionada. 
-3. Explorar los mensajes (Modo 02): gira la perilla de navegación hasta el segundo modo. La pantalla muestra mensajes asociados a la emoción seleccionada anteriormente. 
-4. Iniciar el minijuego (Modo 03): gira la perilla de navegación hasta el tercer modo. La pantalla presenta el juego y se enciende una luz LED que indica que el botón de salto está habilitado. 
-5. Interactuar con el minijuego: presiona el botón de salto para que el personaje esquive los obstáculos. La dificultad del juego varía dependiendo de la emoción seleccionada en el Modo 01. 
-6. Cambiar de modo: gira nuevamente la perilla de navegación para acceder a cualquiera de los tres modos. La máquina conserva la última emoción seleccionada para utilizarla en los mensajes y el minijuego. 
-7. Apagar el dispositivo: presiona nuevamente el botón de encendido para desactivar la pantalla y finalizar la interacción. 
-
 </details>
 
 <details>
@@ -368,7 +367,7 @@ https://wokwi.com/projects/479334243939894273
 
 #### `Perilla`
 
-Qué hace: Representa los potenciómetros físicos que en nuestro caso permiten seleccionar emociones, mensajes y navegar entre pantallas.
+Qué hace: representa un potenciómetro, que entrega un valor analógico según cuánto se gire. La clase convierte ese valor en algo que el programa entiende como una opción concreta, como la emoción número 2 o el mensaje número 4. Para eso divide el recorrido en partes iguales y promedia varias lecturas para filtrar el ruido. También tiene un margen de movimiento mínimo (umbral) que hace que la opción solo cambie cuando la perilla realmente se movió. Así no parpadea entre dos opciones cuando está en el límite. En la máquina hay dos: una navega entre las pantallas y otra elige la emoción o el mensaje.
 
 Atributos:
 - `int patita`: identifica el pin donde esta conectada
@@ -407,7 +406,7 @@ Se relaciona con: `main.cpp`, que usa una perilla para navegar entre las 3 panta
 
 #### `Led`
 
-Qué hace: Controla el LED que avisa que el botón de salto está disponible.
+Qué hace: controla una luz que se enciende o se apaga. Su función es avisar al usuario, se prende solo en el modo del juego para indicar que el botón de salto está disponible. Cada vez que la máquina cambia de pantalla, la clase decide si el LED debe quedar prendido o apagado. Aporta una respuesta visual fuera de la pantalla.
 
 Atributos:
 - `int patita`: pin donde está conectado el LED
@@ -431,7 +430,7 @@ Se relaciona con: `main.cpp`, que llama a actualizar(modoActual) en cada vuelta.
 
 #### `Pantalla`
 
-Qué hace: Maneja la pantalla OLED monocromática de 128 x 64 píxeles por I2C (SH1106, o SSD1306 para probar en Wokwi). Tiene un dibujo en memoria donde se pinta primero todo (píxeles, texto y rostros) y lo envía completo a la pantalla con mostrar().
+Qué hace: maneja la pantalla OLED de 128 x 64 píxeles. Funciona como un lienzo con memoria: primero se dibuja todo ahí (puntos, rectángulos, imágenes y texto) y después se envía completo a la pantalla por I2C, que es el protocolo de comunicación. Además de dibujar rostros, tiene su propia tipografía de píxeles y sabe escribir texto en varias líneas.
 
 Atributos:
 
@@ -456,7 +455,7 @@ Se relaciona con: `Mensajes`, `Emociones` y `Juego`, que dibujan con ella, y `ma
 
 #### `Emociones`
 
-Qué hace: Gestiona las cuatro emociones (felicidad, tristeza, enojo y calma): su nombre, su rostro y el nivel de dificultad del juego asociado a cada una. Dibuja el rostro de la emoción elegida en la pantalla (modo 02).
+Qué hace: controla lo que pasa en el modo 01, guarda las cuatro emociones (felicidad, tristeza, enojo y calma) y todo lo que va asociado a cada una: su nombre, su rostro y su nivel de dificultad para el juego. Se encarga de dibujar el rostro correspondiente cuando el usuario gira la perilla. Su dato más importante es la emoción elegida, porque conecta dos partes de la máquina: lo que el usuario siente y cómo se juega. Por ejemplo, el enojo da el juego más rápido y la calma el más lento.
 
 Atributos:
 - `const char* emociones[4]`: nombres de las emociones (0 felicidad, 1 tristeza, 2 enojo, 3 calma)
@@ -479,7 +478,7 @@ Se relaciona con: `Pantalla` (para dibujar), `Rostros.h` (los dibujos) y `main.c
 
 #### `Mensajes`
 
-Qué hace: Gestiona los mensajes motivacionales del modo 01. La perilla permite recorrerlos y se muestran en la pantalla con un contador (por ejemplo 2/5). No dependen de la emoción.
+Qué hace: controla lo que pasa en el modo 02, guarda la lista de mensajes motivacionales y decide cuál se muestra según la perilla. Al dibujar, parte el texto en varias líneas sin cortar palabras, para que quepa en la pantalla, y agrega un contador (por ejemplo 2/5) para que el usuario sepa que hay más por explorar. También se preocupa de no redibujar si el mensaje no cambió, lo que evita parpadeos.
 
 Atributos:
 
@@ -501,7 +500,7 @@ Se relaciona con: `Pantalla` (para dibujar) y `main.cpp`, que le entrega la posi
 
 #### `Juego`
 
-Qué hace: Es el minijuego del modo 03. Un personaje queda fijo a la izquierda y los obstáculos avanzan hacia él desde la derecha, como si el personaje avanzara solo. El botón 02 lo hace saltar; si choca, termina la partida y se muestra el puntaje. La emoción elegida define la velocidad y la frecuencia de los obstáculos.
+Qué hace: controla lo que pasa en el modo 03, el personaje se queda fijo en pantalla y los obstáculos avanzan hacia él, lo que da la sensación de que corre. La clase calcula en cada instante la posición de todo según el tiempo real que pasó, simula el salto con una fuerza hacia arriba y la gravedad, detecta los choques, y va generando un puntaje en base a los obstaculos superados. La emoción elegida cambia la velocidad y la frecuencia de los obstáculos. Al perder, muestra el puntaje y el botón de salto empieza una partida nueva.
 
 Atributos:
 
@@ -546,7 +545,9 @@ Se relaciona con: `main.cpp` (le entrega el botón y la dificultad) y Pantalla (
 ------
 
 #### Prompts usados:
-para qué se usó cada uno y qué se hizo con la respuesta.
+Utilizamos Chat GPT y Claude para ayudarnos a realizar los códigos. Para esto, primero se realizó un documento donde se explicó lo que queríamos que hiciera la máquina, qué haría cada componente, y qué clases queríamos crear, con sus respectivos métodos y atributos que considerábamos necesarios. A partir de esto, creamos maquetas de los archivos `.h` donde nuestros [2026-10-29](https://github.com/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-03/codigos/2026-10-29) 
+
+------
 
 ### Clases de terceros
 Hechas por grupo 04
