@@ -1,4 +1,4 @@
-#include "AdafruitGFX_Pico.h"
+#include "AdafruitGFXPico.h"
 #include "FuenteRetro.h"
 #include "hardware/spi.h"
 #include "pico/stdlib.h"

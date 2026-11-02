@@ -2,7 +2,7 @@
 // Raspberry Pi Pico 2 W / RP2350, ST7789V, C++17 y Pico SDK (sin Arduino).
 // Se han extraído las clases a .h/.cpp sin modificar las reglas del juego.
 
-#include "AdafruitGFX_Pico.h"
+#include "AdafruitGFXPico.h"
 #include "PantallaUI.h"
 #include "Perilla.h"
 #include "Boton2.h"

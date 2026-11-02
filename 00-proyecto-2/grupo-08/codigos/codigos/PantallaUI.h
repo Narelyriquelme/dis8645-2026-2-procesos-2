@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include "AdafruitGFX_Pico.h"
+#include "AdafruitGFXPico.h"
 
 // DORE 8 - Interfaz de usuario: ocho pantallas, sprites, textos y laberinto.
 /**
