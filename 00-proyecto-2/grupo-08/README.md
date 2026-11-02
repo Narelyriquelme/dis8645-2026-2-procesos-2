@@ -292,7 +292,7 @@ Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLi
 ### Experiencia usuario
 > La experiencia del usuario consiste en interactuar físicamente con el proyecto a través de su carcasa, las perillas y los botones, generando una experiencia de juego dinámica y entretenida. El usuario deberá cumplir distintas misiones, superar desafíos y resolver cada nivel utilizando los controles del dispositivo. Además de la entretención, el juego busca transmitir una reflexión final: aunque el camino para alcanzar una meta pueda presentar dificultades, lo importante es perseverar, seguir intentándolo y confiar en que, con esfuerzo y constancia, es posible llegar hasta el final.
 
-### flujo del juego
+### Flujo del juego
 ![alt](./imagenes/juego.jpeg)
 ### Hardware
 ![alt](./imagenes/hardware.jpeg)
