@@ -1,4 +1,13 @@
 # Proyecto-02
+
+
+<p align="center">
+  <img src="./imagenes/animaciondore8.gif"
+       alt="Dore 8"
+       width="100%">
+</p>
+
+
 *Integrantes*
 
 ☆ Vanessa García / <https://github.com/vanessagarciaM>
@@ -8,6 +17,7 @@
 ☆ Narely Riquelme /
 
 ☆ Angel Sabogal / <https://github.com/angel-udp>
+
 
 ## Commodore 64 Ultimate 
 El Commodore 64 Ultimate representa el renacimiento de uno de los ordenadores clásicos, siendo una recreación física y fiel de la máquina original. Donde su principal objetivo es ofrecer la misma experiencia nostálgica, recuperando carcasa clásico, pero adaptándola a las necesidades tecnológicas de hoy en día.
