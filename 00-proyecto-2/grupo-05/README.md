@@ -464,6 +464,9 @@ void leer
 # Simulación digital en wokwi
 
 <details>
+
+[Prototipo en wokwi](https://wokwi.com/projects/479619611701093377)
+ 
  </details>
 
 # Construcción tangible de Altiro hero
