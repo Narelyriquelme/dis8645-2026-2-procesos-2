@@ -1,4 +1,11 @@
 # Proyecto-02
+
+
+<p align="center">
+  <img src="./imagenes/animaciondore8.gif" alt="Animación Dore 8" width="600">
+</p>
+
+
 *Integrantes*
 
 ☆ Vanessa García /
@@ -8,6 +15,7 @@
 ☆ Narely Riquelme /
 
 ☆ Angel Sabogal / <https://github.com/angel-udp>
+
 
 ## Commodore 64 Ultimate 
 
