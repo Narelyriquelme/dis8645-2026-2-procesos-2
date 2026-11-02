@@ -131,7 +131,7 @@ Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y
 | `diagram.json` | El cableado de Wokwi |
 
 
-### Conexiones
+## Conexiones
 
 | Componente | Pines Raspberry |
 |---|---|
@@ -141,8 +141,6 @@ Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y
 | Potenciómetro cursor | SIG GP27 |
 | Botón borrar | GP20 (a GND, con pull-up interno) |
 | Botón selector | GP21 (a GND, con pull-up interno) |
-
-
 
 ## Diagramas de flujo
 
@@ -182,8 +180,8 @@ Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y
 
 **Conversor de tablas excel a markdown:** 
 
-[Tables Gnerator](https://www.tablesgenerator.com/markdown_tables)
+[Tables Generator](https://www.tablesgenerator.com/markdown_tables)
 
 ## Prompts usados
 
-
+[Chats con Claude](https://github.com/disenoUDP/dis8645-2026-2-procesos-2/blob/main/00-proyecto-2/grupo-04/codigos/promptproyecto-02.pdf)
