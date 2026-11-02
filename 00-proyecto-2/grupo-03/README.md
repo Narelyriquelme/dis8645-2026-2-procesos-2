@@ -304,7 +304,7 @@ flowchart TB
 </details>
 
 <details>
-<summary> Perilla: en detalle </summary>
+<summary> Perilla 1 : en detalle </summary>
   
 ```mermaid
 ---
@@ -312,31 +312,38 @@ config:
  theme: default
 ---
 flowchart TB
-   A(["Modo 2: Emociones"]) --> B["Girar perilla 1"]
-   B --> C{"¿Qué emoción selecciona?"}
-   C -- Felicidad --> D["Mostrar rostro feliz"]
-   C -- Tristeza --> E["Mostrar rostro triste"]
-   C -- Enojo --> F["Mostrar rostro enojado"]
-   C -- Calma --> H["Mostrar rostro tranquilo"]
-   D --> I["Guardar emoción seleccionada"]
-   E --> I
-   F --> I
-   H --> I
-   I --> J{"¿Desea cambiar la emoción?"}
-   J -- Sí --> B
-   J -- No --> K(["Continuar con la navegación"])
+   Screen1["Máquina encendida"] --> Pot01{"Perilla 0:<br>Navegar por los modos"} & Pot11{"Perilla 1:<br>Cambiar mensajes"}
+   Pot01 -- MODO 1 --> Screen1
+   Pot01 -- MODO 2 --> Screen2["Modo 2: Emociones"]
+   Pot01 -- MODO 3 --> Screen3["Modo 3: Juego"]
+   Pot11 -- Mensaje 1 --> Message1["Eres capaz de lograr grandes cosas."]
+   Pot11 -- Mensaje 2 --> Message2["Cada día es una nueva oportunidad."]
+   Pot11 -- Mensaje 3 --> Message3["Confía en ti mismo y en tus habilidades."]
+   Pot11 -- Mensaje 4 --> Message4["El éxito es la suma de pequeños esfuerzos."]
+   Pot11 -- Mensaje 5 --> Message5["Nunca es tarde para perseguir tus sueños."]
+   Screen2 --> Pot12{"Perilla 1:<br>Cambiar emociones"}
+   Pot12 -- Felicidad --> Emotion1["Mostrar rostro feliz"]
+   Pot12 -- Tristeza --> Emotion2["Mostrar rostro triste"]
+   Pot12 -- Enojo --> Emotion3["Mostrar rostro enojado"]
+   Pot12 -- Calma --> Emotion4["Mostrar rostro tranquilo"]
 
 
-   style A color:#000000
-   style B color:#000000
-   style C color:#000000
-   style D color:#000000
-   style E color:#000000
-   style F color:#000000
-   style H color:#000000
-   style I color:#000000
-   style J color:#000000
-   style K color:#000000
+   style Screen1 color:#424242,fill:#ffffde
+   style Pot01 color:#424242,fill:#ffffde
+   style Pot11 color:#000000
+   style Screen2 color:#424242,fill:#ffffde
+   style Screen3 color:#424242,fill:#ffffde
+   style Message1 color:#000000
+   style Message2 color:#000000
+   style Message3 color:#000000
+   style Message4 color:#000000
+   style Message5 color:#000000
+   style Pot12 color:#000000
+   style Emotion1 color:#000000
+   style Emotion2 color:#000000
+   style Emotion3 color:#000000
+   style Emotion4 color:#000000
+
 ```
 
 </details>
