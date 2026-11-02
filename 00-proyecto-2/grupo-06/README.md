@@ -15,7 +15,8 @@
 
 
 # Space Float 
-Space Float es un juego de nave, la cual hay que mantener volando por el mayor tiempo que pueda sin chocar con obstáculos ni caer al suelo. Tendrá 2 botones y 2 perillas para su uso, el primer botón es seleccionador, al mantenerse presionado durante 2 segundos, prende y apaga el juego, el segundo botón volador es el que sirve para mantener la nave volando, ya que al presionarlo la nave sube hasta que el botón se suelta y la nave comienza a caer, por lo que se debe intercalar el presionar y soltar para evitar que la nave caiga. Las perillas manejan dos aspectos distintos, la perilla derecha es una selección de diferentes naves para que el usuario escoja, son cuatro naves: 1-calabaza, 2-chango, 3-gato alien y 4-vaca . La perilla izquierda  regula la velocidad de juego, pudiendo subir o bajar la dificultad para ajustarla a sus capacidades. 
+
+Space Float es un juego de nave, la cual hay que mantener volando la nave por el mayor tiempo que pueda sin chocar con obstáculos ni caer en el espacio. Tendrá 2 botones y 2 perillas para su uso, el primer botón es seleccionador de personajes, al mantenerse presionado durante 2 segundos, prende y apaga el juego, el segundo botón volador es el que sirve para mantener la nave volando, ya que al presionarlo la nave sube hasta que el botón se suelta y la nave comienza a caer, por lo que se debe intercalar el presionar y soltar para evitar que la nave caiga. Las perillas manejan dos aspectos distintos, la perilla derecha es una selección de diferentes naves para que el usuario escoja, son cuatro naves: 1-calabaza, 2-chango, 3-gato alien y 4-vaca. La perilla izquierda  regula la velocidad de juego, pudiendo subir o bajar la dificultad para ajustarla a sus capacidades. 
 
 | Control | Acción |
 |---|---|
@@ -26,10 +27,13 @@ Space Float es un juego de nave, la cual hay que mantener volando por el mayor t
 | **Perilla izquierda** | Aumenta o disminuye la velocidad del mapa (eje X) |
 | **Perilla derecha** | Cambia la nave seleccionada en el menú |
 
-Esta idea de proyecto esta totalmente inspirado en el juego Flappy Bird 
+**Flappy Bird** 
+
+El juego Flappy Bird es la prueba perfecta de cómo una idea ultracompacta puede cobrar vida en el mundo físico, presenta su mecánica de un solo input (un pulso), su gravedad constante y la generación aleatoria de obstáculos lo convierten en la musa definitiva para la electrónica. Flappy Bird demuestra que no necesitas complejas interfaces para crear un proyecto electrónico interesante, memorable y adictivo.
+
 ![inspiración](./imagenes/foto-bird.jpeg)
 
-# Computador elegido 
+# Computador a investigar 
 **Apple iMac G3 (1998)** 
 ![foto computador](./imagenes/imac.jpeg)
 
@@ -38,19 +42,18 @@ Lanzado el 6 de mayo de 1998, el iMac G3 cambio la forma de vender a  Apple, arr
 **Interfaz de usuario:**
 
 Este computador cambió por completo la forma de comprar de los usuarios. Antes de la llegada del iMac, la tecnología siempre manejó la misma estética: equipos sobrios, grises y rectangulares. Cuando Apple presentó el iMac, transformó la forma de vender en un momento clave, justo cuando muchísima gente compraba su primera computadora. Lanzar al mercado un equipo con variedad de colores y un diseño tan particular rompió con la frialdad de la industria de esa época.
+
 A partir de ahí, los compradores ya no solo elegían una máquina por su funcionamiento, sino también por una estética que reflejaba su propia identidad y que se integraba como un objeto interesante en su espacio. Todo esto demostró un éxito rotundo, pasando de ver al usuario como un simple operador de tecnología a un consumidor cautivado por el diseño, e iniciando una era donde la conexión visual y la experiencia de uso pasaron a ser factores decisivos de compra.
 
 ----
 
 **¿Porque este computador?** 
+El caso del regreso de Steve Jobs a Apple parece muy interesante para analizar. Lo que hoy damos súper por sentado —como poder elegir un producto en tu color favorito para reflejar tu identidad— en ese momento rompió por completo con el paradigma de la tecnología.
 
-steve jobs genio, se fue, apple a la bancarrota, vuelve, dice “no vamos a hacer lo mismo que todos”, innova, personaliza, llama la atención y pum dijo “pa los gustos los colores” y sacó los imac g3 full color escoja caserita, ¿qué hay debajo de toda esa carcasa? no se preocupe caserita aquí se lo mostramos ¿que no entiende nada? yo tampoco pero se ve de locos siono si
-
-en palabras formales, nos llamó la atención lo innovadora de la propuesta que trajo steve jobs al regresar como CEO de apple luego de ser despedido, algo que hoy en día podemos tomar como “obvio” que es el hecho de tener un objeto personal que se ajuste más a nuestros gustos solo por el hecho de poder escoger el color haya podido causar tanto revuelo. Además, de la decisión estética de permitir que se vea el contenido electrónico del computador y de los tipos de conexiones que admitió este computador que eliminó el puerto de disquetes y el haber agregado el puerto de conexión para los cables de internet, algo que recién se venía expandiendo en la época.
-
-a mi personalmente me gustan los mouse con formas raras, hubiese amado tener uno de esos mouse con los que probablemente me hubiese dolido la mano de una manera - pumpkinguurl
+El iMac G3 revolucionó el lenguaje visual de la época. Pasar del clásico bloque beige sobrio e industrial a un volumen orgánico con carcasa translúcida fue una jugada genial: no solo aplicaron el concepto de "honestidad del objeto" al mostrar los componentes internos y su forma terminaron creando una conexión emocional con el usuario. Además, en la parte funcional se arriesgaron muchísimo al eliminar la disquetera y apostar por completo por los puertos USB y Ethernet, anticipándose a lo que venía con internet.
 
 # Atributos/Metodos/Constructores 
+
  ```cpp
 //constructor del botón
 //boton1:
@@ -118,53 +121,24 @@ a mi personalmente me gustan los mouse con formas raras, hubiese amado tener uno
 |Botón Táctil Tapa 12x12x7.3 - Interruptor| 2 | $100| <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=2&_sid=c1a18aabb&_ss=r>  |
 |Potenciómetro precision de rotación ajustable 270° | 2 |$350 | <https://zamper.cl/cl/products/potenciometro-precision-de-rotacion-ajustable-270-1855?srsltid=AYCX9vJ52P0V7IY7rqd_A2PkXN33k9fyvnsHMGatWmAEVxbguBIJ7VkvvuQ>|
 
- 
-Avances proyecto: [avances](./codigos)
-
-
-
-# Mapa de flujo
-# [Space Float]
-
-
-Juego de nave inspirado en *Flappy Bird*, programado para una **Raspberry Pi Pico** y mostrado en una pantalla OLED de 0,96". El objetivo es mantener la nave volando el mayor tiempo posible, esquivando obstáculos.
-
-
 ---
-
-
-## Descripción
-
-
-Una nave avanza por un mapa que se desplaza de forma infinita. La persona que juega debe controlar la altura de la nave intercalando entre presionar y soltar un botón: al presionarlo la nave sube, y al soltarlo comienza a caer. Si la nave choca con un obstáculo o con el suelo, el juego se reinicia. **No hay victoria**: el juego continúa infinitamente y el desafío es durar lo más posible.
-
-
-El juego cuenta con:
-
-
-- **Selección de nave:** al iniciar, un menú permite elegir 1 de 4 personajes.
-- **Dificultad ajustable:** una perilla regula la velocidad con que avanza el mapa.
-- **Encendido y apagado** de la pantalla desde un botón.
-
-
----
-
 
 ### Conexiones
 
+Proyecto simulado en [Wokwi](https://wokwi.com) con una **Raspberry Pi Pico**, una pantalla OLED, 2 botones y 2 perillas. Los números de pin son los del archivo `diagram.json`.
 
-> Completar con los pines definitivos del proyecto.
+### Resumen de pines de la Pico
 
-
-| Componente | Pin de la Pico |
-|---|---|
-| Botón 1 (seleccionador) | `GP__` |
-| Botón 2 (volador) | `GP__` |
-| Perilla izquierda (velocidad) | `GP26 (ADC0)` |
-| Perilla derecha (selección de nave) | `GP27 (ADC1)` |
-| OLED SDA | `GP__` |
-| OLED SCL | `GP__` |
-| OLED VCC / GND | `3V3` / `GND` |
+| Pin Pico | Nº físico | Conectado a | Función |
+|---|---|---|---|
+| `GP4` | 6 | OLED `SDA` | I2C0 datos |
+| `GP5` | 7 | OLED `SCL` | I2C0 reloj |
+| `GP14` | 19 | Botón *Seleccionar* | Entrada digital (activo en bajo) |
+| `GP15` | 20 | Botón *Volar* | Entrada digital (activo en bajo) |
+| `GP26` | 31 | Perilla *Velocidad* (`SIG`) | ADC0 |
+| `GP27` | 32 | Perilla *Personaje* (`SIG`) | ADC1 |
+| `3V3` | 36 | OLED, perillas y riel `+` de la protoboard | Alimentación 3,3 V |
+| `GND` | varios | OLED, perillas y riel `-` de la protoboard | Tierra |
 
 
 ---
@@ -300,7 +274,7 @@ flowchart TD
 
 
 <details>
-<summary><b>Diagrama de flujo: botones</b></summary>
+<summary><b>Mapa de flujo: botones</b></summary>
 
 
 **Botón 1 (seleccionador):** pulsación corta selecciona, pulsación larga (2 segundos) enciende o apaga.
@@ -395,7 +369,7 @@ flowchart TD
 
 
 <details>
-<summary><b>Diagrama de flujo: perillas</b></summary>
+<summary><b>Mapa de flujo: perillas</b></summary>
 
 
 **Perilla izquierda (velocidad del mapa):**
