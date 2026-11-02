@@ -429,7 +429,8 @@ void leer
 <details>
 
 Todo comenzó con la explicación del proyecto a Claude escrito a manera de prosa para la creación de los diagramas de flujo en código de mermaid para ser puestos en este repositorio.
-A partir de este contexto general con el cual se crearon los diagramas de flujo, utilizamos este ejemplo `[2026-10-06-clases](https://wokwi.com/projects/477335809803977729)` para tomar la estructura y manera de proceso del código en lenguaje c++ que se nos fue enseñada en el taller, y en base a ello, comenzamos junto a Claude, a escribir las clases y luego comenzar a tejer el proyecto. 
+
+A partir de este contexto general con el cual se crearon los diagramas de flujo, utilizamos este ejemplo [2026-10-06-clases](https://wokwi.com/projects/477335809803977729) para tomar la estructura y manera de proceso del código en lenguaje c++ que se nos fue enseñada en el taller, y en base a ello, comenzamos junto a Claude, a escribir las clases y luego comenzar a tejer el proyecto. 
 
 Usamos el ingles para encaminar de manera precisa lo que se quería obtener, y el español para narrar el proyecto.
 
@@ -473,6 +474,24 @@ nivel: 1, 2 y 3 (nivel 1: fácil, nivel 2: medio, nivel 3: difícil):
 
 
 > Now that you know how it works, create the flowachart whit code for mermaid flowchart and github.
+
+Luego de esto, se creó el documento `.h` de la clase Perilla siguiendo paso a paso los ejemplos de clase, ejemplo con el cual se encamino la simplificación de atributos y métodos en el código ya que Claude aunque lo había hecho bien, estaba haciendo de más (comparábamos con como era la estructura de los ejemplos de clase y nos percatábamos de ello), y eso hacia que el código fuera más complejo para nuestro entendimiento, así que luego le dimos la instrucción de que tomara como referencia la clase que se creó. 
+
+Después, para que Claude tuviera un mayor contexto, le mencionamos los elementos que estábamos utilizando para que si bien el código funcionara en wokwi, también funcionara en Visual Studio Code para el prototipo físico y tangible.  
+
+> Hey claude, now that u have the context and how is the language of the c++ I'm using, the order or the files, clasess etc..., I want you to the help me creating the code for this work in my microcontroller. I'm using a raspberry pi pico 2 w. 
+
+> Let's go step by step, but I want to make an aclaration, that is that with button 1 we are moving trough the levels, and with button 2 we are selecting  the level.
+
+> The elements we are using are:
+> Matriz LED RGB 8×8 con WS2812B. For the ligths, and we are couting 2 files as a one.
+> Parlante 36mm 8Ω (for the sound)
+> Max98357A (for the sound)
+> Botones pulsador
+> Potenciómetros b500k
+> Protoboard.
+
+Let's write the library, and prototiping it first in wokwi, and then we can do it in visual studio code, for the real life prototyping.
  
 </details>
 
@@ -481,7 +500,7 @@ nivel: 1, 2 y 3 (nivel 1: fácil, nivel 2: medio, nivel 3: difícil):
 <details>
  
 - Camila Delgado: por su disposición, asesoría y atención para con las impresiones 3d, el equipo, y mantener el LID súper ordenado siempre.
-- Camila Ramirez: Porque en medio de una conversación nos ayudo a aterrizar la idea del proyecto 
+- Camila Ramirez: Porque en medio de una conversación nos ayudo a aterrizar la idea del proyecto, y por regalarnos el Max98357A para el audio de nuestro proyecto.
 - Camila Parada: Por prestarnos el filamento de impresión **trans**parente 
 - Vania Paredes (sleye) y Caro alegria: Por donarnos filamentos para pruebas.
 - El LID: Por las impresoras 3D, el wifi, los cautines, el espacio, la comodidad, y las herramientas necesarias para la creación tangible de nuestro proyecto.
