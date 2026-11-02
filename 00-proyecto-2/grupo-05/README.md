@@ -308,10 +308,10 @@ flowchart TD
     C --> A
 
     B -- Sí --> D{"¿En qué parte del giro<br/>está la perilla?"}
-    D -- Todo a la izquierda --> E["El LED morado<br/>queda en la columna 1"]
-    D -- Un poco a la izquierda --> F["El LED morado<br/>queda en la columna 2"]
-    D -- Un poco a la derecha --> G["El LED morado<br/>queda en la columna 3"]
-    D -- Todo a la derecha --> H["El LED morado<br/>queda en la columna 4"]
+    D -- Todo a la izquierda (0-1023) --> E["El LED morado<br/>queda en la columna 1"]
+    D -- Un poco a la izquierda (1024-2047) --> F["El LED morado<br/>queda en la columna 2"]
+    D -- Un poco a la derecha (2048-3071) --> G["El LED morado<br/>queda en la columna 3"]
+    D -- Todo a la derecha (3072-4095) --> H["El LED morado<br/>queda en la columna 4"]
 
     E --> I(["La persona ve el LED morado<br/>en la columna elegida"])
     F --> I
@@ -457,13 +457,17 @@ void leer
  </details>
 
 # Esquemático 
-
+    
  <details>
+![Esquematico](.esquematicos/altiro-hero/vista-previa.png)
  </details>
  
 # Simulación digital en wokwi
 
 <details>
+
+[Prototipo en wokwi](https://wokwi.com/projects/479619611701093377)
+ 
  </details>
 
 # Construcción tangible de Altiro hero
@@ -474,8 +478,13 @@ void leer
 ![proceso1](./imagenes/proceso1.png)
 ![proceso2](./imagenes/processo2.png)
 ![presentación del grupo](./imagenes/processo4.png)
- 
+![altiro hero funcionando](./imagenes/niveles.gif)
+![altiro hero funcionando](./imagenes/pierde.gif)   
+![desarmado](./imagenes/desarmado.jpeg)
+![desarmado2](./imagenes/desarmado2.jpeg)
+
 ---
+    
 </details>
 
 # Prompt y Cluade
@@ -546,6 +555,53 @@ Después, para que Claude tuviera un mayor contexto, le mencionamos los elemento
 > Protoboard.
 
 Let's write the library, and prototiping it first in wokwi, and then we can do it in visual studio code, for the real life prototyping.
+    
+Ya para el toque final, le pedimos a ChatGPT que añadiera sonido en los pines asignados usando este prompt, que se perfeccionó gracias a la experimentación de sonido: 
+
+> Integra sonido en mi proyecto para Raspberry Pi Pico 2 W, usa Visual Studio Code. Recuerda poner sonido en todo.
+
+> Primero revisa el código y trabaja directamente en esa carpeta. Conserva la lógica, las animaciones y los controles existentes.
+
+> Usa esta configuración de audio, que ya probé y funcionó:
+> - Núcleo Arduino-Pico de Earle Philhower.
+> - Biblioteca I2S.h.
+> - Frecuencia de muestreo: 16000 Hz.
+> - Muestras de 16 bits con signo.
+> - Onda cuadrada.
+> - Misma muestra en ambos canales mediante audio.write16(muestra, muestra).
+> Conexiones del MAX98357A:
+> Señal	Pico 2 W
+> BCLK	GP6, pin físico 9
+> LRC	GP7, pin físico 10
+> DIN	GP8, pin físico 11
+> VIN	VBUS, pin físico 40, alimentando la Pico por USB
+> GND	GND, pin físico 38
+> SD	Sin conectar
+> GAIN	Sin conectar
+
+
+> El parlante de 8 Ω y 1 W está conectado entre SPK+ y SPK−.
+
+> Implementa el motor siguiendo este patrón:
+> - I2S audio (OUTPUT, 6, 8); LRC utiliza automáticamente GP7.
+> - bool core1_separate_stack = true;
+> - Inicialización de audio en setup1() con audio.setBitsPerSample(16) y audio.begin(16000).
+> - Generación continua de muestras en loop1().
+> - Funciones sonido (frecuencia, duración) y silencio().
+> - Control de duración con millis(), manteniendo responsive el núcleo principal.
+> - Enviar muestras cero cuando no haya una nota activa.
+> Deja un único ajuste directo en Volumen.h:
+> constexpr int AUDIO_AMPLITUDE{2000};
+> El valor 2000 es el del montaje probado. Permite reducirlo con enteros como 1000, 500, 200 o 100; cero significa silencio digital. No controles SD por software.
+
+> Añade efectos a los eventos relevantes del proyecto. Si es un juego, incluye menú, selección, inicio, acierto, fallo, derrota y victoria. Si tiene niveles, crea melodías distintas y sincroniza su ritmo con el avance real del juego.
+
+> Revisa conflictos con GP6, GP7, GP8 y el segundo núcleo antes de integrar. > Indica cualquier cambio de cableado necesario.
+
+> Respalda los archivos que reemplaces, compila para Raspberry Pi Pico 2 W / ARM y deja Run Project configurado para compilar y cargar el archivo actualizado desde esta misma carpeta.
+
+> Al terminar, indica qué cambió, dónde se ajusta la amplitud y qué falta comprobar físicamente.
+
  
 </details>
 
@@ -554,20 +610,22 @@ Let's write the library, and prototiping it first in wokwi, and then we can do i
 <details>
  
 - Camila Delgado: por su disposición, asesoría y atención para con las impresiones 3d, el equipo, y mantener el LID súper ordenado siempre.
-- Camila Ramirez: Porque en medio de una conversación nos ayudo a aterrizar la idea del proyecto, y por regalarnos el Max98357A para el audio de nuestro proyecto.
+- Camila Ramírez: Porque en medio de una conversación nos ayudo a aterrizar la idea del proyecto, y por regalarnos el Max98357A para el audio de nuestro proyecto.
 - Camila Parada: Por prestarnos el filamento de impresión **trans**parente 
 - Vania Paredes (sleye) y Caro alegria: Por donarnos filamentos para pruebas.
 - El LID: Por las impresoras 3D, el wifi, los cautines, el espacio, la comodidad, y las herramientas necesarias para la creación tangible de nuestro proyecto.
 
 </details>
 
-# Referentes
+# Bibliografía
 
 <details>
 
-+ <https://youtu.be/n0YoaTSh_bI>
-+ <https://es.wikipedia.org/wiki/Game_Boy_Color>
-+
-+
-
++ <https://youtu.be/n0YoaTSh_bI>, Datos sobre la Game Boy Color.
++ <https://es.wikipedia.org/wiki/Game_Boy_Color>, foto e información sobre Game Boy Color.
++ <https://co.ebay.com/b/Nintendo-Game-Boy-Color-Clear-Region-Free-Video-Game-Consoles/139971/bn_109360105>, foto de referencia Gameboy Color.
++ <https://www.nintendo.com/es-es/Hardware/La-historia-de-Nintendo/Game-Boy-Color/Game-Boy-Color-627137.html>, historia de la Game Boy Color.
++ <https://es.wikipedia.org/wiki/Guitar_Hero>, información del juego Guitar Hero.
++ <https://www.imdb.com/es/title/tt1571399/>, información del juego Dj Hero.
+    
 </details>
