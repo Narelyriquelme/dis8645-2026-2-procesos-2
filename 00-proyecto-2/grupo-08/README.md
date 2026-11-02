@@ -1,7 +1,16 @@
 # Proyecto-02
+
+
+<p align="center">
+  <img src="./imagenes/animaciondore8.gif"
+       alt="Dore 8"
+       width="100%">
+</p>
+
+
 *Integrantes*
 
-☆ Vanessa García /
+☆ Vanessa García / <https://github.com/vanessagarciaM>
 
 ☆ Isidora Pérez / <https://github.com/isipm08>
 
@@ -9,32 +18,29 @@
 
 ☆ Angel Sabogal / <https://github.com/angel-udp>
 
-## Commodore 64 Ultimate 
 
+## Commodore 64 Ultimate 
 El Commodore 64 Ultimate representa el renacimiento de uno de los ordenadores clásicos, siendo una recreación física y fiel de la máquina original. Donde su principal objetivo es ofrecer la misma experiencia nostálgica, recuperando carcasa clásico, pero adaptándola a las necesidades tecnológicas de hoy en día.
 
 Para lograr el parecido a la máquina original, en su interior alberga una placa equipada con un chip AMD Xilinx Artix-7 FPGA, una tecnología que le permite replicar el comportamiento del hardware clásico ciclo a ciclo. Gracias a esto, el equipo alcanza un 99% de compatibilidad con todo el software que se lanzó para el ordenador, al mismo tiempo que incorpora mejoras modernas, como mayor capacidad de memoria y un modo turbo de 48 MHz para optimizar el rendimiento. Finalmente envolviéndose en una carcasa que recupera la estética y esencia clásica del Commodore, integrando interruptores mecánicos Gateron Pro 3.0 de 55 gramos, teclado de 66 teclas y un soporte para macros y tecnología NKRO garantizando escritura fluida.
 
 Este equipo destaca su versatilidad al realizar la conexión entre dos épocas distintas, la evolución de este muestra cómo los computadores pasaron de ser equipos destinados al aprendizaje y al trabajo, a convertirse en herramientas para jugar, crear música, experimentar gráficos, acercando la tecnología y programación a los hogares. Aunque es compatible con cintas de casete, unidades de disco y con televisores de tubo (CRT). Afortunadamente, no todo el mundo está dispuesto a utilizar una consola retro con un monitor CRT (especialmente por el tamaño que ocupa y su elevado peso). Estos usuarios pueden utilizar la salida HDMI a 1080p para conectarlo a monitores y Smart TV actuales (el cable viene incluido junto con el equipo). 
 
-Dentro de su sistema operativo incluye las suite GEOS, como el GEOWrite, que fue uno de los primeros procesadores de texto modernos, con capacidad de edición WYSIWYG, múltiples fuentes y estilos, escribir documentos, dar forma al texto, e inserción de imágenes. Ahora, es un entorno de escritura sin conexión, ideal para diarios personales, ensayos y redacción sin distracciones. También el GEOPaint era un editor gráfico para dibujar y pintar, crear ilustraciones digitales, con patrones, rellenos y pinceles. Se utilizó para crear tarjetas de felicitación, diseños de boletines informativos y muchísimos proyectos de arte digital para principiantes. Ahora es una herramienta creativa sin distracciones, perfecta para artistas digitales emergentes. Y el GEOPublish fue una de las primeras herramientas modernas de autoedición, combinar texto e imágenes. Fue responsable de innumerables periódicos escolares, boletines parroquiales, folletos de pequeños negocios y carteles de bandas musicales. Y también el resto de la suite como GEOSpell, GEOPile, GEOCalc, GEOGif, GEOS Deskpack Plus, Fuentes GEOS, GEODemo.
+Dentro de su sistema operativo incluye las suite GEOS, como el GEOWrite, que fue uno de los primeros procesadores de texto modernos, con capacidad de edición WYSIWYG, múltiples fuentes y estilos, escribir documentos, dar forma al texto e inserción de imágenes. Ahora, es un entorno de escritura sin conexión, ideal para diarios personales, ensayos y redacción sin distracciones. También el GEOPaint era un editor gráfico para dibujar y pintar, crear ilustraciones digitales, con patrones, rellenos y pinceles. Se utilizó para crear tarjetas de felicitación, diseños de boletines informativos y muchísimos proyectos de arte digital para principiantes. Ahora es una herramienta creativa sin distracciones, perfecta para artistas digitales emergentes. Y el GEOPublish fue una de las primeras herramientas modernas de autoedición, combinar texto e imágenes. Fue responsable de innumerables periódicos escolares, boletines parroquiales, folletos de pequeños negocios y carteles de bandas musicales. Y también el resto de la suite como GEOSpell, GEOPile, GEOCalc, GEOGif, GEOS Deskpack Plus, Fuentes GEOS, GEODemo.
 
 ![alt](./imagenes/commodore-64ultimate.png)
 
 ## Descripción del proyecto
-
-**DORE 8** es un videojuego retro inspirado en la estética del Commodore 64. El proyecto cuenta con una factura técnica desarrollada en C++, luego ejecutada en el microcontrolador Raspberry Pi Pico, tras ser prototipado de forma virtual en la plataforma Wokwi. El relato material sostiene los componentes físicos, tales como: dos perillas, dos botones, una pantalla y buzzer, el cual reproduce música retro y efectos de sonido. Buscando evocar los paneles de control de los microcomputadores en los años ochenta, incluyendo lo físico por parte del jugador con la narraativa digital. El juego tiene como objetivo acompañar y ayudar a un estudiante a llegar a la universidad, superando diferentes desafíos, como recorrer un laberinto para alcanzar la micro, esquivar vehículos durante el trayecto y llegar a su sala de clases. 
+**DORE 8** es un videojuego retro inspirado en la estética del Commodore 64. El proyecto cuenta con una factura técnica desarrollada en C++, luego ejecutada en el microcontrolador Raspberry Pi Pico, tras ser prototipado de forma virtual en la plataforma Wokwi. El relato material sostiene los componentes físicos, tales como: dos perillas, dos botones, una pantalla y buzzer, el cual reproduce música retro y efectos de sonido. Buscando evocar los paneles de control de los microcomputadores en los años ochenta, incluyendo lo físico por parte del jugador con la narrativa digital. El juego tiene como objetivo acompañar y ayudar a un estudiante a llegar a la universidad, superando diferentes desafíos, como recorrer un laberinto para alcanzar la micro, esquivar vehículos durante el trayecto y llegar a su sala de clases. 
 
 En el ámbito visual, adoptamos un estilo de pantallas retro, bloques marcados y delimitados, además de una tipografía geométrica estilo "arcade". Los gráficos se construyen mediante figuras geométricas para optimizar el uso de memoria. Nuestro objetivo es combinar la estética de los videojuegos antiguos con una experiencia interactiva sencilla y entretenida.
 
 Los controles parecen intuitivos, pero al momento de jugar se invierte la usabilidad en momentos clave para simular el estrés y la emoción que se genera el camino a la universidad. En cuanto a estructura, nos centramos en Slides, reforzando la narrativa del sistema de etapas.
 
 ### ¿Por qué Dore 8?
-
 El nombre de nuestro proyecto nace como una síntesis conceptual y un homenaje directo. Este se extrae de la terminación ```commodore``` y el número 8 hace referencia a la ```era de los 8 bits```, ya que este es el período en donde los videojuegos y la informática estaba dominada por consolas y microcomputadores cuyos procesadores manejaba la información en bloques de 8 bits por ciclo. De esta forma encapsulamos de manera general los gráficos con figuras geométricas, sonido y uso de controles mecánicos. Y además porque somos el grupo 08 jaja.
 
 ### Inspiración: La Influencia del Commodore 64
-
 La referencia al Commodore 64 Ultimate se manifiesta en cuatro pilares fundamentales del proyecto:
 
 1. **Estética Gráfica y Lenguaje Visual:** Uso de bloques visuales marcados, bordes delimitados en pantalla y tipografía geométrica estilo monospaciado, emulando el modo de texto y la construcción de sprites característicos de la época de los 8 bits.
@@ -57,7 +63,6 @@ La misión principal del juego es ayudar al estudiante a llegar a la universidad
 - **Slide 5 — Conclusión y reflexión:** Pantalla de cierre que aparece al completar la meta. Muestra el mensaje *«¡Lo lograste!»*, acompañado de una frase reflexiva sobre la resiliencia.
 
 ## Controles e interacciones
-
 | Elemento / interacción | Componente | Especificación | Acción |
 |---|---|---|---|
 | Botón: cambio de escena | Botón pulsador | Momentáneo, 12 × 12 × 7,3 mm | Permite avanzar a la siguiente escena del juego. |
@@ -69,11 +74,7 @@ La misión principal del juego es ayudar al estudiante a llegar a la universidad
 
 ## Pseudocódigo
 
-1. Propósito
-El pseudocódigo describe qué decisiones toma el programa, sin depender de la sintaxis exacta de C++. Es una guía para entender el funcionamiento del videojuego y relacionarlo con las funciones reales del archivo main.cpp.
-
-2. Pseudocódigo general de DORE 8
-INICIO DORE 8
+```INICIO DORE 8```
 
     Preparar salida de mensajes por USB
     Iniciar ADC
@@ -102,10 +103,12 @@ INICIO DORE 8
 
         Esperar brevemente antes de repetir
 
-FIN
-Funciones relacionadas: main(), controlarBotonContinuar(), actualizarNivel().
+        FIN
 
-3. Flujo de pantallas
+**Funciones relacionadas: main(), controlarBotonContinuar(), actualizarNivel()**
+
+```Flujo de pantallas```
+```
 PANTALLA 0: INICIO
     Clic de continuar -> PANTALLA 1: INSTRUCCIONES
 
@@ -131,9 +134,11 @@ PANTALLA 6: VICTORIA
 
 PANTALLA 7: REFLEXIÓN
     Clic de continuar -> PANTALLA 0: INICIO
-Función relacionada: iniciarSlide() restablece las variables y dibuja la escena antes de jugar.
+```
+**Función relacionada: iniciarSlide() restablece las variables y dibuja la escena antes de jugar**
 
-4. Pseudocódigo de lectura de perillas
+```Lectura de perillas```
+```
 FUNCIÓN DIRECCIÓN_DE_PERILLA(GPIO)
     Seleccionar entrada ADC asociada al GPIO
     Leer valor analógico entre 0 y 4095
@@ -147,11 +152,14 @@ FUNCIÓN DIRECCIÓN_DE_PERILLA(GPIO)
 FIN FUNCIÓN
 
 En cada actualización de un nivel:
+
     dx = dirección de perilla horizontal × tamaño del paso
     dy = dirección de perilla vertical × tamaño del paso
-Funciones relacionadas: Perilla::leer(), Perilla::direccion(), actualizarNivel().
+```    
+**Funciones relacionadas: Perilla::leer(), Perilla::direccion(), actualizarNivel()**
 
-5. Pseudocódigo del nivel 1: laberinto
+```Laberinto```
+```
 AL INICIAR LABERINTO:
     Posicionar estudiante en el punto de partida
     Mostrar laberinto y micro
@@ -173,9 +181,11 @@ MIENTRAS el desafío esté EN CURSO:
         Marcar SUPERADO
         Mostrar mensaje para continuar
 FIN
-Funciones relacionadas: colisionLaberinto(), interseccion(), cambiarEstado().
+```
+**Funciones relacionadas: colisionLaberinto(), interseccion(), cambiarEstado()**
 
-6. Pseudocódigo del nivel 2: carretera
+```Carretera```
+```
 AL INICIAR CARRETERA:
     Colocar micro al lado izquierdo, en el carril central
     Colocar tres automóviles en sus posiciones iniciales
@@ -204,9 +214,11 @@ MIENTRAS el desafío esté EN CURSO:
 
     Redibujar micro, automóviles y líneas del camino
 FIN
-Funciones relacionadas: dibujarMetaCarretera(), dibujarMoviles(), dibujarMovimiento(), interseccion().
+```
+**Funciones relacionadas: dibujarMetaCarretera(), dibujarMoviles(), dibujarMovimiento(), interseccion()**
 
-7. Pseudocódigo del nivel 3: sala de clases
+```Sala de clases```
+```
 AL INICIAR SALA:
     Colocar estudiante en la esquina superior izquierda
     Dibujar el pasillo y la puerta SALA 304
@@ -219,9 +231,11 @@ MIENTRAS el desafío esté EN CURSO:
         Marcar SUPERADO
         Mostrar mensaje para continuar
 FIN
-Función relacionada: actualizarNivel().
+```
+**Función relacionada: actualizarNivel()**
 
-8. Pseudocódigo de Boton2
+```Boton2```
+```
 AL CREAR Boton2:
     Configurar GPIO como entrada con resistencia pull-up
 
@@ -246,10 +260,14 @@ CADA VUELTA:
             3 clics -> PULSADO3VECES
 
 AL CONSULTAR leerGesto():
-    Entregar el gesto pendiente y limpiarlo
-En la versión actual: el programa solo ejecuta una acción con PULSADO1VEZ del botón continuar (GP11); el resto de gestos se conserva como posibilidad de ampliación.
 
-9. Pseudocódigo del dibujo de pantalla
+    Entregar el gesto pendiente y limpiarlo
+    
+En la versión actual: el programa solo ejecuta una acción con PULSADO1VEZ del botón continuar (GP11); el resto de gestos se conserva como posibilidad de ampliación.
+```
+
+```Dibujo de pantalla```
+```
 AL INICIAR PANTALLA:
     Configurar SPI0 (GP18 reloj, GP19 datos)
     Configurar CS, DC y RST
@@ -267,29 +285,40 @@ AL DIBUJAR UNA ESCENA:
     Dibujar marcos y paredes con líneas y rectángulos
     Dibujar estudiante, micro o autos con figuras geométricas
     Escribir textos usando la fuente retro 5x7
-Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLine(), fillCircle(), PantallaUI::dibujarSlide().
+```
+**Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLine(), fillCircle(), PantallaUI::dibujarSlide()**
 
-10. Decisiones técnicas que explica este pseudocódigo
-- El programa está escrito en C++ con Pico SDK, sin el entorno Arduino.
-- Los gráficos utilizan primitivas inspiradas en Adafruit GFX, adaptadas para el controlador físico ST7789V. No se trata de incorporar la biblioteca oficial Adafruit de Arduino tal cual.
-- Se evita un framebuffer completo para cuidar la memoria: los escenarios se dibujan enviando pequeñas regiones de píxeles por SPI. Se mantiene una tabla pequeña de glifos de texto de 5 × 7.
-- El movimiento y el tiempo se calculan con base en milisegundos, evitando detener el juego durante los desafíos.
-- El sonido no está activo en esta versión; el GPIO GP13 queda reservado para una futura solución con amplificador adecuado.
-- Las frases y textos actuales se mantienen provisionales hasta que el equipo establezca los definitivos.
+## Organización del código: Clases
+| Clases/Archivo | Descripción |
+|---|---|
+| **diagram.json** | Definición de los componentes del circuito y sus conexiones. |
+| **Audio.cpp** | Implementación de las funciones encargadas de controlar el sonido del buzzer. |
+| **Audio.h** | Declaración de las funciones y estructuras utilizadas para el control del audio. |
+| **main.cpp** | Archivo principal encargado de inicializar y coordinar el funcionamiento del proyecto. |
+| **AdafruitGFX_Pico.cpp** | Implementación de las funciones gráficas para el manejo de la pantalla. |
+| **AdafruitGFX_Pico.h** | Declaración de las funciones y estructuras gráficas utilizadas. |
+| **Boton.cpp** | Implementación de las funciones encargadas de gestionar los botones. |
+| **Boton.h** | Declaración de las funciones y estructuras utilizadas para controlar los botones. |
+| **FuenteRetro.h** | Definición de una tipografía personalizada de estilo retro. |
+| **PantallaUI.cpp** | Implementación de las funciones que gestionan la interfaz gráfica, mostrando textos y elementos visuales. |
+| **PantallaUI.h** | Declaración de las funciones relacionadas con la interfaz gráfica. |
+| **Perilla.cpp** | Implementación de las funciones encargadas de leer y gestionar los valores de los potenciómetros. |
+| **Perilla.h** | Declaración de las funciones y estructuras utilizadas para controlar los potenciómetros. |
 
 ## Diagramas
 ### Experiencia usuario
 > La experiencia del usuario consiste en interactuar físicamente con el proyecto a través de su carcasa, las perillas y los botones, generando una experiencia de juego dinámica y entretenida. El usuario deberá cumplir distintas misiones, superar desafíos y resolver cada nivel utilizando los controles del dispositivo. Además de la entretención, el juego busca transmitir una reflexión final: aunque el camino para alcanzar una meta pueda presentar dificultades, lo importante es perseverar, seguir intentándolo y confiar en que, con esfuerzo y constancia, es posible llegar hasta el final.
 
-### flujo del juego
+### Flujo del juego
+![alt](./imagenes/juego.jpeg)
 ### Hardware
+![alt](./imagenes/hardware.png)
 ### Software
+![alt](./imagenes/software.png)
 ## Esquemático
-
 ![imagen](imagenes/esquematico.png)
 
 ### Tabla de materiales
-
 |Componente|Cantidad|Precio|Link|
 |---|---|---|---|
 |Raspberry Pi Pico|1|$14.990|<https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers>|
@@ -303,7 +332,6 @@ Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLi
 |Cable USB-C|1| $1.800|<https://altronics.cl/cable-usb-tipo-c-datos-alimentacion>|
 
 ## Pruebas y error
-
 Durante el desarrollo de DORE 8 fuimos realizando diferentes pruebas en Wokwi para comprobar que los componentes y el código funcionaran correctamente. Al principio comenzamos con un proyecto vacío, donde incorporamos la Raspberry Pi Pico, una pantalla, dos potenciómetros, dos botones, un buzzer y un LED. Realizamos las conexiones manualmente, siguiendo la distribución que queríamos para nuestro prototipo.
 
 Una de las primeras pruebas fue comprobar el funcionamiento del sonido, ya que queríamos que el videojuego tuviera música retro de fondo y efectos sonoros. Para esto trabajamos con una clase llamada Audio, utilizando C++ y Pico SDK, sin Arduino. También probamos las perillas para verificar que permitieran mover un objeto en la pantalla y que los botones respondieran correctamente.
@@ -319,7 +347,6 @@ Otra dificultad que encontramos fue durante la prueba del nivel de la micro. Not
 Estas pruebas nos ayudaron a identificar aspectos que debíamos mejorar, tanto en el funcionamiento del código como en la experiencia del jugador. También nos permitieron entender la importancia de probar cada componente por separado antes de integrarlo al videojuego completo.
 
 ## Aciertos 
-
 Uno de los principales aciertos durante el desarrollo de DORE 8 fue comenzar probando los componentes de manera individual antes de trabajar en el videojuego completo. Esto nos permitió comprobar que las perillas, los botones, la pantalla, el buzzer y el LED funcionaran correctamente, facilitando la identificación de errores.
 
 Otro acierto fue utilizar C++ con Pico SDK, ya que era uno de los requisitos del proyecto. También decidimos trabajar con clases para mantener el código organizado y poder reutilizar algunas de las desarrolladas anteriormente, como las de las perillas y los botones.
@@ -334,15 +361,18 @@ También fue importante identificar que algunos elementos necesitaban ajustes, c
 
 En general, consideramos que uno de nuestros mayores aciertos fue avanzar de manera progresiva, probando, identificando errores y realizando modificaciones. Gracias a este proceso logramos pasar de un circuito básico en Wokwi a un prototipo de videojuego que integra gráficos, controles, música y diferentes desafíos.
 
-## Carcasa 
+## Proceso
+![alt](./imagenes/proceso.png)
 
+## Carcasa 
 La carcasa la realizamos en impresión 3D, realizando bocetos previos, quisimos enfocarnos en la forma del commodore, en donde, de acuerdo a nuestro juego y objetivo del proyecto 02, adaptamos los botones y perillas para que se pudiese realizar el juego de manera cómoda.
+
+![imagen](imagenes/carcasa.png)
 
 ## Documentación IA
 
 
 ## Bibliografía
-
 https://commodore.net/computer/ 
 
 https://www.commodore.ca/commodore-history/chronological-history-of-commodore-computer/?utm
