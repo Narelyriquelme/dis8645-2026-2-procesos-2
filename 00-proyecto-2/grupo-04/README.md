@@ -142,6 +142,9 @@ Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y
 | Botón borrar | GP20 (a GND, con pull-up interno) |
 | Botón selector | GP21 (a GND, con pull-up interno) |
 
+Foto de las conexiones en físico.
+
+![foto de las conexiones en físico](./imagenes/conexiones-proyecto2.jpeg)
 
 #### *seleccionar*
 
