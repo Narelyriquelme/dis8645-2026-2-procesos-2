@@ -34,10 +34,9 @@ Era del CD-ROM y 32 bits (Mediados de los 90): Con la llegada de soportes como l
 
 Era moderna y el sonido interactivo (Siglo XXI - Presente): La música y los efectos dejaron de ser simples archivos lineales para volverse adaptativos y dinámicos, reaccionando en tiempo real a las acciones del jugador, la exploración o el combate. Además, géneros como el jazz, la música electrónica y fusiones culturales pasaron a ser sellos distintivos en sagas como Persona o Sonic the Hedgehog
 
+<br>
 
-## Inspiración
-
-Sharp X68000
+### Inspiración - Sharp X68000
 
 El proyecto consiste en un dispositivo sonoro inspirado en las configuraciones y el sistema del computador Sharp X68000. La interacción se realizará mediante dos botones y dos perillas, cada uno con una función específica para seleccionar, reproducir y controlar los sonidos.
 
@@ -53,17 +52,21 @@ la Sharp X68000 lideró el mercado de los sistemas informáticos japoneses, fina
 
 <br>
 
-### referentes
+### Referentes
 
 1. Bleep-Drum
+
+
 
 ![bleep-drum](./imagenes/bleep-drum.jpg)
 
 ![bleep-drum](./imagenes/bleep-drum01.jpg)
 
+2. 
+
 <br>
 
-## ¿por qué 5 sonidos? 
+### ¿Por qué 5 sonidos?
 
 - Un tono simple.
 - Una secuencia rítmica.
@@ -71,33 +74,35 @@ la Sharp X68000 lideró el mercado de los sistemas informáticos japoneses, fina
 - Un sonido percusivo.
 - Una muestra de audio digital.
 
-La elección de cinco sonidos responde a la intención de representar distintas transformaciones tecnológicas en la historia del audio de los videojuegos. Cada sonido corresponde a una etapa que permite reconocer cómo evolucionaron la generación, síntesis y reproducción del sonido, desde los primeros tonos electrónicos hasta el audio digital. 
+La elección de cinco sonidos responde a la intención de representar distintas transformaciones tecnológicas en la historia del audio de los videojuegos. Cada sonido corresponde a una etapa que permite reconocer cómo evolucionaron la generación, síntesis y reproducción del sonido, desde los primeros tonos electrónicos hasta el audio digital.
 
-### sonido 0
-
-fecha:
-
-### sonido 1
+### Sonido0
 
 fecha:
 
-### sonido 2
+### Sonido1
 
 fecha:
 
-### sonido 3
+### Sonido2
 
 fecha:
 
-### sonido 4
+### Sonido3
 
 fecha:
 
-## Presentación del Proyecto
+### Sonido4
 
-**Implementación física**: Este proyecto se presentará en formato de prototipo funcional en protoboard con carcasa. 
+fecha:
 
-La interacción principal y la salida de audio I2S se demostrarán directamente sobre la Raspberry Pi Pico 2 W y los componentes montados en protoboard. Ademas se integrará una carcasa impresa en 3d.
+### SonidoInicio
+
+## **Implementación física**
+
+Este proyecto se presentará en formato de prototipo funcional en protoboard y con carcasa.
+
+La interacción principal y la salida de audio I2S se demostrarán directamente sobre la Raspberry Pi Pico 2W y los componentes montados en protoboard. Ademas se integrará una carcasa impresa en 3D.
 
 La idea de presentar la solución en protoboard con una carcasa permite verificar directamente el protocolo de comunicación **I2S** utilizado entre la Raspberry Pi Pico 2 W y el amplificador MAX98357A, así como la lectura analógica por ADC (potenciómetro) y digital (encoder KY-040 y pulsadores).
 
@@ -108,27 +113,6 @@ La prueba física es esencial para validar el muestro y la fidelidad de los 5 au
 ![protoboard](./imagenes/carcasa2.jpg)
 
 ![proto y tapa frontal](./imagenes/carcasa3.jpg)
-
-## Controles e interacciones
-
-El encoder rotatorio cumple dos funciones en un solo componente: funciona como **perilla** al girarlo y como **botón** al presionarlo, ya que incluye un pulsador integrado en su eje.
-
-| Control | Componente | Especificación | Acción |
-| --- | --- | --- | --- |
-| Encoder (perilla): giro horario | Encoder rotatorio con pulsador | Tipo KY-040 | Avanza al siguiente sonido. |
-| Encoder (perilla): giro antihorario | Encoder rotatorio con pulsador | Tipo KY-040 | Retrocede al sonido anterior. |
-| Encoder (botón): pulsación | Encoder rotatorio con pulsador | Tipo KY-040 o similar* | Reproduce el sonido seleccionado. |
-| Potenciómetro (perilla) | Potenciómetro | Tipo B o lineal| Regula el volumen general en un rango de 0 a 100. |
-| Botón Loop: primera pulsación | Botón pulsador | Momentáneo, 12 × 12 mm | Activa la repetición continua del sonido. |
-| Botón Loop: segunda pulsación | Botón pulsador | Momentáneo, 12 × 12 mm + resistencia pull down | Desactiva la repetición continua del sonido. |
-| Cinco lucecitas LED | 5 LED + 5 resistencias | LED 5 mm*, resistencias 220–330 Ω* | Indican cuál de los cinco sonidos está seleccionado. |
-| Unidad de control | Microcontrolador | Raspberry Pi Pico 2 W (chip RP2350, 150 MHz, 520 KB RAM, 4 MB flash) | Lee el encoder, el potenciómetro y el botón Loop, enciende los LEDs y envía el audio al amplificador por I2S. |
-
-### Diagrama de experiencia de usuario
-
-![diagrama](./imagenes/usuario.png)
-
-<br>
 
 ## Experiencia de uso
 
@@ -143,7 +127,71 @@ El encoder rotatorio cumple dos funciones en un solo componente: funciona como *
 
 <br>
 
-## Casos no deseados
+### Diagrama de experiencia de usuario
+
+![diagrama](./imagenes/usuario.png)
+
+<br>
+
+### Controles e interacciones
+
+El encoder rotatorio cumple dos funciones en un solo componente: funciona como **perilla** al girarlo y como **botón** al presionarlo, ya que incluye un pulsador integrado en su eje.
+
+| Control | Componente | Especificación | Acción |
+| --- | --- | --- | --- |
+| Encoder (perilla): giro horario | Encoder rotatorio con pulsador | Tipo KY-040 | Avanza al siguiente sonido. |
+| Encoder (perilla): giro antihorario | Encoder rotatorio con pulsador | Tipo KY-040 | Retrocede al sonido anterior. |
+| Encoder (botón): pulsación | Encoder rotatorio con pulsador | Tipo KY-040 o similar* | Reproduce el sonido seleccionado. |
+| Potenciómetro (perilla) | Potenciómetro | Tipo B o lineal| Regula el volumen general en un rango de 0 a 100. |
+| Botón Loop: primera pulsación | Botón pulsador | Momentáneo, 12 × 12 mm | Activa la repetición continua del sonido. |
+| Botón Loop: segunda pulsación | Botón pulsador | Momentáneo, 12 × 12 mm + resistencia pull down | Desactiva la repetición continua del sonido. |
+| Cinco lucecitas LED | 5 LED + 5 resistencias | LED 5 mm*, resistencias 220–330 Ω* | Indican cuál de los cinco sonidos está seleccionado. |
+| Unidad de control | Microcontrolador | Raspberry Pi Pico 2 W (chip RP2350, 150 MHz, 520 KB RAM, 4 MB flash) | Lee el encoder, el potenciómetro y el botón Loop, enciende los LEDs y envía el audio al amplificador por I2S. |
+
+<br>
+
+## Código
+
+### seudo-código
+
+1. Inicia la máquina
+
+2. suena sonidoPrendido.h
+
+3. se define los parametros inciales de la máquina, es decir, que se enciende led 0 y sonido 0 queda pre-seleccionado
+
+4. lectura inicial de volumen [potenciometro en GPIO XX]
+
+5. si presiona botonLoop y se habilita el modo loop 
+
+- se identifica reproduciendo el sonidoLoopActivado.h y cambiando el led encendido a parpadear
+
+- al momento de seleccionar uno de los 5 sónidos, este se reproducira en un bucle que acabará solo si es presionado el botonLoop nuevamente 
+
+6. Si se gira la perillaEncoder se podrá seleccionar uno de los 5 sonidos que estan asociados al igual que los leds con valores de 0 a 4, al llegar a un extremo se mueve al otro extremo como un circulo
+
+- todas las instancias de lucesita y sonido estan relacionadas directamente, es decir que led 0 y sonido 0 estan vinculados
+
+7. Si se presiona botónSelector se reproduce el sonido en el que se encuentre 
+
+8. si se gira la perillaVolumen, el valor asociado cambiará el volumen
+
+
+<br>
+
+### relación interfaz y código
+
+- botonSelector corresponde al botón de la perilla y funciona con `leer()` y detectar `presionado`
+
+- perillaSelector corresponde al encoder que se desplaza por los 5 sonidos seleccionables
+
+- botonLoop es un pushbutton que está enlazado con la variable `bool estadoPresionarSwitch`, si este es falso, el estado loop es falso
+
+- volumen es un potenciometro, ubicado en el GPIO26 y funciona con valores de 0 a 100
+
+<br>
+
+### Casos no deseados
 
 Nos plantemos diversas situaciones hipoteticas y ver como debería reaccionar la máquina a ellas
 
@@ -191,55 +239,29 @@ Todas comienzan con la pregunta ¿que pasa si...
 
 <br>
 
-## Archivos
+### Archivos / Estructura
 
-main.cpp
+- main.cpp
 
-Boton.h + Boton.cpp
+- BotonGrupo1.h + BotonGrupo1.cpp
 
-Perilla.h + Perilla.cpp
+- PerillaGrupo7.h + PerillaGrupo7.cpp
 
-Sonido.h + Sonido.cpp
+- Sonido.h + Sonido.cpp
 
-Lucecita.h + Lucecita.cpp
+- Lucecita.h + Lucecita.cpp
 
-ampli.h + ampli.cpp
+- Ampli.h + Ampli.cpp
 
-<br>
+- Sonido0.h
 
-## seudo-código
+- Sonido1.h
 
-1. Inicia la máquina
+- Sonido2.h
 
-2. suena sonidoPrendido.h
+- Sonido3.h
 
-3. se define los parametros inciales de la máquina, es decir, que se enciende led 0 y sonido 0 queda pre-seleccionado
-
-4. lectura inicial de volumen [potenciometro en GPIO XX]
-
-5. si presiona botonLoop y se habilita el modo loop 
-
-- se identifica reproduciendo el sonidoLoopActivado.h y cambiando el led encendido a parpadear
-
-- al momento de seleccionar uno de los 5 sónidos, este se reproducira en un bucle que acabará solo si es presionado el botonLoop nuevamente 
-
-6. Si se gira la perillaEncoder se podrá seleccionar uno de los 5 sonidos que estan asociados al igual que los leds con valores de 0 a 4, al llegar a un extremo se mueve al otro extremo como un circulo
-
-- todas las instancias de lucesita y sonido estan relacionadas directamente, es decir que led 0 y sonido 0 estan vinculados
-
-7. Si se presiona botónSelector se reproduce el sonido en el que se encuentre 
-
-8. si se gira la perillaVolumen, el valor asociado cambiará el volumen
-
-### relación interfaz y código
-
-- botonSelector corresponde al botón de la perilla y funciona con `leer()` y detectar `presionado`
-
-- perillaSelector corresponde al encoder que se desplaza por los 5 sonidos seleccionables
-
-- botonLoop es un pushbutton que está enlazado con la variable `bool estadoPresionarSwitch`, si este es falso, el estado loop es falso
-
-- volumen es un potenciometro, ubicado en el GPIO26 y funciona con valores de 0 a 100
+- Sonido4.h
 
 <br>
 
@@ -268,7 +290,7 @@ modoSwitch
 
 | anterior | actual | resultado |
 | :------: | :----: | :-------: |
-| 0        | 0      |  0        |
+| 0        | 0      | 0         |
 | 1        | 0      | 1         |
 | 1        | 1      | 0         |
 | 0        | 1      | 1         |
@@ -311,20 +333,21 @@ Método constructor Lucecita():
 -Configurar el pin como salida.
 -Inicializar la luz apagada.
 
-**Método prender():**
+#### prender()
 
--Cambiar el estado de la luz a encendida.
--Activar el pin para encender la luz.
+- Cambiar el estado de la luz a encendida.
+- Activar el pin para encender la luz.
 
-**Método apagar():**
+#### apagar()
 
--Cambiar el estado de la luz a apagada.
--Desactivar el pin para apagar la luz.
+- Cambiar el estado de la luz a apagada.
+- Desactivar el pin para apagar la luz.
 
-**Metodo parpadeo():** 
-para no ocupar sleep_ms(500) agregar el Metodo parpadeo(): 
+#### Metodo parpadeo() 
 
+- para no ocupar sleep_ms(500) agregar el metodo parpadeo(): 
 
+<br>
 
 ### class Audio
 
@@ -358,7 +381,7 @@ Para lograr introducir cualquier sonido para reproducir en nuestra Raspi
 
 ### class Ampli
 
-Se preparó
+Se preparó una clase enfocada en el uso de la amplificación de audio con el IC MAX98357A
 
 ```cpp
 
@@ -455,6 +478,9 @@ void Ampli::controlVolumen(){
 ## comentarios claude
 
 Desde acá en adelante se describen distintas conversación en las que se le solicita a Claude que observe y analice nuestro código.
+
+<details> 
+<summary>CLICK</summary>  
 
 ### revisión #1
 
@@ -1006,5 +1032,9 @@ Leyendo el código, esto es lo que **hace hoy** el programa en cada caso. Si alg
 | ¿Dos sonidos al mismo tiempo? | No. `Ampli` guarda un solo `datosAudio`, así que cargar uno reemplaza al otro. |
 
 **Orden sugerido para corregir:** 2 y 3 (antes de soldar, porque son de circuito) → 1 → 4 → 5 → 6 (al probar en la placa) → 7.
+
+</details>
+
+<br>
 
 ## Bibliografía
