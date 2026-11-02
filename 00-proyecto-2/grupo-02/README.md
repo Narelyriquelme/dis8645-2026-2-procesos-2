@@ -2,6 +2,10 @@
   <img src="./imagenes/applemacintosh.gif" alt="Apple Macintosh" />
   <img src="./imagenes/applemacintosh.gif" alt="Apple Macintosh" />
 </p>
+<p align="center">
+  <img src="./imagenes/applemacintosh.gif" alt="Apple Macintosh" />
+  <img src="./imagenes/applemacintosh.gif" alt="Apple Macintosh" />
+</p>
 
 <h2 align="center">Remanencia</h2>
 
@@ -50,7 +54,7 @@ La interacción busca ser sencilla e intuitiva, generando una experiencia íntim
 
 - **Perilla 1 (eje Y):** movimiento vertical en la pantalla
 - **Perilla 2 (eje X):** movimiento horizontal, simulando el movimiento de un mouse
-- **Botón 1:** seleccionar y abrir una carpeta
+- **Botón 1:** seleccionar, abrir una carpeta y volver al escritorio
 - **Botón 2:** controlar acciones relacionadas con la reproducción y visualización de imágenes
 
 parte de nuestra clase:
@@ -180,8 +184,6 @@ La forma general toma como referencia la estética compacta del Macintosh, reint
 
 ## Referentes
 
-## Por dentro del Macintosh
-
 Acá logramos observar el Macintosh por dentro, descubriendo los componentes y la arquitectura que hicieron posible su funcionamiento.
 
 <p align="center">
@@ -193,7 +195,6 @@ Acá logramos observar el Macintosh por dentro, descubriendo los componentes y l
 
 > **Fuente:** [iFixit – Evertiq](https://evertiq.com/news/33666) · 24 de enero de 2014.
 
-## Susan Kare y la interfaz gráfica
 
 Susan Kare fue la diseñadora gráfica responsable de crear gran parte de los elementos visuales de la interfaz del Apple Macintosh. Su trabajo incluyó íconos, tipografías y símbolos que ayudaron a construir un lenguaje gráfico simple, reconocible y cercano para los usuarios.
 
