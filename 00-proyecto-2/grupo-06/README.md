@@ -54,7 +54,7 @@ A partir de ahí, los compradores ya no solo elegían una máquina por su funcio
 
 **¿Porque este computador?** 
 
-El caso del regreso de Steve Jobs a Apple parece muy interesante para analizar. Lo que hoy damos súper por sentado —como poder elegir un producto en tu color favorito para reflejar tu identidad— en ese momento rompió por completo con el paradigma de la tecnología.
+El caso del regreso de Steve Jobs a Apple parece muy interesante para analizar. Lo que hoy damos súper por sentado, como poder elegir un producto en tu color favorito para reflejar tu identidad, en ese momento rompió por completo con el paradigma de la tecnología.
 
 El iMac G3 revolucionó el lenguaje visual de la época. Pasar del clásico bloque beige sobrio e industrial a un volumen orgánico con carcasa translúcida fue una jugada genial: no solo aplicaron el concepto de "honestidad del objeto" al mostrar los componentes internos y su forma terminaron creando una conexión emocional con el usuario. Además, en la parte funcional se arriesgaron muchísimo al eliminar la disquetera y apostar por completo por los puertos USB y Ethernet, anticipándose a lo que venía con internet.
 
@@ -126,7 +126,8 @@ El iMac G3 revolucionó el lenguaje visual de la época. Pasar del clásico bloq
 | Pantalla OLED 128×64 I2C  | 1 | $4.275| <https://afel.cl/products/pantalla-lcd-oled-azul-y-amarillo-0-96?pr_prod_strat=similar&pr_rec_id=22da38dac&pr_rec_pid=8381957570712&pr_ref_pid=8381902258328&pr_seq=uniform> |
 |Botón Táctil Tapa 12x12x7.3 - Interruptor| 2 | $100| <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=2&_sid=c1a18aabb&_ss=r>  |
 |Potenciómetro precision de rotación ajustable 270° | 2 |$350 | <https://zamper.cl/cl/products/potenciometro-precision-de-rotacion-ajustable-270-1855?srsltid=AYCX9vJ52P0V7IY7rqd_A2PkXN33k9fyvnsHMGatWmAEVxbguBIJ7VkvvuQ>|
-
+|Filamento PLA Azul Transparente Artillery 1.75mm 1kg | 1 | $12.350 | <https://afel.cl/products/filamento-pla-azul-transparente-artillery-1-75mm-1kg?variant=46542002225304&country=CL&currency=CLP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_term=&utm_campaign=@+Smart+Shopping+2&utm_source=adwords&utm_medium=ppc&hsa_acc=1808722794&hsa_cam=19569174895&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=19560974580&gbraid=0AAAAADBMsFRRmTRkn9oKBtVw79nVHh8KS&gclid=CjwKCAjwxpvXBhASEiwAue4B4ed23eDQ-YCXO8st0oxGzCuKT3vjxjjm0EL1v7oY52jj6jaXNLaVaRoCrU4QAvD_BwE> |
+| Filamento PETG Blanco 1kg Creality | 1 | $12.990 | <https://www.todotoner.cl/impresoras/impresoras-3d/filamentos/petg-1kg-blanco-creality?gad_source=1&gad_campaignid=1059548761&gbraid=0AAAAADmvC_MvqydLR3o7t8TXGLvgXfIuL&gclid=CjwKCAjwxpvXBhASEiwAue4B4RWqaF0-o7iKFoy3i9zdE0cag_qk_u1ieZHJzUcut__SspJ7ib5owxoCygsQAvD_BwE> |
 ---
 
 # Conexiones
@@ -451,8 +452,71 @@ flowchart TD
 
 </details>
 
-# Carcasa 
+# Botones Grupo 05
+
+Cuando comenzamos trabajando con los botones del grupo 05 presentamos varios problemas ( detalles más adelante). Ya solucionados los problemas, el grupo 5 cambió las funcionalidades de cada botón, por lo que nos toca cambiar y adaptar lo que ya tenemos para que los botones funcionen. La distribución cambió de la siguiente manera: 
+
+Botón 1: Su función es cambiar de nivel 1>2>3 y seleccionar con un doble clic con un tiempo límite entre clicks de 0.6ms —--> su función es cambiar de nivel 1>2>3 y al recibir un cuarto clic, se reinicia el ciclo volviendo al nivel 1 
+
+Botón 2: Su función es atrapar notas —---> su función atrapar notas y se le suma la función de seleccionar nivel. El botón comienza actuando con la función de seleccionar nivel y una vez seleccionado, la función del botón cambia a atrapar para su uso en el juego. 
+
+Al cambiar esto, se eliminaron las variables y funciones que manejaban el tiempo entre clics, puesto que ya no utilizarían doble clic como una acción en el proyecto. Nuestro código presentaba tres archivos distintos para los botones, un archivo Botón que saltaba de nivel, BotónAtrapar (para el juego) y BotónNivel que seleccionaba con doble click y que traía todas las variables y funciones para ello. Ese último archivo fue el que eliminamos. 
+
+Al quitar estos archivos, se adaptó el main, quitando las condicionales if que trabajaban con variables de tiempo para leer los intervalos de tiempo entre clics y que distinguían entre una pulsación y dos pulsaciones. Reemplazándolas por una lectura de estados directa de los botones que simplifican las respuestas en el sistema. 
+
+---
+
+**Problemas en el trabajo**
+
+Al entregar la primera versión de los botones antes de los cambios de grupo 05, aparecia un error que no permitía iniciar la simulación:
+
+ ```cpp
+
+“/rp2040/tools/pqt-gcc/4.0.1-8ec9d6f/bin/../lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/bin/ld: /sketch/main.cpp.o: in function `main':
+/sketch/main.cpp:160:(.text.startup.main+0x2): undefined reference to `stdio_init_all'
+collect2: error: ld returned 1 exit status
+Error during build: exit status 1”
+ ```
+
+
+- Resulta que el jason tenía:
+ ```cpp
+“attrs”:{} sin "builder": "pico-sdk",
+ ```
+
+ - Entonces pasamos de 
+ ```
+
+{ "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+ ```
+
+a
+
+ ```cpp
+
+{ "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": { "builder": "pico-sdk" } },
+ ```
+
+
+- También se tuvo que borrar el CMakeLists.txt ya que no se había creado de manera automática, entonces al borrarlo permití que la builder genere su propio CMakeLists.txt
+
+- En connections  se agrego
+ ```cpp
+
+[ "pico:GP0", "$serialMonitor:RX", "" ],
+    [ "pico:GP1", "$serialMonitor:TX", "" ]
+  ],
+ ```
+- Para poder ver el texto de printf
+
+
+
+
+# Carcasa/ Renders
+Como grupo se decidio entregar el proyecto de manera digital todo el proceso de los codígos, igualmente se genero un modelado 3D en Rhino 8 de la carcasa del proyecto, adaptando el modelo a las piezas reales que se deseaban trabajar
 ![render](./imagenes/render-proyecto-dos.png)
+![render](./imagenes/render-proyecto-dos-dos.png)
+
 
 # Bibliografia
 iMac G3. (s. f.). En Apple Wiki. Recuperado el 2 de noviembre de 2026, de https://apple.fandom.com/wiki/IMac_G3
