@@ -1,5 +1,7 @@
 # Nanai: parar y seguir
 
+![Inicio de pantalla](./gifs/iniciopantalla.gif)
+
 ## Nombre del proyecto
 
 **Integrantes:** 
