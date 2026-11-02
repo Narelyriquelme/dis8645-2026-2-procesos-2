@@ -181,6 +181,12 @@ Foto de las conexiones en físico.
 | Perilla          | P1, P2     |   2 | B10k         | $500   | https://afel.cl/products/potenciometro-10k-ohm                                             |
 | Resistor         | R1, R2     |   2 | 10k          | $20    | https://afel.cl/products/kit-500-resistencias-1-2w-50-valores                              |
 
+## Carcasa
+
+Intentamos traer la estética de los objetos que seleccionamos para el render de la carcasa hecho en rhino y posteriormente pasado por chatgpt y photoroom.
+
+![render de la carcasa](./imagenes/carcasa-proyecto2.png)
+
 ## Bibliografía
 
 **Información:**
