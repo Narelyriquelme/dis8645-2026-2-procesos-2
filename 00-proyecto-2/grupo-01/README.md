@@ -70,11 +70,11 @@ La idea de presentar la solución en protoboard con una carcasa permite verifica
 
 La prueba física es esencial para validar el muestro y la fidelidad de los 5 audios representativos, debido a que realizar el proyecto de manera virtual no permitiría escuchar los sonidos.
 
-![carcasa frontal](./imagenes/carcasa1.png)
+![carcasa frontal](./imagenes/carcasa1.jpg)
 
-![protoboard](./imagenes/carcasa2.png)
+![protoboard](./imagenes/carcasa2.jpg)
 
-![proto y tapa frontal](./imagenes/carcasa3.png)
+![proto y tapa frontal](./imagenes/carcasa3.jpg)
 
 ## Controles e interacciones
 
