@@ -18,6 +18,7 @@ Perilla Y (GP26): Si está al 0%
 → pixel 55 (fondo de pantalla).
 Posición absoluta: El cursor se queda exactamente en el punto donde dejes la perilla, igual que en un Etch A Sketch. No se desplaza solo hacia los extremos ni acelera.
 Sobremuestreo suave: Se promedian 4 lecturas consecutivas por vuelta para eliminar vibraciones en Wokwi.
+
 ## encargos
 
 ## lectura
