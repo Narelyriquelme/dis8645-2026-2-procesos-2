@@ -11,7 +11,7 @@
       "attrs": { "builder": "pico-sdk" }
     },
     { "type": "wokwi-potentiometer", "id": "pot1", "top": -164.5, "left": -9.8, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "pot2", "top": -164.5, "left": -259.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -164.5, "left": -257.05, "attrs": {} },
     {
       "type": "wokwi-pushbutton",
       "id": "btn1",
@@ -92,7 +92,7 @@
     [ "pot2:GND", "pico:GND.7", "black", [ "v9.6", "h-48", "v-28.8" ] ],
     [ "oled1:GND", "pico:GND.1", "black", [ "v-19.2", "h-48", "v153.6" ] ],
     [ "oled1:SCL", "pico:GP5", "gold", [ "v-9.6", "h-86.1", "v172.8" ] ],
-    [ "oled1:SDA", "pico:GP4", "limegreen", [ "v-38.4", "h-105.53", "v201.6" ] ],
+    [ "oled1:SDA", "pico:GP4", "limegreen", [ "v-38.4", "h-86.33", "v201.6" ] ],
     [ "pot2:SIG", "pico:GP27", "violet", [ "v9.6", "h-58", "v76.8", "h219.6" ] ],
     [ "r1:1", "pico:GP14", "cyan", [] ],
     [ "r1:2", "pico:GND.3", "black", [] ],
