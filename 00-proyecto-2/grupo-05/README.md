@@ -453,7 +453,7 @@ void leer
 # Esquemático 
     
  <details>
-![Esquematico](./imegenes/vista-previa.png)
+![Esquematico](./imagenes/vista-previa.png)
  </details>
  
 # Simulación digital en wokwi
