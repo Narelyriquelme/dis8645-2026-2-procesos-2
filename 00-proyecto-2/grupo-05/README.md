@@ -16,6 +16,10 @@
  - *Simulación digital en wokwi*
  - *Prototipo físico tangible de altiro hero*
 
+**Descargables**
+- Carcasa
+- Esquemático en Kicad 
+
 **Indice:**   
 - Génesis del proyecto
    - Contexto / investigación / referentes.
