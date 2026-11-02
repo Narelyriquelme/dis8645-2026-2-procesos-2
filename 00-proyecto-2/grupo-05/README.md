@@ -427,6 +427,53 @@ void leer
 # Prompt y Cluade
 
 <details>
+
+Todo comenzó con la explicación del proyecto a Claude escrito a manera de prosa para la creación de los diagramas de flujo en código de mermaid para ser puestos en este repositorio.
+A partir de este contexto general con el cual se crearon los diagramas de flujo, utilizamos este ejemplo `[2026-10-06-clases](https://wokwi.com/projects/477335809803977729)` para tomar la estructura y manera de proceso del código en lenguaje c++ que se nos fue enseñada en el taller, y en base a ello, comenzamos junto a Claude, a escribir las clases y luego comenzar a tejer el proyecto. 
+
+Usamos el ingles para encaminar de manera precisa lo que se quería obtener, y el español para narrar el proyecto.
+
+> Diagrama de flujo experiencia de usuario.
+Hey claude i’m doing a proyect, with my team and it consists of creating an interactive computational machine that combines analog and digital elements, inspired by various entertainment devices such as the Game Boy, Guitar Hero, and DJ Hero.
+This is how (name of our baby, still doesn’t have a name) came to life: a pocket-sized entertainment device equipped with two buttons and two knobs. It works as follows:
+The game has four lanes along which lights of different colors continuously descend, similar to Piano Tiles. The player must move between these lanes and match the color of each descending light to continue playing. If they fail to match the correct color in the corresponding lane, they lose. And I want you to help me creating the code for the flowchart for mermaid and github. 
+Imma tell u how it works in spanish because is easier for me to explain how it works:
+
+> Se comienza por el inicio (inicio), donde la persona comienza el recorrido por el programa y luego llega a una decisión donde debe decidir si enciende la máquina o no (encender): si escoge no (no), no continua y debe volver al inicio.
+Sí escoge sí (sí), debe seleccionar un nivel entre los siguientes para comenzar el juego:
+nivel: 1, 2 y 3 (nivel 1: fácil, nivel 2: medio, nivel 3: difícil):
+
+> Comentario:  El nivel se cambia y se selecciona con botón 1; 
+> Cambiar: oprimir una vez. 
+> Seleccionar; oprimir dos veces.
+
+> y luego de escoger el nivel se inicia el juego dependiendo del cual se haya escogido (inicio del juego), y funciona de esta manera:
+
+> Con el botón 2, se puede mover entre los cuatro caminos para atrapar la luz que va bajando, y con la perilla 2 se cambia el color de la led que se mueve entre los cuatro caminos que es equivalente al color de la luz que va bajando para hacer match. 
+
+> Para aumentar o disminuir la velocidad de bajada de las luces, se utiliza la perilla 1.
+
+> ¿Qué pasa si pierde? le regresa a la selección de niveles para seleccionar uno volver a comenzar.
+
+> ¿Qué pasa si continua sin perder? después de pasar 2:00 min, pasa al siguiente nivel, y así sucede con todos los niveles. Cuando se termina el nivel 3, se termina el juego y vuelve otra vez a la selección de niveles. 
+
+> Funcionamiento de botones y perillas:
+
+> Botones:
+> boton 1: 
+
+> * Oprimir una vez: cambiar de nivel, navegar en ese menú.
+> * Oprimir dos veces: seleccionar el nivel. 
+
+> boton 2: cambiarse de camino, navegar entre los 4 caminos.
+
+> Perillas: 
+> perilla 1: aumenta o disminuye la velocidad de las luces que bajan.
+> perilla 2: solo se mueve entre cuatro rangos, los cuales son los cuatro caminos del juego.
+
+
+> Now that you know how it works, create the flowachart whit code for mermaid flowchart and github.
+ 
 </details>
 
 # Agradecimientos
