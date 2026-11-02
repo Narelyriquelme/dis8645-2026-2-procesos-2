@@ -146,6 +146,7 @@ Cada clase vive en sus propios archivos: el `.h` declara, el `.cpp` implementa y
 ![escribir](./videos/escribir.gif)
 ![borrar](./videos/borrar.gif)
 ![buscar](./videos/buscar.gif) 
+![escribir](./videos/escribir.gif)
 
 ## Diagramas de flujo
 
