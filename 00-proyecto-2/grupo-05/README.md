@@ -51,6 +51,7 @@
 ![niveles](./imagenes/niveles.gif)
 ![pierde](./imagenes/pierde.gif)
     
+</details>
 
 ## Contexto del proyecto:
 
@@ -75,6 +76,10 @@ El dispositivo se enciende con un interruptor ubicado en la parte inferior del c
 El juego cuenta con tres niveles, que se eligen desde el menú con el segundo botón, ubicado en el costado derecho: una pulsación avanza entre nivel 1, 2 y 3, y para seleccionar el nivel deseado se presiona el botón que está debajo de la matriz LED cuando el número del nivel se muestre en la pantalla. Debajo del botón que se encuentra al costado derecho hay una segunda perilla que permite aumentar o disminuir la velocidad de descenso del patrón, lo que ajusta la dificultad a tu gusto. Cada nivel dura un máximo de dos minutos y al superarlo sin cometer ningún error, comienza el siguiente de manera automática, mientras que si cometes un error vuelves al menú de selección de niveles. Una vez completados los tres niveles, el dispositivo regresa al menú inicial.
 
 </details>
+
+## Feedback
+
+<details>
 </details>
 
 # Diagramas de flujo 
