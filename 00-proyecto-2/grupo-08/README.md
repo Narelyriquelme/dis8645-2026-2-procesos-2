@@ -9,6 +9,7 @@
 
 ☆ Angel Sabogal / <https://github.com/angel-udp>
 
+
 ## Commodore 64 Ultimate 
 
 El Commodore 64 Ultimate representa el renacimiento de uno de los ordenadores clásicos, siendo una recreación física y fiel de la máquina original. Donde su principal objetivo es ofrecer la misma experiencia nostálgica, recuperando carcasa clásico, pero adaptándola a las necesidades tecnológicas de hoy en día.
@@ -67,7 +68,10 @@ El flujo interactivo se estructura en **5 Slides correlativos**:
 ### experiencia usuario
 ### hardware
 ### software
-## Esquemático 
+## Esquemático
+
+![imagen](imagenes/esquematico.png)
+
 ### Tabla de materiales
 
 |Componente|Cantidad|Precio|Link|
@@ -116,6 +120,8 @@ En general, consideramos que uno de nuestros mayores aciertos fue avanzar de man
 
 ## Carcasa 
 
+La carcasa la realizamos en impresión 3D, realizando bocetos previos, quisimos enfocarnos en la forma del commodore, en donde, de acuerdo a nuestro juego y objetivo del proyecto 02, adaptamos los botones y perillas para que se pudiese realizar el juego de manera cómoda.
+
 ## Documentación IA
 
 ### Organización del Proyecto por Clases: Juego Arcade (Raspberry Pi Pico)
@@ -157,10 +163,6 @@ Para mantener el código ordenado, eficiente en memoria y fácil de presentar, d
 * **Métodos (Funciones):**
 * `begin()`: Configura el pin en modo entrada digital (`INPUT_PULLUP`).
 * `fuePresionado()`: Retorna `true` solo cuando el usuario presiona el botón.
-
-
-
-
 
 ---
 
@@ -309,7 +311,11 @@ https://wokwi.com/projects/479061199676387329
 ## Bibliografía
 
 https://commodore.net/computer/ 
+
 https://www.commodore.ca/commodore-history/chronological-history-of-commodore-computer/?utm
+
 https://hardzone.es/noticias/perifericos/precio-especificaciones-commodore-64-ultimate/ 
+
 https://www.ign.com/articles/commodore-64-ultimate-review
+
 https://www.wired.com/review/commodore-64-ultimate/
