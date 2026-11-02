@@ -67,11 +67,221 @@ La misión principal del juego es ayudar al estudiante a llegar a la universidad
 | Indicador de tiempo | LED | LED indicador | Advierte que el tiempo de juego está próximo a finalizar. |
 | Visualización del juego | Pantalla LCD TFT | 2,0 pulgadas, controlador ST7789, interfaz SPI, resolución 240 × 320 píxeles, 8 pines | Muestra el entorno del juego, los elementos gráficos y el desarrollo de la partida. |
 
+## Pseudocódigo
+
+1. Propósito
+El pseudocódigo describe qué decisiones toma el programa, sin depender de la sintaxis exacta de C++. Es una guía para entender el funcionamiento del videojuego y relacionarlo con las funciones reales del archivo main.cpp.
+
+2. Pseudocódigo general de DORE 8
+INICIO DORE 8
+
+    Preparar salida de mensajes por USB
+    Iniciar ADC
+    Habilitar los pines de las dos perillas
+    Configurar el LED de advertencia
+    Iniciar pantalla ST7789V en orientación horizontal
+    Mostrar pantalla 0: "Hola! Comencemos..."
+
+    REPETIR INDEFINIDAMENTE:
+        Leer tiempo actual
+        Leer botón de música (sin ejecutar acción: no hay audio)
+        Leer botón de continuar
+
+        SI el botón continuar registra un clic sencillo:
+            SI la pantalla es informativa:
+                Ir a la siguiente pantalla
+            SI el nivel está superado:
+                Ir a la siguiente pantalla
+            SI el nivel está fallido:
+                Reiniciar el mismo nivel
+            SI el nivel sigue en curso:
+                Permanecer en el mismo nivel
+
+        SI la pantalla actual corresponde a un desafío en curso:
+            Actualizar tiempo, movimiento, colisiones y resultado
+
+        Esperar brevemente antes de repetir
+
+FIN
+Funciones relacionadas: main(), controlarBotonContinuar(), actualizarNivel().
+
+3. Flujo de pantallas
+PANTALLA 0: INICIO
+    Clic de continuar -> PANTALLA 1: INSTRUCCIONES
+
+PANTALLA 1: INSTRUCCIONES
+    Clic de continuar -> PANTALLA 2: PRESENTACIÓN DEL DESAFÍO
+
+PANTALLA 2: DESAFÍO
+    Clic de continuar -> PANTALLA 3: LABERINTO
+
+PANTALLA 3: LABERINTO
+    Si llega a la micro -> SUPERADO -> clic -> PANTALLA 4
+    Si agota el tiempo -> FALLIDO -> clic -> REINICIAR LABERINTO
+
+PANTALLA 4: CARRETERA
+    Si llega a la meta sin chocar -> SUPERADO -> clic -> PANTALLA 5
+    Si choca o agota tiempo -> FALLIDO -> clic -> REINICIAR CARRETERA
+
+PANTALLA 5: SALA
+    Si llega a la puerta 304 -> SUPERADO -> clic -> PANTALLA 6
+
+PANTALLA 6: VICTORIA
+    Clic de continuar -> PANTALLA 7: REFLEXIÓN
+
+PANTALLA 7: REFLEXIÓN
+    Clic de continuar -> PANTALLA 0: INICIO
+Función relacionada: iniciarSlide() restablece las variables y dibuja la escena antes de jugar.
+
+4. Pseudocódigo de lectura de perillas
+FUNCIÓN DIRECCIÓN_DE_PERILLA(GPIO)
+    Seleccionar entrada ADC asociada al GPIO
+    Leer valor analógico entre 0 y 4095
+
+    SI valor < 1660:
+        DEVOLVER -1
+    SI valor > 2450:
+        DEVOLVER +1
+    EN OTRO CASO:
+        DEVOLVER 0
+FIN FUNCIÓN
+
+En cada actualización de un nivel:
+    dx = dirección de perilla horizontal × tamaño del paso
+    dy = dirección de perilla vertical × tamaño del paso
+Funciones relacionadas: Perilla::leer(), Perilla::direccion(), actualizarNivel().
+
+5. Pseudocódigo del nivel 1: laberinto
+AL INICIAR LABERINTO:
+    Posicionar estudiante en el punto de partida
+    Mostrar laberinto y micro
+    Iniciar cuenta regresiva desde 20 segundos
+
+MIENTRAS el desafío esté EN CURSO:
+    Calcular tiempo restante
+    SI quedan 5 segundos o menos: hacer parpadear el LED
+    SI el tiempo llega a 0: marcar FALLIDO
+
+    Leer dirección horizontal y vertical
+    Probar movimiento píxel a píxel
+    SI el siguiente píxel tocaría una pared:
+        No avanzar en esa dirección
+    EN OTRO CASO:
+        Mover al estudiante
+
+    SI la caja del estudiante toca la micro:
+        Marcar SUPERADO
+        Mostrar mensaje para continuar
+FIN
+Funciones relacionadas: colisionLaberinto(), interseccion(), cambiarEstado().
+
+6. Pseudocódigo del nivel 2: carretera
+AL INICIAR CARRETERA:
+    Colocar micro al lado izquierdo, en el carril central
+    Colocar tres automóviles en sus posiciones iniciales
+    Mostrar carretera y línea amarilla de meta
+    Iniciar cuenta regresiva desde 15 segundos
+
+MIENTRAS el desafío esté EN CURSO:
+    Comprobar tiempo restante
+    SI quedan 5 segundos o menos: hacer parpadear el LED
+    SI tiempo = 0: marcar FALLIDO
+
+    Leer ambas perillas
+    Mover la micro con pasos de 9 píxeles
+    Mantenerla dentro de los límites de la carretera
+
+    PARA CADA automóvil:
+        Desplazar automóvil hacia la izquierda
+        SI sale de la pantalla: reaparecer a la derecha
+        SI choca con la micro:
+            Marcar FALLIDO
+            Terminar comprobación del nivel
+
+    SI la micro toca la meta derecha:
+        Marcar SUPERADO
+        Mostrar mensaje para continuar
+
+    Redibujar micro, automóviles y líneas del camino
+FIN
+Funciones relacionadas: dibujarMetaCarretera(), dibujarMoviles(), dibujarMovimiento(), interseccion().
+
+7. Pseudocódigo del nivel 3: sala de clases
+AL INICIAR SALA:
+    Colocar estudiante en la esquina superior izquierda
+    Dibujar el pasillo y la puerta SALA 304
+    No iniciar cuenta regresiva
+
+MIENTRAS el desafío esté EN CURSO:
+    Leer ambas perillas
+    Mover estudiante dentro del área permitida
+    SI el estudiante toca la puerta:
+        Marcar SUPERADO
+        Mostrar mensaje para continuar
+FIN
+Función relacionada: actualizarNivel().
+
+8. Pseudocódigo de Boton2
+AL CREAR Boton2:
+    Configurar GPIO como entrada con resistencia pull-up
+
+CADA VUELTA:
+    Leer botón (0 = presionado)
+    Esperar estabilidad eléctrica (antirrebote)
+
+    SI estado = REPOSO Y comienza una pulsación:
+        Guardar tiempo de inicio
+        Pasar a PRESIONADO
+
+    SI estado = PRESIONADO Y se suelta:
+        SI duró al menos 5 segundos: gesto MUY LARGO
+        SI duró al menos 1 segundo: gesto LARGO
+        SI duró menos: contar clic y ESPERAR_PRESIÓN
+
+    SI estado = ESPERANDO_PRESIÓN:
+        SI hay otro clic dentro del intervalo: seguir contando
+        SI se acaba el intervalo:
+            1 clic -> PULSADO1VEZ
+            2 clics -> PULSADO2VECES
+            3 clics -> PULSADO3VECES
+
+AL CONSULTAR leerGesto():
+    Entregar el gesto pendiente y limpiarlo
+En la versión actual: el programa solo ejecuta una acción con PULSADO1VEZ del botón continuar (GP11); el resto de gestos se conserva como posibilidad de ampliación.
+
+9. Pseudocódigo del dibujo de pantalla
+AL INICIAR PANTALLA:
+    Configurar SPI0 (GP18 reloj, GP19 datos)
+    Configurar CS, DC y RST
+    Reiniciar controlador ST7789V
+    Establecer color RGB565
+    Elegir orientación horizontal
+
+AL DIBUJAR UNA FIGURA:
+    Calcular coordenadas y recortar los límites
+    Enviar comandos para seleccionar zona de pantalla
+    Enviar píxeles del color mediante bloques pequeños
+
+AL DIBUJAR UNA ESCENA:
+    Limpiar fondo
+    Dibujar marcos y paredes con líneas y rectángulos
+    Dibujar estudiante, micro o autos con figuras geométricas
+    Escribir textos usando la fuente retro 5x7
+Funciones relacionadas: AdafruitGFX_Pico::begin(), ventana(), fillRect(), drawLine(), fillCircle(), PantallaUI::dibujarSlide().
+
+10. Decisiones técnicas que explica este pseudocódigo
+- El programa está escrito en C++ con Pico SDK, sin el entorno Arduino.
+- Los gráficos utilizan primitivas inspiradas en Adafruit GFX, adaptadas para el controlador físico ST7789V. No se trata de incorporar la biblioteca oficial Adafruit de Arduino tal cual.
+- Se evita un framebuffer completo para cuidar la memoria: los escenarios se dibujan enviando pequeñas regiones de píxeles por SPI. Se mantiene una tabla pequeña de glifos de texto de 5 × 7.
+- El movimiento y el tiempo se calculan con base en milisegundos, evitando detener el juego durante los desafíos.
+- El sonido no está activo en esta versión; el GPIO GP13 queda reservado para una futura solución con amplificador adecuado.
+- Las frases y textos actuales se mantienen provisionales hasta que el equipo establezca los definitivos.
+
 ## Diagramas
 ### Experiencia usuario
 > La experiencia del usuario consiste en interactuar físicamente con el proyecto a través de su carcasa, las perillas y los botones, generando una experiencia de juego dinámica y entretenida. El usuario deberá cumplir distintas misiones, superar desafíos y resolver cada nivel utilizando los controles del dispositivo. Además de la entretención, el juego busca transmitir una reflexión final: aunque el camino para alcanzar una meta pueda presentar dificultades, lo importante es perseverar, seguir intentándolo y confiar en que, con esfuerzo y constancia, es posible llegar hasta el final.
 
-### flujo del juego 
+### flujo del juego
 ### Hardware
 ### Software
 ## Esquemático
