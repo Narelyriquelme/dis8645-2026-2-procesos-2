@@ -87,11 +87,11 @@ La diferencia principal con MacPaint es que el movimiento no depende de una sola
 
 ### Esquemático
 
-<img src="./esquematicos/esquematico_proyecto2.png" alt="Esquemático de TRAZO en KiCad" width="700">
+<img src="./esquematicos/esquematico-proyecto2.png" alt="Esquemático de TRAZO en KiCad" width="700">
 
 El esquemático está hecho en KiCad y se basa en la simulación de Wokwi del Código 7. La pantalla se representó con el símbolo de OLED I2C que trae KiCad; en el proyecto usamos la SSD1306 de 128 × 64.
 
-- [Esquemático en PDF](./esquematicos/esquematico_proyecto2.pdf)
+- [Esquemático en PDF](./esquematicos/esquematico-proyecto2.pdf)
 - [Archivos de KiCad](./esquematicos/kicad/)
 
 Simulación en Wokwi: https://wokwi.com/projects/479331745306537985
