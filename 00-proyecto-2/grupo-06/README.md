@@ -27,6 +27,8 @@ Space Float es un juego de nave, la cual hay que mantener volando la nave por el
 | **Perilla izquierda** | Aumenta o disminuye la velocidad del mapa (eje X) |
 | **Perilla derecha** | Cambia la nave seleccionada en el menú |
 
+----
+
 **Flappy Bird** 
 
 El juego Flappy Bird es la prueba perfecta de cómo una idea ultracompacta puede cobrar vida en el mundo físico, presenta su mecánica de un solo input (un pulso), su gravedad constante y la generación aleatoria de obstáculos lo convierten en la musa definitiva para la electrónica. Flappy Bird demuestra que no necesitas complejas interfaces para crear un proyecto electrónico interesante, memorable y adictivo.
@@ -35,9 +37,12 @@ El juego Flappy Bird es la prueba perfecta de cómo una idea ultracompacta puede
 
 # Computador a investigar 
 **Apple iMac G3 (1998)** 
+
 ![foto computador](./imagenes/imac.jpeg)
 
 Lanzado el 6 de mayo de 1998, el iMac G3 cambio la forma de vender a  Apple, arrancando una nueva era de productos icónicos, como el iPod, iPhone y iPad. Era super reconocible por su diseño de plástico transparente en colores muy llamativos y su forma particular, además revolucionando siendo pionera en el mercado al deshacerse del disquete para irse por los puertos USB y el CD.
+
+----
 
 **Interfaz de usuario:**
 
@@ -48,6 +53,7 @@ A partir de ahí, los compradores ya no solo elegían una máquina por su funcio
 ----
 
 **¿Porque este computador?** 
+
 El caso del regreso de Steve Jobs a Apple parece muy interesante para analizar. Lo que hoy damos súper por sentado —como poder elegir un producto en tu color favorito para reflejar tu identidad— en ese momento rompió por completo con el paradigma de la tecnología.
 
 El iMac G3 revolucionó el lenguaje visual de la época. Pasar del clásico bloque beige sobrio e industrial a un volumen orgánico con carcasa translúcida fue una jugada genial: no solo aplicaron el concepto de "honestidad del objeto" al mostrar los componentes internos y su forma terminaron creando una conexión emocional con el usuario. Además, en la parte funcional se arriesgaron muchísimo al eliminar la disquetera y apostar por completo por los puertos USB y Ethernet, anticipándose a lo que venía con internet.
@@ -123,7 +129,7 @@ El iMac G3 revolucionó el lenguaje visual de la época. Pasar del clásico bloq
 
 ---
 
-### Conexiones
+# Conexiones
 
 Proyecto simulado en [Wokwi](https://wokwi.com) con una **Raspberry Pi Pico**, una pantalla OLED, 2 botones y 2 perillas. Los números de pin son los del archivo `diagram.json`.
 
@@ -156,7 +162,8 @@ Proyecto simulado en [Wokwi](https://wokwi.com) con una **Raspberry Pi Pico**, u
 7. Si chocas, el juego se reinicia y vuelves al menú de selección.
 
 
----## Diagramas de flujo
+
+## Diagramas de flujo
 
 
 <details>
@@ -444,3 +451,10 @@ flowchart TD
 
 </details>
 
+# Carcasa 
+![render](./imagenes/render-proyecto-dos.png)
+
+# Bibliografia
+iMac G3. (s. f.). En Apple Wiki. Recuperado el 2 de noviembre de 2026, de https://apple.fandom.com/wiki/IMac_G3
+
+La República. (2 de septiembre de 2025). iMac G3, la computadora que salvó a Apple de la quiebra y dio origen a la ‘i’ en sus productos. Yahoo Noticias. https://es-us.noticias.yahoo.com/imac-g3-computadora-salv%C3%B3-apple-150534174.html 
