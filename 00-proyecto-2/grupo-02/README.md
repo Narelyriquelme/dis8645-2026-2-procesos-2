@@ -173,15 +173,13 @@ Fin y haz loop como quieras:)
 
 
 
-
 ## Carcasa
 La propuesta considera una carcasa inspirada en el Macintosh 1984.
 Su diseño busca representar visualmente el computador histórico mientras integra pantalla y controles físicos compuestos por dos perillas y dos botones.
 La forma general toma como referencia la estética compacta del Macintosh, reinterpretándola como un objeto destinado a la exploración de recuerdos digitales.
 
-![fotopropuesta](./imagenes/fotopropuesta.png)
-![fotopropuesta2](./imagenes/fotopropuesta2.png)
-
+![propuesta1](./imagenes/propuesta1.png)
+![propuesta2](./imagenes/propuesta2.png)
 ## Referentes
 
 Acá logramos observar el Macintosh por dentro, descubriendo los componentes y la arquitectura que hicieron posible su funcionamiento.
@@ -220,8 +218,8 @@ Finalmente, también se tomó la decisión de construir una carcasa representati
 # Prompts utilizados
 *(Agregar aquí los prompts utilizados para los códigos.)*
 
-# Esquemáticos
-*(Agregar aquí los esquemáticos kicad.)*
+# Esquemático
+![esquematicoo](./imagenes/esquematicoo.png)
 
 ## Bibliografía
 
