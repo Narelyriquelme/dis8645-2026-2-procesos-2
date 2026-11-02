@@ -408,7 +408,7 @@ void leer
 ![proceso3](./imagenes/proceso3.png)
 ![proceso1](./imagenes/proceso1.png)
 ![proceso2](./imagenes/processo2.png)
-![presentación del grupo](./imagenes/proceso4.png)
+![presentación del grupo](./imagenes/processo4.png)
  
 ---
 </details>
