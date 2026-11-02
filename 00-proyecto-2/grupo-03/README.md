@@ -87,7 +87,11 @@ Planeamos realizar la carcasa en impresión 3d, para mantenernos fiel a las form
 ![boceto](./imagenes/boceto-2.png)
 
 #### Modelado
+Monitor:
 ![modelado](./imagenes/modelado.png)
+
+Botonera:
+![modelado](./imagenes/modelado-botonera.png)
 
 ---
 
