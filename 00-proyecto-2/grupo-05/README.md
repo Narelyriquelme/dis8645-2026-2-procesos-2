@@ -40,6 +40,7 @@
    - Carcasa
    - Equipo de trabajo
 - Prompt y Cluade
+- Agradecimientos 
 - Referentes
 
 # Génesis del proyecto
