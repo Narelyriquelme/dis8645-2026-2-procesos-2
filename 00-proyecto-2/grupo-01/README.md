@@ -70,6 +70,12 @@ La idea de presentar la solución en protoboard con una carcasa permite verifica
 
 La prueba física es esencial para validar el muestro y la fidelidad de los 5 audios representativos, debido a que realizar el proyecto de manera virtual no permitiría escuchar los sonidos.
 
+![carcasa frontal](./imagenes/carcasa1.png)
+
+![protoboard](./imagenes/carcasa2.png)
+
+![proto y tapa frontal](./imagenes/carcasa3.png)
+
 ## Controles e interacciones
 
 El encoder rotatorio cumple dos funciones en un solo componente: funciona como **perilla** al girarlo y como **botón** al presionarlo, ya que incluye un pulsador integrado en su eje.
