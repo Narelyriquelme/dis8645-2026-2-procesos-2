@@ -29,10 +29,12 @@
    - Perillas
    - Botones
 - Factura de materiales
+   - Horas de trabajo
 - Pseudocódigo del rol de los componentes
    - Switch
    - Botones
    - Perillas
+- Esquemático
 - Construcción tangible de Altiro hero
 - Referentes
 
