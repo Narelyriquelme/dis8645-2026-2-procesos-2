@@ -45,13 +45,8 @@
 - Referentes
 
 # Génesis del proyecto
-<details>
 
-![génesis](./imagenes/genesis.jpeg)
-![niveles](./imagenes/niveles.gif)
-![pierde](./imagenes/pierde.gif)
-    
-</details>
+<details>
 
 ## Contexto del proyecto:
 
@@ -77,9 +72,20 @@ El juego cuenta con tres niveles, que se eligen desde el menú con el segundo bo
 
 </details>
 
+## El nacimiento
+
+<details>
+
+![génesis](./imagenes/genesis.jpeg)
+![niveles](./imagenes/niveles.gif)
+![pierde](./imagenes/pierde.gif)
+    
+</details>
+
 ## Feedback
 
 <details>
+</details>
 </details>
 
 # Diagramas de flujo 
