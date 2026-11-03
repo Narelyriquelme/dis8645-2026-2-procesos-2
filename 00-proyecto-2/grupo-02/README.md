@@ -41,13 +41,13 @@ El proyecto busca explorar esa permanencia mediante una interfaz inspirada en lo
 
 ## Concepto
 
-La propuesta consiste en un escritorio digital compuesto por cuatro carpetas que contienen imágenes personales simplificadas a frame. Mediante botones y perillas físicas, el usuario puede desplazarse por la pantalla, seleccionar carpetas y explorar sus fotografías.
+La propuesta consiste en un escritorio digital compuesto por cuatro carpetas que contienen frases respresentativas de cada área de nuestras vidas. Mediante botones y perillas físicas, el usuario puede desplazarse por la pantalla, seleccionar carpetas y explorar sus frases.
 La interacción busca ser sencilla e intuitiva, generando una experiencia íntima que acerque la tecnología a las personas.
 
 - **Escritorio:** inspirado en la interfaz gráfica del Macintosh de 1984.
-- **Carpetas:** una cuadrícula de 2 × 2 con cuatro carpetas que contienen imágenes.
+- **Carpetas:** una cuadrícula de 2 × 2 con cuatro carpetas que contienen categorias.
 - **Ventanas:** elementos visuales que permiten mostrar el contenido de las carpetas.
-- **Pantalla:** muestra el escritorio, las fotografías y las interacciones del usuario.
+- **Pantalla:** muestra el escritorio, las frases y las interacciones del usuario.
 - **Estética:** píxeles, íconos y gráficos monocromáticos.
 
 ## Cuatro carpetas
@@ -75,13 +75,13 @@ parte de nuestra clase:
 - **Presionar 3 veces:** activar un carrusel de frases.
 - **Mantener presionado durante 5 segundos:** volver al escritorio, independientemente de la posición de las perillas.
 
-Al abrir una carpeta, se muestra inicialmente su primera imagen. El usuario puede avanzar entre fotografías y activar su reproducción secuencial. Una pulsación prolongada permite regresar al escritorio y explorar otra carpeta.
+Al abrir una carpeta, se muestra inicialmente su primera frase. El usuario puede avanzar entre frases y activar su reproducción secuencial. Una pulsación prolongada permite regresar al escritorio y explorar otra carpeta.
 
 # Relato de uso de la máquina
 Al encender el dispositivo, el usuario observa un escritorio digital con cuatro carpetas.
 Utilizando la perilla horizontal y la perilla vertical puede desplazar el cursor sobre la pantalla hasta posicionarse sobre la carpeta que desea explorar.
 Una vez seleccionada, mantiene presionado el botón principal durante un segundo para abrirla.
-Al abrir una carpeta, se muestra una fotografía representativa. El usuario puede avanzar entre imágenes o activar una reproducción automática mediante distintas combinaciones de pulsaciones.
+Al abrir una carpeta, se muestra una frase representativa. El usuario puede avanzar entre frases o activar una reproducción automática mediante distintas combinaciones de pulsaciones.
 Cuando desea regresar al menú principal, puede mantener presionado el botón durante cinco segundos para volver al escritorio y explorar nuevas carpetas.
 La experiencia busca recrear la sensación de recorrer recuerdos digitales mediante una interfaz inspirada en los primeros computadores personales.
 
@@ -90,7 +90,7 @@ La experiencia busca recrear la sensación de recorrer recuerdos digitales media
 El proyecto contempla la programación de clases para botones y perillas, responsables de traducir las acciones físicas del usuario en interacciones digitales.
 La clase Boton considera cinco variables y cinco funciones para gestionar el estado del botón, detectar las pulsaciones, medir su duración y ejecutar acciones según el contexto de uso.
 Las perillas permiten controlar la posición del cursor en los ejes horizontal y vertical, mientras que la pantalla representa visualmente las acciones realizadas.
-Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almacenamiento, junto con una pantalla y controles físicos. Las imágenes se organizan en carpetas para facilitar su navegación y visualización.
+Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almacenamiento, junto con una pantalla y controles físicos. Las frases se organizan en carpetas para facilitar su navegación y visualización.
 
 ## Diagrama de flujo
 
@@ -136,11 +136,11 @@ posición de perilla y
 
 humanamente decidir sobre qué carpeta me quiero posicionar
 
-seguro que quieres seleccionar esa carpeta? = presiona el botón 1 durante 1 segundo
+seguro que quieres seleccionar esa carpeta? = presiona el botón 1 durante una pulsación larga
 
             Seleccionar carpeta
             Abrir carpeta
-            Mostrar primera fotografía de la carpeta
+            Mostrar primera frase de la carpeta
 ```
 
 **carpeta**
@@ -148,19 +148,19 @@ seguro que quieres seleccionar esa carpeta? = presiona el botón 1 durante 1 seg
 ```cpp
 si la carpeta está abierta podemos continuar: true
 
-nos mostrará directamente un frame representativo de la carpeta
+nos mostrará directamente una frase representativa de la carpeta
 
     SI botón 2 se presiona 2 veces
-        Avanzará a la siguiente fotografía
+        Avanzará a la siguiente frase
  //para poder
-        Mostrar nueva fotografía
+        Mostrar nueva frase
 
     SI botón 2 se presiona 3 veces
-        Activar carrusel de fotografías
+        Activar carrusel de frases.
 //para poder
-        Reproducir fotografías automáticamente
+        Reproducir frases automáticamente
 
-    SI botón 2 se mantiene presionado durante 5 segundos
+    SI botón 1 se mantiene presionado durante 5 segundos
         Detener carrusel
  //para poder
         Volver al escritorio digital
@@ -175,7 +175,7 @@ si está encendido
 
 podemos volver a navegar
 ver diferentes carpetas
-ver frames
+ver frases
 ver carrusel
 
 Fin y haz loop como quieras:)
