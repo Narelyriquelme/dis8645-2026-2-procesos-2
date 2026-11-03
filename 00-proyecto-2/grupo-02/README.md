@@ -50,7 +50,7 @@ La interacción busca ser sencilla e intuitiva, generando una experiencia íntim
 - **Pantalla:** muestra el escritorio, las fotografías y las interacciones del usuario.
 - **Estética:** píxeles, íconos y gráficos monocromáticos.
 
-## Las cuatro carpetas
+## Cuatro carpetas
 
 1. **Personas**: contiene frases relacionadas con los vínculos afectivos, las personas importantes y las huellas que dejan en nuestra vida.
 
@@ -59,6 +59,7 @@ La interacción busca ser sencilla e intuitiva, generando una experiencia íntim
 3. **Momentos**: contiene frases sobre instantes cotidianos, experiencias compartidas y situaciones que adquieren significado con el paso del tiempo.
 
 4. **Objetos**: contiene frases relacionadas con objetos que poseen un significado emocional por las historias y experiencias que representan.
+   
 ## Interacción
 
 - **Perilla 1 (eje Y):** movimiento vertical en la pantalla
@@ -100,12 +101,12 @@ Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almac
 | Componentes | Cantidad | Precio unitario | Link |
 | --- | --- | --- | --- |
 | Raspberry Pi Pico 2W | 1 | $14.990 | <https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers> |
-| Botón pulsador | 2 | 200 | | <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptos> |
+| Botón pulsador | 2 | 100 | | <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptos> |
 | Potenciómetro b100k | 2 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
 | LED | 1 | $100 | <https://afel.cl/products/kit-50-diodos-leds-de-5mm-ultrabrillantes> |
 | Resistencia 220 Ω | 2 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
-| Pantalla | 1 | | |
-| Protoboard | 1 | | |
+| Pantalla ILI9341| 1 |$16.990 | https://afel.cl/products/shield-tft-touch-3-2-ili9341?srsltid=AYCX9vLf24U_AsYjwifPUWpld3K7FYkukGNdyBM3ej3P2EYb3arjNnl9 |
+| Protoboard | 1 | 1.500 | https://afel.cl/products/mini-protoboard-400-puntos?_pos=1&_sid=a63a98843&_ss=r|
 
 ## Pseudocódigo del rol de los componentes
 
