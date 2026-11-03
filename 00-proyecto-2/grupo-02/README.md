@@ -42,13 +42,13 @@ El proyecto busca explorar esa permanencia mediante una interfaz inspirada en lo
 
 ## Concepto
 
-La propuesta consiste en un escritorio digital compuesto por cuatro carpetas que contienen imágenes personales simplificadas a frame. Mediante botones y perillas físicas, el usuario puede desplazarse por la pantalla, seleccionar carpetas y explorar sus fotografías.
+La propuesta consiste en un escritorio digital compuesto por cuatro carpetas que contienen frases respresentativas de cada área de nuestras vidas. Mediante botones y perillas físicas, el usuario puede desplazarse por la pantalla, seleccionar carpetas y explorar sus frases.
 La interacción busca ser sencilla e intuitiva, generando una experiencia íntima que acerque la tecnología a las personas.
 
 - **Escritorio:** inspirado en la interfaz gráfica del Macintosh de 1984.
-- **Carpetas:** una cuadrícula de 2 × 2 con cuatro carpetas que contienen imágenes.
+- **Carpetas:** una cuadrícula de 2 × 2 con cuatro carpetas que contienen categorias.
 - **Ventanas:** elementos visuales que permiten mostrar el contenido de las carpetas.
-- **Pantalla:** muestra el escritorio, las fotografías y las interacciones del usuario.
+- **Pantalla:** muestra el escritorio, las frases y las interacciones del usuario.
 - **Estética:** píxeles, íconos y gráficos monocromáticos.
 
 ## Cuatro carpetas
@@ -65,25 +65,25 @@ La interacción busca ser sencilla e intuitiva, generando una experiencia íntim
 
 - **Perilla 1 (eje Y):** movimiento vertical en la pantalla
 - **Perilla 2 (eje X):** movimiento horizontal, simulando el movimiento de un mouse
-- **Botón 1:** seleccionar, abrir una carpeta y volver al escritorio
-- **Botón 2:** controlar acciones relacionadas con la reproducción y visualización de imágenes
+- **Botón 1:** seleccionar y vuelve al escritorio
+- **Botón 2:** cambiar de página y carrusel de frases
 
 parte de nuestra clase:
 
 - **Sin presionar:** estado 0.
-- **Presionar durante 1 segundo:** abrir la carpeta seleccionada.
-- **Presionar 2 veces:** avanzar a la siguiente fotografía.
-- **Presionar 3 veces:** activar un carrusel de fotografías.
+- **Pulsación larga 1 click:** abrir la carpeta seleccionada.
+- **1 click:** avanzar a la siguiente frase.
+- **Presionar 3 veces:** activar un carrusel de frases.
 - **Mantener presionado durante 5 segundos:** volver al escritorio, independientemente de la posición de las perillas.
 
-Al abrir una carpeta, se muestra inicialmente su primera imagen. El usuario puede avanzar entre fotografías y activar su reproducción secuencial. Una pulsación prolongada permite regresar al escritorio y explorar otra carpeta.
+Al abrir una carpeta, se muestra inicialmente su primera frase. El usuario puede avanzar entre frases y activar su reproducción secuencial. Una pulsación prolongada permite regresar al escritorio y explorar otra carpeta.
 
 # Relato de uso de la máquina
 
 Al encender el dispositivo, el usuario observa un escritorio digital con cuatro carpetas.
 Utilizando la perilla horizontal y la perilla vertical puede desplazar el cursor sobre la pantalla hasta posicionarse sobre la carpeta que desea explorar.
 Una vez seleccionada, mantiene presionado el botón principal durante un segundo para abrirla.
-Al abrir una carpeta, se muestra una fotografía representativa. El usuario puede avanzar entre imágenes o activar una reproducción automática mediante distintas combinaciones de pulsaciones.
+Al abrir una carpeta, se muestra una frase representativa. El usuario puede avanzar entre frases o activar una reproducción automática mediante distintas combinaciones de pulsaciones.
 Cuando desea regresar al menú principal, puede mantener presionado el botón durante cinco segundos para volver al escritorio y explorar nuevas carpetas.
 La experiencia busca recrear la sensación de recorrer recuerdos digitales mediante una interfaz inspirada en los primeros computadores personales.
 
@@ -92,7 +92,7 @@ La experiencia busca recrear la sensación de recorrer recuerdos digitales media
 El proyecto contempla la programación de clases para botones y perillas, responsables de traducir las acciones físicas del usuario en interacciones digitales.
 La clase Boton considera cinco variables y cinco funciones para gestionar el estado del botón, detectar las pulsaciones, medir su duración y ejecutar acciones según el contexto de uso.
 Las perillas permiten controlar la posición del cursor en los ejes horizontal y vertical, mientras que la pantalla representa visualmente las acciones realizadas.
-Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almacenamiento, junto con una pantalla y controles físicos. Las imágenes se organizan en carpetas para facilitar su navegación y visualización.
+Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almacenamiento, junto con una pantalla y controles físicos. Las frases se organizan en carpetas para facilitar su navegación y visualización.
 
 ## Diagrama de flujo
 
@@ -137,11 +137,11 @@ posición de perilla y
 
 humanamente decidir sobre qué carpeta me quiero posicionar
 
-seguro que quieres seleccionar esa carpeta? = presiona el botón 1 durante 1 segundo
+seguro que quieres seleccionar esa carpeta? = presiona el botón 1 durante una pulsación larga
 
             Seleccionar carpeta
             Abrir carpeta
-            Mostrar primera fotografía de la carpeta
+            Mostrar primera frase de la carpeta
 ```
 
 **carpeta**
@@ -149,19 +149,19 @@ seguro que quieres seleccionar esa carpeta? = presiona el botón 1 durante 1 seg
 ```cpp
 si la carpeta está abierta podemos continuar: true
 
-nos mostrará directamente un frame representativo de la carpeta
+nos mostrará directamente una frase representativa de la carpeta
 
     SI botón 2 se presiona 2 veces
-        Avanzará a la siguiente fotografía
+        Avanzará a la siguiente frase
  //para poder
-        Mostrar nueva fotografía
+        Mostrar nueva frase
 
     SI botón 2 se presiona 3 veces
-        Activar carrusel de fotografías
+        Activar carrusel de frases.
 //para poder
-        Reproducir fotografías automáticamente
+        Reproducir frases automáticamente
 
-    SI botón 2 se mantiene presionado durante 5 segundos
+    SI botón 1 se mantiene presionado durante 5 segundos
         Detener carrusel
  //para poder
         Volver al escritorio digital
@@ -175,7 +175,7 @@ si está encendido
 
 podemos volver a navegar
 ver diferentes carpetas
-ver frames
+ver frases
 ver carrusel
 
 Fin y haz loop como quieras:)
@@ -273,6 +273,66 @@ Respuesta (resumen): Claude explicó que es un archivo de cabecera solo con cons
 # Esquemático
 
 ![esquematicoo](./imagenes/esquematicoo.png)
+
+# Decisiones y aprendizajes 
+
+Al utilizar la clase de nuestros compañeros nos arrojaba un error [Remanencia clases 2-8](https://wokwi.com/projects/479626182718971905)
+
+Prompt: “Estoy trabajando en un proyecto en Wokwi utilizando Raspberry pi pico y cpp. Al compilar el proyecto, aparece el siguiente error: ”
+
+```cpp
+PICO_SDK_PATH is /home/wokwi/pico-sdk
+Target board (PICO_BOARD) is 'pico'.
+Using board configuration from /home/wokwi/pico-sdk/src/boards/include/boards/pico.h
+Pico Platform (PICO_PLATFORM) is 'rp2040'.
+Build type is Release
+TinyUSB available at /home/wokwi/pico-sdk/lib/tinyusb/hw/bsp/rp2040; enabling build support for USB.
+BTstack available at /home/wokwi/pico-sdk/lib/btstack
+cyw43-driver available at /home/wokwi/pico-sdk/lib/cyw43-driver
+mbedtls available at /home/wokwi/pico-sdk/lib/mbedtls
+lwIP available at /home/wokwi/pico-sdk/lib/lwip
+C library type is newlib
+CMake Warning at /home/wokwi/pico-sdk/tools/Findpicotool.cmake:30 (message):
+  No installed picotool with version 2.3.0 found - building from source
+
+  It is recommended to build and install picotool separately, or to set
+  PICOTOOL_FETCH_FROM_GIT_PATH to a common directory for all your SDK
+  projects
+Call Stack (most recent call first):
+  /home/wokwi/pico-sdk/tools/CMakeLists.txt:180 (find_package)
+  /home/wokwi/pico-sdk/tools/CMakeLists.txt:722 (pico_init_picotool)
+  /home/wokwi/pico-sdk/src/cmake/on_device.cmake:81 (picotool_postprocess_binary)
+  CMakeLists.txt:12 (pico_add_extra_outputs)
+
+
+Downloading Picotool
+Using picotool from /home/wokwi/project/build_pico/_deps/picotool/picotool
+/home/wokwi/project/src/main.cpp: In function 'int main()':
+/home/wokwi/project/src/main.cpp:62:29: error: 'class Perilla' has no member named 'leerEnRango'
+   62 |         int posX = perillaX.leerEnRango(0, Pantalla::ANCHO - 1); // 0..319
+      |                             ^~~~~~~~~~~
+/home/wokwi/project/src/main.cpp:63:29: error: 'class Perilla' has no member named 'leerEnRango'
+   63 |         int posY = perillaY.leerEnRango(0, Pantalla::ALTO - 1);  // 0..239
+      |                             ^~~~~~~~~~~
+make[2]: *** [CMakeFiles/wokwi_project.dir/build.make:135: CMakeFiles/wokwi_project.dir/src/main.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:2397: CMakeFiles/wokwi_project.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
+
+Error: Process exited with 2
+```
+**Chatgpt** nos respondió que el error pasa por que en el main.cpp se está ocupando una función leerEnRango(), pero esta no existe en la clase de la perilla. En base al tiempo y al proyecto decidimos realizar una clase que funcionará tal cual a como lo imaginabamos 
+
+
+***reflexión sobre el trabajo colaborativo con grupo 8***
+
+Con el **grupo 8** tuvimos una comunicación fluida, fuimos compartiendo avances e intercambiando ideas entre los grupos.
+
+Sí bien rescatamos similitud entre la primera idea de nuestros proyectos, como la funcionalidad de las perillas con un movimiento en el eje x e y. Como también en la funcionalidad de los botones. Como grupo asumimos que serían compatibles al considerar los aspectos bases del proyecto. Aun así, reconocemos que nos debimos hacer cargo de la etapa tal vez más importante del proyecto de esta parte del trabajo colaborativo. Comprobar y pedir una retroalimentación al igual que dar una, sobre cómo se implemento o se trabajo la clase en el proyecto del grupo 8. Sí bien la comunicación fue constante, no fuimos más allá
+
+Aprendimos que el trabajo colaborativo va más allá de compartir avances o asumir que funcionaria al tener proyectos similares, validar y comprobar es lo fundamental. Al tener funcionalidades similares es totalmente enorgullecedor y llamativo que logramos generar proyectos totalmente diferentes
+
+
 
 ## Bibliografía
 
