@@ -70,6 +70,7 @@ Para esto, se buscarán sonidos a los que les haremos una abstracción, modific�
 2. Dos referentes anteriores Computadores de 8 bits: sonidos de generaciones previas, caracterizados por ondas simples, canales limitados y melodías electrónicas.
 
 Sonido0: 
+
 Sonido1: 
 
 1. Referente central Sharp X68000: sonidos característicos de sus videojuegos, combinando síntesis FM y audio ADPCM.
@@ -79,6 +80,7 @@ Sonido2:
 3. Dos referentes posteriores  Computadores y plataformas más actuales: sonidos que incorporan audio digital, muestras grabadas, mayor complejidad musical y procesamiento de audio en tiempo real.
 
 Sonido3:
+
 Sonido4:
 
 ### Referentes
@@ -93,7 +95,53 @@ Sonido4:
 
 <br>
 
+- [Display 4 Matriz Led Verde 8x8 Max7219 SPI](https://afel.cl/products/display-4-matriz-led-verde-8x8-max7219-spi)
 
+Esta matriz de led utiliza un multiplexor, es decir que mediante 2 canales se envia información para controlar cada led, de esta manera no debemos tener 256 canales (total de leds)
+
+<br>
+
+- [Allison Parrish: Recent and Selected Work](https://portfolio.decontextualize.com/)
+
+Compilado de proyectos de Allison, muchos de ellos trabajan con el IC 2040. Recordando este microcontrolador corresponde al cerebro de la Raspberry Pi Pico
+
+> [Allison’s Bootleg Cart](https://abc.decontextualize.com/) Me encantó, ya que mi cariño por el mundo de los videojuegos, pero más específicamente por el _modeo_ o la realización de elementos para _hackear_  hardware retro. Espero profundizar esto en algún momentp
+
+<br>
+
+- [Sam Lavigne](https://lav.io/) 
+
+Recuerdo que aaron me enseño esta web portafolio y más específicamente https://lav.io/projects/new-york-apartment/. Acá Sam recopila **todos** los datos de arriendo y estructura una lógica de visualización de datos interactiva, pudiendo "fusionar" todos los departamentos en uno, calculando cuando te demorarias en pagar cada uno, etc...
+
+Este portafolio lo tengo constantemente en mi memoria, ya que es un gran referente de las cosas que se pueden llegar a lograr con el código
+
+<br>
+
+- [How to speak machine](https://drive.google.com/file/d/1jdlTussK-nnjx7-pNHt1AHZHUXFPDMnk/view)
+
+Este libro puede servir para entender la lógica detrás de lo que es y no es un computador personal, concepto clave del proyecto-02
+
+<br>
+
+- [Bleep-Drum](https://github.com/BleepLabs/Bleep-Drum)
+
+Desarrollaron una máquina percusiva que utiliza 4 sonidos y 2 modificadores. Este referente es clave para lo que queremos lograr, igualmente nos acercamos a la versión que está en el LID para explorar y ver las posibilidades de lo que es posible
+
+Utiliza un microcontrolador ATM, más exactamente el que utilizaban los Arduino Uno R3
+
+<br>
+
+- [oficina del sonido](https://www.oficinadesonido.org/)
+
+Referente similar al anterior, no profundizo aún en este. Lo dejo para un futuro
+
+<br>
+
+- [Windows 95](https://www.youtube.com/watch?v=I3Ak5VgyEoc)
+
+El sonido de inicio de Windows 95 desarrollado por Brian Eno nos plantea el oceano de infinidades que pueden ocurrir en pocos segundos. De esto, además consideramos el como la sonoridad evolucionó con la computación
+
+<br>
 ### SonidoInicio
 
 ## **Implementación física**
