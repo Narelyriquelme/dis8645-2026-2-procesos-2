@@ -6,7 +6,7 @@ Fecha de entrega: 2026-11-03
 
 ## Integrantes
 
-Emilia Contreras / [hazzaily](https://github.com/hazzaily) / Diagrama de flujo, esquemático, documentación.
+Emilia Contreras / [hazzaily](https://github.com/hazzaily) / Diagrama de flujo, esquemático, documentación, carcasa.
 
 Kristel Ladrón de Guevara / [kristelagj](https://github.com/kristelagj) / Esquemático, registro, documentación.
 
