@@ -231,6 +231,66 @@ Finalmente, también se tomó la decisión de construir una carcasa representati
 # Esquemático
 ![esquematicoo](./imagenes/esquematicoo.png)
 
+# Decisiones y aprendizajes 
+
+Al utilizar la clase de nuestros compañeros nos arrojaba un error [Remanencia clases 2-8](https://wokwi.com/projects/479626182718971905)
+
+Prompt: “Estoy trabajando en un proyecto en Wokwi utilizando Raspberry pi pico y cpp. Al compilar el proyecto, aparece el siguiente error: ”
+
+```cpp
+PICO_SDK_PATH is /home/wokwi/pico-sdk
+Target board (PICO_BOARD) is 'pico'.
+Using board configuration from /home/wokwi/pico-sdk/src/boards/include/boards/pico.h
+Pico Platform (PICO_PLATFORM) is 'rp2040'.
+Build type is Release
+TinyUSB available at /home/wokwi/pico-sdk/lib/tinyusb/hw/bsp/rp2040; enabling build support for USB.
+BTstack available at /home/wokwi/pico-sdk/lib/btstack
+cyw43-driver available at /home/wokwi/pico-sdk/lib/cyw43-driver
+mbedtls available at /home/wokwi/pico-sdk/lib/mbedtls
+lwIP available at /home/wokwi/pico-sdk/lib/lwip
+C library type is newlib
+CMake Warning at /home/wokwi/pico-sdk/tools/Findpicotool.cmake:30 (message):
+  No installed picotool with version 2.3.0 found - building from source
+
+  It is recommended to build and install picotool separately, or to set
+  PICOTOOL_FETCH_FROM_GIT_PATH to a common directory for all your SDK
+  projects
+Call Stack (most recent call first):
+  /home/wokwi/pico-sdk/tools/CMakeLists.txt:180 (find_package)
+  /home/wokwi/pico-sdk/tools/CMakeLists.txt:722 (pico_init_picotool)
+  /home/wokwi/pico-sdk/src/cmake/on_device.cmake:81 (picotool_postprocess_binary)
+  CMakeLists.txt:12 (pico_add_extra_outputs)
+
+
+Downloading Picotool
+Using picotool from /home/wokwi/project/build_pico/_deps/picotool/picotool
+/home/wokwi/project/src/main.cpp: In function 'int main()':
+/home/wokwi/project/src/main.cpp:62:29: error: 'class Perilla' has no member named 'leerEnRango'
+   62 |         int posX = perillaX.leerEnRango(0, Pantalla::ANCHO - 1); // 0..319
+      |                             ^~~~~~~~~~~
+/home/wokwi/project/src/main.cpp:63:29: error: 'class Perilla' has no member named 'leerEnRango'
+   63 |         int posY = perillaY.leerEnRango(0, Pantalla::ALTO - 1);  // 0..239
+      |                             ^~~~~~~~~~~
+make[2]: *** [CMakeFiles/wokwi_project.dir/build.make:135: CMakeFiles/wokwi_project.dir/src/main.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:2397: CMakeFiles/wokwi_project.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
+
+Error: Process exited with 2
+```
+**Chatgpt** nos respondió que el error pasa por que en el main.cpp se está ocupando una función leerEnRango(), pero esta no existe en la clase de la perilla. En base al tiempo y al proyecto decidimos realizar una clase que funcionará tal cual a como lo imaginabamos 
+
+
+***reflexión sobre el trabajo colaborativo con grupo 8***
+
+Con el **grupo 8** tuvimos una comunicación fluida, fuimos compartiendo avances e intercambiando ideas entre los grupos.
+
+Sí bien rescatamos similitud entre la primera idea de nuestros proyectos, como la funcionalidad de las perillas con un movimiento en el eje x e y. Como también en la funcionalidad de los botones. Como grupo asumimos que serían compatibles al considerar los aspectos bases del proyecto. Aun así, reconocemos que nos debimos hacer cargo de la etapa tal vez más importante del proyecto de esta parte del trabajo colaborativo. Comprobar y pedir una retroalimentación al igual que dar una, sobre cómo se implemento o se trabajo la clase en el proyecto del grupo 8. Sí bien la comunicación fue constante, no fuimos más allá
+
+Aprendimos que el trabajo colaborativo va más allá de compartir avances o asumir que funcionaria al tener proyectos similares, validar y comprobar es lo fundamental. Al tener funcionalidades similares es totalmente enorgullecedor y llamativo que logramos generar proyectos totalmente diferentes
+
+
+
 ## Bibliografía
 
 - Wikipedia. Macintosh 128K. Wikipedia, la enciclopedia libre.<https://es.wikipedia.org/wiki/Macintosh_128K>
