@@ -17,8 +17,8 @@
 - ***Carla Núñez*** @ccarlabelenn
 
 ## Sobre el proyecto
+Este proyecto toma como referente el Apple Macintosh de 1984, recuperando su lenguaje visual basado en ventanas, carpetas, íconos y una interfaz monocromática de píxeles. A partir de esta estética, proponemos un escritorio digital interactivo que permite explorar carpetas que contienen frases relacionadas con recuerdos, emociones y experiencias personales de una manera intuitiva y cercana.
 
-Este proyecto toma como referente el Apple Macintosh de 1984, recuperando su lenguaje visual basado en ventanas, carpetas, íconos y una interfaz monocromática de píxeles. A partir de esta estética, proponemos un escritorio digital interactivo que permite explorar fotografías y recuerdos personales de una manera intuitiva y cercana.
 El proyecto busca reflexionar sobre cómo la tecnología, además de procesar información y facilitar tareas cotidianas, puede convertirse en un medio para preservar algo profundamente humano: los recuerdos, los vínculos y las experiencias compartidas.
 
 ## Referente Apple Mac
@@ -50,6 +50,15 @@ La interacción busca ser sencilla e intuitiva, generando una experiencia íntim
 - **Pantalla:** muestra el escritorio, las fotografías y las interacciones del usuario.
 - **Estética:** píxeles, íconos y gráficos monocromáticos.
 
+## Las cuatro carpetas
+
+1. **Personas**: contiene frases relacionadas con los vínculos afectivos, las personas importantes y las huellas que dejan en nuestra vida.
+
+2. **Lugares**: contiene frases que evocan espacios significativos, lugares que recordamos y experiencias asociadas a ellos.
+
+3. **Momentos**: contiene frases sobre instantes cotidianos, experiencias compartidas y situaciones que adquieren significado con el paso del tiempo.
+
+4. **Objetos**: contiene frases relacionadas con objetos que poseen un significado emocional por las historias y experiencias que representan.
 ## Interacción
 
 - **Perilla 1 (eje Y):** movimiento vertical en la pantalla
