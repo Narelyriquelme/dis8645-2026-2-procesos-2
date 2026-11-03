@@ -1,4 +1,4 @@
-![tittle](./imagenes/altiro-hero-loop.gif)
+ ![tittle](./imagenes/altiro-hero-loop.gif)
 
 **Realizado por:**  
 *Francisca Jesús Palma Cuevas (frannciscapalma)*
@@ -453,7 +453,9 @@ void leer
 # Esquemático 
     
  <details>
+  
 ![Esquematico](./imagenes/vista-previa.png)
+
  </details>
  
 # Simulación digital en wokwi
