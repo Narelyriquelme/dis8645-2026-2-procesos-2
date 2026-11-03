@@ -1,4 +1,4 @@
-![tittle](./imagenes/altiro-hero-loop.gif)
+ ![tittle](./imagenes/altiro-hero-loop.gif)
 
 **Realizado por:**  
 *Francisca Jesús Palma Cuevas (frannciscapalma)*
@@ -454,7 +454,9 @@ void leer
     
  <details>
   
+  
 ![Esquematico](./imagenes/esquematico.png)
+
 
  </details>
  
