@@ -101,7 +101,7 @@ Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almac
 | Componentes | Cantidad | Precio unitario | Link |
 | --- | --- | --- | --- |
 | Raspberry Pi Pico 2W | 1 | $14.990 | <https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers> |
-| Botón pulsador | 2 | 100 | | <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptos> |
+| Botón pulsador | 2 | $100 | https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=4&_sid=f5c2aac0d&_ss=r |
 | Potenciómetro b100k | 2 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
 | LED | 1 | $100 | <https://afel.cl/products/kit-50-diodos-leds-de-5mm-ultrabrillantes> |
 | Resistencia 220 Ω | 2 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
