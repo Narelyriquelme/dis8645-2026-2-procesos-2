@@ -17,8 +17,8 @@
  - *Prototipo físico tangible de altiro hero*
 
 **Descargables**
-- Carcasa
-- Esquemático en Kicad 
+- Carcasa [modelos 3d](https://github.com/santiagocifuvelez/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-05/modelos-3d)
+- Kicad [esquemático](https://github.com/santiagocifuvelez/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-05/esquematicos/altiro-hero)
 
 **Indice:**   
 - Génesis del proyecto
