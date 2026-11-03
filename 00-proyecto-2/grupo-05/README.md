@@ -18,7 +18,7 @@
 
 **Descargables**
 - Carcasa [modelos 3d](https://github.com/santiagocifuvelez/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-05/modelos-3d)
-- Kicad
+- Kicad [esquemático](https://github.com/santiagocifuvelez/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-05/esquematicos/altiro-hero)
 
 **Indice:**   
 - Génesis del proyecto
