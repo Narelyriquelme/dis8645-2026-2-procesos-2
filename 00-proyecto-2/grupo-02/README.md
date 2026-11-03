@@ -17,8 +17,8 @@
 - ***Carla Núñez*** @ccarlabelenn
 
 ## Sobre el proyecto
+Este proyecto toma como referente el Apple Macintosh de 1984, recuperando su lenguaje visual basado en ventanas, carpetas, íconos y una interfaz monocromática de píxeles. A partir de esta estética, proponemos un escritorio digital interactivo que permite explorar carpetas que contienen frases relacionadas con recuerdos, emociones y experiencias personales de una manera intuitiva y cercana.
 
-Este proyecto toma como referente el Apple Macintosh de 1984, recuperando su lenguaje visual basado en ventanas, carpetas, íconos y una interfaz monocromática de píxeles. A partir de esta estética, proponemos un escritorio digital interactivo que permite explorar fotografías y recuerdos personales de una manera intuitiva y cercana.
 El proyecto busca reflexionar sobre cómo la tecnología, además de procesar información y facilitar tareas cotidianas, puede convertirse en un medio para preservar algo profundamente humano: los recuerdos, los vínculos y las experiencias compartidas.
 
 ## Referente Apple Mac
@@ -50,6 +50,16 @@ La interacción busca ser sencilla e intuitiva, generando una experiencia íntim
 - **Pantalla:** muestra el escritorio, las fotografías y las interacciones del usuario.
 - **Estética:** píxeles, íconos y gráficos monocromáticos.
 
+## Cuatro carpetas
+
+1. **Personas**: contiene frases relacionadas con los vínculos afectivos, las personas importantes y las huellas que dejan en nuestra vida.
+
+2. **Lugares**: contiene frases que evocan espacios significativos, lugares que recordamos y experiencias asociadas a ellos.
+
+3. **Momentos**: contiene frases sobre instantes cotidianos, experiencias compartidas y situaciones que adquieren significado con el paso del tiempo.
+
+4. **Objetos**: contiene frases relacionadas con objetos que poseen un significado emocional por las historias y experiencias que representan.
+   
 ## Interacción
 
 - **Perilla 1 (eje Y):** movimiento vertical en la pantalla
@@ -91,12 +101,12 @@ Se considera el uso de una Raspberry Pi como plataforma de procesamiento y almac
 | Componentes | Cantidad | Precio unitario | Link |
 | --- | --- | --- | --- |
 | Raspberry Pi Pico 2W | 1 | $14.990 | <https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers> |
-| Botón pulsador | 2 | 200 | | <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptos> |
+| Botón pulsador | 2 | $100 | https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=4&_sid=f5c2aac0d&_ss=r |
 | Potenciómetro b100k | 2 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
 | LED | 1 | $100 | <https://afel.cl/products/kit-50-diodos-leds-de-5mm-ultrabrillantes> |
 | Resistencia 220 Ω | 2 | $495 | <https://altronics.cl/potenciometro-lineal-100k-b100k> |
-| Pantalla | 1 | | |
-| Protoboard | 1 | | |
+| Pantalla ILI9341| 1 |$16.990 | https://afel.cl/products/shield-tft-touch-3-2-ili9341?srsltid=AYCX9vLf24U_AsYjwifPUWpld3K7FYkukGNdyBM3ej3P2EYb3arjNnl9 |
+| Protoboard | 1 | 1.500 | https://afel.cl/products/mini-protoboard-400-puntos?_pos=1&_sid=a63a98843&_ss=r|
 
 ## Pseudocódigo del rol de los componentes
 
@@ -173,15 +183,13 @@ Fin y haz loop como quieras:)
 
 
 
-
 ## Carcasa
 La propuesta considera una carcasa inspirada en el Macintosh 1984.
 Su diseño busca representar visualmente el computador histórico mientras integra pantalla y controles físicos compuestos por dos perillas y dos botones.
 La forma general toma como referencia la estética compacta del Macintosh, reinterpretándola como un objeto destinado a la exploración de recuerdos digitales.
 
-![fotopropuesta](./imagenes/fotopropuesta.png)
-![fotopropuesta2](./imagenes/fotopropuesta2.png)
-
+![propuesta1](./imagenes/propuesta1.png)
+![propuesta2](./imagenes/propuesta2.png)
 ## Referentes
 
 Acá logramos observar el Macintosh por dentro, descubriendo los componentes y la arquitectura que hicieron posible su funcionamiento.
@@ -220,8 +228,8 @@ Finalmente, también se tomó la decisión de construir una carcasa representati
 # Prompts utilizados
 *(Agregar aquí los prompts utilizados para los códigos.)*
 
-# Esquemáticos
-*(Agregar aquí los esquemáticos kicad.)*
+# Esquemático
+![esquematicoo](./imagenes/esquematicoo.png)
 
 ## Bibliografía
 
