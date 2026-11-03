@@ -64,15 +64,15 @@ La interacción busca ser sencilla e intuitiva, generando una experiencia íntim
 
 - **Perilla 1 (eje Y):** movimiento vertical en la pantalla
 - **Perilla 2 (eje X):** movimiento horizontal, simulando el movimiento de un mouse
-- **Botón 1:** seleccionar, abrir una carpeta y volver al escritorio
-- **Botón 2:** controlar acciones relacionadas con la reproducción y visualización de imágenes
+- **Botón 1:** seleccionar y vuelve al escritorio
+- **Botón 2:** cambiar de página y carrusel de frases
 
 parte de nuestra clase:
 
 - **Sin presionar:** estado 0.
-- **Presionar durante 1 segundo:** abrir la carpeta seleccionada.
-- **Presionar 2 veces:** avanzar a la siguiente fotografía.
-- **Presionar 3 veces:** activar un carrusel de fotografías.
+- **Pulsación larga 1 click:** abrir la carpeta seleccionada.
+- **1 click:** avanzar a la siguiente frase.
+- **Presionar 3 veces:** activar un carrusel de frases.
 - **Mantener presionado durante 5 segundos:** volver al escritorio, independientemente de la posición de las perillas.
 
 Al abrir una carpeta, se muestra inicialmente su primera imagen. El usuario puede avanzar entre fotografías y activar su reproducción secuencial. Una pulsación prolongada permite regresar al escritorio y explorar otra carpeta.
