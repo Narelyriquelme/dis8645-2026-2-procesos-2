@@ -92,7 +92,7 @@ inicio → ¿tarjeta acercada? —no→ esperar
 
 ---
 
-# texto descriptivo del proyecto
+# Texto descriptivo del proyecto
 
 Nuestro proyecto n°3 se basará en crear un juego donde el jugador debe interactuar con el sistema mediante botones pulsadores y utilizar el sonido como principal medio de comunicación para comprender lo que sucede durante la partida.
 
@@ -100,11 +100,13 @@ El juego consiste en controlar una nave espacial que debe sobrevivir a diferente
 
 El jugador deberá interpretar las señales auditivas para tomar decisiones, desplazarse entre diferentes posiciones y disparar contra los enemigos antes de recibir un ataque.  La partida termina cuando la nave pierde todas sus vidas. El sistema comunica el resultado mediante una secuencia sonora y permite iniciar una nueva partida. 
 
-1. **Mecánica y funcionamiento** 
+
+## 1. **Mecánica y funcionamiento** 
 
 El videojuego funciona mediante tres posiciones imaginarias: izquierda, centro y derecha. Estas posiciones representan los diferentes sectores del espacio por los que pueden aparecer los enemigos y desplazarse la nave del jugador. Durante la partida, los enemigos aparecen aleatoriamente en cualquiera de estos sectores. El jugador debe reconocer su ubicación mediante las señales emitidas por el parlante y utilizar los botones para desplazarse o disparar. 
 
-El funcionamiento general se desarrolla de la siguiente manera:
+
+## El funcionamiento general se desarrolla de la siguiente manera:
 
 1. **Inicio:** el jugador presiona el botón de inicio y el sistema reproduce una señal sonora que indica que la partida ha comenzado.  
 2. **Desarrollo:** aparecen enemigos y obstáculos en diferentes posiciones.  
@@ -114,7 +116,8 @@ El funcionamiento general se desarrolla de la siguiente manera:
 6. **Dificultad progresiva:** a medida que aumenta el tiempo de juego, los enemigos aparecen con mayor frecuencia y velocidad.  
 7. **Finalización:** cuando el jugador pierde todas sus vidas, se reproduce una señal de derrota y se comunica la puntuación final.
 
-Cada sonido tendrá un significado específico:
+
+## Cada sonido tendrá un significado específico:
 
 * **Pitido hacia la izquierda:** indica la presencia de un enemigo en el sector izquierdo.  
 * **Pitido hacia la derecha:** indica la presencia de un enemigo en el sector derecho.  
@@ -160,7 +163,7 @@ III. I-N-T-E-R-F-A-C-E
 El autor plantea las bases de lo que significa enseñar diseño gráfico hoy. Introduce la idea de que el diseño no se trata de "estilo" o decoración, sino de sistemas, reglas y tecnología aplicadas a la comunicación.
 
 
-Bloque 8 · Typography (paginas 81-90)
+### Bloque 8 · Typography (paginas 81-90)
 
 1. Tema central
 
@@ -198,7 +201,7 @@ Donald Knuth trata la tipografía como un problema matemático y programable. De
 
 4. Citas
 
-Cita 1 (p. 85)
+**Cita 1 (p. 85)**
 
 INGLÉS: “Knuth was horrified by the quality of the new phototype. He also realized that setting a page of type is a discrete problem. Divide the page into a fine grid of squares—each box is either black or white, ink or no ink, 1 or 0.”
 
@@ -207,7 +210,7 @@ ESPAÑOL: “Knuth quedó horrorizado por la calidad del nuevo fototipo. Tambié
 Análisis: Aquí la tipografía pasa de oficio visual a problema computable. Esa lógica binaria es la base de toda la tipografía digital.
 
 
-Cita 2 (p. 86)
+**Cita 2 (p. 86)**
 
 INGLÉS: “Metafont is a tool for designing and generating typefaces by describing them mathematically. TeX puts type on a page and Metafont draws that type.”
 
@@ -216,7 +219,7 @@ ESPAÑOL: “Metafont es una herramienta para diseñar y generar tipografías de
 Análisis: Reparte el trabajo en dos sistemas: uno compone y otro dibuja. La letra deja de ser un dibujo fijo y pasa a ser una descripción.
 
 
-Cita 3 (p. 88)
+**Cita 3 (p. 88)**
 
 INGLÉS: “Metafont, however, never really took off. Its mathematical learning curve proved a bit steep for type designers. And mathematicians were not necessarily so interested in designing typefaces. It remains an alternate typographic future.”
 
