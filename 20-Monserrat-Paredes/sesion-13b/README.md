@@ -60,7 +60,7 @@ El videojuego funciona mediante tres posiciones imaginarias: izquierda, centro y
 
 ## Bill of Materials (BOM)
 
-| # | Cantidad | Componente | Descripción / Función | Precio unitario | Subtotal | Enlace |
+| # | Cantidad | Componente | Descripción / Función | Precio | Subtotal | Enlace |
 |---|:--------:|------------|------------------------|----------------:|---------:|--------|
 | 1 | 1 | Raspberry Pi Pico RP2040 | Controlador principal del videojuego | $0 | $0 | [Comprar](URL) |
 | 2 | 1 | Parlante de 8 Ω | Reproducción de señales y efectos sonoros | $0 | $0 | [Comprar](URL) |
