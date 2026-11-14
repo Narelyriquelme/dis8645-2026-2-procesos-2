@@ -12,4 +12,85 @@ Tener:
   
 ## encargos
 
+
 ## lectura
+
+Libro: A New Program for Graphic Design
+
+Autor: David Reinfurt
+
+El libro está dividido en 3 grandes capítulos.
+
+I. T--Y-P-O-G-R-A-P-H-Y
+
+II. G-E-S-T-A-L-T
+
+III. I-N-T-E-R-F-A-C-E
+
+El autor plantea las bases de lo que significa enseñar diseño gráfico hoy. Introduce la idea de que el diseño no se trata de "estilo" o decoración, sino de sistemas, reglas y tecnología aplicadas a la comunicación.
+
+
+### Bloque 9 · Typography (pp. 91-97)
+
+
+1. Tema central
+
+Reinfurt cuenta cómo Metafont rehabilitado se volvió una fuente “viva” que se reutiliza y cambia en cada proyecto (exposiciones, catálogos, logo, película). La sección Typography cierra con su lista de lecturas.
+
+
+2. Análisis directo
+   
+- Meta-the-difference-between-the-two-Font nace de una invitación del Queens Museum. Luego se reutiliza en Gallery 400, Dot Dot Dot, Bulletins of the Serving Library, una feria en Turín y el MoMA. Cada encargo la hace avanzar un poco.
+
+- El texto habla de la fuente: ensayos como “A Note on the Type” están compuestos con la misma tipografía que describen. Junto a “A Note on the Time” (cómo los computadores acuerdan la hora en red) vinculan tipografía, tiempo y sistemas.
+
+- En vez de vender la fuente, proponen a Kadist usarla como logo por 10 años, mientras cambia muy despacio. El logo deja de ser una imagen fija y pasa a ser un sistema que evoluciona.
+
+- Peso, inclinación y “superness” funcionan como tres ejes de un cubo, y una bolita hace un recorrido aleatorio entre ellos. De ahí sale la versión 4-D, que además mueve el tipo de pluma.
+
+- La película “Letter & Spirit” (18 min) se graba en 35 mm con una máquina de Jürg Lehni, usando una tecnología antigua para animar tipografía digital.
+
+- La conclusión es que la fuente es casi idéntica a Metafont, pero su historia enredada queda incrustada en ella. Para Reinfurt, esas historias son lo que da sentido a lo que hacemos.
+
+
+3. Glosario
+
+| Término (Inglés) | Traducción (Español) | Explicación |
+|---|---|---|
+| Parameter | Parámetro | Valor ajustable que cambia el comportamiento de la fuente. |
+| Slant | Inclinación | Ángulo de las letras hacia adelante o hacia atrás. |
+| Superness | Superelipticidad | Medida de la redondez de la "O", que afecta al resto de letras. |
+| Random walk | Recorrido aleatorio | Movimiento por pasos al azar dentro de un espacio de posibilidades. |
+| Nib | Plumilla | Punta de la pluma que determina el trazo de la letra. |
+| House font | Fuente de la casa | Tipografía propia que un estudio usa en sus publicaciones. |
+| Exhibition catalogue | Catálogo de exposición | Publicación que acompaña y documenta una muestra. |
+| Anachronistic | Anacrónico | Que pertenece a otra época y ya quedó fuera de contexto. |
+
+
+4. Citas
+
+**Cita 1 (p. 91)**
+
+INGLÉS: “It took a lot of work to get to that point, many wrong turns, and no shortage of digressions. I suppose this is also the point.”
+
+ESPAÑOL: “Costó mucho trabajo llegar a ese punto, con muchos giros equivocados y sin falta de digresiones. Supongo que ese también es el punto.”
+
+Análisis: El rodeo y el error se presentan como parte del método, no como fallas. El diseño especulativo avanza por desvíos.
+
+
+**Cita 2 (p. 93)**
+
+INGLÉS: “We would use the invitation as an excuse to develop an aspect of this project we’d been interested in—to make the typeface explicitly change over time.”
+
+ESPAÑOL: “Usaríamos la invitación como excusa para desarrollar un aspecto de este proyecto que nos interesaba: hacer que la tipografía cambiara explícitamente con el tiempo.”
+
+Análisis: Los encargos funcionan como pretexto para investigar. El tiempo se vuelve un parámetro del diseño.
+
+
+**Cita 3 (p. 96)**
+
+INGLÉS: “when so much is so readily available, these stories are how we make coherent sense of what we do.”
+
+ESPAÑOL: “cuando hay tanto tan fácilmente disponible, estas historias son la manera en que damos un sentido coherente a lo que hacemos.”
+
+Análisis: Con tanta información a mano, contar el proceso es lo que da sentido al trabajo. Es la idea de cierre de la sección.
