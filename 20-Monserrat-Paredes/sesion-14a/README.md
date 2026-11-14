@@ -12,7 +12,6 @@ Tener:
   
 ## encargos
 
-
 ## lectura
 
 Libro: A New Program for Graphic Design
