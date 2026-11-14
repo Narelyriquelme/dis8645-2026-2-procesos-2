@@ -16,7 +16,7 @@ sesión-13b (viernes 13):
 
 ---
   
-10 cosas que si queremos para el proyecto
+### 10 cosas que si queremos para el proyecto
 
 1. samples de nuestras canciones favoritas (licencias).
 
@@ -32,7 +32,7 @@ sesión-13b (viernes 13):
 11. que tenga luces
 
 
-10 cosas que no queremos para el proyecto
+### 10 cosas que no queremos para el proyecto
 
 1. ocupar pantallas
 2. no interactividad
