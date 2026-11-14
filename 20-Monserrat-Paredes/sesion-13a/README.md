@@ -140,17 +140,17 @@ El videojuego funciona mediante tres posiciones imaginarias: izquierda, centro y
 
 ## Bill of Materials (BOM)
 
-| # | Cantidad | Componente | Descripción / Función | Precio unitario | Subtotal | Proveedor | Enlace |
-|---|:--------:|------------|------------------------|:---------------:|:--------:|-----------|--------|
-| 1 | 1 | Raspberry Pi Pico RP2040 | Controlador principal del videojuego | $ | $ | | [Link]() |
-| 2 | 1 | Parlante de 8 Ω | Reproducción de señales y efectos sonoros | $ | $ | | [Link]() |
-| 3 | 1 | Amplificador PAM8302 | Amplificación de las señales de audio | $ | $ | | [Link]() |
-| 4 | 4 | Pulsadores electrónicos | Control de movimiento, disparo e inicio | $ | $ | | [Link]() |
-| 5 | 4 | Resistencias de 10 kΩ | Opcionales, según la configuración de los botones | $ | $ | | [Link]() |
-| 6 | 1 | Protoboard | Montaje y conexión de los componentes | $ | $ | | [Link]() |
-| 7 | Variable | Cables Dupont | Conexiones eléctricas | $ | $ | | [Link]() |
-| 8 | 1 | Fuente de alimentación USB de 5 V | Suministro de energía | $ | $ | | [Link]() |
-| | | | **Total** | | **$** | | |
+| # | Cantidad | Componente | Descripción / Función | Precio unitario | Subtotal | Enlace |
+|---|:--------:|------------|------------------------|----------------:|---------:|--------|
+| 1 | 1 | Raspberry Pi Pico RP2040 | Controlador principal del videojuego | $0 | $0 | [Comprar](URL) |
+| 2 | 1 | Parlante de 8 Ω | Reproducción de señales y efectos sonoros | $0 | $0 | [Comprar](URL) |
+| 3 | 1 | Amplificador PAM8302 | Amplificación de las señales de audio | $0 | $0 | [Comprar](URL) |
+| 4 | 4 | Pulsadores electrónicos | Control de movimiento, disparo e inicio | $0 | $0 | [Comprar](URL) |
+| 5 | 4 | Resistencias de 10 kΩ | Opcionales, según la configuración de los botones | $0 | $0 | [Comprar](URL) |
+| 6 | 1 | Protoboard | Montaje y conexión de los componentes | $0 | $0 | [Comprar](URL) |
+| 7 | Variable | Cables Dupont | Conexiones eléctricas | $0 | $0 | [Comprar](URL) |
+| 8 | 1 | Fuente de alimentación USB de 5 V | Suministro de energía | $0 | $0 | [Comprar](URL) |
+| | | | | **Total** | **$0** | |
 
 
 ## encargos
