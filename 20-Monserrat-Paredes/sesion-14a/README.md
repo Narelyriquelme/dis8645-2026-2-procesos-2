@@ -9,7 +9,20 @@ Tener:
 - Diagrama de flujo
   
 - esqueleto en wokwi
-  
+
+---
+
+Wokwi → Color pin	y qué hace
+
+Amarillo → GP2	Mover la nave a la izquierda
+
+Azul	→ GP3	→ Mover la nave a la derecha
+
+Rojo	→ GP4	→ Disparar
+
+Verde	→ GP5	→ Iniciar, pausar y reanudar la partida (y reiniciar después del game over)
+
+
 ## encargos
 
 ## lectura
