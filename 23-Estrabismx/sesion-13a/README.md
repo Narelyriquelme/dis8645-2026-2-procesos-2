@@ -3,8 +3,10 @@
 ## apuntes sesión
 
 > La idea central consta de una antítesis de _autotune_, en este, existen los errores pero no el `CTRL Z`, es por ello que cada cambió que se guarda es duradero, si se quiere descartar algo, se hace con todo el conjunto.
-
+>
 > En este sampler se ingresa, grabaciones mediante un micrófono, estas pueden ser editadas en frecuencia, velocidad, ventana de ejecución, etc. Lo importante es que cada vez que se guarda la configuración del audio elegido, este queda añadido a un **banco** de audios (que funciona mediante una tarjeta microSD), en este banco de audios, todo suena al mismo tiempo, es decir que cada grabación se superpone sobre las demás. Es relevante mencionar que estos cambios no son editables o poseen la capacidad de borrarse parcialmente, el único modo de borrar los errores, es eliminar todo
+>>
+>> esto fue una idea preliminar
 
 - Punto a considerar:
 
