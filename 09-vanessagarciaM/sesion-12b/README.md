@@ -30,6 +30,8 @@ finalmente, recibimos comentarios específicos sobre nuestro proyecto 02, los cu
 - corregir errores ortográficos y revisar la redacción general.
 - incorporar diagramas de flujo que permitan explicar de manera más clara el funcionamiento y los procesos del proyecto.
 
+esta retroalimentación nos permitió tener mayor claridad sobre los aspectos que debemos fortalecer, tanto en la documentación como en el desarrollo y presentación de nuestro próximo proyecto.
+
 ### links varios
 <https://www.brandnewnoise.com/>
 
@@ -42,5 +44,3 @@ finalmente, recibimos comentarios específicos sobre nuestro proyecto 02, los cu
 <https://www.youtube.com/watch?v=UQ7BZlV_0zQ&t=108s>
 
 <https://www.elf-audio.com/koala/how-it-was-made.php>
-
-esta retroalimentación nos permitió tener mayor claridad sobre los aspectos que debemos fortalecer, tanto en la documentación como en el desarrollo y presentación de nuestro próximo proyecto.
