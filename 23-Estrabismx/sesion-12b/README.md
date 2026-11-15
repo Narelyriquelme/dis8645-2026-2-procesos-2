@@ -11,7 +11,6 @@ Revisamos y hablamos de la solemne 2
 3. [Motor Drone](https://www.instagram.com/p/Dcy5DkVsHMi/)
 4. [Analog Television](https://www.instagram.com/p/Db8YyPPRhcb/)
 5. [Sinte + Microcontrolador](https://www.instagram.com/p/Dd_fMOKOELP/)
-6. 
 
 <br>
 
