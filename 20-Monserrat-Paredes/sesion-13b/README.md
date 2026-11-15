@@ -100,7 +100,7 @@ Estados del juego = ESPERA → JUGANDO ⇄ PAUSA → GAME OVER → (nueva partid
 
 ## Bill of Materials (BOM)
 
-| # | Cantidad | Componente | Descripción / Función | Precio unitario | Enlace |
+| # | Cantidad | Componente | Descripción / Función | Precio | Enlace |
 |---|:--------:|------------|------------------------|----------------:|--------|
 | 1 | 1 | Raspberry Pi Pico RP2040 | Controlador principal del videojuego | $11.290 | [Comprar]([URL](https://raspberrypi.cl/products/raspberry-pi-pico-w-con-conexion-wifi)) |
 | 2 | 1 | Parlante de 8 Ω | Reproducción de señales y efectos sonoros | $2.890 | [Comprar](https://mcielectronics.cl/shop/product/mini-parlante-altavoz-8-ohms-0-5w/?srsltid=AYCX9vJ9-djZf65FXXZwwQeBYD4vnUlDCRA0cK9tNaXlrv1RwtmbaxVus4Q) |
