@@ -38,7 +38,7 @@ Parlante pequeño    | -
 LA DIMENSIÓN SONORA DE LA REALIDAD
 
 - Sesión 13a (**hoy**) &rarr; bill of materials, diagrama de flujo, texto-descripción, máximos 2 propuestas
-- Sesión 13b &rarr; descripción total del proyecto, prototipos, pseudocoódigo, wokwi
+- Sesión 13b &rarr; descripción total del proyecto, prototipos, pseudocódigo, wokwi
 - Sesión 14a &rarr; ???
 - Sesión 14b &rarr; entrega proyecto-03, nota por preguntas cruzadas
 
