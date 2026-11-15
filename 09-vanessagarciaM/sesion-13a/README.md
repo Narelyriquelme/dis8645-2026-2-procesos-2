@@ -113,4 +113,15 @@ referencia: <https://www.visual-paradigm.com/tutorials/flowchart-tutorial/>
 
 ## lectura
 
+páginas leídas:  80 a la 90
+
+en estas páginas se menciona el comercial de televisión de apple de 1984 y la llegada de la macintosh, usándolos para mostrar cómo se creó una narrativa de "liberación" frente a un supuesto monopolio opresor, cuando en realidad lo que hacían era imponer una ideología de control estético y técnico. también el salto hacia atrás en la historia de los medios para analizar la poesía concreta hecha con máquinas de escribir en los años 60 y 70 por autores como bpnichol y steve mccaffery, demostrando que la máquina de escribir misma era una interfaz que obligaba a experimentar con la materialidad del texto y del soporte. 
+
+cita 1 
+
+“Hemos creado por primera vez en toda la historia un jardín de pura ideología, donde cada trabajador puede florecer, a salvo de las plagas de cualquier pensamiento verdadero contradictorio. Nuestra unificación de Pensamientos es más poderosa que cualquier flota o ejército en la tierra. Somos un pueblo, con una sola voluntad, una sola resolución, una sola causa. Nuestros enemigos se hablarán a sí mismos hasta la muerte, y los enterraremos con su propia confusión.”(Emerson, p.82)
+
+cita 2 
+
+“La máquina de escribir surge como una interfaz de lectura/escritura analógica profundamente influyente. Además, la poesía de máquina de escribir en general y la poesía concreta sucia en particular son sumamente eficaces en la forma en que llaman la atención sobre los límites y las posibilidades de la máquina de escribir como interfaz.”(Emerson, p.88) 
 
