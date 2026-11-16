@@ -34,4 +34,4 @@
 
 ### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
 
-<img src="./imagenes/Kaleidoloop.jpg" alt="" width="50%">
+<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="50%">
