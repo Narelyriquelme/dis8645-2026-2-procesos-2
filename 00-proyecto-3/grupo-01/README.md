@@ -27,3 +27,11 @@
 ### [MOOG GRANDMOTHER](https://www.moogmusic.com/synthesizers/grandmother/)
 
 <img src="./imagenes/grandmother.jpg" alt="" width="50%">
+
+### [Kaleidoloop](https://forum.critterandguitari.com/t/kaleidoloop-returns/10321)
+
+<img src="./imagenes/kaleidoloop.png" alt="" width="50%">
+
+### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
+
+<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="50%">
