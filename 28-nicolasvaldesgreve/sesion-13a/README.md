@@ -2,13 +2,10 @@
 
 ## apuntes sesión
 
-el lenguaje no crea realidades. la realidad es lo que es, el lenguaje nos ayuda a entenderlo.
-
-en 15b se termina la asistencia.
-
-semana 16 es exclusivo de taller 
-
-el pseudo pueden ser puros prints explicando que sucede
++ el lenguaje no crea realidades. la realidad es lo que es, el lenguaje nos ayuda a entenderlo.
++ en 15b se termina la asistencia.
++ semana 16 es exclusivo de taller.
++ el pseudo del proyecto pueden ser puros prints explicando que sucede.
 
 ---
 
@@ -124,3 +121,7 @@ El prototipo tiene **cinco botones para reproducir los samples** y un sexto, **�
 ---
 
 ## lectura: Program Or Be Programmed: Ten Commands for a Digital Age - Douglas Rushkoff
+
+“Language is an abstraction of the real world, where sounds represent things and actions” esto fue lo que se discutió en clases!! Douglas dice que la realidad es lo que es, el lenguaje es la abstracción de ésta, y el texto es una abstracción del lenguaje. por lo que entendí, todo esto unido es lo que es el mundo digital, en donde todo es una abstracción de todo, lo cual automáticamente hace que el mundo dependa de las estandarizaciones centralizadas.
+
+“The invention of text allowed for contracts, the law, codes of ethics, and even the Bible” gracias a que tenemos la abstracción de las palabras como lo es el texto, existe ao3… la vida es buena.
