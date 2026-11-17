@@ -247,10 +247,10 @@ See [examples/PlatformIO](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-
 ## Hardware
 ### My boards
 * [Pico SD Card Development Board](https://forums.raspberrypi.com/viewtopic.php?p=2123146#p2123146)
-![PXL_20230726_200951753a](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/986ff919-e39e-40ef-adfb-78407f6e1e41)
+[PXL_20230726_200951753a](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/986ff919-e39e-40ef-adfb-78407f6e1e41)
 
 * [Pico Stackable, Plug & Play SD Card Expansion Module](https://forums.raspberrypi.com/viewtopic.php?t=356864)
-![PXL_20230926_212422091](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/7edfea8c-59b0-491c-8321-45487bce9693)
+[PXL_20230926_212422091](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/7edfea8c-59b0-491c-8321-45487bce9693)
 
 ### Prewired boards with SD card sockets
 There are a variety of RP2040 boards on the market that provide an integrated µSD socket. As far as I know, most are useable with this library.
@@ -277,7 +277,7 @@ Prerequisites:
 * (Optional) 100 nF, 1 µF, and 10 µF capacitors for decoupling
 * (Optional) 22 µH inductor for decoupling
 
-![image](https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg "Pinout")
+[image](https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg "Pinout")
 <!--
 |       | SPI0  | GPIO  | Pin   | SPI       | MicroSD 0 | Description            | 
 | ----- | ----  | ----- | ---   | --------  | --------- | ---------------------- |
@@ -294,10 +294,10 @@ Please see [here](https://docs.google.com/spreadsheets/d/1BrzLWTyifongf_VQCc2IpJ
 SPI and SDIO at 31.5 MHz are pretty demanding electrically. You need good, solid wiring, especially for grounds. A printed circuit board with a ground plane would be nice!
 
 <!--
-![image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/IMG_1473.JPG "Prototype")
+[image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/IMG_1473.JPG "Prototype")
 -->
-![image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/PXL_20230201_232043568.jpg "Protoboard, top")
-![image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/PXL_20230201_232026240_3.jpg "Protoboard, bottom")
+[image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/PXL_20230201_232043568.jpg "Protoboard, top")
+[image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/PXL_20230201_232026240_3.jpg "Protoboard, bottom")
 
 ### Construction
 * The wiring is so simple that I didn't bother with a schematic. 
@@ -391,7 +391,7 @@ See [An instance of `sd_spi_if_t` describes the configuration of one SPI to SD c
   * Program the device
   * See [examples/command_line/README.md](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/tree/main/examples/command_line/README.md) for operation.
 <!--
-![image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/IMG_1481.JPG "Prototype")
+[image](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico/blob/master/images/IMG_1481.JPG "Prototype")
 -->
 
 ## Customizing for the Hardware Configuration 
@@ -412,7 +412,7 @@ Attributes (or "fields", or "members") of these objects specify which pins to us
 [see [Static vs. Dynamic Configuration](#static-vs-dynamic-configuration)], 
 the C runtime initializes static memory to 0.)
 
-![Illustration of the configuration dev_brd.hw_config.c](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/0eedadea-f6cf-44cb-9b76-544ec74287d2)
+[Illustration of the configuration dev_brd.hw_config.c](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/0eedadea-f6cf-44cb-9b76-544ec74287d2)
 
 Illustration of the configuration 
 [dev_brd.hw_config.c](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/blob/main/examples/command_line/dev_brd.hw_config.c)
@@ -918,7 +918,7 @@ You are welcome to contribute to this project! Just submit a Pull Request in Git
 * [RP2040: Enable up to 42 MHz SDIO bus speed](https://github.com/ZuluSCSI/ZuluSCSI-firmware/tree/rp2040_highspeed_sdio)
 * SD UHS Double Data Rate (DDR): clock data on both edges of the clock
 <!--
-![image](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/8a28782e-84c4-40c8-8757-a063a4b83292)
+[image](https://github.com/carlk3/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/assets/50121841/8a28782e-84c4-40c8-8757-a063a4b83292)
 -->
 ## Appendix A: Migration actions
 ### Migrating from v2
