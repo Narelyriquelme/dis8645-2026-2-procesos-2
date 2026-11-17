@@ -235,7 +235,7 @@ La guía separa una perilla para el volumen y otra para navegar, con presión pa
 
 Yoto también permite que el cuidador configure límites de volumen y funciones desde su aplicación. ¿Nos sirve pensar en un límite de volumen para el adulto, aunque la interacción diaria quede en el dispositivo?
 
-[Controles oficiales de Toniebox](https://support.tonies.com/hc/en-gb/sections/29036384400402-Playing-and-Controls)
+- [Controles oficiales de Toniebox](https://support.tonies.com/hc/en-gb/sections/29036384400402-Playing-and-Controls)
 
 Toniebox no usa botones tradicionales: el volumen se ajusta con las orejas y el avance o retroceso con inclinación o golpes. Puede servirnos para discutir gestos, pero habría que probar si son claros en nuestro prototipo.
 
