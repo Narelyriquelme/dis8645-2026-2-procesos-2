@@ -10,7 +10,7 @@ la nota de proyecto dos se calcula como la suma de esos 6 puntajes, más el punt
 
 - criterio-01: grupal. documentación textual y diagramática. README del proyecto, diagramas de flujo, esquemáticos, bibliografía, prompts usados, proceso.
 - criterio-02: grupal. factiblidad. bill of materials, simulaciones en wokwi, pseudocódigo, coreografía.
-- criterio-03: grupal. referentes. análisis de referentes, incluyendo diseñadores, artistas, proyectos, instalaciones, obras, instrumentos, etc.
+- criterio-03: grupal. referentes (10). análisis de referentes, incluyendo diseñadores, artistas, proyectos, instalaciones, obras, instrumentos, etc.
 - criterio-04: individual. presentación oral del proyecto, incluyendo relato y responder preguntas.
 - criterio-05: individual. bitácoras, incluyendo encargos y lecturas
 - criterio-06: individual. tiempo. puntualidad en clases, en entregas y en uso del tiempo durante la presentación.
