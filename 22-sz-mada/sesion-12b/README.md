@@ -44,16 +44,16 @@ Somebody wants to read about finance rather than microcontrollers :skull: to eac
 
 ## encargo
 
-1. Leer el texto de Schafer y escribir un párrafo en la bítacora donde describan un sonido que les llame su atención. Nombrar el sonido, y elaborar cómo aparece, intentar describir cómo suena, y sus aspectos culturales
+- Leer el texto de Schafer y escribir un párrafo en la bitácora donde describan un sonido que les llame su atención. Nombrar el sonido, y elaborar cómo aparece, intentar describir cómo suena, y sus aspectos culturales
 
-1. Revisar una obra de Tristan Perich y una de Christine Sun Kim
+Opté por elegir el sonido de la lluvia ya que es fácil de reconocer, pero también es un fenómeno¿ que puede generar distintas sensaciones según la experiencia de cada persona
 
-1. Revisar repo de grupo-01 proyecto 2 para ver cómo resolvieron el aspecto del amplificador y parlante
+Lo que más me llama la atención, es el sonido que hace cuando cae en los techos o las ventanas, sobretodo cuando aumenta de manera gradual rather than just a light shower. Esto mismo (la intensidad del sonido) también depende de la superficie, nuevamente hablando de los techos y ventanas, en esta última puede sonar como un golpe seco, mientras que en los techos puede ser más como un murmullo. Culturalmente, la gente asocia la lluvia a la nostalgia, la introspección, lo melancólico, quizás hasta a la incomodidad, pero personalmente asocio la lluvia a la tranquilidad, más que nada porque siempre he tenido el privilegio poder disfrutar los días de lluvia en la comodidad de mi casa, y aún cuando iba al colegio o ahora en la universidad, mis trayectos de ida y vuelta nunca fueron fuertemente afectados. Ya que es un sonido cotidiano de cierta manera, tiende a pasar desapercibido; quizás uno lo note cuando comienza a llover, pero pasado unos minutos, ya se convierte en literal background noise, hasta el punto que quizás ni notes cuando deje de llover
 
 ---
 
-1.
+- Revisar una obra de Tristan Perich y una de Christine Sun Kim
 
-1.
+---
 
-1.
+- Revisar repo de grupo-01 proyecto 2 para ver cómo resolvieron el aspecto del amplificador y parlante
