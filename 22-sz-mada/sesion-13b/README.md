@@ -83,5 +83,3 @@ Tener parámetros claros
 ---
 
 Necesitamos trabajar el pseudocódigo y el esqueleto en Wokwi para poder profundizar en lo más técnico el martes
-
-## "Avance" para el martes
