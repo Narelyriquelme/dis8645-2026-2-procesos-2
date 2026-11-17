@@ -12,6 +12,16 @@ Nuestra máquina es un instrumento que no es musical ¿o si? es la intervención
 
 Dentro del funcionamiento técnico, este es controlado por un microcontrolador Raspberry Pi Pico 2W, el cual se encarga de gestionar las entradas de la interfaz física y el procesamiento del sonido y su manipulación. Para asegurar un rendimiento continuo y evitar las limitaciones de memoria al trabajar con audios muy largos o con muchas capas, el sistema integra un módulo de tarjeta SD, que permite almacenar, sobreescribir y reproducir el conjunto de sonidos grabados de manera fluida.
 
+### Interfaz
+
+![](./imagenes/estructura.png)
+
+La interfaz se organiza en tres zonas principales: reproducción, grabación y edición. La zona de reproducción se ubica a la izquierda e incorpora una pantalla para visualizar los datos del sonido, un parlante y los botones Play y Stop. Se decide incorporar una perilla de volumen en el lateral, ya que, al enfrentarse a la máquina, el usuario encontrará esta primera sección. Por ello, se considera importante disponer de este control cerca del botón Play, facilitando el ajuste del volumen durante la reproducción.
+
+La zona de grabación se dispone al centro y contiene un micrófono y un botón para iniciar la captura de audio. Finalmente, la zona de edición se ubica a la derecha y reúne perillas deslizantes para modificar los efectos, acompañadas de indicadores luminosos de colores que permiten identificar visualmente sus rangos e intensidades. En el lateral de esta sección se incorpora otra perilla para ajustar el volumen del audio antes de guardarlo.
+
+Con esta distribución se busca generar una lectura intuitiva de izquierda a derecha, como una guía de pasos que orienta al usuario a través de las distintas acciones: reproducir, grabar y editar. De esta manera, se diferencian las funciones, se facilita la lectura de los controles y se hace más intuitiva la interacción con el dispositivo.
+
 ### Posibilidades dentro del aspecto de audio
 
 El tiempo máximo de grabación por cada audio es de 30 segundos.
@@ -22,11 +32,123 @@ Son 60 posibilidades donde podría iniciar un audio.
 
 <br>
 
+#### Modificadores de sonido
+
+<h5>envolventes</h5>
+<ul>
+  <li>attack</li>
+  <li>decay</li>
+  <li>sustain</li>
+  <li>release</li>
+</ul>
+
+<h5>fx / modulación</h5>
+<ul>
+  <li>pitching</li>
+  <li>reverb</li>
+  <li>trémolo</li>
+  <li>bit crushing</li>
+  <li>ring modulator</li>
+  <li>velocidad</li>
+</ul>
+
+<h5>ecualización</h5>
+<ul>
+  <li>high pass filter</li>
+</ul>
+
+<h5>niveles / ganancia</h5>
+<ul>
+  <li>volumen de audio</li>
+  <li>volumen general</li>
+</ul>
+
+<br>
+
 ### Diagramas
 
 ![](./imagenes/dis8645-2026-2-v02.png)
 
 ![](./imagenes/dis8645-2026-2.png)
+
+### pseudo - código
+
+- Se establece que `sonido` es una grabación sin ninguna modificación, la cual al editar sus parámetros la entendemos como `audio` y una vez que se guarda, se añade a las demás y forma un `conjuntoDeAudios`. Todos los `audios` guardados se reproducen en nuestro `canvas`, es decir, nuestro lienzo que podemos reproducir en cualquier momento pero no editar
+
+- Se inicia la máquina con el interruptor
+
+```cpp
+
+bool interruptorGeneral; // valor asociado a la lectura del switch o botón 
+bool funcionamientoMaquina; // depende del interruptorEncendido
+// si es true la maquina realiza sus funciones con normalidad
+// si es false, la maquina debe tener un led encendido que indica que recibe corriente
+
+if (interruptorGeneral){
+funcionamientoMaquina = 1;}
+
+```
+
+- Se consulta si hay `conjuntoDeAudios`
+
+- En caso de haber, se encienden 3 leds que indican la posibilidad de realizar 3 acciones (es decir que cada `led` es un indicador de uso de cada modo), estos corresponden a `reproduccion`, `grabacion` y `borrado`
+
+    - `reproduccion` permite escuchar el `conjuntoDeAudios`
+
+        - Al activar esta opción, se inhabiltan los demás modos meintras dure la reproducción (se apagan sus leds indicadores)
+
+        - Si se vuelve a presionar `reproduccion` mientras suena el `conjuntoDeAudios` se cancela el modo
+
+        - Si se hace `dobleClick` al momento de activar `reproduccion`, se habilita el modo bucle
+        
+    - `grabacion` permite guardar sonidos de hasta un máximo de 10 segundos
+
+        - Estos sonidos luego se pueden editar variando velocidad, tono...
+
+        - Mientras esto ocurre se bloquea cualquier otro modo
+
+        - Solo se permite salir guardando el `audio`
+
+        - Una vez guardado el `audio` se le asigna una posición "aleatoria" en la que va a sonar en el `conjuntoDeAudios`
+
+    - `borrado` elimina `conjuntoDeAudios`, dejando la memoria vacia esperando nuevos `audios`
+
+        - Una vez ocurre esto se está forzado a solo poder grabar un `sonido`
+
+- En caso de no haber `conjuntoDeAudios` se bloquean todas las funciones a exepción de `grabar`, la cual al iniciarse ocurre con normalidad tal como se describio anteriormente
+
+- Si la máquina es apagada desde el `interruptorGeneral`, el `conjuntoDeAudios` debe quedar almancenado
+
+#### Estructura
+
+Se considera ordenar el código en distintas clases, a continuación se listan algunas a considerar
+
+- Boton (lectura de botones)
+
+- Perilla (lectura de perillas)
+
+- Multiplexor (pensado en la un multiplexor para optimizar la lecutra de perillas)
+
+- Lucesita (describen el funcionamiento de los distintos estados)
+
+- [NombreEfecto] (se encarga de la complejidad de como debe modificar el `audio`)
+
+- Aleatoriedad (es una estructura que simula aleatoriadad necesaria para el funcionamiento de la máquina)
+
+- Conversor (lógica detrás de la placa ---- que convierte audio digital a análogo)
+
+- Amplificacion (lógica detrás de la placa ---- que convierte amplifica el sónido)
+
+- Reproduccion (define al modo `reproduccion`)
+
+- Grabar (define al modo `grabar`)
+
+- Borrar (define al modo `borrar`)
+
+- Microfono (establece como se comunica el micrófono con el microcontrolador)
+
+- SDCard (se encarga de la lógica detrás de la grabación y lectura de datos)
+
 
 ### Wokwi
 
