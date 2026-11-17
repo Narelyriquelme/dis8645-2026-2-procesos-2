@@ -1,5 +1,7 @@
 # grupo-07
 
+## proyecto-03
+
 ### Integrantes
 
 - Isidora Díaz [@isiidoraadiiaz](https://github.com/isiidoraadiiaz)
@@ -64,7 +66,7 @@ Se utilizarán botones duros y diferenciables. No se utilizarán botones de goma
 ## Bill of Materials
 
 | Componente | Cantidad | Precio unitario | Proveedor |
-|---|---:|---:|---|
+| -- | ---: | ---: | --- |
 | Raspberry Pi Pico | 1 | $0 | Universidad |
 | Pantalla TFT LCD Touch 2,4" SPI | 1 | $10.000 | Afel |
 | Mini parlante 3 W / 4 Ω | 1 | $3.000 | Afel |
