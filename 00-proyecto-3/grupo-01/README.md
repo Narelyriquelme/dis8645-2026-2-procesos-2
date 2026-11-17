@@ -24,6 +24,18 @@ Cada 10 segundos se da la orden de reproducir un audio.
 
 Son 60 posibilidades donde podría iniciar un audio.
 
+<br>
+
+### Diagramas
+
+![](./imagenes/dis8645-2026-2-v02.png)
+
+![](./imagenes/dis8645-2026-2.png)
+
+### Wokwi
+
+https://wokwi.com/projects/480724591872061441
+
 ## Referentes
 
 ### [NYQUIST - Bit Crush](https://notpedals.com/products/nyquist)
