@@ -22,7 +22,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-#include "fstream.h"
+#include "Fstream.h"
 //------------------------------------------------------------------------------
 int16_t StreamBaseClass::getch() {
   uint8_t c;

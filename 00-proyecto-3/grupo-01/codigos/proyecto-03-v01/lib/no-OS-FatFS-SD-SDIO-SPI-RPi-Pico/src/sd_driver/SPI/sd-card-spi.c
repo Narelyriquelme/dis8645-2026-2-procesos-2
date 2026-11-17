@@ -178,11 +178,11 @@
 #include "delays.h"
 #include "sd_card.h"
 #include "sd_card_constants.h"
-#include "sd_spi.h"
+#include "SdSpi.h"
 #include "sd_timeouts.h"
 #include "util.h"
 //
-#include "sd_card_spi.h"
+#include "SdCardSpi.h"
 
 #if defined(NDEBUG) || !USE_DBG_PRINTF
 #  pragma GCC diagnostic ignored "-Wunused-function"

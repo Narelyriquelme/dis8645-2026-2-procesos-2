@@ -29,7 +29,7 @@
  * \brief StdioStream class
  */
 #include <limits.h>
-#include "ios.h"
+#include "Ios.h"
 //------------------------------------------------------------------------------
 /** Total size of stream buffer. The entire buffer is used for output.
   * During input UNGETC_BUF_SIZE of this space is reserved for ungetc.

@@ -32,8 +32,8 @@ specific language governing permissions and limitations under the License.
 #include "SPI/my_spi.h"
 #include "SPI/sd_card_spi.h"
 #include "diskio.h"
-#include "sd_card_constants.h"
-#include "sd_regs.h"
+#include "SdCardConstants.h"
+#include "SdRegs.h"
 #include "util.h"
 
 #ifdef __cplusplus

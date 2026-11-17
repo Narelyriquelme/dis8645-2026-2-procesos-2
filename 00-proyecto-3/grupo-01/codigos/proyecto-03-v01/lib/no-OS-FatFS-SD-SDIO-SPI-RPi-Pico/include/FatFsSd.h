@@ -20,7 +20,7 @@ specific language governing permissions and limitations under the License.
 #include <cstring>
 #include <vector>
 //
-#include "FatFsSd_C.h"
+#include "FatFsSdC.h"
 //
 #include "util.h"
 

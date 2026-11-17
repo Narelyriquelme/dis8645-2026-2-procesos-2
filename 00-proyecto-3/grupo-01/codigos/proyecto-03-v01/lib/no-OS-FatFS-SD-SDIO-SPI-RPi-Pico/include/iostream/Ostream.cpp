@@ -23,7 +23,7 @@
  * DEALINGS IN THE SOFTWARE.
  */
 #include <string.h>
-#include "ostream.h"
+#include "Ostream.h"
 #ifndef PSTR
 #define PSTR(x) x
 #endif  // PSTR

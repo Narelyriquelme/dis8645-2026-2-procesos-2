@@ -28,7 +28,7 @@
  * \file
  * \brief \ref ostream class
  */
-#include "ios.h"
+#include "Ios.h"
 //==============================================================================
 /**
  * \class ostream

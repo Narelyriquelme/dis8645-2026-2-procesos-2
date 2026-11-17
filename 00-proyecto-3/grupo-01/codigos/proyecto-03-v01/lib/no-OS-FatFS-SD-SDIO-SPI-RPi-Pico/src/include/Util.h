@@ -18,7 +18,7 @@ specific language governing permissions and limitations under the License.
 #include <stdint.h>
 #include <string.h>
 //
-#include "my_debug.h"
+#include "MyDebug.h"
 
 #ifdef __cplusplus
 extern "C" {

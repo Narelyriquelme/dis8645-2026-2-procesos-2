@@ -23,7 +23,7 @@
 //
 #include "dma_interrupts.h"
 #include "hw_config.h"
-#include "rp2040_sdio.h"
+#include "Rp2040Sdio.h"
 #include "rp2040_sdio.pio.h"
 #include "delays.h"
 #include "sd_card.h"
@@ -31,7 +31,7 @@
 #include "my_debug.h"
 #include "util.h"
 //
-#include "rp2040_sdio.h"
+#include "Rp2040Sdio.h"
 
 #define azdbg(arg1, ...) {\
     DBG_PRINTF("%s,%s:%d %s\n", __func__, __FILE__, __LINE__, arg1); \
