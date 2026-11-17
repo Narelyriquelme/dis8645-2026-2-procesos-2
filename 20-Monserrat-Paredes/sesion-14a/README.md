@@ -22,8 +22,31 @@ Amarillo	→ GP4	→ Disparar
 
 Verde	→ GP5	→ Iniciar, pausar y reanudar la partida (y reiniciar después del game over)
 
+---
+
+### Corrección en clases (profes)
+
+Está más acotado, bien
+necesitan ser capaces de utilizar dos parlantes, y repartirlos entre izquierda y derecha. El PAM8403 ya es estereo Así pueden jugar con los porcentajes de cuanto se va un sonido para cada lado.
+
+eso en los mixers se llama control de panorámica
+en el primer párrafo ocuparía la palabra que descubrimos: "audiojuego"
+el sonido podría ser de tipo "radar", con el sonido de lo que se van acercando más insistentes.
+
+
+### Que vamos a incluir:
+
+1. led (para avisar la proximidad de los obstaculos y enemigos, no por el lado que viene la amenaza).
+
+2. Pantalla: cuantas vidas me quedan, animación de inicio, animación de leven up (en que nivel voy), animación game over.
+
+3. Sonidos al perder y al subir de nivel, con el fin de molestar al usuario y no pueda avanzar.
+
+el punto de asistencia sera reemplaxado por un ensayo en las bitacoras de mi timepo y yo, tengo que hablar del tiempo y porque he faltado a las clases (una pagina de google docs).
+
 
 ## encargos
+
 
 ## lectura
 
