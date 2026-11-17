@@ -96,13 +96,13 @@ blabla
 
 ---
 
-## Carcasa
+## Bill of Materials (BOM)
 
 blabla
 
 ---
 
-## Bill of Materials (BOM)
+## Carcasa
 
 blabla
 
