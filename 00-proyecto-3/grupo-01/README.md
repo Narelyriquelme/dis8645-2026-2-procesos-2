@@ -32,6 +32,39 @@ Son 60 posibilidades donde podría iniciar un audio.
 
 <br>
 
+#### Modificadores de sonido
+
+<h5>envolventes</h5>
+<ul>
+  <li>attack</li>
+  <li>decay</li>
+  <li>sustain</li>
+  <li>release</li>
+</ul>
+
+<h5>fx / modulación</h5>
+<ul>
+  <li>pitching</li>
+  <li>reverb</li>
+  <li>trémolo</li>
+  <li>bit crushing</li>
+  <li>ring modulator</li>
+  <li>velocidad</li>
+</ul>
+
+<h5>ecualización</h5>
+<ul>
+  <li>high pass filter</li>
+</ul>
+
+<h5>niveles / ganancia</h5>
+<ul>
+  <li>volumen de audio</li>
+  <li>volumen general</li>
+</ul>
+
+<br>
+
 ### Diagramas
 
 ![](./imagenes/dis8645-2026-2-v02.png)
