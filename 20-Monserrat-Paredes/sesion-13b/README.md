@@ -663,7 +663,9 @@ private:
 ## encargos
 
 Hacer esqueleto en wokwi
-  
+
+https://wokwi.com/projects/480722608786043905
+
 ## lectura
 
 Libro: A New Program for Graphic Design
