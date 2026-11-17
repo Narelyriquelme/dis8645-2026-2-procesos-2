@@ -1,7 +1,7 @@
 # sesion-14a
 
-## apuntes sesión
+2026.11.17
 
-## encargos
+## apuntes sesión
 
 ## lectura
