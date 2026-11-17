@@ -208,3 +208,37 @@ J-->D;
 // Probamos el LED, el mensaje guardado y el mensaje de error.
 // Probamos el cambio entre día y noche cuando definamos cómo se obtiene la hora.
 ```
+
+## Referencias
+
+- [Yoto](https://uk.yotoplay.com/the-yoto-app) · tarjetas y reloj de día/noche
+
+Las tarjetas permiten escoger qué escuchar y el reloj distingue el día de la noche. Podemos mirar cómo llevar esa diferencia a la pantalla y a la selección de audios de (proyecto-03).
+
+- [Toniebox](https://support.tonies.com/hc/en-150/articles/29036477098898-How-do-I-add-content-onto-my-Creative-Tonie) · Creative Tonies
+
+Una figura puede quedar asociada a un cuento, una canción o una grabación familiar. Sirve para pensar cómo usamos personajes para que un niño reconozca el contenido antes de reproducirlo.
+
+- Biblioteca de audio
+
+Partir con narraciones y voces de prueba grabadas por el equipo. Para sonidos externos, guardar título, autor, enlace y licencia por archivo.
+
+- [Grupo 1 del proyecto 2](https://github.com/disenoUDP/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-01) · Salida de audio
+
+Mirar cómo conectaron la raspi al amplificador digital y al parlante como referencia para la primera prueba de reproducción.
+
+### Controles para mirar en referencias
+
+- [Guía oficial de controles de Yoto](https://support.yotoplay.com/en_gb/how-to-control-your-yoto-player-SyGKKj7zg)
+
+La guía separa una perilla para el volumen y otra para navegar, con presión para seleccionar o avanzar. Nos sirve como referencia para probar una interacción de giro + presión.
+
+Yoto también permite que el cuidador configure límites de volumen y funciones desde su aplicación. ¿Nos sirve pensar en un límite de volumen para el adulto, aunque la interacción diaria quede en el dispositivo?
+
+- [Controles oficiales de Toniebox](https://support.tonies.com/hc/en-gb/sections/29036384400402-Playing-and-Controls)
+
+Toniebox no usa botones tradicionales: el volumen se ajusta con las orejas y el avance o retroceso con inclinación o golpes. Puede servirnos para discutir gestos, pero habría que probar si son claros en nuestro prototipo.
+
+- [Grupo 1 del proyecto 2](https://github.com/disenoUDP/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-01) · Salida de audio
+
+Usar esta referencia para probar primero la cadena raspi → amplificador → parlante antes de cerrar los controles de reproducción.
