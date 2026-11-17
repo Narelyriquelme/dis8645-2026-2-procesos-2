@@ -8,3 +8,13 @@ En general, nos dijeron que el proyecto está bien encaminado, pero que más ade
 ## encargos
 
 ## lectura
+
+Página 85
+> “Hoy parece que nuestro sentido individual y colectivo de la apariencia es asaltado por todos lados, mientras que interminables canales de medios digitales, sociales y televisivos se unen al elenco de asaltantes que Bacon identificó hace más de 50 años atrás.”
+
+El autor plantea que hoy estamos constantemente expuestos a imágenes e información a través de los medios digitales, las redes sociales y la televisión. Esto influye en cómo percibimos el mundo y en cómo construimos nuestra propia idea de la realidad y la apariencia.
+
+Página 91
+> “El circuito de retroalimentación de la producción/consumo de imágenes que mencioné antes se ha vuelto aún más misterioso, a medida que las manifestaciones de la I.A. permean nuestro diario vivir.”
+
+Reflexiona sobre cómo la inteligencia artificial está cambiando nuestra relación con las imágenes. Ya no solo consumimos imágenes, sino que también participamos en su creación y modificación mediante sistemas digitales. Esto genera un ciclo en el que la tecnología influye en lo que vemos y también en lo que producimos.
