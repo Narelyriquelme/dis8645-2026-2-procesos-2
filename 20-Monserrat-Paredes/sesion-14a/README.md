@@ -33,6 +33,10 @@ eso en los mixers se llama control de panorámica
 en el primer párrafo ocuparía la palabra que descubrimos: "audiojuego"
 el sonido podría ser de tipo "radar", con el sonido de lo que se van acercando más insistentes.
 
+Considerar como se van a cargar los audios, existen modulos distintos donde uno de los mas utilizados es el "dfplayer mini", en este mismo punto como es que irian a lograr el audio binaural con 1 solo reproductor en su BOM? Creo que no es posible con solo 1 parlante.
+
+Creo que les falta un claro referente de la jugabilidad, me refiero que existen un monton de scrollers infinitos, pero este tiene un poco de similitud a temple run o subway surfers segun lo que comprendo en lo que han escrito. Pueden destacar algun aspecto en especifico.
+
 
 ### Que vamos a incluir:
 
