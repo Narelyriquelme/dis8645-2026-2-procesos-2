@@ -79,7 +79,7 @@ Una vez que ambas personas hayan experimentado con sus sonidos, estos se fusiona
 La idea es que cada persona aporte un sonido distinto y que, al juntarse, se genere algo nuevo que ninguna podría producir por separado. Todo sucede en tiempo real, sin almacenar los sonidos, convirtiendo la interacción en una experiencia física, visual y sonora.
 
 ## lectura
-![fotossss](./imagenes/fotossss.png)
+![fotossss-1](./imagenes/fotossss-1.png)
 Compressed Cinema  de Casey Reas y Allison Parrish
 
 Me llevé este libro de LID porque ya había terminado mi lectura anterior. Me llamó la atención porque es de Casey Reas, el mismo autor de mi libro anterior, así que me dio curiosidad conocer otro de sus trabajos. También me llamó la atención su portada, por los números y su apariencia plateada.
