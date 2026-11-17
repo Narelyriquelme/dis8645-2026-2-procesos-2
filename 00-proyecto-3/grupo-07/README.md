@@ -9,122 +9,63 @@
 - Carlo Martínez [@zaaaiko](https://github.com/zaaaiko)
 - Natalia Pilar [@sz-mada](https://github.com/sz-mada)
 
-## Descripción del proyecto
-
 ### Descripción general
 
-El proyecto consiste en un dispositivo sonoro portátil diseñado para acompañar a niños de 3 a 4 años que necesiten apoyo en momentos de soledad, miedo o incertidumbre. El dispositivo permitirá reproducir cuentos, música y mensajes grabados por un cuidador mediante una interacción física sencilla. El nombre del dispositivo y del proyecto aún está por definir.
+El proyecto consiste en un dispositivo sonoro pensado para acompañar a infancias de 3 a 4 años en momentos específicos del día, especialmente cuando están en su habitación, descansando o preparándose para dormir. En esta primera versión, el dispositivo permanecerá en un lugar fijo, como un velador.
 
-### Usuario objetivo y contenido
+El dispositivo tendrá tres botones físicos principales. Uno permitirá escuchar cuentos, otro reproducirá música y el tercero dará acceso a un mensaje grabado por la persona cuidadora. Al presionar un botón, comenzará a sonar un audio de esa categoría. En cuentos y música, una segunda pulsación del mismo botón permitirá pasar al siguiente contenido disponible.
 
-El público objetivo corresponde a niños de 3 a 4 años que necesiten acompañamiento. Se trabajará con una biblioteca común y no con bibliotecas separadas por rango de edad.
+Cada botón tendrá un personaje o icono asociado a su categoría. La pantalla podrá reforzar esa relación mostrando qué está pasando. Así, cada infante podrá asociar el botón con un símbolo y una respuesta sonora, incluso si todavía no lee.
 
-Los cuentos y la música utilizarán audios con licencias que permitan su uso. La biblioteca inicial será cerrada y estará compuesta por los contenidos definidos por el equipo. Las grabaciones serán el único contenido proporcionado directamente por el cuidador y se actualizarán diariamente.
+El alcance de la primera versión será acotado: tres cuentos, cuatro piezas de música infantil y la posibilidad de grabar un mensaje. Con esta biblioteca inicial, queremos comprobar la reproducción, la navegación mediante botones, la grabación y el funcionamiento de la interacción física.
 
-La biblioteca se organizará según dos momentos del día, día y noche. Aún debe definirse cómo el dispositivo reconocerá cada momento, por ejemplo mediante la hora de Santiago, un temporizador o una configuración realizada por el cuidador.
+### Usuario objetivo y contexto de uso
+
+El dispositivo está pensado para infancias de 3 a 4 años que puedan necesitar acompañamiento en momentos de soledad, miedo o incertidumbre dentro de su habitación.
+
+La persona cuidadora podrá dejar el dispositivo preparado en el velador. Desde ahí, cada infante podrá elegir entre un cuento, música o el mensaje grabado sin tener que usar un celular ni recorrer un menú complejo.
+
+Las categorías se diferenciarán mediante personajes, iconos y respuestas de audio. La pantalla podrá mostrar información de apoyo, pero la acción principal deberá poder entenderse a partir de los botones físicos.
+
+Nos enfocamos en los 3 a 4 años porque en esa etapa ya aparecen habilidades que podemos aprovechar. A los 3 años, muches niñes pueden reconocer qué está pasando en una imagen. A los 4, muches pueden anticipar qué viene en un cuento conocido o inventar situaciones con personajes durante el juego. Como estas habilidades se desarrollan a ritmos distintos, queremos que la interacción se entienda mediante señales que se puedan **ver, tocar y escuchar**.
+
+## Por qué incluimos una voz familiar
+
+Al investigar el **apego paterno y materno**, vimos que el padre y la madre pueden ser figuras a las que les niñes recurren cuando necesitan consuelo. Ese vínculo también puede darles seguridad para jugar y explorar. Hay estudios que observaron el apego alrededor de los 3 años y encontraron relaciones con la regulación emocional y la forma de desenvolverse con sus pares a los 5. En nuestro proyecto, el mensaje también puede venir de otra figura significativa que participe en el cuidado cotidiano. 
+
+Si une infante extraña a su papá o a alguien que le cuida, puede elegir escuchar un saludo que esa persona le dejó. **Nuestra hipótesis es que volver a oír una voz conocida puede darle una sensación de compañía en ese momento.** Las investigaciones que revisamos sobre voces grabadas se hicieron en contextos específicos, como el despertar después de una anestesia. Todavía queda por saber qué efecto tendría un mensaje así en la rutina de su habitación antes de dormir.
+
+También revisamos el **abandono infantil** para entender mejor el alcance del proyecto. UNICEF Chile lo describe como una forma extrema de negligencia en la que faltan cuidados y protección. La investigación que revisamos muestra que la negligencia grave puede asociarse con dificultades de comunicación en la primera infancia y que un entorno de cuidado estable puede favorecer la seguridad del apego. En nuestra máquina, el punto de partida es que **ya hay una relación de cuidado** y que esa persona quiere dejarle un mensaje a cada infante para cuando la extrañe.
+
+### Contenido y alcance inicial
+
+La biblioteca inicial estará compuesta por:
+
+- Tres cuentos de hasta cinco minutos cada uno.
+- Cuatro piezas de música infantil de hasta un minuto cada una.
+- Un mensaje de hasta un minuto, grabado por la persona cuidadora.
+
+Para los **cuentos**, vamos a fijarnos en si se puede seguir la historia solo escuchándola. Nos interesa que se entienda quién es el personaje, qué le pasa, qué hace y cómo termina la historia. Entre los 3 y 4 años ya se empieza a deducir información que el cuento deja implícita, aunque esto varía según cada infante y el apoyo disponible durante la escucha. Por eso, al revisar cada versión, nos vamos a preguntar si la narración cuenta lo necesario para seguir la historia o si hace falta mirar el libro para entenderla. 
+
+Para la **música**, vamos a considerar qué se puede reconocer y seguir al escucharla. Si una canción tiene letra, nos fijaremos en las palabras del estribillo y en si se entiende la acción o la idea principal. Si es instrumental, nos interesa si hay un ritmo o una melodía que vuelva a aparecer. Una canción puede ser fácil de tararear aunque parte de la letra todavía resulte difícil de comprender.
+
+Buscaremos los cuentos y la música en bibliotecas de audio o repositorios que permitan su uso gratuito y tengan una licencia compatible con el proyecto. Para cada audio registraremos el título, la autoría o el nombre de quien lo interpreta, la fuente y el tipo de licencia.
+
+Al principio consideramos separar los cuentos entre día y noche. Como los tres podrán usarse en cualquier momento, decidimos que la biblioteca se organizará por categorías y que su reproducción estará disponible a cualquier hora.
 
 ### Funcionamiento principal
 
-El dispositivo principal será utilizado por el niño y contará con tres botones físicos duros asociados a cuentos, música y grabaciones.
+El dispositivo quedará en un lugar fijo y estará pensado principalmente para el uso de les niñes. Sus tres botones físicos corresponderán a cuentos, música y mensajes de la persona cuidadora.
 
-La primera presión activará la categoría correspondiente. Una nueva presión sobre el mismo botón permitirá cambiar el contenido dentro de esa categoría. El sistema deberá evitar la reproducción repetida del mismo audio y diferenciar entre una pulsación válida, una pulsación larga y varias pulsaciones consecutivas.
+Al presionar el botón de cuentos, sonará uno de los tres cuentos disponibles. Si se vuelve a presionar el mismo botón, se pasará al siguiente. Las piezas musicales funcionarán de la misma manera, dentro de su propia categoría.
 
-La pantalla acompañará la interacción, aunque todavía debe definirse qué información mostrará. Entre las posibilidades se encuentran la categoría activa, el personaje asociado al contenido, el audio en reproducción y el estado del dispositivo.
+El sistema deberá permitir avanzar entre los audios y distinguir una pulsación válida, una pulsación larga y varios toques consecutivos. Para ello, registrará el estado anterior de cada botón y el tiempo transcurrido desde la última pulsación.
 
-### Sistema de grabación
+El tercer botón reproducirá el mensaje de la persona cuidadora. El dispositivo almacenará un solo archivo de grabación y lo reemplazará cuando se registre un mensaje nuevo. El archivo quedará en la tarjeta SD, junto con los demás audios de la biblioteca.
 
-El sistema permitirá almacenar un solo mensaje familiar a la vez. El mensaje se eliminará después de un día o será reemplazado cuando se registre uno nuevo. La grabación estará destinada al cuidador y no al uso cotidiano del niño.
+La pantalla acompañará la interacción mostrando la categoría seleccionada, el contenido que está sonando y estados como «Grabando», «Mensaje guardado» o «Error». Los botones permitirán navegar por los contenidos por sí solos.
 
-### Alternativas consideradas
-
-La primera alternativa consistía en utilizar una perilla encoder con un rango mínimo y máximo asociado a no y sí. Si el dispositivo no estaba ejecutando otra acción, después de 15 segundos volvería al valor por defecto, no. Para comenzar la grabación se debería seleccionar sí y mantener la perilla presionada durante cinco segundos. La pantalla mostraría una cuenta regresiva hasta indicar grabando. Al soltar la perilla terminaría la grabación y aparecería durante diez segundos el “mensaje guardado”. También se consideró que una nueva presión pudiera eliminar el mensaje anterior.
-
-La segunda alternativa consistía en utilizar la pantalla touch con lápiz como control parental. Un ícono ubicado en una esquina de la pantalla debería mantenerse presionado durante cinco segundos para acceder a una pantalla de clave. Desde allí se podría crear o modificar la clave y luego acceder a la grabación. Esta opción requería comprobar si era posible utilizar solo una sección de la pantalla como superficie touch y si el lápiz funcionaría correctamente.
-
-### Alternativa seleccionada
-
-La alternativa seleccionada consiste en separar físicamente una parte del dispositivo principal. Este módulo incluirá el micrófono y la función de grabación, y se conectará mediante conectores JST. Al conectarlo aparecerá la interfaz de grabación.
-
-El cuidador presionará el módulo para comenzar a grabar y lo soltará para terminar. Al finalizar aparecerá el “mensaje guardado”. Si se produce un error, se mostrará una notificación correspondiente. Un LED permanecerá encendido durante la grabación y se apagará al terminar.
-
-El parlante y los botones de cuentos, música y grabaciones permanecerán en el dispositivo principal, que será utilizado por el niño. La separación del módulo funcionará como una restricción física para evitar que el niño acceda a la grabación o elimine accidentalmente los mensajes de sus cuidadores.
-
-### Componentes y almacenamiento
-
-Se utilizará un micrófono básico y de bajo costo. Falta seleccionar un modelo compatible con la raspi y comprobar si su conexión será mediante USB o una entrada analógica por ADC.
-
-El almacenamiento se resolverá mediante un lector SD y una tarjeta SD, donde se guardarán los audios de la biblioteca y el mensaje diario del cuidador.
-
-El amplificador PAM8403 y el parlante se mantienen como referencia para la salida de audio. Antes de cerrar el sistema será necesario probar la cadena de reproducción con la raspi.
-
-### Carcasa
-
-La carcasa debe integrar el dispositivo principal y el módulo desmontable. También debe contemplar espacio para la pantalla, el parlante, el lector SD, la tarjeta, la batería, los conectores JST y la ventilación.
-
-Se utilizarán botones duros y diferenciables. No se utilizarán botones de goma. El módulo desmontable deberá poder separarse sin dejar conexiones expuestas ni piezas fáciles de retirar.
-
-## Bill of Materials
-
-| Componente | Cantidad | Precio unitario | Proveedor |
-| -- | ---: | ---: | --- |
-| Raspberry Pi Pico | 1 | $0 | Universidad |
-| Pantalla TFT LCD Touch 2,4" SPI | 1 | $10.000 | Afel |
-| Mini parlante 3 W / 4 Ω | 1 | $3.000 | Afel |
-| Amplificador PAM8403 2x3 W | 1 | $1.000 | Afel |
-| Kit de 5 botones pulsadores | 1 | $500 | Afel |
-| Micrófono USB pequeño | 1 | $4.000 | Por definir |
-| Tarjeta microSD 32 GB | 1 | $6.000 | Por definir |
-| Power Bank USB-C (5 V / 3 A) | 1 | $15.000 | Por definir |
-| Cable USB-C de alimentación | 1 | $1.500 | Por definir |
-| Cable y conexión de audio 3,5 mm | 1 | $1.500 | Por definir |
-| Cables Dupont y conectores | 1 lote | $2.500 | Afel / estimado |
-| Carcasa impresa en 3D | 1 | $6.000 | Fabricación propia |
-| **TOTAL ESTIMADO** | | **$51.000** | |
-
-*Precios en pesos chilenos (CLP). Los valores de pantalla, parlante, amplificador y pulsadores corresponden a precios publicados en Afel. Los demás son estimaciones presupuestarias y deben confirmarse antes de la compra.*
-
-### Enlaces de componentes — Afel
-
-- [Pantalla TFT LCD Touch 2,4"](https://afel.cl/products/2-4-inch-spi-touch-screen-module-tft-interface-240-320-with-touch)
-- [Mini parlante 3 W](https://afel.cl/products/mini-parlante-altavoz-de-3w)
-- [Amplificador PAM8403](https://afel.cl/products/amplificador-stereo-clase-d-2x3w-pam8403)
-- [Kit de 5 botones pulsadores](https://afel.cl/products/kit-boton-tactil-6x6x10-de-4-pines-interruptor-5-unidades)
-- [Cables y conectores](https://afel.cl/collections/cables)
-
-### Función de los componentes
-
-- **Raspberry Pi Pico:** controla el funcionamiento del dispositivo, la pantalla, los botones y el sistema de reproducción y grabación de audio.
-
-- **Pantalla TFT LCD:** muestra ilustraciones, personajes, cuentos, categorías de contenido y opciones de navegación.
-
-- **Mini parlante:** reproduce cuentos, música, sonidos relajantes y mensajes familiares.
-
-- **Amplificador PAM8403:** amplifica la señal de audio de la Raspberry Pi para alimentar el parlante.
-
-- **Botones pulsadores:** permiten navegar por las categorías, seleccionar audios, reproducir, pausar y activar la grabación de voz.
-
-- **Micrófono USB:** permite grabar mensajes personalizados de familiares o cuidadores.
-
-- **Tarjeta microSD:** almacena el sistema operativo, el programa, los cuentos, la música y las grabaciones.
-
-- **Power Bank:** proporciona energía portátil al dispositivo. Debe entregar 5 V / 3 A de forma estable.
-
-- **Cable USB-C:** conecta la Power Bank con la raspberry pi pico.
-
-- **Conexión de audio:** transporta el audio desde la Raspberry Pi hacia el amplificador.
-
-- **Cables y conectores:** permiten realizar las conexiones electrónicas entre los componentes.
-
-- **Carcasa impresa en 3D:** protege los componentes y permite desarrollar una forma redondeada, cómoda y fácil de manipular.
-
-### Presupuesto final
-
-Costo estimado por dispositivo: **$51.000 CLP**
-
-El presupuesto considera la reutilización de una Raspberry Pi Pico disponible en la universidad.
-
-## Diagrama de flujo
-
+### Diagrama de flujo (preliminar)
 ```mermaid
 flowchart TD
 
@@ -142,103 +83,67 @@ H--no -->J(Elige otra cosa);
 J-->D;
 ```
 
-## Pseudocódigo
 
-```cpp
-// PROYECTO 3 — CÓDIGO 1
-// Primero definimos las entradas, los estados y lo que debería pasar en cada caso.
-//
-// 0. PREPARAR LAS ENTRADAS
-// Vamos a leer tres botones, uno para cuentos, otro para música y otro para grabaciones.
-// También tenemos que leer el módulo separado de grabación, el micrófono y el estado del lector SD.
-// La pantalla, el parlante, el PAM8403 y el LED de grabación quedan como salidas.
-// Los pines todavía no los escribimos hasta probar el diagrama y el cableado.
-//
-// 1. PREPARAR LOS ARCHIVOS Y VARIABLES
-// En la tarjeta SD vamos a tener los cuentos, la música y el mensaje del cuidador.
-// El mensaje del cuidador se guarda como un solo archivo.
-// Si se graba otro mensaje, reemplaza al anterior.
-// Después de un día el mensaje se borra.
-// Necesitamos guardar qué audio está sonando y cuál fue el último, para no repetirlo todo el rato.
-// También necesitamos guardar la categoría actual y el estado de reproducción.
-//
-// 2. LEER EL MOMENTO DEL DÍA
-// El contenido se separa entre día y noche.
-// Falta decidir si la hora se obtiene desde la raspi o si usamos un temporizador.
-// La función debería devolver día o noche y actualizar la biblioteca que se muestra.
-//
-// 3. LEER LOS BOTONES
-// La primera presión activa una categoría.
-// Otra presión sobre el mismo botón cambia al siguiente contenido de esa categoría.
-// Hay que diferenciar una presión corta de una presión larga.
-// Varias presiones muy seguidas no deberían cambiar muchas veces el contenido.
-// Para eso necesitamos guardar el estado anterior del botón y el tiempo de la última presión.
-//
-// 4. LEER EL MÓDULO DE GRABACIÓN
-// Cuando el módulo está conectado, se puede entrar al estado de grabación.
-// Al presionar comienza la grabación y al soltar termina.
-// Mientras está grabando prendemos el LED.
-// Al terminar guardamos el archivo y mostramos “mensaje guardado”.
-// Si no está el micrófono o falla la tarjeta SD, mostramos un error.
-// Cuando el módulo se separa, volvemos al dispositivo principal.
-//
-// 5. PREPARAR LA PANTALLA
-// La pantalla debería mostrar la categoría, el audio actual y el estado del dispositivo.
-// También debería mostrar grabando, mensaje guardado y error.
-// La pantalla todavía está por definir, así que por ahora dejamos esas funciones separadas.
-//
-// 6. ESTADOS DEL PROGRAMA
-// Por ahora necesitamos espera, navegación, reproducción, grabación, mensaje guardado y error.
-// El estado actual decide qué entradas se leen y qué se muestra.
-// No debería sonar un audio mientras estamos guardando otro archivo.
-//
-// 7. ORDEN DEL CICLO PRINCIPAL
-// Primero iniciamos la raspi, la pantalla, el audio, la tarjeta SD y los botones.
-// Después leemos las entradas.
-// Luego decidimos si cambió la categoría, si hay que reproducir, grabar o mostrar un error.
-// Actualizamos la pantalla y las salidas.
-// Repetimos el ciclo sin bloquearlo con esperas largas.
-// Para medir tiempos podemos usar una marca de tiempo, como time_us_64.
-//
-// 8. REVISAR RESULTADOS
-// Probamos un botón a la vez y comprobamos que los otros no cambien.
-// Probamos leer un cuento y una canción desde la tarjeta SD.
-// Probamos que no se repita el mismo archivo inmediatamente.
-// Probamos grabar, guardar, reemplazar y borrar el mensaje del cuidador.
-// Probamos el LED, el mensaje guardado y el mensaje de error.
-// Probamos el cambio entre día y noche cuando definamos cómo se obtiene la hora.
-```
+### Sistema de grabación
 
-## Referencias
+La persona cuidadora grabará desde un módulo separado del dispositivo principal. Este módulo incluirá un micrófono y un botón para iniciar y terminar la grabación. Se conectará mediante conectores JST.
 
-- [Yoto](https://uk.yotoplay.com/the-yoto-app) · tarjetas y reloj de día/noche
+Para grabar, la persona cuidadora mantendrá presionado el botón y lo soltará para terminar. Mientras la grabación esté activa, el LED permanecerá encendido. Al terminar, el sistema guardará el archivo y mostrará «Mensaje guardado». Si el sistema no detecta el micrófono, si falla la tarjeta SD o si el archivo no se puede guardar, la pantalla mostrará un estado de error.
 
-Las tarjetas permiten escoger qué escuchar y el reloj distingue el día de la noche. Podemos mirar cómo llevar esa diferencia a la pantalla y a la selección de audios de (proyecto-03).
+Al quedar en un módulo separado, el control de grabación estará reservado para la persona cuidadora. Esto busca evitar que les niñes inicien una grabación o eliminen el mensaje por accidente.
 
-- [Toniebox](https://support.tonies.com/hc/en-150/articles/29036477098898-How-do-I-add-content-onto-my-Creative-Tonie) · Creative Tonies
+## Personajes, colores y forma de la máquina
 
-Una figura puede quedar asociada a un cuento, una canción o una grabación familiar. Sirve para pensar cómo usamos personajes para que un niño reconozca el contenido antes de reproducirlo.
+Queremos que cada categoría tenga su propio personaje o icono. Al investigar símbolos para infantes de 3 años, vimos que **reconocer un dibujo y saber qué hace el botón son dos cosas distintas**. Cada infante puede reconocer un libro en el botón y aprender que ese dibujo se relaciona con *escuchar un cuento* al presionarlo y oír la narración. Por eso, queremos mantener la misma relación entre el dibujo del botón, lo que aparece en pantalla y el audio que se activa. Los personajes todavía están por definir.
 
-- Biblioteca de audio
+Los botones serán **grandes, rígidos y resistentes a golpes**. Queremos que se distingan por la forma, la posición y el símbolo. El color ayudará a ubicarlos y el relieve podría aportar una diferencia al tocarlos. La investigación muestra que en la etapa preescolar ya se pueden distinguir formas y texturas con las manos. Dentro de este rango también varían el tamaño de la mano y la fuerza que se puede ejercer. Por eso, todavía tenemos que definir cuánto medirá cada botón, qué distancia habrá entre ellos y qué tan fácil será presionarlos sin mover la máquina.
 
-Partir con narraciones y voces de prueba grabadas por el equipo. Para sonidos externos, guardar título, autor, enlace y licencia por archivo.
+Al elegir la paleta, vamos a mirar **qué tan bien se distingue cada control de la carcasa y de los demás botones**, sobre todo con la luz que puede haber en la habitación a la hora de dormir. Los estudios sobre color muestran que les niñes pueden asociar ciertas imágenes con emociones. El efecto de un color específico de la carcasa sobre la calma queda abierto. La paleta también va a influir en cómo se percibe el objeto y sigue siendo una decisión de diseño. 
 
-- [Grupo 1 del proyecto 2](https://github.com/disenoUDP/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-01) · Salida de audio
+La carcasa tiene que quedar estable en el velador y proteger la pantalla, el parlante, la tarjeta SD, la batería y las conexiones. Los botones estarán integrados en la carcasa, con los cables y las piezas pequeñas fuera del alcance de les niñes durante el uso cotidiano.
 
-Mirar cómo conectaron la raspi al amplificador digital y al parlante como referencia para la primera prueba de reproducción.
+### BOM
 
-### Controles para mirar en referencias
+| Componente | Cantidad | Precio unitario | Proveedor |
+|---|---:|---:|---|
+| Raspberry Pi Pico 2 W | 1 | $0 | Universidad |
+| [Pantalla TFT LCD Touch 3,5" SPI 480x320](https://afel.cl/products/3-5-inch-spi-touch-screen-module-tft-interface-480-320-with-touch) | 1 | $14.000 | Afel |
+| [Mini parlante 3 W / 4 Ω](https://afel.cl/products/mini-parlante-altavoz-de-3w) | 1 | $3.000 | Afel |
+| [Amplificador PAM8403 2x3 W](https://afel.cl/products/amplificador-stereo-clase-d-2x3w-pam8403) | 1 | $1.000 | Afel |
+| [Botón táctil con tapa 12x12x7,3 mm](https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor) | 5 | $100 | Afel |
+| [Módulo micrófono amplificador MAX4466](https://afel.cl/products/modulo-microfono-amplificador-max4466) | 1 | $2.990 | Afel |
+| [Lector Micro SD SPI](https://afel.cl/products/lector-micro-sd) | 1 | $2.500 | Afel |
+| Tarjeta microSD 4 GB | 1 | Por definir | No hay en Afel |
+| [Pack de 60 cables de conexión Dupont](https://afel.cl/products/pack-60-cables-de-conexion) | 1 | $2.500 | Afel |
+| [Kit de conectores JST XH2.54](https://afel.cl/products/kit-conectores-jst-xh2-54-560-piezas) | 1 | $6.000 | Afel |
+| Switch para prender y apagar el dispositivo | 1 | $0 | Propio |
+| LED | 2 | $0 | Propios |
+| Cable USB | 1 | $0 | Propio |
+| **Total sin la tarjeta SD** |  | **$32.560** |  |
 
-- [Guía oficial de controles de Yoto](https://support.yotoplay.com/en_gb/how-to-control-your-yoto-player-SyGKKj7zg)
+- Eliminamos la batería y el power bank porque el dispositivo ya no será portátil y permanecerá instalado en un lugar fijo.
+- La pantalla elegida incluye función touch, pero para el proyecto la vamos a usar como pantalla de visualización.
 
-La guía separa una perilla para el volumen y otra para navegar, con presión para seleccionar o avanzar. Nos sirve como referencia para probar una interacción de giro + presión.
+### Primer código (declaraciones)
+[Código 1: declaraciones preliminares](https://github.com/blosssom-n/dis8645-2026-2-procesos-2/blob/main/00-proyecto-3/grupo-07/codigos/Codigo_1_2026-11-13_declaraciones_muy_preliminares/Declaraciones.cpp)
 
-Yoto también permite que el cuidador configure límites de volumen y funciones desde su aplicación. ¿Nos sirve pensar en un límite de volumen para el adulto, aunque la interacción diaria quede en el dispositivo?
+### Revisión del módulo de grabación
 
-- [Controles oficiales de Toniebox](https://support.tonies.com/hc/en-gb/sections/29036384400402-Playing-and-Controls)
+Como el dispositivo quedará fijo en el velador, nos queda revisar si el módulo desmontable sigue siendo la opción más cómoda. Por la diferencia de altura, la persona que graba podría necesitar acercar el micrófono sin mover todo el dispositivo.
 
-Toniebox no usa botones tradicionales: el volumen se ajusta con las orejas y el avance o retroceso con inclinación o golpes. Puede servirnos para discutir gestos, pero habría que probar si son claros en nuestro prototipo.
+Una opción es mantener el módulo separado y conectarlo por cable. Así, la persona cuidadora podría acercarlo para grabar y volver a dejarlo en su lugar, fuera del alcance de les niñes durante el uso cotidiano. Para el Proyecto 3, mantendremos el módulo desmontable para simular primero su funcionamiento. Retomaremos esta decisión para el examen. 
 
-- [Grupo 1 del proyecto 2](https://github.com/disenoUDP/dis8645-2026-2-procesos-2/tree/main/00-proyecto-2/grupo-01) · Salida de audio
+## Bibliografía
 
-Usar esta referencia para probar primero la cadena raspi → amplificador → parlante antes de cerrar los controles de reproducción.
+- Cao, X., Wang, B., Liu, M., & Li, J. (2024). Effect of recorded mother's voice on emergence delirium in pediatric patients: A systematic review with meta-analysis. *Jornal de Pediatria, 100*(3), 231–241. [DOI](https://doi.org/10.1016/j.jped.2023.08.008)
+- Centers for Disease Control and Prevention. (s. f.). *Indicadores del desarrollo a los 3 años*. [CDC](https://www.cdc.gov/act-early/es/milestones/3-years.html?utm.com)
+- Centers for Disease Control and Prevention. (s. f.). *Milestones by 4 years*. [CDC](https://www.cdc.gov/act-early/milestones/4-years.html?utm.com)
+- Fernandes, C., Fernandes, M., Santos, A. J., Antunes, M., Monteiro, L., Vaughn, B. E., & Veríssimo, M. (2021). Early attachment to mothers and fathers: Contributions to preschoolers’ emotional regulation. *Frontiers in Psychology, 12*, 660866. [DOI](https://doi.org/10.3389/fpsyg.2021.660866)
+- Filiatrault-Veilleux, P., Bouchard, C., Trudeau, N., & Desmarais, C. (2016). Comprehension of inferences in a narrative in 3- to 6-year-old children. *Journal of Speech, Language, and Hearing Research, 59*(5), 1099–1110. [DOI](https://doi.org/10.1044/2016_JSLHR-L-15-0252)
+- Kalagher, H., & Jones, S. S. (2011). Young children’s haptic exploratory procedures. *Journal of Experimental Child Psychology, 110*(4), 592–602. [DOI](https://doi.org/10.1016/j.jecp.2011.06.007)
+- Liu, N., Chen, C., Liu, Y., Jiang, S., Gao, Q., & Wu, R. (2024). The interference effect of low-relevant animated elements on digital picture-book comprehension in preschoolers: An eye-movement study. *Journal of Eye Movement Research, 17*(4). [DOI](https://doi.org/10.16910/jemr.17.4.1)
+- Ministerio de Educación de Chile. (s. f.). *OA 03 LA NM. Lenguajes Artísticos, Nivel Medio*. Currículum Nacional. [MINEDUC](https://www.curriculumnacional.cl/614/w3-article-303364.html?utm.com)
+- Mizuko, M. (1987). Transparency and ease of learning of symbols represented by Blissymbols, PCS, and Picsyms. *Augmentative and Alternative Communication, 3*(3), 129–136. [DOI](https://doi.org/10.1080/07434618712331274409)
+- Pouliou, D., Bonoti, F., & Nikonanou, N. (2018). Do preschoolers recognize the emotional expressiveness of colors in realistic and abstract art paintings? *The Journal of Genetic Psychology, 179*(2), 53–61. [DOI](https://doi.org/10.1080/00221325.2018.1424704?utm.com)
+- UNICEF Chile. (2011). *Para reconstruir la vida: Guía para apoyar intervenciones psicosociales en emergencias y desastres*. [Documento](https://www.unicef.org/chile/media/1666/file/guia_para_apoyar_intervenciones_psicosociales.pdf?utm.com)
+
