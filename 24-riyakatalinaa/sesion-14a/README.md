@@ -7,6 +7,7 @@ martes 2026-11-17
 - mandar link al discord del avance que llevamos del proyecto-03
 - seguir avanzando en proyecto-03
 - [Wokwi - proyecto-03](https://wokwi.com/projects/480722608786043905) 
+- realizar diagrama de flujo
 - 
 
 ## encargos
