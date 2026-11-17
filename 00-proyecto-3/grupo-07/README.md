@@ -65,7 +65,24 @@ El tercer botón reproducirá el mensaje de la persona cuidadora. El dispositivo
 
 La pantalla acompañará la interacción mostrando la categoría seleccionada, el contenido que está sonando y estados como «Grabando», «Mensaje guardado» o «Error». Los botones permitirán navegar por los contenidos por sí solos.
 
-### Diagramas de flujo
+### Diagrama de flujo (preliminar)
+```mermaid
+flowchart TD
+
+A@{shape: circ, label: "Adulto prepara<br>el dispositivo"}-->B(Graba mensajes y sonidos);
+B-->C(El niño lo lleva consigo);
+C-->D{¿Qué necesita?};
+D-->E(Cuento o música);
+D-->F(Mensaje grabado);
+D-->G(Sonido calmante);
+E-->H{¿Se siente mejor?};
+F-->H;
+G-->H;
+H--sí-->I@{shape: dbl-circ, label: "Sigue con su día o descansa"};
+H--no -->J(Elige otra cosa);
+J-->D;
+```
+
 
 ### Sistema de grabación
 
