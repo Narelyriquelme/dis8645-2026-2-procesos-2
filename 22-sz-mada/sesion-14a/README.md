@@ -24,4 +24,12 @@ Nos revisaron los entregables del proyecto hasta el momento, haré copy & paste 
 
 Hacer algo chico y rápido es **difícil**, así que we should NOT marry the idea of making the project portable, focus on making sure it WORKS, then iterate
 
+---
+
+Para el criterio-06, una reflexión de tres párrafos (1 pág) de "el tiempo y yo" en Google Docs
+
+### Things mentioned in class
+
+[Julio Torres](https://es.wikipedia.org/wiki/Julio_Torres_(c%C3%B3mico))
+
 ## lectura
