@@ -20,4 +20,8 @@ Nos revisaron los entregables del proyecto hasta el momento, haré copy & paste 
 >- ¿saben los niños leer? ¿saben los niños de semiótica? ¿como navegan un menú y eligen lo que quieren? es bueno que también se proponga educar en esto
 >- pensar en controles resistentes a golpes, porque los niños son medios brutos. También que sean perillas grandes y cómodas
 
+---
+
+Hacer algo chico y rápido es **difícil**, así que we should NOT marry the idea of making the project portable, focus on making sure it WORKS, then iterate
+
 ## lectura
