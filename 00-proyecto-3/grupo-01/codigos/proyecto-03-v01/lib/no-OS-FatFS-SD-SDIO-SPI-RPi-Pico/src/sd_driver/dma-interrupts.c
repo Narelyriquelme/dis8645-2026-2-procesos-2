@@ -1,8 +1,8 @@
 
 #include "hw_config.h"
-#include "sd_card.h"
+#include "SdCard.h"
 //
-#include "dma_interrupts.h"
+#include "DmaInterrupts.h"
 
 static void dma_irq_handler(const uint DMA_IRQ_num, io_rw_32 *dma_hw_ints_p) {
     // Iterate through all of the SD cards

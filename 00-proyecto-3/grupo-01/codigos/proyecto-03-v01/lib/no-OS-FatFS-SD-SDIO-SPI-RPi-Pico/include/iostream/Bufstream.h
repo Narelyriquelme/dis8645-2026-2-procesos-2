@@ -29,7 +29,7 @@
  * \brief \ref ibufstream and \ref obufstream classes
  */
 #include <string.h>
-#include "iostream.h"
+#include "Iostream.h"
 //==============================================================================
 /**
  * \class ibufstream

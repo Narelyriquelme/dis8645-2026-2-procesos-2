@@ -28,7 +28,7 @@
  * \file
  * \brief \ref istream class
  */
-#include "ios.h"
+#include "Ios.h"
 
 /**
  * \class istream

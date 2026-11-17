@@ -21,13 +21,13 @@ specific language governing permissions and limitations under the License.
 //
 #include "my_debug.h"
 #include "delays.h"
-#include "my_spi.h"
+#include "MySpi.h"
 //
 #if !defined(USE_DBG_PRINTF) || defined(NDEBUG)
 #  pragma GCC diagnostic ignored "-Wunused-variable"
 #endif
 //
-#include "sd_spi.h"
+#include "SdSpi.h"
 
 // #define TRACE_PRINTF(fmt, args...)
 // #define TRACE_PRINTF printf

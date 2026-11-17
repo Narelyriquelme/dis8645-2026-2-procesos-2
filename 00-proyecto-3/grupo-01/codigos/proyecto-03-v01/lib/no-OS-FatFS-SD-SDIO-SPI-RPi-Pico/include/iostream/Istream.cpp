@@ -24,7 +24,7 @@
  */
 #include <float.h>
 #include <ctype.h>
-#include "istream.h"
+#include "Istream.h"
 //------------------------------------------------------------------------------
 int istream::get() {
   int c;

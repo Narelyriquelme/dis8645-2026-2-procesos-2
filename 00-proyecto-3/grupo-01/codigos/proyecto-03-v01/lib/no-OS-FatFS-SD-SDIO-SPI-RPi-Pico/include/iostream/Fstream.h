@@ -28,7 +28,7 @@
  */
 #ifndef fstream_h
 #define fstream_h
-#include "iostream.h"
+#include "Iostream.h"
 //------------------------------------------------------------------------------
 /**
  * \class StreamBaseClass

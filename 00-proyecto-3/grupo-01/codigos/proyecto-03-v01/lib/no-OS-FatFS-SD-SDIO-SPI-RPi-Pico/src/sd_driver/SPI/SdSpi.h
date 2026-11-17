@@ -20,7 +20,7 @@ specific language governing permissions and limitations under the License.
 //
 #include "delays.h"
 #include "my_debug.h"
-#include "my_spi.h"
+#include "MySpi.h"
 #include "sd_card.h"
 #include "sd_timeouts.h"
 

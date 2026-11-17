@@ -28,8 +28,8 @@
  * \file
  * \brief \ref iostream class
  */
-#include "istream.h"
-#include "ostream.h"
+#include "Istream.h"
+#include "Ostream.h"
 /** Skip white space
  * \param[in] is the Stream
  * \return The stream

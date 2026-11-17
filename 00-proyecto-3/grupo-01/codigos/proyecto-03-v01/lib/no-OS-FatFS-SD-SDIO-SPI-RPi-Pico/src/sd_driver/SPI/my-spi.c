@@ -30,7 +30,7 @@ specific language governing permissions and limitations under the License.
 #include "my_debug.h"
 #include "util.h"
 //
-#include "my_spi.h"
+#include "MySpi.h"
 
 #ifndef USE_DBG_PRINTF
 #pragma GCC diagnostic ignored "-Wunused-variable"
