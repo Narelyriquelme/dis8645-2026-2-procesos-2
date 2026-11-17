@@ -11,10 +11,6 @@ Hugo Montoya
 
 ## sobre el proyecto
 
-# sesion-13a
-
-## apuntes sesión
-
 #### Brainstorming
 **que sí queremos**
 1. Dos personas
