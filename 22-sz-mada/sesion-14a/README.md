@@ -28,6 +28,8 @@ Hacer algo chico y rápido es **difícil**, así que we should NOT marry the ide
 
 Para el criterio-06, una reflexión de tres párrafos (1 pág) de "el tiempo y yo" en Google Docs
 
+Voy a dejar mi link pegado [aquí](https://docs.google.com/document/d/1PVsXfFFHLyxAfKwcNztYfP-VJ-rFEZSV7pcdcqGPGXs/edit?usp=sharing) desde ya para poder easily copy&paste en caso de tener que moverlo a otra bitácora
+
 ### Things mentioned in class
 
 [Julio Torres](https://es.wikipedia.org/wiki/Julio_Torres_(c%C3%B3mico))
