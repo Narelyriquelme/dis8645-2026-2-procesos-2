@@ -61,7 +61,14 @@ blabla
 
 ## sobre el proyecto
 
-blabla
+- Mecánica y funcionamiento
+
+- Cada sonido tendrá un significado específico
+
+-  Tabla de sonidos (ordenada por frecuencia, de grave a agudo)
+
+-  Qué significa tener más o menos Hz
+
 
 ---
 
