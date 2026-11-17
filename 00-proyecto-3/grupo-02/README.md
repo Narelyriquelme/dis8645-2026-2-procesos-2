@@ -85,6 +85,13 @@ estado = activo
 ```
 —-------------------- FALTA
 
+#### Wokwi
+es uno inicial, falta aun
+
+Tenemos preguntas, ya que nos gustaria que cada teclado tenga sonido de notas musicales, eso como se puede representar en wokwi, ademas del laser
+
+https://wokwi.com/projects/480951299269584897
+
 ## encargos
 
 ## lectura
