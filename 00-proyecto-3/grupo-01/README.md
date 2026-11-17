@@ -12,6 +12,10 @@ Nuestra máquina es un instrumento que no es musical ¿o si? es la intervención
 
 Dentro del funcionamiento técnico, este es controlado por un microcontrolador Raspberry Pi Pico 2W, el cual se encarga de gestionar las entradas de la interfaz física y el procesamiento del sonido y su manipulación. Para asegurar un rendimiento continuo y evitar las limitaciones de memoria al trabajar con audios muy largos o con muchas capas, el sistema integra un módulo de tarjeta SD, que permite almacenar, sobreescribir y reproducir el conjunto de sonidos grabados de manera fluida.
 
+### Interfaz
+
+![](./imagenes/estructura.png)
+
 ### Posibilidades dentro del aspecto de audio
 
 El tiempo máximo de grabación por cada audio es de 30 segundos.
