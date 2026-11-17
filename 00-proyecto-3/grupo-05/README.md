@@ -12,66 +12,65 @@
 # Te escucho sonar, Santiago
 
 **Realizado por:**  
-*Francisca Jesús Palma Cuevas (frannciscapalma)*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*Francisca Jesús Palma Cuevas (frannciscapalma)*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 *Nicolás Elías Valdés Greve (nicolasvaldesgreve)*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 *Santiago Cifuentes Vélez (santiagocifuvelez)*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 *Tomás Antonio Catrileo Curihual (tomascatri)*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Descripción del trabajo
 
-Te escucho sonar Santiago, es un sampler fisico tangible que permite recorrer acusticamente cuatro trayectos en los medios de transporte más comunes para les estudiantes universitarios los cuales toman como punto de partida general el barrio universitario , especificamente la universidad Diego Portales, hasta la casa de cada une de elles en la ciudad de Santiago de Chile.
+Te escucho sonar Santiago, es un sampler físico tangible que permite recorrer acusticamente cuatro trayectos en los medios de transporte más comunes para les estudiantes universitarios, los cuales toman como punto de partida general el barrio universitario , específicamente la Universidad Diego Portales, hasta la casa de cada une de elles en la ciudad de Santiago de Chile.
 
-Este proyecto nace desde la rutina que se crea en torno a los medios de transportes y nuestra convivencia del trazo que se vuelve huella en nuestro día a día cuando vamos de un lugar a otro. Tanto así, que solemos anticipar sonidos en nuestras cabezas para adelantarnos,
+Este proyecto nace desde la rutina que se crea en torno a los medios de transporte y nuestra convivencia del trazo que se vuelve huella en nuestro día a día cuando vamos de un lugar a otro. Tanto así que solemos anticipar sonidos en nuestras cabezas para adelantarnos,
 "se inicia el cierre de puertas",
-o el chillido del frenazo del metro cuando comienza a detenerse y en vez de ser incómodo, es la antítesis de la felicidad de saber que es tu turno de ir a casa. 
+o el chillido del frenazo del metro cuando comienza a detenerse y, en vez de ser incómodo, es la antítesis de la felicidad de saber que es tu turno de ir a casa. 
 
-(El ejemplo anterior fue tomando como ejemplo el metro, pero lo mismo sucede con el transporte que usted tome).
+(Lo mismo sucede con el transporte que usted tome).
 
-Pero bueno, aunque la prosa poetica romantice los sonidos con los cuales nos familiarizamos a lo largo de nuestra vida, este proyecto tambien busca resaltar su concepto de cuna, el cual empieza con la _justicia acústica_, ya que no todos los trayectos suenan igual, el ruido de la ciudad se vive de forma distinta dependiendo de cómo y por dónde nos movamos. 
+Este proyecto también busca resaltar su concepto de cuna, el cual empieza con la _justicia acústica_, ya que no todos los trayectos suenan igual, el ruido de la ciudad se vive de forma distinta dependiendo de cómo y por dónde nos movamos. 
 
 ## ¿Cómo funciona este sampler?
-Este instrumento contiene sonidos pre-grabados del recorrido casa-universidad que se representa en un mapa de Santiago de Chile con 4 líneas las cuales inician por los hogares de cada integrante del grupo (4 integrantes = 4 líneas), y todas terminan en un punto en común: el barrio Universitario; metro República; Universidad Diego Portales.
+Este instrumento contiene sonidos pregrabados de los recorridos que inician desde la universidad Diego Portales, hacia los hogares de cada integrante del grupo  (universidad-casa) que se representa en un mapa abstraído de Santiago de Chile con 4 líneas(4 integrantes = 4 líneas).
 
-Cada línea tiene 6 puntos de contacto, en donde cada punto tiene un sonido grabado en ese tramo del viaje. Al pasar la línea con el dedo o un caimán el sensor capacitivo detecta en qué punto esta el contacto y reproduce el sonido, el cual dura mientras hay contacto y vuelve al silencio al soltar.
+Cada línea tiene 6 puntos de contacto, en donde cada punto tiene un sonido grabado perteneciente a ese tramo del viaje. Al pasar la línea con el dedo, el sensor capacitivo detecta en qué punto está el contacto y reproduce el sonido, el cual dura mientras hay contacto y vuelve al silencio al soltar.
 
-
-Entonces: 
+**A manera de resumen:** 
 1. El instrumento se compone de 4 líneas que representan el recorrido de cada integrante.
-2. Cada línea tiene 6 sonidos pre-grabados en coherencia al transporte allí escogido.
-3. Al pasar el dedo por encima de la línea siguiendo el recorrido se pueden activar y escuchar los sonidos dependiendo de la ubicación del dedo. 
-4. **Perilla 2 = Volumen**
+2. Cada línea tiene 6 sonidos pregrabados en coherencia con el transporte escogido.
+3. Al pasar el dedo por encima de la línea siguiendo el recorrido, se pueden activar y escuchar los sonidos dependiendo de la ubicación del dedo. 
+4. **Perilla 1 = Volumen**
 Graduar el volumen del sampler.
 5. **Switch = on/off**
 Para encender o apagar la máquina.
 
-## Carateristicas de diseño
-1. 3.3v 
-2. Standalone
-3. Fuente abierta
-4. Bajo licencia del MIT
-5. Lenguaje c++
-6. agregar méssss
+## Características de diseño
+1. 3.3 V
+2. Fuente abierta
+3. Bajo licencia del MIT
+4. Lenguaje C++
+5. Retroalimentación mediante LEDs
+
 
 ## Referente: 
 
 **Stylophone:** 
-Dispositivo en el cual el usuario interactua con el instrumento mediante una herramienta conductora. El instrumento tiende al silencio, y solo se permite generar sonidos al hacer contacto con la interfaz del instrumento mediante la herramienta conductora, y deja de sonar cuando se separa de este.
+Dispositivo en el cual el usuario interactúa con el instrumento mediante una herramienta conductora. El instrumento tiende al silencio, y solo se permite generar sonidos al hacer contacto con la interfaz del instrumento mediante la herramienta conductora, y deja de sonar cuando se separa de este.
 
+agregar 9 más
 
 
 ## Registro sonoro
 
 Cada integrante grabó su recorrido casa-universidad en un medio de transporte distinto:
 
-1. Metro (Fran): Línea 1 y 5.
-2. Micro (Nico): 210 y E07
-3. Colectivo (Tomás): Cerro navia 
-4. Bicicleta (Santi): Vargas Buston 
+1. Metro (Fran): Línea 1 y 5 Maipú-Repúlica
+2. Micro (Nico): 210 y E07 La Florida-República
+3. Colectivo (Tomás): Cerro Navia-República
+4. Bicicleta (Santi): San Miguel-República
 
 #### Criterios de grabación
 
-Acordamos qué sonidos grabar...
+Acordamos qué sonidos grabar:
 
 | Sonido    | Metro     | Micro | Colectivo | Bicicleta |
 | -------- | --------- | ----- | --------- | --------- |
@@ -99,13 +98,14 @@ Acordamos qué sonidos grabar...
 | Cable USB a Micro USB de datos para alimentar y programar la Pico | 1 | $1.000 | [Afel](https://afel.cl/products/cable-micro-usb-30cm) |
 | Parlante de 8 Ω y 1 W | 1 | $3.290 | [MechatronicStore](https://www.mechatronicstore.cl/altavoz-8-ohm-1w/) |
 | Amplificador de audio I²S MAX98357A | 1 | $4.236 | [Mercado Libre](https://www.mercadolibre.cl/modulo-amplificador-audio-i2s-3w-clase-d-/p/MLC2069999027?pdp_filters=item_id%3AMLC4487218772) |
+| Módulo Lector Micro SD SPI | 1 | $2.900 | [MechatroniStore](https://www.mechatronicstore.cl/modulo-lector-micro-sd-spi/) |
 
 ---
 
 
 
 ## Flowchart sampler: 
-Te escucho tocar, Santiago...
+Te escucho sonar, Santiago
 
 ```mermaid
 ---
@@ -284,4 +284,3 @@ https://wokwi.com/projects/480903494879270913
 - <https://docs.sunfounder.com/projects/newton-lab-kit/en/latest/cproject/ar_mpr121.html> CONEXIONES DEL SENSOR
 - <https://www.instructables.com/Stylobit-a-Microbit-Powered-Stylophone/> estilofono diy lego(? en caso de idk
 - <https://learn.adafruit.com/adafruit-mpr121-12-key-capacitive-touch-sensor-breakout-tutorial?view=all> 
-
