@@ -52,6 +52,9 @@ Velocidad de reproducción de la secuencia que se compuso.
 8. **Perilla 2 = Volumen**
 Graduar el volumen del sampler.
 
+9. **Switch = on/off**
+Para encender o apagar la máquina.
+
 ## Carateristicas de diseño
 1. 9v 
 2. Standalone
@@ -121,29 +124,132 @@ config:
     curve: step
 ---
 flowchart TD
-    Inicio(["Inicio"]) --> Encender["Encender la Raspberry Pi Pico 2 W"]
-    Encender --> Preparar["Inicializar los sensores y la salida de audio I²S"]
-    Preparar --> Leer["Leer los sensores"]
-    Leer --> Detectar{"¿Hay una nuevo contacto?"}
+    Inicio(["Inicio"]) --> ON["Mover el interruptor a ON"]
+    ON --> Preparar["Encender LED verde e inicializar sensores MPR121 y audio I²S"]
+    Preparar --> Leer["Leer puntos táctiles, botones y perillas"]
 
-    Detectar -->|No| SinPulsacion["Mantener el estado actual del audio"]
-    SinPulsacion --> Leer
-    Detectar -->|Sí| Identificar{"¿Qué sensor se activó?"}
+    Leer --> Contacto
+    Leer --> Boton
+    Leer --> Perillas
 
-    Identificar -->|1 · Metro| Metro["Seleccionar sample de metro"]
-    Identificar -->|2 · Micro| Micro["Seleccionar sample de micro"]
-    Identificar -->|3 · Colectivo| Colectivo["Seleccionar sample de colectivo"]
-    Identificar -->|4 · Bicicleta| Bici["Seleccionar sample de bicicleta"]
+    subgraph TACTIL ["A · Puntos táctiles"]
+        Contacto{"¿Hay contacto en un punto?"}
+        Contacto -->|Sí| Linea{"¿En qué línea?"}
+        Linea -->|Línea 1| Metro["Metro: sonido del punto 1 a 6"]
+        Linea -->|Línea 2| Micro["Micro: sonido del punto 1 a 6"]
+        Linea -->|Línea 3| Colectivo["Colectivo: sonido del punto 1 a 6"]
+        Linea -->|Línea 4| Bici["Bicicleta: sonido del punto 1 a 6"]
+        Metro --> Sonar
+        Micro --> Sonar
+        Colectivo --> Sonar
+        Bici --> Sonar
+        Sonar["Encender LED del carril y reproducir el sonido mientras haya contacto"]
+        Sonar --> Grabando{"¿Está grabando?"}
+        Grabando -->|Sí| Guardar["Guardar el punto en la secuencia"]
+        Contacto -->|No| Silencio["Silenciar el sonido y apagar LED del carril"]
+    end
 
-    Metro --> EnCurso{"¿Hay un audio sonando?"}
-    Micro --> EnCurso
-    Colectivo --> EnCurso
-    Bici --> EnCurso
+    subgraph BOTONES ["B · Botones"]
+        Boton{"¿Se presionó un botón?"}
+        Boton -->|Botón 1| B1["Grabar: iniciar o detener la grabación"]
+        Boton -->|Botón 2| B2["Reproducir: iniciar o pausar la composición"]
+        Boton -->|Botón 3| B3["Reset: borrar la secuencia grabada"]
+    end
 
-    EnCurso -->|Sí| Detener["Detener el audio anterior"]
-    EnCurso -->|No| Reproducir["Iniciar el audio seleccionado por el parlante mediante el MAX98357A"]
-    Detener --> Reproducir
-    Reproducir -->|Seguir leyendo <br> mientras suena| Leer
+    subgraph PERILLAS ["C · Perillas"]
+        Perillas["Leer la posición de las perillas"]
+        Perillas --> Tempo["Perilla 1 · Tempo: ajustar la velocidad de reproducción de la secuencia"]
+        Perillas --> Volumen["Perilla 2 · Volumen: ajustar el volumen del sampler"]
+    end
+
+    Grabando -->|No| Ciclo
+    Guardar --> Ciclo
+    Silencio --> Ciclo
+    Boton -->|No| Ciclo
+    B1 --> Ciclo
+    B2 --> Ciclo
+    B3 --> Ciclo
+    Tempo --> Ciclo
+    Volumen --> Ciclo
+    Ciclo["Repetir ciclo"] --> Leer
+
+    classDef inicio fill:#d4edda,stroke:#28a745,color:#000
+    classDef metro fill:#cfe2ff,stroke:#0d6efd,color:#000
+    classDef micro fill:#fff3cd,stroke:#e0a800,color:#000
+    classDef colectivo fill:#ffe5d0,stroke:#fd7e14,color:#000
+    classDef bici fill:#e2d9f3,stroke:#6f42c1,color:#000
+    class Inicio,ON,Preparar inicio
+    class Metro metro
+    class Micro micro
+    class Colectivo colectivo
+    class Bici bici
+```
+
+## Flowchart: experiencia de usuario
+
+```mermaid
+---
+config:
+  flowchart:
+    curve: step
+---
+flowchart TD
+    Inicio(["Inicio"]) --> Encender["La persona mueve el interruptor a ON"]
+    Encender --> Mapa["Observa el mapa de Santiago con 4 líneas que terminan en el barrio Universitario"]
+    Mapa --> Elegir{"¿Qué línea quiere recorrer?"}
+
+    subgraph Explorar ["Fase 1 · Exploración liberal"]
+        Metro["Metro · Fran: líneas 1 y 5"]
+        Micro["Micro · Nico: 210 y E07"]
+        Colectivo["Colectivo · Tomás: Cerro Navia"]
+        Bici["Bicicleta · Santi: Vargas Buston"]
+        Tocar["Pasa el dedo o un caimán por los 6 puntos de la línea, desde la casa hasta la UDP"]
+        Escucha["Escucha el sonido grabado en ese tramo y ve encenderse el LED del carril"]
+        Soltar["Suelta el contacto y el sonido vuelve al silencio"]
+    end
+
+    Elegir -->|Línea 1| Metro
+    Elegir -->|Línea 2| Micro
+    Elegir -->|Línea 3| Colectivo
+    Elegir -->|Línea 4| Bici
+    Metro --> Tocar
+    Micro --> Tocar
+    Colectivo --> Tocar
+    Bici --> Tocar
+    Tocar --> Escucha
+    Escucha --> Soltar
+
+    Soltar --> Quiere{"¿Quiere componer una secuencia?"}
+    Quiere -->|No| Sigue{"¿Quiere seguir explorando?"}
+    Sigue -->|Sí| Elegir
+    Sigue -->|No| Apagar["Mueve el interruptor a OFF"]
+
+    Quiere -->|Sí| Grabar["Presiona el botón 1 para empezar a grabar"]
+
+    subgraph Componer ["Fase 2 · Exploración de composición"]
+        Grabar --> Recorre["Recorre una o varias líneas con el dedo"]
+        Recorre --> DetenerGrab["Presiona otra vez el botón 1 para dejar de grabar"]
+        DetenerGrab --> Play["Presiona el botón 2 para reproducir su composición"]
+        Play --> Ajustar["Gira la perilla 1 para cambiar el tempo y la perilla 2 para ajustar el volumen"]
+        Ajustar --> Pausa["Presiona otra vez el botón 2 para pausar"]
+    end
+
+    Pausa --> Conforme{"¿Le gusta el resultado?"}
+    Conforme -->|No| Reset["Presiona el botón 3 para borrar la secuencia"]
+    Reset --> Grabar
+    Conforme -->|Sí| Otra{"¿Quiere hacer otra composición?"}
+    Otra -->|Sí| Reset
+    Otra -->|No| Apagar
+    Apagar --> Fin(["Fin"])
+
+    classDef metro fill:#cfe2ff,stroke:#0d6efd,color:#000
+    classDef micro fill:#fff3cd,stroke:#e0a800,color:#000
+    classDef colectivo fill:#ffe5d0,stroke:#fd7e14,color:#000
+    classDef bici fill:#e2d9f3,stroke:#6f42c1,color:#000
+    class Metro metro
+    class Micro micro
+    class Colectivo colectivo
+    class Bici bici
 ```
 
 ---
