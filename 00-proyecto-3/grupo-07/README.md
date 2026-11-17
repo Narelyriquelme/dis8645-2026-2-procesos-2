@@ -108,7 +108,7 @@ La carcasa tiene que quedar estable en el velador y proteger la pantalla, el par
 - La pantalla elegida incluye función touch, pero para el proyecto la vamos a usar como pantalla de visualización.
 
 ### Primer código (declaraciones)
-[Código 1: declaraciones preliminares](https://github.com/blosssom-n/dis8645-2026-2-procesos-2/blob/main/00-proyecto-3/grupo-07/codigos/Codigo_1_2026-11-13_declaraciones_muy_preliminares/README.md)
+[Código 1: declaraciones preliminares](https://github.com/blosssom-n/dis8645-2026-2-procesos-2/blob/main/00-proyecto-3/grupo-07/codigos/Codigo_1_2026-11-13_declaraciones_muy_preliminares/Declaraciones.cpp)
 
 ### Revisión del módulo de grabación
 
