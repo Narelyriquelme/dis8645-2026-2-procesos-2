@@ -78,6 +78,22 @@ La propuesta consiste en dos objetos individuales, cada uno con un micrófono, q
 Una vez que ambas personas hayan experimentado con sus sonidos, estos se fusionan dentro de la máquina, generando una nueva composición sonora que se transforma visualmente mediante figuras de Lissajous. Estas formas cambian dependiendo de las frecuencias y de la relación entre ambos sonidos, creando una figura única que representa el encuentro de las dos personas.
 La idea es que cada persona aporte un sonido distinto y que, al juntarse, se genere algo nuevo que ninguna podría producir por separado. Todo sucede en tiempo real, sin almacenar los sonidos, convirtiendo la interacción en una experiencia física, visual y sonora.
 
-## encargos
-
 ## lectura
+![fotossss-1](./imagenes/fotossss-1.png)
+Compressed Cinema  de Casey Reas y Allison Parrish
+
+Me llevé este libro de LID porque ya había terminado mi lectura anterior. Me llamó la atención porque es de Casey Reas, el mismo autor de mi libro anterior, así que me dio curiosidad conocer otro de sus trabajos. También me llamó la atención su portada, por los números y su apariencia plateada.
+
+### Sobre el libro
+
+Al revisar sus páginas, encontré textos que mezclan descripciones de paisajes, naturaleza, cuerpos y distintas sensaciones. No parece seguir una historia tradicional, sino que combina diferentes ideas y descripciones.
+
+
+1. “Breathing deeply, the sun begins to lighten, and the rain stops…”
+
+Este fragmento describe cómo la lluvia comienza a detenerse y el sol vuelve a aparecer. Transmite una sensación de calma y cambio, como el paso de un día lluvioso a uno más despejado. También presenta a la naturaleza como parte importante de la escena.
+
+2. “I close my eyes for just a second, take a moment and observe, then take a deep inhale.”
+
+Esta parte describe el acto de cerrar los ojos, detenerse un momento, observar y respirar profundamente. Se relaciona con hacer una pausa en medio de lo que está ocurriendo y prestar atención al entorno. Es una escena sencilla que transmite tranquilidad.
+

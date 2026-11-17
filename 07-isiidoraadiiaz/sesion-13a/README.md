@@ -309,8 +309,24 @@ flowchart LR
     style FIN fill:#292927,stroke:#292927,color:#FFFFFF
 ```
 
-- Nido — (pegar)
+- Nido
 
+```mermaid
+flowchart TD
+
+A@{shape: circ, label: "Adulto prepara<br>el dispositivo"}-->B(Graba mensajes y sonidos);
+B-->C(El niño lo lleva consigo);
+C-->D{¿Qué necesita?};
+D-->E(Cuento o música);
+D-->F(Mensaje grabado);
+D-->G(Sonido calmante);
+E-->H{¿Se siente mejor?};
+F-->H;
+G-->H;
+H--sí-->I@{shape: dbl-circ, label: "Sigue con su día o descansa"};
+H--no -->J(Elige otra cosa);
+J-->D;
+```
 
 ## lectura
 
