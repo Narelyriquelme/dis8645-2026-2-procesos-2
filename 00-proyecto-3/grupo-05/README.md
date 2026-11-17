@@ -9,7 +9,7 @@
 
 ## sobre el proyecto
 
-# Te escucho tocar, Santiago...
+# Te escucho sonar, Santiago
 
 **Realizado por:**  
 *Francisca Jesús Palma Cuevas (frannciscapalma)*
@@ -20,11 +20,11 @@
 
 ## Descripción del trabajo
 
-Te escucho tocar Santiago, es un sampler fisico tangible que permite recorrer acusticamente cuatro trayectos en los medios de transporte más comunes para lxs estudiantes univresitarios los cuales toman como punto de partida general el barrio universitario, especificamente la universidad Diego Portales, hasta la casa de cada unx de ellxs en la ciudad de Santiago de Chile.
+Te escucho sonar Santiago, es un sampler fisico tangible que permite recorrer acusticamente cuatro trayectos en los medios de transporte más comunes para les estudiantes universitarios los cuales toman como punto de partida general el barrio universitario , especificamente la universidad Diego Portales, hasta la casa de cada une de elles en la ciudad de Santiago de Chile.
 
-Este proyecto nace desde la rutina que se crea entorno a los medios de transportes y nuestra convivencia del traso que se vuelve huella en nuestro día a día cuando vamos de un lugar a otro. Tanto así, que solemos anticipar sonidos en nuestras cabezas para adelantarnos,
+Este proyecto nace desde la rutina que se crea en torno a los medios de transportes y nuestra convivencia del trazo que se vuelve huella en nuestro día a día cuando vamos de un lugar a otro. Tanto así, que solemos anticipar sonidos en nuestras cabezas para adelantarnos,
 "se inicia el cierre de puertas",
-o el grito del frenazo del metro cuando comienza a detenerse y en vez de ser incomodo, es la antitesis de la felicidad de saber que es tu turno de ir a casa. 
+o el chillido del frenazo del metro cuando comienza a detenerse y en vez de ser incómodo, es la antítesis de la felicidad de saber que es tu turno de ir a casa. 
 
 (El ejemplo anterior fue tomando como ejemplo el metro, pero lo mismo sucede con el transporte que usted tome).
 
@@ -35,38 +35,18 @@ Este instrumento contiene sonidos pre-grabados del recorrido casa-universidad qu
 
 Cada línea tiene 6 puntos de contacto, en donde cada punto tiene un sonido grabado en ese tramo del viaje. Al pasar la línea con el dedo o un caimán el sensor capacitivo detecta en qué punto esta el contacto y reproduce el sonido, el cual dura mientras hay contacto y vuelve al silencio al soltar.
 
-Nuestro sampler; Te escucho tocar, Santiago... cuenta con dos fases: 
-- **Exploración liberal:** sonido como reacción al paso del dedo del usuario.
-- **Exploración de composición:** sonidos que se pueden grabar para reproducir a manera de secuencia. Aquí es donde nuestro instrumento se define como sampler.
 
 Entonces: 
 1. El instrumento se compone de 4 líneas que representan el recorrido de cada integrante.
 2. Cada línea tiene 6 sonidos pre-grabados en coherencia al transporte allí escogido.
 3. Al pasar el dedo por encima de la línea siguiendo el recorrido se pueden activar y escuchar los sonidos dependiendo de la ubicación del dedo. 
-4. **Botón 1 = grabar:** 
-Para grabar la secuencia de sonidos por donde el usuario paso su dedo, ya sea una sola línea o entre líneas, nuestro sampler va a tener un botón 1: grabar.
-- Si se oprime una sola vez = grabar
-- Si se vuelve a oprimir = dejar de grabar
-
-5. **Botón 2: = reproducir composición** 
-Para reproducir la grabación de la secuencia de sonidos que se compuso, está el botón 2. 
-- Si se oprime una sola vez = reproduce composición.
-- Si se vuelve a oprimir = se pausa la composición. 
-
-6. **Botón 3 = resetear la maquina**
-Este botón permite limpiar alguna secuencia ya grabada. Reset.
-
-7. **Perilla 1 = tempo:**
-Velocidad de reproducción de la secuencia que se compuso.
-
-8. **Perilla 2 = Volumen**
+4. **Perilla 2 = Volumen**
 Graduar el volumen del sampler.
-
-9. **Switch = on/off**
+5. **Switch = on/off**
 Para encender o apagar la máquina.
 
 ## Carateristicas de diseño
-1. 9v 
+1. 3.3v 
 2. Standalone
 3. Fuente abierta
 4. Bajo licencia del MIT
@@ -78,7 +58,7 @@ Para encender o apagar la máquina.
 **Stylophone:** 
 Dispositivo en el cual el usuario interactua con el instrumento mediante una herramienta conductora. El instrumento tiende al silencio, y solo se permite generar sonidos al hacer contacto con la interfaz del instrumento mediante la herramienta conductora, y deja de sonar cuando se separa de este.
 
-**korg volca sample 1:**
+
 
 ## Registro sonoro
 
