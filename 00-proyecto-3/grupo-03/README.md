@@ -15,9 +15,18 @@ El proyecto busca educar en cuanto a biodiversidad de especies que se encuentran
 
 Habrá un potenciómetro por cada categoría, donde a través de umbrales se reconocerá qué especie fue seleccionada. Además, las categorías irán acompañadas de otro potenciómetro para controlar el volumen de cada una. Así, cada usuario puede construir su paisaje sonoro de especies.
 
-Boceto de la máquina:
+**Boceto de la máquina:**
 
 ![boceto](./imagenes/boceto.jpeg)
+
+**Render hecho con Chat GPT:**
+
+Prompt:
+
+> "Genera un render realista del diseño que adjunto, respetando su distribución y proporciones. Los materiales y elementos deben interpretarse de la siguiente manera: las superficies de color café claro corresponden a madera clara; las piezas burdeos, a filamento de impresión 3D; y las perillas verdes, también a filamento 3D. Los pequeños puntos burdeos corresponden a potenciómetros de menor tamaño, destinados a controlar el volumen de cada especie. Las líneas grabadas en la superficie representan las siluetas de distintas especies. En la parte superior se encuentran los orificios de salida del sonido. El botón ubicado en la esquina superior izquierda corresponde al encendido y apagado del dispositivo, mientras que en la zona inferior izquierda se incorpora una pequeña leyenda explicativa. Es importante mantener la estética, la distribución de los controles y la estructura del diseño original, sin agregar elementos que no estén contemplados."
+
+![render 1](./imagenes/render1.png)
+![render 2](./imagenes/render2.png)
 
 Paso a paso:
 
