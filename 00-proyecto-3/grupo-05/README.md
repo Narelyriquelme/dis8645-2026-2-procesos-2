@@ -1,5 +1,3 @@
-# grupo-05
-
 # Te escucho sonar, Santiago
 
 **Realizado por:**  
@@ -25,6 +23,9 @@ Este instrumento contiene sonidos pregrabados de los recorridos que inician desd
 
 Cada línea tiene 6 puntos de contacto, en donde cada punto tiene un sonido grabado perteneciente a ese tramo del viaje. Al pasar la línea con el dedo, el sensor capacitivo detecta en qué punto está el contacto y reproduce el sonido, el cual dura mientras hay contacto y vuelve al silencio al soltar.
 
+También, en el sampler se puede reproducir sonidos en simultáneo; 
+Si quiero oprimir el punto 3 de la línea 1, y a la vez quiero oprimir el punto 6 de la línea 4, pueden sonar a la vez. Sí oprimo todos los puntos de todas las líneas, tiene el mismo efecto de escucha simultánea. Como una composición en vivo. 
+
 **A manera de resumen:** 
 1. El instrumento se compone de 4 líneas que representan el recorrido de cada integrante.
 2. Cada línea tiene 6 sonidos pregrabados en coherencia con el transporte escogido.
@@ -33,6 +34,7 @@ Cada línea tiene 6 puntos de contacto, en donde cada punto tiene un sonido grab
 Graduar el volumen del sampler.
 5. **Switch = on/off**
 Para encender o apagar la máquina.
+6. 
 
 ## Características de diseño
 1. 3.3 V
@@ -52,7 +54,7 @@ agregar 9 más
 
 ## Registro sonoro
 
-Cada integrante grabó su recorrido casa-universidad en un medio de transporte distinto:
+Cada integrante grabó su recorrido universidad-casa en un medio de transporte distinto:
 
 1. Metro (Fran): Línea 1 y 5 Maipú-Repúlica
 2. Micro (Nico): 210 y E07 La Florida-República
@@ -82,7 +84,7 @@ Acordamos qué sonidos grabar:
 | Módulo táctil capacitivo MPR121 de 12 entradas | 2 | $2.680 | [MechatronicStore](https://www.mechatronicstore.cl/modulo-controlador-de-sensor-tactil-capacitivo-teclado-i2c-mpr121/) |
 | Protoboard MB-102 de 830 puntos | 1 | $2.500 | [Afel](https://afel.cl/products/protoboard-mb-102-830-puntos) |
 | Interruptor MTS-102 de 3 pines | 1 | $400 | [Afel](https://afel.cl/products/interruptor-mts-102-3-pines) |
-| LED de 5 mm, uno azul, amarillo, naranjo y morado para los carriles, más uno verde de encendido | 5 | $100 | [MechatronicStore](https://www.mechatronicstore.cl/led-alto-brillo-5mm-colores/) |
+| LED de 5 mm, uno azul, amarillo, naranjo y morado para los carriles, más uno verde de encendido y rojo de error | 6 | $100 | [MechatronicStore](https://www.mechatronicstore.cl/led-alto-brillo-5mm-colores/) |
 | 1 pack de 5 Resistencias de 470 Ω para los LED | 1 | $500 | [Triacs](https://triacs.cl/lamborghino/953-resistencia-470-ohm-12w-5-unid-.html) |
 | Pack 10 cables caimán a Dupont macho | 1 | $2.500 | [Afel](https://afel.cl/products/kit-10-cables-caiman-a-dupont-macho) |
 | 1 pack de 5 cables Dupont macho a macho | 1 | $1.000 | [Afel](https://afel.cl/products/pack-20-cables-de-conexion-macho-macho) |
@@ -93,16 +95,113 @@ Acordamos qué sonidos grabar:
 
 ---
 
-
+## Flowchart sampler: 
+Te escucho sonar, Santiago
 
 ## Flowchart sampler: 
 Te escucho sonar, Santiago
 
+```mermaid
+flowchart TD
+    A(["Switch en ON"]) --> B["Alimentación USB 3.3 V a la Raspberry Pi Pico 2 W"]
+    B --> C["Inicializar I2C, SPI, I2S, ADC y LEDs"]
+    C --> D{"¿Se detecta la tarjeta<br/>microSD?"}
+    D -- No --> E["Mostrar error en LED roja"]
+    E --> Y
+    D -- Sí --> F["Verificar los 24 audios pregrabados"]
+    F --> G["Encender LED verde si<br/>todo funciona bien y<br/>dejar apagados los<br/>LEDs de carriles"]
+    G --> H["Leer los 2 módulos MPR121 por I2C: 24 electrodos"]
+    H --> PER1["Leer la perilla de volumen 
+por entrada analógica ADC"]
+    PER1 --> PER2["Calcular el nivel de 
+volumen según la posición de la perilla"]
+    PER2 --> I{"¿Hay electrodos tocados?"}
+    I -- No --> J["Detener todos los audios y apagar LEDs de carril"]
+    J --> K
+    I -- Sí --> L["Crear lista con 
+todos los puntos tocados 
+al mismo tiempo"]
+    L --> M["Para cada punto: 
+identificar carril y 
+punto 1 a 6"]
+    M --> N["Encender el LED de cada 
+carril activo"]
+    N --> O["Leer el audio de cada punto desde 
+la microSD por SPI"]
+    O --> P["Mezclar los audios 
+en simultáneo"]
+    P --> VOL["Aplicar el nivel de volumen de la perilla a la mezcla"]
+    VOL --> Q["Enviar la mezcla por I2S al amplificador MAX98357A"]
+    Q --> R["Parlante reproduce 
+todos los sonidos al 
+volumen elegido"]
+    R --> S["Detener los audios de los puntos que se soltaron"]
+    S --> K
+    K{"¿Switch sigue en ON?"}
+    K -- Sí --> H
+    K -- No --> Y["Apagar LEDs y audio"]
+    Y --> Z(["Fin"])
+
+    classDef inicio fill:#a7f3d0,stroke:#047857,color:#000
+    classDef proceso fill:#bfdbfe,stroke:#1d4ed8,color:#000
+    classDef decision fill:#fde68a,stroke:#b45309,color:#000
+    classDef audio fill:#e9d5ff,stroke:#7e22ce,color:#000
+    classDef perilla fill:#fed7aa,stroke:#c2410c,color:#000
+    classDef error fill:#fecaca,stroke:#b91c1c,color:#000
+    classDef fin fill:#e5e7eb,stroke:#374151,color:#000
+
+    class A inicio
+    class B,C,F,G,H,J,L,M,N,S proceso
+    class D,I,K decision
+    class O,P,Q,R audio
+    class PER1,PER2,VOL perilla
+    class E error
+    class Y,Z fin
+```
 
 ## Flowchart: experiencia de usuario
 
+```mermaid
+flowchart TD
+    A(["La persona se acerca 
+    al sampler"]) --> B["Ve el mapa abstracto 
+    de Santiago con 4 líneas"]
+    B --> C["Mueve el switch a ON"]
+    C --> D["Se enciende la luz verde.
+    Sí algo falla se enciende 
+    luz roja"]
+    D --> E["Elige una línea: Metro, Micro, Colectivo o Bicicleta"]
+    E --> F["Apoya el dedo 
+    en un punto de contacto"]
+    F --> G["Se enciende el LED de la línea y suena el sonido del tramo"]
+    G --> H{"¿Toca otro punto mientras mantiene el primero?"}
+    H -- Sí --> I["Suenan todos los puntos tocados a la vez: 
+    composición en vivo"]
+    I --> J
+    H -- No --> J{"¿Mantiene al menos un dedo en el mapa?"}
+    J -- Sí --> K["Los sonidos continúan"]
+    K --> H
+    J -- No --> L["Vuelve el silencio y se apagan los LEDs"]
+    L --> M{"¿Qué hace después?"}
+    M -- "Avanza por el trayecto" --> F
+    M -- "Cambia de línea" --> E
+    M -- "Ajusta el volumen" --> N["Gira la perilla"]
+    N --> F
+    M -- "Termina" --> O["Mueve el switch a OFF"]
+    O --> P(["Fin"])
 
----
+    classDef inicio fill:#a7f3d0,stroke:#047857,color:#000
+    classDef accion fill:#bfdbfe,stroke:#1d4ed8,color:#000
+    classDef decision fill:#fde68a,stroke:#b45309,color:#000
+    classDef sonido fill:#e9d5ff,stroke:#7e22ce,color:#000
+    classDef fin fill:#e5e7eb,stroke:#374151,color:#000
+
+    class A inicio
+    class B,C,D,E,F,N,O accion
+    class H,J,M decision
+    class G,I,K,L sonido
+    class P fin
+```
 
 ## Pseudocódigo
 
