@@ -1,7 +1,10 @@
 # grupo-02
 
 ## integrantes
-
+Antonia Loch
+Anaís Marchausen
+Carla Nuñez
+Hugo Montoya
 
 ## sobre el proyecto
 
