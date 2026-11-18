@@ -65,7 +65,7 @@ el punto de asistencia sera reemplaxado por un ensayo en las bitacoras de mi tim
 | 11 | Sensor MPU6050 | Acelerómetro y giroscopio GY-521 | 1 | $4.000 | [Comprar](https://afel.cl/products/sensor-giroscopio-acelerometro-gy-521-mpu6050/) |
 | 12 | Batería LiPo | 3,7 V / 2000 mAh – Modelo 103450 | 1 | $7.990 | [Comprar](https://maxelectronica.cl/fuentes-de-alimentacion/910-bateria-li-po-37v-74wh-2000mah-modelo-103450-con-conector-jst-ph20.html) |
 | 13 | Potenciómetro | 10 kΩ | 1 | $500 | [Comprar](https://afel.cl/products/potenciometro-10k-ohm) |
-| 14 | Pantalla | LCD 1602 I2C | $4633 | [Comprar]([https://afel.cl/products/potenciometro-10k-ohm](https://www.mercadolibre.cl/modulo-lcd-20x4-con-interfaz-2004-para-display/p/MLC2035293542)) |
+| 14 | Pantalla | LCD 1602 I2C | 1 | $4633 | [Comprar]([https://afel.cl/products/potenciometro-10k-ohm](https://www.mercadolibre.cl/modulo-lcd-20x4-con-interfaz-2004-para-display/p/MLC2035293542)) |
 
 
 ## encargos
