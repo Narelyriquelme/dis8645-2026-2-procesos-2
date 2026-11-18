@@ -91,4 +91,17 @@ Seguiré leyendo, y taller incita a hacerlo, eso es bacán, gracias
 
 COMPUTATIONAL DRAWING
 
+-Bien la última vez quedé en que las diferencias y uniones entre el dibujo y la computación. El libro define que es la computación, que puede hacer el dibujo, que no puede hacer la computación. Los contrasta y nos habla de porqué son tan diferentes entre sí.
+
+-El dibujo(a mano) no puede ser editado, no puede borrarse un rayón, da igual que lo borres con goma, lo hecho hecho está y deja un rastro único del trazo que pasó o existió allí. El dibujo no tiene un control z que borre con precisión borrando la totalidad del trazo. Es por esto que el libro dice que los dibujo digitales no son para nada dibujos, para nada. 
+
+-"Most so called "digital drawings", in design software, are in fact models of lines, not drawing at all" 
+
+El dibujo digital es más una representación del dibujo mismo. 
+
+"a computer cannot draw" la percepción es parte del dibujo, si el dibujo es entendido como una formación, entonces el lectura del dibujo tiene que venir de la mente. Tiene que ser interpretada. Dibujar es una actividad humana. 
+
+
+
+
 
