@@ -71,11 +71,30 @@ Son 60 posibilidades donde podría iniciar un audio.
 
 ![](./imagenes/dis8645-2026-2.png)
 
+### BOM
+
+| # | Item                 | Cant. | Valor   | Link | Imagen |
+| - | -------------------- | ----- | ------- | ---- | ------ |
+| 1 | Raspberry Pi Pico 2W | 01     | $14.990 | <https://mcielectronics.cl/shop/product/raspberry-pi-pico-2-w-con-headers/> | <img src="./imagenes/pi-pico-2w.png" alt="" width="100%"> |
+| 2 | Micrófono I2S INMP441 | 01 | $5.890<sup><b>1</b> | <https://www.mechatronicstore.cl/modulo-microfono-i2s-inmp441/> | <img src="./imagenes/microfono.jpg" alt="" width="100%"> |
+| 3 | PCM5102A decodificador DAC | 01 | $1.122<sup><b>2</b> | <https://es.aliexpress.com/item/1005006104038963.html> | ![](./imagenes/pcm.avif) |
+| 4 | Módulo PAM8302 | 01 | $720<sup><b>2</b> | https://es.aliexpress.com/item/1005007274382818.html | ![](./imagenes/amp.avif) |
+| 5 | Pantalla LCD Oled 1.3" 128x64 | 01 | $5.000 | https://afel.cl/products/pantalla-lcd-oled-1-3-128x64-caracteres-azules | ![](./imagenes/pantalla.webp)
+| 6 | Módulo Multiplexor CD74HC4067 | 02 | $2.000 | https://afel.cl/products/modulo-multiplexor-cd74hc4067 | ![](./imagenes/multi.webp) |
+| 7 | Botones | 
+| 8 | Potenciometros |
+| 9 | Luces led |
+| 10 | Slider |
+
 ### pseudo - código
 
-- Se establece que `sonido` es una grabación sin ninguna modificación, la cual al editar sus parámetros la entendemos como `audio` y una vez que se guarda, se añade a las demás y forma un `conjuntoDeAudios`. Todos los `audios` guardados se reproducen en nuestro `canvas`, es decir, nuestro lienzo que podemos reproducir en cualquier momento pero no editar
+- Se establece que:
+  - `sonido` es una grabación sin ninguna modificación. Es nuestro pez
+  -  Al editar sus parámetros la entendemos como `audio`. Ahora nuestro pez es un pescado
+  - Una vez que se guarda, se añade a los demás `audios` y forma un `conjuntoDeAudios`. Este es nuetro pescado cocinado, no se puede "_**des**cocinar_"
+  -Todos los `audios` guardados se reproducen en nuestro `canvas`, es decir, nuestro lienzo que podemos reproducir en cualquier momento pero no editar. El equivalente a decir el tamño del plato
 
-- Se inicia la máquina con el interruptor
+- Ahora se inicia la máquina con el interruptor
 
 ```cpp
 
@@ -91,33 +110,47 @@ funcionamientoMaquina = 1;}
 
 - Se consulta si hay `conjuntoDeAudios`
 
-- En caso de haber, se encienden 3 leds que indican la posibilidad de realizar 3 acciones (es decir que cada `led` es un indicador de uso de cada modo), estos corresponden a `reproduccion`, `grabacion` y `borrado`
+- En caso de haber, se encienden 2 leds que indican la posibilidad de realizar 2 acciones (es decir que cada `led` es un indicador de uso de cada modo), estos corresponden a `reproduccion` y `grabacion`
 
     - `reproduccion` permite escuchar el `conjuntoDeAudios`
 
-        - Al activar esta opción, se inhabiltan los demás modos meintras dure la reproducción (se apagan sus leds indicadores)
+        - Al activar esta opción, se inhabilta el modo grabar mientras dure la reproducción (se apagan sus leds indicadores y los bótones dejar de ser leidos)
 
-        - Si se vuelve a presionar `reproduccion` mientras suena el `conjuntoDeAudios` se cancela el modo
+        - Posee 2 botones, uno de `reproducción` y otro de `detener` (no confundir con `pausa`), este segundo detiene la reproducción del `conjuntoDeAudios` y deja seteado en el inicio el `canva`, de modo que si se vuelve a dar a reproducir se hará desde el segundo 0 
 
-        - Si se hace `dobleClick` al momento de activar `reproduccion`, se habilita el modo bucle
+        - La reproducción de `audios` es siempre en bucle
         
     - `grabacion` permite guardar sonidos de hasta un máximo de 10 segundos
 
-        - Estos sonidos luego se pueden editar variando velocidad, tono...
+        - Para grabar se presiona el boton asociado
 
-        - Mientras esto ocurre se bloquea cualquier otro modo
+        - para detener la grabacion antes de los 10s se vuelve a presionar el botón. Esto inicia automáticamente el modo de `edición`
 
-        - Solo se permite salir guardando el `audio`
+        - Mientras esto ocurre se bloquea cualquier otro modo e inica la reproducción en bucle del sonido hasta que se guarde
+
+        - Además los leds asociados a los efectos empiezan a variar su brillo mediante PWM
+
+        - Estos efectos de sonido se dividen en 3 secciones con 3 modificadores cada una
+
+        - Cada sección posee su potenciómetro deslizable que modifica los valores asociados
+
+        - Al seleccionar un efecto se mantiene oscilando el led, mientras que todos los demás se apagan
+
+        - Para terminar con el efecto y guardar sus cambios se presiona el botón asociado o se selecciona otro efecto
+
+        - Al terminar de editar se guarda el `audio` con su botón asignado y se deja de reproducir en bucle
 
         - Una vez guardado el `audio` se le asigna una posición "aleatoria" en la que va a sonar en el `conjuntoDeAudios`
-
-    - `borrado` elimina `conjuntoDeAudios`, dejando la memoria vacia esperando nuevos `audios`
-
-        - Una vez ocurre esto se está forzado a solo poder grabar un `sonido`
 
 - En caso de no haber `conjuntoDeAudios` se bloquean todas las funciones a exepción de `grabar`, la cual al iniciarse ocurre con normalidad tal como se describio anteriormente
 
 - Si la máquina es apagada desde el `interruptorGeneral`, el `conjuntoDeAudios` debe quedar almancenado
+
+#### Modo Reproducir
+
+#### Modo Grabar
+
+##### Modo Editar
 
 #### Estructura
 
@@ -127,7 +160,7 @@ Se considera ordenar el código en distintas clases, a continuación se listan a
 
 - Perilla (lectura de perillas)
 
-- Multiplexor (pensado en la un multiplexor para optimizar la lecutra de perillas)
+- Multiplexor (pensado en un multiplexor para optimizar la lecutra de perillas)
 
 - Lucesita (describen el funcionamiento de los distintos estados)
 
