@@ -84,7 +84,7 @@ Son 60 posibilidades donde podría iniciar un audio.
 | 2 | Micrófono I2S INMP441 | 01 | $5.890<sup><b>1</b> | <https://www.mechatronicstore.cl/modulo-microfono-i2s-inmp441/> | <img src="./imagenes/microfono.jpg" alt="" width="100%"> |
 | 3 | PCM5102A decodificador DAC | 01 | $1.122<sup><b>2</b> | <https://es.aliexpress.com/item/1005006104038963.html> | ![](./imagenes/pcm.avif) |
 | 4 | Módulo PAM8302 | 01 | $720<sup><b>2</b> | https://es.aliexpress.com/item/1005007274382818.html | ![](./imagenes/amp.avif) |
-| 5 | Pantalla LCD Oled 1.3" 128x64 | 01 | $5.000 | https://afel.cl/products/pantalla-lcd-oled-1-3-128x64-caracteres-azules | ![](./imagenes/pantalla.webp)
+| 5 | Pantalla LCD Oled Azul y Amarillo 0,96 | 01 | $4.500 | https://afel.cl/products/pantalla-lcd-oled-azul-y-amarillo-0-96 | ![](./imagenes/pantalla.webp)
 | 6 | Módulo Multiplexor CD74HC4067 | 02 | $2.000 | https://afel.cl/products/modulo-multiplexor-cd74hc4067 | ![](./imagenes/multi.webp) |
 | 7 | Botones | 
 | 8 | Potenciometros |
