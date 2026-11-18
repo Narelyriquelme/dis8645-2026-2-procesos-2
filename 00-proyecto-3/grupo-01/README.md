@@ -39,36 +39,18 @@ Son 60 posibilidades donde podría iniciar un audio.
 
 #### Modificadores de sonido
 
-<h5>envolventes</h5>
-<ul>
-  <li>attack</li>
-  <li>decay</li>
-  <li>sustain</li>
-  <li>release</li>
-</ul>
-
-<h5>fx / modulación</h5>
-<ul>
-  <li>pitching</li>
-  <li>reverb</li>
-  <li>trémolo</li>
-  <li>bit crushing</li>
-  <li>ring modulator</li>
-  <li>velocidad</li>
-</ul>
-
-<h5>ecualización</h5>
-<ul>
-  <li>high pass filter</li>
-</ul>
-
-<h5>niveles / ganancia</h5>
-<ul>
-  <li>volumen de audio</li>
-  <li>volumen general</li>
-</ul>
-
-<br>
+| Categoría | Efecto | Descripción original | Descripción simplificada | Descripción coloquial |
+| :--- | :--- | :--- | :--- | :--- |
+| Envolventes | Attack | regula en cuánto tiempo tarda el sonido en llegar a su volumen máximo desde que empieza, le importa cuándo y cómo inicia, no importa cómo termina. | tiempo que demora el sonido en aparecer desde el silencio hasta su punto máximo. | si el sonido entra de golpe o despacio. |
+| Envolventes | Release | regula en cuánto tiempo tarda el sonido en apagarse por completo desde que dejas de tocarlo, le importa cuándo y cómo termina, no cómo empezó. | tiempo que demora el sonido en desaparecer al soltarlo. | si el sonido se corta en seco o se va apagando de a poco. |
+| FX / Modulación | Pitching | modifica la altura tonal del sonido para hacerlo más agudo o más grave sin cambiar necesariamente su duración, alterando directamente la afinación de la señal. | sube o baja qué tan agudo o grave suena el audio. | dejar el sonido más finito o más grueso. |
+| FX / Modulación | Reverb | agrega rebotes y cola al sonido simulando las dimensiones de un espacio físico, cambiando la sensación de amplitud y distancia alrededor del audio. | simula el tamaño y el rebote del lugar donde suena el audio. | hacer que suene seco o con eco de un lugar grande. |
+| FX / Modulación | Trémolo | hace que el volumen suba y baje de manera repetitiva siguiendo un ritmo constante, manteniendo el tono intacto mientras oscila solo su intensidad. | oscilación rápida y repetitiva del volumen. | hacer que el volumen suba y baje rápido todo el rato. |
+| FX / Modulación | Bit crushing | reduce la resolución y la calidad digital del sonido, perdiendo detalles limpios para generar una textura áspera, granulada y sucia. | baja la calidad del audio hasta volverlo áspero y pixelado. | queda el sonido roto, sucio y con poca calidad. |
+| FX / Modulación | Ring modulator | multiplica el sonido original por otra onda interna creando frecuencias nuevas y disonantes, haciendo que pierda su forma natural y tome un carácter metálico. | cruza el audio con otra señal para volverlo metálico y disonante. | vuelve el sonido metálico, robótico o raro. |
+| FX / Modulación | Velocidad | controla qué tan rápido o lento se reproduce el audio en el tiempo, lo que al cambiar el ritmo también suele alterar qué tan agudo o grave se escucha. | acelera o frena el tiempo de reproducción del audio. | poner el audio más rápido o más lento. |
+| Niveles / Ganancia | Volumen de audio | regula la intensidad de un sonido o pista individual antes de juntarse con el resto, y luego se integrará con ese nivel de volumen a la mezcla de sonidos | controla qué tan fuerte suena una sola pista. | subirle o bajarle el volumen a un solo sonido sin tocar el resto. |
+| Niveles / Ganancia | Volumen general | regula la intensidad de salida de toda la mezcla, controlando el nivel final que escuchas al sumar todos los sonidos y efectos. | controla la fuerza final de todo el conjunto a la vez. | sube o baja el volumen general |
 
 ### Diagramas
 
