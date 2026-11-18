@@ -59,7 +59,7 @@ el punto de asistencia sera reemplaxado por un ensayo en las bitacoras de mi tim
 | 5 | Resistencias | 10 kΩ | 4 | $20 | [Comprar](https://afel.cl/products/kit-500-resistencias-1-2w-50-valores) |
 | 6 | Protoboard | 400 puntos | 2 | $1.500 | [Comprar](https://afel.cl/products/mini-protoboard-400-puntos) |
 | 7 | Cables jumper | Cables de conexión | Variable | $2.000 | [Comprar](https://afel.cl/products/pack-60-cables-de-conexion) |
-| 8 | Alimentación USB | Fuente de alimentación de 5 V | 1 | — | Por definir |
+| 8 | Alimentación USB | Fuente de alimentación de 5 V | 1 | — | — |
 | 9 | Lector de tarjeta SD | Módulo lector de tarjeta SD | 1 | $1.000 | [Comprar](https://afel.cl/products/modulo-lector-tarjetas-sd) |
 | 10 | Módulo de carga TP4056 | Cargador USB-C para batería LiPo de 3,7 V | 1 | $1.990 | [Comprar](https://www.mechatronicstore.cl/controlador-tp4056-para-bat-litio-5v-1a-mini-usb/?attribute_conector-usb=Tipo+C) |
 | 11 | Sensor MPU6050 | Acelerómetro y giroscopio GY-521 | 1 | $4.000 | [Comprar](https://afel.cl/products/sensor-giroscopio-acelerometro-gy-521-mpu6050/) |
