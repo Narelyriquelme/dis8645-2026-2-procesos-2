@@ -153,9 +153,27 @@ funcionamientoMaquina = 1;}
 
 #### Modo Reproducir
 
+Encargado de la reproducción del `conjuntoDeAudios`, utiliza 2 botones y posee una pantalla para visualizar desde la cantidad de audios que existen dentro del conjunto hasta la frecuencia con la que pueden ingresar cada audio. Los 2 botones son para la reproducción del conjunto y para detener la reproducción.
+
+El elemento de la pantalla muestra [...]
+
+`botonReproducir` es la instancia de la clase BotonGrupo1 y consiste de un push button, este lee y detecta cuando es presionado el botón, ignora doble click, cuanto tiempo se presiona (sin contar el _debounce_), una vez que inicia se debe utilizar `botonDetener`para detener el bucle
+
+`botonDetener` es la instancia que detiene y cancela la reproducción
+
+> revisar que tan necesario son 2 botones que hagan esto, ver que sea solo uno o un switch
+
 #### Modo Grabar
 
+Inicia presionando `botonGrabar`, el que solo detecta presionados y cambio de estados, es decir que se presiona una vez para iniciar y una segunda vez para cortar la grabación antes de 10 segundos (este corresponde al límite de duración que posee la grabación), posee un pequeño tiempo para que no se presione 2 veces y queden grabados de menos de 0.5s.
+
+Una vez que se detiene la grabación con el segundo _click_ automáticamente se inicia la edición del sonido grabado
+
 ##### Modo Editar
+
+Al entrar a esta sección el sonido grabado, se reproduce en bucle para notar como los efectos interfieren en tiempo real. Para seleccionar alguno de estos se observará que  
+
+<br>
 
 #### Estructura
 
@@ -186,7 +204,6 @@ Se considera ordenar el código en distintas clases, a continuación se listan a
 - Microfono (establece como se comunica el micrófono con el microcontrolador)
 
 - SDCard (se encarga de la lógica detrás de la grabación y lectura de datos)
-
 
 ### Wokwi
 
