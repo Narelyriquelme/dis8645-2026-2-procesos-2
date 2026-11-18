@@ -48,8 +48,35 @@ Creo que les falta un claro referente de la jugabilidad, me refiero que existen 
 
 el punto de asistencia sera reemplaxado por un ensayo en las bitacoras de mi timepo y yo, tengo que hablar del tiempo y porque he faltado a las clases (una pagina de google docs).
 
+### Actualización BOM
+
+| N.º | Componente | Especificaciones | Cantidad | Precio | Enlace |
+|:---:|---|---|:---:|---:|---|
+| 1 | Raspberry Pi Pico RP2040 | Microcontrolador | 1 | $11.290 | [Comprar](https://raspberrypi.cl/products/raspberry-pi-pico-w-con-conexion-wifi) |
+| 2 | Parlante | 8 Ω / 0,5 W | 1 | $2.890 | [Comprar](https://mcielectronics.cl/shop/product/mini-parlante-altavoz-8-ohms-0-5w/) |
+| 3 | Amplificador PAM8403 | Amplificador de audio 3 W × 2 | 1 | $2.500 | [Comprar](https://afel.cl/products/amplificador-pam8403-3w-x-2-con-potenciometro) |
+| 4 | Botones pulsadores | Táctiles 6 × 6 × 5 mm | 4 | $500 | [Comprar](https://afel.cl/products/kit-boton-tactil-6x6x5-interruptor-5-unidades) |
+| 5 | Resistencias | 10 kΩ | 4 | $20 | [Comprar](https://afel.cl/products/kit-500-resistencias-1-2w-50-valores) |
+| 6 | Protoboard | 400 puntos | 2 | $1.500 | [Comprar](https://afel.cl/products/mini-protoboard-400-puntos) |
+| 7 | Cables jumper | Cables de conexión | Variable | $2.000 | [Comprar](https://afel.cl/products/pack-60-cables-de-conexion) |
+| 8 | Alimentación USB | Fuente de alimentación de 5 V | 1 | — | Por definir |
+| 9 | Lector de tarjeta SD | Módulo lector de tarjeta SD | 1 | $1.000 | [Comprar](https://afel.cl/products/modulo-lector-tarjetas-sd) |
+| 10 | Módulo de carga TP4056 | Cargador USB-C para batería LiPo de 3,7 V | 1 | $1.990 | [Comprar](https://www.mechatronicstore.cl/controlador-tp4056-para-bat-litio-5v-1a-mini-usb/?attribute_conector-usb=Tipo+C) |
+| 11 | Sensor MPU6050 | Acelerómetro y giroscopio GY-521 | 1 | $4.000 | [Comprar](https://afel.cl/products/sensor-giroscopio-acelerometro-gy-521-mpu6050/) |
+| 12 | Batería LiPo | 3,7 V / 2000 mAh – Modelo 103450 | 1 | $7.990 | [Comprar](https://maxelectronica.cl/fuentes-de-alimentacion/910-bateria-li-po-37v-74wh-2000mah-modelo-103450-con-conector-jst-ph20.html) |
+| 13 | Potenciómetro | 10 kΩ | 1 | $500 | [Comprar](https://afel.cl/products/potenciometro-10k-ohm) |
+| 14 | Pantalla | LCD 1602 I2C | $4633 | [Comprar]([https://afel.cl/products/potenciometro-10k-ohm](https://www.mercadolibre.cl/modulo-lcd-20x4-con-interfaz-2004-para-display/p/MLC2035293542)) |
+
 
 ## encargos
+
+Escribir una página en el formato similar a este texto. Es decir, Times New Roman 12, con interlineado 1,15. 
+
+El objetivo del texto es narrar una visión personal sobre la idea del tiempo. Narrar sobre su relación con el tiempo, sobre la mañana y la hora de clases, sobre el paso del tiempo, el uso del tiempo, la política y el tiempo. 
+
+El texto debe estar escrito en Google Docs de principio a fin. Evitar escribir en otra parte y pegarlo acá. Recordar dar acceso de comentador con mail UDP.
+
+Bibliografía  →  Pueden usar el sistema de citas que prefieran: Chicago, MLA, APA, IEEE, etc.
 
 
 ## lectura
