@@ -8,9 +8,14 @@
 
 ## sobre el proyecto
 
-Nuestra máquina es un instrumento que no es musical ¿o si? es la intervención humana la que lo decide y lo hará por medio de la captura, edición y reproducción del sonido. Por cada nueva intervención que se vaya acumulando sobre la anterior, generará capas de sonido que progresivamente alteran el registro original. Utiliza una lógica de edición irreversible por cada audio que se graba, con efectos y modulaciones de sonido que solo se podrán aplicar para los sonidos grabados más no para el conjunto total de estos, de esta forma las intervenciones quedan almacenadas y transforman continuamente el resultado del conjunto de sonidos. El registro solo se puede reproducir desde el inicio o detener completamente, sin poder recuperar o editar libremente un punto específico del proceso. La lógica irreversible también aplica para el conjunto final de sonidos, el cuál no se puede borrar, solo puede llegar a un límite de audios almacenados.
+Nuestra máquina es un instrumento que no es musical ¿o sí? sin la intervención de quien la usa no produce nada, pero lo que resulta sea música o ruido depende de quien lo escucha. Nuestro proyecto recorre 3 etapas de interacción: captura, edición y reproducción del sonido. En la fase de captura, se incorpora un botón y un micrófono el cuál está articulado para que la persona pueda grabar su voz, disponiendo de un máximo de 30 segundos por grabación.
 
-Dentro del funcionamiento técnico, este es controlado por un microcontrolador Raspberry Pi Pico 2W, el cual se encarga de gestionar las entradas de la interfaz física y el procesamiento del sonido y su manipulación. Para asegurar un rendimiento continuo y evitar las limitaciones de memoria al trabajar con audios muy largos o con muchas capas, el sistema integra un módulo de tarjeta SD, que permite almacenar, sobreescribir y reproducir el conjunto de sonidos grabados de manera fluida.
+En la etapa de edición, cada grabación utiliza una lógica de edición irreversible. El dispositivo tiene una sección física de edición con efectos y modulaciones, controlables con deslizadores, perillas y botones. Al terminar una grabación, esta queda repitiéndose en bucle disponible para ser editada y solo a esta se le podrán aplicar los efectos. Una vez que ya se hayan hecho los cambios y almacenado a la mezcla de sonidos, ya no se podrán realizar más modificaciones.
+
+En la etapa de reproducción las grabaciones se acumulan en una mezcla de unos diez minutos, dividida en 60 puntos de inicio, uno cada 10 segundos. Cada nueva grabación se ubica en uno de esos puntos y como puede durar hasta 30 segundos, se superpone con las que suenan cerca de ella. La lógica irreversible que se incorpora para cada audio individual, también aplica para la mezcla de sonidos, de esta manera solo se puede reproducir desde el principio o detener por completo: no se puede pausar ni avanzar a un punto específico. Tampoco se puede borrar. Una vez que los 60 puntos de inicio hayan sido totalmente ocupados, la máquina ya no permite grabar más, solo reproducir la mezcla final. El sonido sale por un altavoz con una perilla de volumen, y una pantalla muestra una abstracción gráfica de cuán saturada está la mezcla.
+
+Dentro del funcionamiento interno, este dispositivo es controlado por una Raspberry Pi Pico 2 W, la cual se encarga de gestionar las entradas y salidas de la interfaz física correspondientes a las conexiones con perillas, sliders, botones, leds, altavoz y pantalla, y también gestiona el procesamiento del sonido y su manipulación. Para asegurar un rendimiento continuo y evitar las limitaciones de memoria de la Raspi al trabajar con audios muy largos o con muchas capas, el sistema integra un módulo de tarjeta SD, que permite almacenar y reproducir el conjunto de sonidos grabados de manera fluida.
+
 
 ### Interfaz
 
@@ -34,36 +39,18 @@ Son 60 posibilidades donde podría iniciar un audio.
 
 #### Modificadores de sonido
 
-<h5>envolventes</h5>
-<ul>
-  <li>attack</li>
-  <li>decay</li>
-  <li>sustain</li>
-  <li>release</li>
-</ul>
-
-<h5>fx / modulación</h5>
-<ul>
-  <li>pitching</li>
-  <li>reverb</li>
-  <li>trémolo</li>
-  <li>bit crushing</li>
-  <li>ring modulator</li>
-  <li>velocidad</li>
-</ul>
-
-<h5>ecualización</h5>
-<ul>
-  <li>high pass filter</li>
-</ul>
-
-<h5>niveles / ganancia</h5>
-<ul>
-  <li>volumen de audio</li>
-  <li>volumen general</li>
-</ul>
-
-<br>
+| Categoría | Efecto | Descripción original | Descripción simplificada | Descripción coloquial |
+| :--- | :--- | :--- | :--- | :--- |
+| Envolventes | Attack | regula en cuánto tiempo tarda el sonido en llegar a su volumen máximo desde que empieza, le importa cuándo y cómo inicia, no importa cómo termina. | tiempo que demora el sonido en aparecer desde el silencio hasta su punto máximo. | si el sonido entra de golpe o despacio. |
+| Envolventes | Release | regula en cuánto tiempo tarda el sonido en apagarse por completo desde que dejas de tocarlo, le importa cuándo y cómo termina, no cómo empezó. | tiempo que demora el sonido en desaparecer al soltarlo. | si el sonido se corta en seco o se va apagando de a poco. |
+| FX / Modulación | Pitching | modifica la altura tonal del sonido para hacerlo más agudo o más grave sin cambiar necesariamente su duración, alterando directamente la afinación de la señal. | sube o baja qué tan agudo o grave suena el audio. | dejar el sonido más finito o más grueso. |
+| FX / Modulación | Reverb | agrega rebotes y cola al sonido simulando las dimensiones de un espacio físico, cambiando la sensación de amplitud y distancia alrededor del audio. | simula el tamaño y el rebote del lugar donde suena el audio. | hacer que suene seco o con eco de un lugar grande. |
+| FX / Modulación | Trémolo | hace que el volumen suba y baje de manera repetitiva siguiendo un ritmo constante, manteniendo el tono intacto mientras oscila solo su intensidad. | oscilación rápida y repetitiva del volumen. | hacer que el volumen suba y baje rápido todo el rato. |
+| FX / Modulación | Bit crushing | reduce la resolución y la calidad digital del sonido, perdiendo detalles limpios para generar una textura áspera, granulada y sucia. | baja la calidad del audio hasta volverlo áspero y pixelado. | queda el sonido roto, sucio y con poca calidad. |
+| FX / Modulación | Ring modulator | multiplica el sonido original por otra onda interna creando frecuencias nuevas y disonantes, haciendo que pierda su forma natural y tome un carácter metálico. | cruza el audio con otra señal para volverlo metálico y disonante. | vuelve el sonido metálico, robótico o raro. |
+| FX / Modulación | Velocidad | controla qué tan rápido o lento se reproduce el audio en el tiempo, lo que al cambiar el ritmo también suele alterar qué tan agudo o grave se escucha. | acelera o frena el tiempo de reproducción del audio. | poner el audio más rápido o más lento. |
+| Niveles / Ganancia | Volumen de audio | regula la intensidad de un sonido o pista individual antes de juntarse con el resto, y luego se integrará con ese nivel de volumen a la mezcla de sonidos | controla qué tan fuerte suena una sola pista. | subirle o bajarle el volumen a un solo sonido sin tocar el resto. |
+| Niveles / Ganancia | Volumen general | regula la intensidad de salida de toda la mezcla, controlando el nivel final que escuchas al sumar todos los sonidos y efectos. | controla la fuerza final de todo el conjunto a la vez. | sube o baja el volumen general |
 
 ### Diagramas
 
@@ -79,7 +66,7 @@ Son 60 posibilidades donde podría iniciar un audio.
 | 2 | Micrófono I2S INMP441 | 01 | $5.890<sup><b>1</b> | <https://www.mechatronicstore.cl/modulo-microfono-i2s-inmp441/> | <img src="./imagenes/microfono.jpg" alt="" width="100%"> |
 | 3 | PCM5102A decodificador DAC | 01 | $1.122<sup><b>2</b> | <https://es.aliexpress.com/item/1005006104038963.html> | ![](./imagenes/pcm.avif) |
 | 4 | Módulo PAM8302 | 01 | $720<sup><b>2</b> | https://es.aliexpress.com/item/1005007274382818.html | ![](./imagenes/amp.avif) |
-| 5 | Pantalla LCD Oled 1.3" 128x64 | 01 | $5.000 | https://afel.cl/products/pantalla-lcd-oled-1-3-128x64-caracteres-azules | ![](./imagenes/pantalla.webp)
+| 5 | Pantalla LCD Oled Azul y Amarillo 0,96 | 01 | $4.500 | https://afel.cl/products/pantalla-lcd-oled-azul-y-amarillo-0-96 | ![](./imagenes/pantalla.jpg)
 | 6 | Módulo Multiplexor CD74HC4067 | 02 | $2.000 | https://afel.cl/products/modulo-multiplexor-cd74hc4067 | ![](./imagenes/multi.webp) |
 | 7 | Botones | 
 | 8 | Potenciometros |
@@ -210,11 +197,17 @@ https://wokwi.com/projects/480724591872061441
 
 <br>
 
+Este es un pedal de efectos hechos con componentes analógicos. El efecto que produce es como el de pixelar el sonido, haciendo que este pierda nitidez. Nosotras rescatamos el efecto como tal y lo integramos a nuestra sección de edición de audio.
+
 <img src="./imagenes/bit-crusher.webp" alt="" width="50%">
 
 <br>
 
 ### [Mini Glitch](https://electricmojoguitars.com/products/tkog-mini-glitch)
+
+<br>
+
+Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Se inspiró en un patch de stutter en Max/MSP que usaba Jonny Greenwood, de Radiohead. Lo que rescatamos de este pedal son las funciones que tiene: el bucle, el efecto de glitch y que use su propia señal para repetir, lo cuál nuestro proyecto.
 
 <img src="./imagenes/mini-glitch.png" alt="" width="50%">
 

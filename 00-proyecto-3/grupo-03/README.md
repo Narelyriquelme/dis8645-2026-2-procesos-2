@@ -86,17 +86,19 @@ flowchart TD
 
 ### BOM – Lista de materiales
 
-| N° | Componente | Descripción / Función | Cantidad |
-|---:|---|---|---:|
-| 1 | Multiplexor I2C | Permite conectar varios dispositivos I2C utilizando un mismo bus de comunicación. | 1 |
-| 2 | Buzzer | Emite sonidos de aviso, como el sonido de encendido de la máquina. | 1 |
-| 3 | MAX98357A – I2S Class-D Mono Amplifier | Amplifica la señal de audio digital I2S para reproducir sonidos mediante un parlante. | 1 |
-| 4 | Potenciómetros | Permiten seleccionar especies y regular el volumen de cada canal. | 8 |
-| 5 | Cables Dupont | Permiten realizar conexiones eléctricas entre componentes. | Según necesidad |
-| 6 | Cables Dupont macho-hembra | Conexiones entre pines y módulos electrónicos. | Según necesidad |
-| 7 | Cables Dupont hembra-hembra | Conexiones entre pines o módulos con terminales macho. | Según necesidad |
-| 8 | Cables Dupont macho-macho | Conexiones en protoboard y otros puntos de conexión. | Según necesidad |
-| 9 | Botón pulsador | Permite encender y apagar la máquina. | 1 |
+## BOM – Lista de materiales
+
+| Código | Componente | Especificación | Cantidad | Precio unitario (CLP) | Subtotal (CLP) | Proveedor |
+|---|---|---|---:|---:|---:|---|
+| MUX-001 | Multiplexor | CD74HC4067 – 16 canales | 1 | $2.000 | $2.000 | [Afel](https://afel.cl/products/modulo-multiplexor-cd74hc4067) |
+| SPK-001 | Parlante | 8 Ω – 1 W | 1 | $3.290 | $3.290 | [Mechatronic Store](https://www.mechatronicstore.cl/altavoz-8-ohm-1w/) |
+| AMP-001 | Amplificador | MAX98357A – I2S Class-D Mono | 1 | $1.114 | $1.114 | [AliExpress](https://es.aliexpress.com/item/1005007629020891.html) |
+| POT-001 | Potenciómetro | B100K – 100 kΩ | 8 | $500 | $4.000 | [Afel](https://afel.cl/products/potenciometro-100k-ohm) |
+| CAB-001 | Cable Dupont | Macho-hembra (pack 20) | 1 pack | $1.000 | $1.000 | [Afel](https://afel.cl/products/pack-20-cables-de-conexion-macho-hembra) |
+| CAB-002 | Cable Dupont | Hembra-hembra (pack 20) | 1 pack | $1.000 | $1.000 | [Afel](https://afel.cl/products/pack-20-cables-de-conexion-hembra-hembra) |
+| CAB-003 | Cable Dupont | Macho-macho (pack 20) | 1 pack | $1.000 | $1.000 | [Afel](https://afel.cl/products/pack-20-cables-de-conexion-macho-macho) |
+| BTN-001 | Botón | Táctil 12 × 12 × 7,3 mm | 1 | $100 | $100 | [Afel](https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor) |
+| SD-001 | Módulo micro SD | Lector de tarjeta micro SD | 1 | $2.500 | $2.500 | [Afel](https://afel.cl/products/lector-micro-sd) |
 
 ### referentes
 
@@ -209,7 +211,7 @@ El simulador se trabajó con IA para hacer pruebas de las conexiones que necesit
 Prompt:
 > "Para este examen vamos a trabajar con C++. Necesito desarrollar un código de prueba para controlar 8 potenciómetros y un botón de encendido/apagado. Los primeros 4 potenciómetros serán para seleccionar especies. Cada uno tendrá 3 rangos de valores, correspondientes a Especie 01, Especie 02 y Especie 03, dependiendo de cuánto se gire. Los otros 4 potenciómetros controlarán el volumen de cada uno de los selectores, de forma independiente. Además, necesitamos un botón que permita encender y apagar todo el sistema, deteniendo la reproducción de los sonidos cuando esté apagado. La idea es probar primero esta lógica de funcionamiento en C++, utilizando sonidos de prueba y dejando el código preparado para integrar posteriormente los audios definitivos."
 
-https://wokwi.com/projects/479334243939894273
+https://wokwi.com/projects/480943431055838209
 
 
 

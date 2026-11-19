@@ -22,11 +22,7 @@ hasta el momento, tenemos estos posibles sonidos:
 para desarrollar el proyecto, profundizamos en las posibles ideas de todos estos sonidos, y llegamos a la que es de nuestro mayor interés y que tiene más peso conceptual: concentrarnos solo en los sonidos de biodiversidad de nuestro territorio, específicamente en las que se encuentra amenazadas y cómo le podemos dar visibilidad a su sonido, existencia, y como consecuencia apelando a su cuidado, ya que no se puede cuidar lo que no se conoce.
 
 ### Ecos en extinción
-"La máquina permitirá escuchar, activar, silenciar y superponer los sonidos de diferentes animales mediante controles físicos, generando composiciones sonoras que surgen de la interacción entre sus distintas voces.
-
-Cada especie tendrá un canal independiente, permitiendo modificar su volumen y combinarla con otras grabaciones sin perder las características originales de su sonido.
-
-De esta manera, el instrumento funciona tanto como un pequeño archivo de biodiversidad sonora como una herramienta de exploración y composición colectiva."
+"La máquina permitirá escuchar, activar, silenciar y superponer los sonidos de diferentes animales mediante controles físicos, generando composiciones sonoras que surgen de la interacción entre sus distintas voces. De esta manera, el instrumento funciona tanto como un pequeño archivo de biodiversidad sonora como una herramienta de exploración y composición colectiva."
 
 ### funcionamiento
 - el instrumento permite construir un paisaje sonoro de manera progresiva.
@@ -46,14 +42,61 @@ nos interesa la simplicidad de su interacción y el protagonismo de la perilla c
 
 ### bill of materials (BOM)
 
-hasta el momento: 
+| N° | Componente | Descripción / Función | Cantidad |
+|---:|---|---|---:|
+| 1 | Multiplexor I2C | Permite conectar varios dispositivos I2C utilizando un mismo bus de comunicación. | 1 |
+| 2 | Buzzer | Emite sonidos de aviso, como el sonido de encendido de la máquina. | 1 |
+| 3 | MAX98357A – I2S Class-D Mono Amplifier | Amplifica la señal de audio digital I2S para reproducir sonidos mediante un parlante. | 1 |
+| 4 | Potenciómetros | Permiten seleccionar especies y regular el volumen de cada canal. | 8 |
+| 5 | Cables Dupont | Permiten realizar conexiones eléctricas entre componentes. | Según necesidad |
+| 6 | Cables Dupont macho-hembra | Conexiones entre pines y módulos electrónicos. | Según necesidad |
+| 7 | Cables Dupont hembra-hembra | Conexiones entre pines o módulos con terminales macho. | Según necesidad |
+| 8 | Cables Dupont macho-macho | Conexiones en protoboard y otros puntos de conexión. | Según necesidad |
+| 9 | Botón pulsador | Permite encender y apagar la máquina. | 1 |
 
-- boton pulsador
-- 8 potenciometros
-- raspberry pi pico 2w
+### diagrama de flujo
 
+```mermaid
+---
+config:
+  theme: default
+---
+flowchart TD
+    A([Inicio]) --> B[Presionar botón de encendido]
+    B --> C[Reproducir sonido de encendido]
+    C --> D[Leer posición de las 4 perillas de especie]
+    D --> E[Cargar especie seleccionada en cada canal]
+    E --> F[Leer posición de las 4 perillas de volumen]
+    F --> G[Iniciar reproducción de los canales en loop]
 
-La experiencia de usuario busca que quien ocupe la maquina, la prenda con el botón, que se refuerce esto a través de un sonido para confirmar que la máquina está prendida. Para crear su propio sonido sonoro existen cinco categorías (aves, mamíferos, reptiles, anfibios e insectos, donde habrán especies por cada una, POR TERMINAR DE DEFINIRSE
+    G --> H{¿Volumen mayor a cero?}
+    H -->|No| I[Canal permanece en silencio]
+    H -->|Sí| J[Reproducir sonido de la especie seleccionada]
+
+    I --> K[Esperar interacción de la persona]
+    J --> K
+
+    K --> L{¿Qué control se modifica?}
+
+    L -->|Perilla de especie| M[Cambiar especie de la categoría]
+    M --> N[Cargar y reproducir nuevo sonido]
+    N --> K
+
+    L -->|Perilla de volumen| O[Ajustar volumen del canal]
+    O --> P{¿Volumen está en cero?}
+    P -->|Sí| Q[Silenciar especie]
+    P -->|No| R[Reproducir especie con nuevo volumen]
+    Q --> K
+    R --> K
+
+    L -->|Ninguno| K
+
+    K --> S{¿Presiona botón de apagado?}
+    S -->|No| L
+    S -->|Sí| T[Silenciar todos los canales]
+    T --> U[Detener reproducción]
+    U --> V([Máquina en reposo])
+```
 
 ## encargos
 
