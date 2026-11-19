@@ -9,8 +9,6 @@ esta era nuestra idea de proyecto al inicio.
 
 Este proyecto es un juego interactivo físico inspirado en la forma y el estilo de una rocola clásica. La idea es crear una máquina entretenida que ponga a prueba qué tanto saben de música los jugadores, combinando sonidos, luces y botones reales en un formato llamativo y fácil de usar.
 
-nuestra nueva idea es utilizar el parlante con 3 botones, cada uno con un título arriba que indique su tema. al presionar cada botón, sonaría uno de los 3 sonidos distintos de ese tema, uno a la vez por cada pulsación. habría 3 botones en total y 9 sonidos diferentes, 3 por cada tema. si necesitamos utilizar una perilla, podría servir para variar el tono de los sonidos.
-
 ​**Cómo se juega?** 
 
 La dinámica del juego es muy sencilla y rápida:
@@ -26,6 +24,8 @@ La dinámica del juego es muy sencilla y rápida:
 ​**El premio**
 
 Para hacer el juego más emocionante, la rocola tiene un espacio interno donde guarda dulces. Si el jugador logra pasar los 3 niveles y adivina todas las canciones, la máquina activa un mecanismo interno que libera un dulce hacia una pequeña bandeja exterior, entregándole una recompensa real por haber ganado.
+
+> nuestra nueva idea es utilizar el parlante con 3 botones, cada uno con un título arriba que indique su tema. al presionar cada botón, sonaría uno de los 3 sonidos distintos de ese tema, uno a la vez por cada pulsación. habría 3 botones en total y 9 sonidos diferentes, 3 por cada tema. si necesitamos utilizar una perilla, podría servir para variar el tono de los sonidos.
 
 ### correcciones
 1. Simplificar el proyecto: evitar funciones demasiado complejas, como reconocer palabras específicas mediante la voz.
