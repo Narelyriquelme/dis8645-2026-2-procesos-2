@@ -240,6 +240,10 @@ Además nosotras queremos representar visualmente cómo el sonido se va sumando 
 
 <img src="./imagenes/kaleidoloop.png" alt="" width="50%">
 
-### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
+<br>
 
-<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="50%">
+También desarmamos este aparato para ver el funcionamiento interno y nos dimos cuenta de que utiliza este chip. Algo que nos demuestra que existen otros tipos de controladores que son capaces de realizar cosas similares a las que estamos haciendo con la Raspi.
+
+#### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
+
+<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="20%">
