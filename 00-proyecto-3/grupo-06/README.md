@@ -439,13 +439,17 @@ Que rescatamo: El espacio y la repetición como método para degradar.
 ![referente](./imagenes/referente-3.jpeg)
 
 
-**4- The Disintegration Loops (de William Basinski)**
+**4-Sony 19C-70 (1965)**
+Fue el primer televisor comercial a color con tecnología Chromatron
 
-Al intentar digitalizar antiguas grabaciones en cinta magnética de los años 80, el polvo magnético se iba desprendiendo al pasar por los cabezales, haciendo que las melodías se fueran borrando y deshaciendo en tiempo real 
+Este modelo específicamente, es una pieza exhibida en el Museo de Archivos Históricos de Sony.
 
-Que rescatamos:La pérdida como proceso físico visible.
+Pantalla de 19 pulgadas
 
-![referente](./imagenes/referente-4.jpeg)
+Utilizaba una rejilla de alambres verticales y tres cañones de electrones, esto permitía obtener una imagen más brillante y nítida
+Su fabricación era muy compleja y costosa, vendió solo 18 mil unidades y esto estuvo a nada de llevar a la compañía a la quiebra.
+
+![referente](./imagenes/referente-11.jpeg)
 
 
 **5- La fantasmología o Hauntology/Hauntología en general**
