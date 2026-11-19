@@ -89,8 +89,35 @@ Cada sonido tendrá un significado específico:
 
 **Botón 4 – Inicio y pausa:** permite comenzar el videojuego, pausar la partida y reiniciarla cuando corresponda.
 
+
+## Bill of Materials (BOM)
+
+| # | Cantidad | Componente | Descripción / Función | Precio unitario | Subtotal | Enlace |
+|---|:--------:|------------|------------------------|----------------:|---------:|--------|
+| 1 | 1 | Raspberry Pi Pico RP2040 | Controlador principal del videojuego | $0 | $0 | [Comprar](URL) |
+| 2 | 1 | Parlante de 8 Ω | Reproducción de señales y efectos sonoros | $0 | $0 | [Comprar](URL) |
+| 3 | 1 | Amplificador PAM8302 | Amplificación de las señales de audio | $0 | $0 | [Comprar](URL) |
+| 4 | 4 | Pulsadores electrónicos | Control de movimiento, disparo e inicio | $0 | $0 | [Comprar](URL) |
+| 5 | 4 | Resistencias de 10 kΩ | Opcionales, según la configuración de los botones | $0 | $0 | [Comprar](URL) |
+| 6 | 1 | Protoboard | Montaje y conexión de los componentes | $0 | $0 | [Comprar](URL) |
+| 7 | Variable | Cables Dupont | Conexiones eléctricas | $0 | $0 | [Comprar](URL) |
+| 8 | 1 | Fuente de alimentación USB de 5 V | Suministro de energía | $0 | $0 | [Comprar](URL) |
+| | | | | **Total** | **$0** | |
+
+
 ## encargos
 
+sesión-13b (viernes 13):
+
+- descripción total del proyecto
+  
+- prototipos
+  
+- pseudocódigo
+  
+- esqueleto en wokwi
+
+  
 ## lectura
 
 nos dejaron elegir un libro para leer durante el semestre en el cual debemos dejar 2 citas por clase y leer mínimo 100 paginas durante el semestre
