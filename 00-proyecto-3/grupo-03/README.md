@@ -100,10 +100,6 @@ flowchart TD
 | BTN-001 | Botón | Táctil 12 × 12 × 7,3 mm | 1 | $100 | $100 | [Afel](https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor) |
 | SD-001 | Módulo micro SD | Lector de tarjeta micro SD | 1 | $2.500 | $2.500 | [Afel](https://afel.cl/products/lector-micro-sd) |
 
-**Subtotal (sin multiplexor): $14.004 CLP**
-
-*Nota: Los precios corresponden a los valores cotizados y no incluyen despacho. El precio del multiplexor está pendiente de confirmación.*
-
 ### referentes
 
 ![referente](./imagenes/referente2.png)
