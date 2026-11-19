@@ -1,8 +1,116 @@
-# grupo-08
 
-## integrantes
+# Proyecto-03
 
-- 
+**grupo-08**
+
+*Integrantes*
+
+☆ Vanessa García / <https://github.com/vanessagarciaM>
+
+☆ Isidora Pérez / <https://github.com/isipm08>
+
+☆ Narely Riquelme / <https://github.com/Narelyriquelme>
+
+☆ Angel Sabogal / <https://github.com/angel-udp>
+
 
 ## sobre el proyecto
 
+El proyecto consiste en construir un muestrario interactivo con nueve sonidos grabados por nosotros.
+
+Habrá tres categorías, cada una asociada a un botón y compuesta por tres grabaciones distintas.
+
+El equipo definirá las categorías y elegirá qué objetos, acciones o ambientes registrar. Cada pista tendrá una ficha breve con el nombre del sonido, qué lo produjo y quién lo grabó. Así, la selección final tendrá una relación directa con lo que el grupo decida explorar.
+
+La consola tendrá tres botones, dos perillas y un parlante. Al presionar un botón, se escucha el primer sonido de su categoría. Las siguientes pulsaciones sobre ese mismo botón avanzan al segundo y al tercero, y después vuelven al primero. Cada botón conserva su posición en la secuencia.
+
+Una perilla regula el volumen desde el silencio hasta el máximo configurado. La otra modifica la altura del sonido, desde más grave hasta más agudo, con el tono original en el centro.
+
+La consola estará en una espera silenciosa (standby) hasta que se pulse un botón. Si se presiona otro botón, o se vuelve a presionar el mismo mientras suena una pista, la reproducción se corta y la siguiente comienza desde el principio después de una pausa breve de aproximadamente medio milisegundo.
+
+Al terminar, la consola vuelve a quedar en silencio.
+
+También se contempla una décima grabación sorpresa, integrada por el grupo, y se activa al presionar los tres botones juntos.
+
+## funcionamiento
+
+| Control | Función definida |
+|---------|------------------|
+| **Botón 1** | Reproduce las tres grabaciones de la categoría 1 en orden: 1, 2, 3 y 1. |
+| **Botón 2** | Reproduce las tres grabaciones de la categoría 2 con su propia secuencia. |
+| **Botón 3** | Reproduce las tres grabaciones de la categoría 3 con su propia secuencia. |
+| **Perilla de volumen** | A la izquierda, silencio. Al girar hacia la derecha, el volumen aumenta progresivamente hasta el máximo configurado. El cambio se escucha mientras suena la pista. |
+| **Perilla de tono** | A la izquierda, más grave. Al centro, tono original. A la derecha, más agudo. Se puede ajustar antes de pulsar cualquier botón y el ajuste se aplica a la pista que empieza. |
+| **Tres botones juntos** | Reproducen la grabación sorpresa una vez, sin avanzar las secuencias. Para volver a activarla, se deben soltar los tres botones. |
+
+## diagrama 
+![imagen](imagenes/diagramaa.jpeg)
+## esquematico
+(nare)
+
+## pseudo - código
+
+INICIO
+
+  El soundboard reproduce nueve grabaciones propias.
+
+  Hay tres botones y cada botón corresponde a una categoría con tres grabaciones.
+
+  Cada grabación tiene tres versiones: grave, original y aguda.
+  Una perilla regula el volumen y la otra elige la versión del sonido.
+
+  Guardar el número de grabación que esté y avanzar al siguiente en la categoría.
+  Al encender, las tres categorías empiezan en la grabación 1.
+  Mantener el parlante en silencio hasta recibir una pulsación.
+
+  REPETIR MIENTRAS LA CONSOLA ESTÁ ENCENDIDA
+
+    Leer la perilla de volumen y ajustar la salida.
+    El mínimo deja el parlante en silencio, incluso durante una pista.
+
+    Detectar nuevas pulsaciones de los botones.
+
+    SI se presionan los tres botones juntos
+      Interrumpir la pista actual, si hay una en reproducción.
+      Reproducir la grabación sorpresa.
+      Conservar el número de la próxima grabación de cada categoría.
+      Esperar a que se suelten los tres botones para aceptar otra pulsación.
+
+    SI se registra una pulsación de un solo botón
+      Identificar la categoría de ese botón.
+      Consultar qué grabación sigue en esa categoría.
+      Leer la perilla de tono y elegir grave, original o aguda.
+      Interrumpir la pista actual, si hay una en reproducción.
+      Dejar una pausa breve e iniciar la grabación elegida desde el comienzo.
+      Avanzar la secuencia de esa categoría: 1, 2, 3 y nuevamente 1.
+
+    SI termina la reproducción
+      Volver a la espera silenciosa.
+
+  FIN REPETIR
+
+FIN
+
+## wokwi
+
+<https://wokwi.com/projects/480948910221458433>
+
+## bom
+
+|Componente|Cantidad|Precio|Link|
+|---|---|---|---|
+|Raspberry Pi Pico|1|$14.990|<https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers>|
+|Reproductor de Audio (DFPlayer Mini)| 1 |$2.990|<https://afel.cl/products/modulo-reproductor-mp3-tf-16p-v3-0>|
+|Salida de Audio (Altavoz 3W, 8 Ohm)| 1 |$3.000|<https://afel.cl/products/mini-parlante-altavoz-de-3w>|
+|Protoboard|1|$1.500|<https://afel.cl/products/mini-protoboard-400-puntos>|
+|Cables dupont pack 20|x|$1.000|<https://afel.cl/products/pack-20-cables-de-conexion-macho-macho>|
+|Kit 10 Cables Caiman a Dupont Hembra|x|$2.500|<https://afel.cl/products/kit-10-cables-caiman-a-dupont-hembra?_pos=2&_sid=aec538813&_ss=r>|
+|Pack 20 Cables de Conexión Macho Hembra|x|$1.000|<https://afel.cl/products/pack-20-cables-de-conexion-macho-hembra?_pos=1&_sid=bff72fae6&_ss=r>
+|Potenciómetro B100k|2|$500|<https://afel.cl/products/potenciometro-10k-ohm>|
+|Cable micro usb |1| $x|<https://www.masterg.cl/mgcamic/p?idsku=6>|
+|Almacenamiento (Tarjeta MicroSD) | 1 | $x | x |
+|Botones| 3 | $300 | <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=1&_sid=2ce280b32&_ss=r> |
+
+## referentes
+
+## bibliografía 

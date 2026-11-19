@@ -1,13 +1,12 @@
 # grupo-02
 
+![imagenes](./imagenes/lissajous.gif)
+
 ## integrantes
-Antonia Loch
-
-Anaís Marchausen
-
-Carla Nuñez
-
-Hugo Montoya
++ ***Antonia Loch*** @antoloch
++ ***Anaís Marchausen*** @anaisbmg
++ ***Carla Nuñez*** @ccarlabelenn
++ ***Hugo Montoya*** @hugomontoya
 
 ## sobre el proyecto
 
