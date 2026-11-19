@@ -193,37 +193,6 @@ https://wokwi.com/projects/480724591872061441
 
 ## Referentes
 
-### [NYQUIST - Bit Crush](https://notpedals.com/products/nyquist)
-
-<br>
-
-Este es un pedal de efectos hechos con componentes analógicos. El efecto que produce es como el de pixelar el sonido, haciendo que este pierda nitidez. Nosotras rescatamos el efecto como tal y lo integramos a nuestra sección de edición de audio.
-
-<img src="./imagenes/bit-crusher.webp" alt="" width="50%">
-
-<br>
-
-### [Mini Glitch](https://electricmojoguitars.com/products/tkog-mini-glitch)
-
-<br>
-
-Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Lo que rescatamos de este pedal es el funcionamiento que tiene: el bucle, el efecto de glitch y por sobre todo que use su propia señal para repetir es una lógica que nuestro proyecto busca al introducir audios sobre otros.
-
-<img src="./imagenes/mini-glitch.png" alt="" width="50%">
-
-<br>
-
-### [MOOG GRANDMOTHER](https://www.moogmusic.com/synthesizers/grandmother/)
-
-<br>
-
-El Grandmother de Moog, pertenece a una familia de sintetizadores analógicos semimodulares, que quiere decir que tiene 41 puntos de conexión para conectar con otros módulos de sonido, pero que también se puede usar individualmente sin conectar cables.
-Este es uno de nuestros principales referentes porque desde aquí pudimos interactuar de manera tangible para comprender como se modula el sonido a través de los efectos que se aplican a las ondas propias de los osciladores del sintetizador.
-
-Por otra parte, hay varias cosas que al momento de estar utilizando este dispositivo nos hicieron ruido respecto a la accesibilidad y organización de la interfaz, por ejemplo, el hecho de que nos costó demasiado encontrar el volumen general, el cuál estaba en un lugar con poca jerarquía visual y pasaba muy desapercibido al estar contiguo al efecto de reverb y, si bien estaba en la sección de output, habían perillas que parecían ser más importantes que esta.
-
-<img src="./imagenes/grandmother.jpg" alt="" width="50%">
-
 ### [Kaleidoloop](https://forum.critterandguitari.com/t/kaleidoloop-returns/10321)
 
 El Critter & Guitari Kaleidoloop es un sampler y looper portátil diseñado para grabar sonidos, crear bucles con estos y manipularlos en tiempo real. 
@@ -247,3 +216,34 @@ También desarmamos este aparato para ver el funcionamiento interno y nos dimos 
 #### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
 
 <img src="./imagenes/lpc2138fbd64.jpg" alt="" width="20%">
+
+### [MOOG GRANDMOTHER](https://www.moogmusic.com/synthesizers/grandmother/)
+
+<br>
+
+El Grandmother de Moog, pertenece a una familia de sintetizadores analógicos semimodulares, que quiere decir que tiene 41 puntos de conexión para conectar con otros módulos de sonido, pero que también se puede usar individualmente sin conectar cables.
+Este es uno de nuestros principales referentes porque desde aquí pudimos interactuar de manera tangible para comprender como se modula el sonido a través de los efectos que se aplican a las ondas propias de los osciladores del sintetizador.
+
+Por otra parte, hay varias cosas que al momento de estar utilizando este dispositivo nos hicieron ruido respecto a la accesibilidad y organización de la interfaz, por ejemplo, el hecho de que nos costó demasiado encontrar el volumen general, el cuál estaba en un lugar con poca jerarquía visual y pasaba muy desapercibido al estar contiguo al efecto de reverb y, si bien estaba en la sección de output, habían perillas que parecían ser más importantes que esta.
+
+<img src="./imagenes/grandmother.jpg" alt="" width="50%">
+
+### [Mini Glitch](https://electricmojoguitars.com/products/tkog-mini-glitch)
+
+<br>
+
+Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Lo que rescatamos de este pedal es el funcionamiento que tiene: el bucle, el efecto de glitch y por sobre todo que use su propia señal para repetir es una lógica que nuestro proyecto busca al introducir audios sobre otros.
+
+<img src="./imagenes/mini-glitch.png" alt="" width="50%">
+
+<br>
+
+### [NYQUIST - Bit Crush](https://notpedals.com/products/nyquist)
+
+<br>
+
+Este es un pedal de efectos hechos con componentes analógicos. El efecto que produce es como el de pixelar el sonido, haciendo que este pierda nitidez. Nosotras rescatamos el efecto como tal y lo integramos a nuestra sección de edición de audio.
+
+<img src="./imagenes/bit-crusher.webp" alt="" width="50%">
+
+<br>
