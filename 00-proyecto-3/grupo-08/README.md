@@ -13,22 +13,15 @@
 
 ☆ Angel Sabogal / <https://github.com/angel-udp>
 
+# 9dB
 
 ## sobre el proyecto
 
-El proyecto consiste en construir un muestrario interactivo con nueve sonidos grabados por nosotros.
+```9dB``` es una cápsula sonora interactiva diseñado para poner en valor nuestro paisaje auditivo cotidiano de la vida universitario como estudiantes de diseño, mediante una interfaz física con 3 botones, los cuales son disparadores de 3 sonidos de cada temática y 2 potenciómetros, los cuales regulan volumen y tono, traduciendo y transformando los sonidos y ruidos cotidianos que solemos normalizar y escuchar diariamente en un archivo vivo del proceso creativo y en una experiencia táctil, sonora y nostálgica de la memoria universitaria. Nos basamos en 3 instancias claves dentro de la universidad [pañol - break - casino]  
 
-Habrá tres categorías, cada una asociada a un botón y compuesta por tres grabaciones distintas.
+El nombre ```9dB``` se debe a 3 sonidos y 3 botones [9 registros auditivos], los cuales representan la matriz sonora de nuestro proyecto, dB [decibeles] alude a la medición física del sonido y la ergonomía auditiva. En nuestro entorno que nos basamos, los decibeles simbolizan la frontera entre ruido ambiental que solemos ignorar y el sonido intencional que rescatamos al presionar un botón.
 
-El equipo definirá las categorías y elegirá qué objetos, acciones o ambientes registrar. Cada pista tendrá una ficha breve con el nombre del sonido, qué lo produjo y quién lo grabó. Así, la selección final tendrá una relación directa con lo que el grupo decida explorar.
-
-La consola tendrá tres botones, dos perillas y un parlante. Al presionar un botón, se escucha el primer sonido de su categoría. Las siguientes pulsaciones sobre ese mismo botón avanzan al segundo y al tercero, y después vuelven al primero. Cada botón conserva su posición en la secuencia.
-
-Una perilla regula el volumen desde el silencio hasta el máximo configurado. La otra modifica la altura del sonido, desde más grave hasta más agudo, con el tono original en el centro.
-
-La consola estará en una espera silenciosa (standby) hasta que se pulse un botón. Si se presiona otro botón, o se vuelve a presionar el mismo mientras suena una pista, la reproducción se corta y la siguiente comienza desde el principio después de una pausa breve de aproximadamente medio milisegundo.
-
-Al terminar, la consola vuelve a quedar en silencio.
+La consola estará en una espera silenciosa hasta que se pulse un botón. Si se presiona otro botón, o se vuelve a presionar el mismo mientras suena una pista, la reproducción se corta y la siguiente comienza desde el principio después de una pausa breve de aproximadamente medio milisegundo. Al terminar, la consola vuelve a quedar en silencio.
 
 También se contempla una décima grabación sorpresa, integrada por el grupo, y se activa al presionar los tres botones juntos.
 
@@ -45,11 +38,12 @@ También se contempla una décima grabación sorpresa, integrada por el grupo, y
 
 ## diagrama 
 ![imagen](imagenes/diagramaa.jpeg)
+
 ## esquematico
 (nare)
 
 ## pseudo - código
-
+```
 INICIO
 
   El soundboard reproduce nueve grabaciones propias.
@@ -90,6 +84,7 @@ INICIO
   FIN REPETIR
 
 FIN
+```
 
 ## wokwi
 
