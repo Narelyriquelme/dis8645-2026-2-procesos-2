@@ -217,7 +217,7 @@ Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hace
 
 <br>
 
-El Grandmother de Moog, pertenece a una familia de sintetizadores analógicos semimodulares. Que quiere decir que tiene 41 puntos de conexión para conectar con otros módulos de sonido, pero que también se puede usar individualmente sin conectar cables.
+El Grandmother de Moog, pertenece a una familia de sintetizadores analógicos semimodulares, que quiere decir que tiene 41 puntos de conexión para conectar con otros módulos de sonido, pero que también se puede usar individualmente sin conectar cables.
 Este es uno de nuestros principales referentes porque desde aquí pudimos interactuar de manera tangible para comprender como se modula el sonido a través de los efectos que se aplican a las ondas propias de los osciladores del sintetizador.
 
 Por otra parte, hay varias cosas que al momento de estar utilizando este dispositivo nos hicieron ruido respecto a la accesibilidad y organización de la interfaz, por ejemplo, el hecho de que nos costó demasiado encontrar el volumen general, el cuál estaba en un lugar con poca jerarquía visual y pasaba muy desapercibido al estar contiguo al efecto de reverb y, si bien estaba en la sección de output, habían perillas que parecían ser más importantes que esta.
@@ -225,6 +225,10 @@ Por otra parte, hay varias cosas que al momento de estar utilizando este disposi
 <img src="./imagenes/grandmother.jpg" alt="" width="50%">
 
 ### [Kaleidoloop](https://forum.critterandguitari.com/t/kaleidoloop-returns/10321)
+
+El Critter & Guitari Kaleidoloop es un sampler y looper portátil diseñado para grabar sonidos, crear bucles con estos y manipularlos en tiempo real. 
+
+Esta fue otra de las máquinas que apenas la vimos nos abrió muchas respuestas como también muchas preguntas. Partiendo desde cómo podría interactuar el usuario con la interfaz, ya sea en el gesto de acercarse a grabar su voz, o incluso abriendo la discusión sobre si el usuario tiende a grabar solo presionando una vez el botón o manteniéndolo presionado.
 
 <br>
 
