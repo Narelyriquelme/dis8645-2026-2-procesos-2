@@ -437,7 +437,7 @@ https://www.youtube.com/watch?v=wJWksPWDKOc
 
 Degradación sonora. 2 grabadoras en una habitación: Una reproduce una voz, el micrófono graba el sonido de la habitación, y la segunda grabadora lo vuelve a grabar en bucle. Con cada ciclo, las frecuencias de la habitación se comen la voz humana hasta convertirla en un zumbido borroso e irreconocible. 
 
-Que rescatamo: El espacio y la repetición como método para degradar.
+Que rescatamos: El espacio y la repetición como método para degradar.
 
 ![referente](./imagenes/referente-3.jpeg)
 
