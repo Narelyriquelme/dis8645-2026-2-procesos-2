@@ -30,23 +30,29 @@ Visualizar proyecto: [https://wokwi.com/projects/480722608786043905](https://wok
 
 ## Referentes
 
-scanner sombre
+1. scanner sombre
 
 ![scanner-sombre](./imagenes/scanner-sombre.jpg)
 
-echoes of bats and men
+2. echoes of bats and men
 
 ![echoes-of-bats-and-men](./imagenes/echoes-of-bats-and-men.jpg)
 
-oregon trail
+3. oregon trail
 
 ![oregon-trail](./imagenes/oregon-trail.jpg)
 
-Atari 2600 - Atari - 1981 Asteroids
+4. Atari 2600 - Atari - 1981 Asteroids
 
 https://www.atarimania.com/games/atari-2600-games-asteroids-7379
 
+5. Game boy
 
+![Nintendo-Game-Boy](./imagenes/Nintendo-Game-Boy.jpg)
+
+6. Bop It
+
+![Bop-it](./imagenes/Bop-it.jpg)
 
 ---
 
