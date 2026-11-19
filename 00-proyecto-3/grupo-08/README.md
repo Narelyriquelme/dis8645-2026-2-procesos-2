@@ -44,7 +44,7 @@ También se contempla una décima grabación sorpresa, integrada por el grupo, y
 | **Tres botones juntos** | Reproducen la grabación sorpresa una vez, sin avanzar las secuencias. Para volver a activarla, se deben soltar los tres botones. |
 
 ## diagrama 
-
+![imagen](imagenes/diagramaa.jpeg)
 ## esquematico
 (nare)
 
