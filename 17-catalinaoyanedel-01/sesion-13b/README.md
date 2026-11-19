@@ -1,4 +1,5 @@
 # sesion-13b
+viernes 13 de noviembre
 
 ## apuntes sesión
 correcciones proyecto
