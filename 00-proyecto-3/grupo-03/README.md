@@ -9,13 +9,17 @@
 
 ## sobre el proyecto
 
-Este proyecto busca educar sobre la biodiversidad de las especies amenazadas o en peligro de extinción que habitan nuestro territorio, a través de una máquina sonora que da visibilidad a sus voces, a su existencia y, como consecuencia, apela a su cuidado, ya que no se puede cuidar lo que no se conoce. La máquina se organiza en cuatro categorías: mamíferos, aves, anfibios e insectos. Cada categoría contiene tres especies, una por cada zona del país (norte, centro y sur). 
+Este proyecto busca acercar y educar sobre la biodiversidad de las especies amenazadas o en peligro de extinción que habitan nuestro territorio chileno, a través de una máquina sonora que da visibilidad y amplifica sus voces y su existencia. Como consecuencia, apela desde la escucha, generar un vínculo sensible a la memoria de estas especies que muchas veces pasan desapercibidas, invitando a reconocer su presencia y reflexionar sobre la fragilidad de su existencia.. 
 
-La máquina permite escuchar, silenciar y superponer los sonidos de los distintos animales mediante perillas, generando composiciones sonoras que surgen de la combinación de sus voces. Así, el instrumento funciona tanto como un pequeño archivo de biodiversidad sonora como una herramienta de exploración y composición de un paisaje sonoro.
+La máquina se organiza en cuatro categorías: mamíferos, aves, anfibios e insectos. Cada categoría contiene tres especies, una por cada zona del país (norte, centro y sur). 
+
+La máquina permite escuchar, silenciar y superponer los sonidos de los distintos animales mediante perillas, generando composiciones sonoras que surgen de la combinación de sus voces. Así, el instrumento funciona tanto como un pequeño archivo de biodiversidad sonora como una herramienta de exploración y composición de un imaginario de paisaje sonoro.
 
 ### funcionamento
 
-Habrá un potenciómetro por cada categoría, donde a través de umbrales se reconocerá qué especie fue seleccionada. Además, las categorías irán acompañadas de otro potenciómetro para controlar el volumen de cada una. Así, cada usuario puede construir su paisaje sonoro de especies.
+La máquina tendrá cuatro potenciómetros, uno por cada categoría: mamíferos, aves, insectos y anfibios. Cada uno tendrá la posibilidad de seleccionar uno de tres especies mediante rangos predefinidos. Cada uno de estos potenciómetros estará acompañado de otro potenciómetro que controlará la probabilidad de aparición del sonido. Cada vez que una especie suene, su velocidad, duración y volumen variarán aleatoriamente.
+
+Un noveno potenciómetro controlará el tempo general, definiendo cada cuánto se evalúan estas probabilidades. Además, habrá un botón de encendido y apagado que emitirá un sonido para indicar el estado de la máquina.
 
 **Boceto de la máquina:**
 
