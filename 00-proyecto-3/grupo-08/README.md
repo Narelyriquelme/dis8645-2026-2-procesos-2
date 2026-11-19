@@ -46,7 +46,7 @@ También se contempla una décima grabación sorpresa, integrada por el grupo, y
 ## diagrama 
 ![imagen](imagenes/diagramaa.jpeg)
 ## esquematico
-(nare)
+![imagen](imagenes/esquematico-proyecto03.png)
 
 ## pseudo - código
 
@@ -112,5 +112,23 @@ FIN
 |Botones| 3 | $300 | <https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor?_pos=1&_sid=2ce280b32&_ss=r> |
 
 ## referentes
+
+**Sound Diaries**
+
+Sound Diaries es un proyecto que se dedica a explorar y registrar los sonidos de la vida cotidiana, como objetos, acciones y espacios que muchas veces pasan desapercibidos. Busca reconocer el valor cultural y significativo de estos sonidos que pueden parecer insignificantes. Este referente nos inspira a explorar y grabar sonidos cotidianos para utilizarlos como material en la creación de nuestra propia colección sonora.
+
+Sound Diares. (s.f). About Sound Diares. https://www.sound-diaries.co.uk/
+
+**Freesound**
+
+Freesound es una plataforma colaborativa que funciona como una biblioteca de sonidos, donde las personas pueden compartir, buscar y descargar grabaciones de distintas fuentes. Los audios se organizan mediante etiquetas y descripciones que facilitan su búsqueda. Este referente nos entrega una idea de cómo organizar nuestros sonidos por categorías y construir una biblioteca sonora interactiva que permita descubrir e identificar cada grabación.
+
+Freesound. (s.f). Frequently asked questions. https://freesound.org/help/faq/#what-is-this-site-anyway
+
+**World Listening Project**
+
+World Listening Project es una iniciativa que promueve la escucha activa y la valoración del entorno sonoro. Busca generar conciencia sobre los sonidos que nos rodean y cómo estos forman parte de nuestra relación con los espacios y la vida cotidiana. Este referente nos inspira a invitar a las personas a descubrir sonidos ambientales y cotidianos, prestando atención a sus diferencias, variaciones y características a través de la escucha.
+
+World Listening Project. (s.f). About us. https://www.worldlisteningproject.org/
 
 ## bibliografía 
