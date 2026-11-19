@@ -42,6 +42,10 @@ oregon trail
 
 ![oregon-trail](./imagenes/oregon-trail.jpg)
 
+Atari 2600 - Atari - 1981 Asteroids
+
+https://www.atarimania.com/games/atari-2600-games-asteroids-7379
+
 
 
 ---
