@@ -30,25 +30,13 @@ Visualizar proyecto: [https://wokwi.com/projects/480722608786043905](https://wok
 
 ## Referentes
 
-- scanner sombre
-  
-- giroscopio acelerómetro: usar interacciones como los videojuegos
-  
-- posición del dispositivo
+scanner sombre
 
-- ultrasónico
+echoes of bats and men
 
-- sensor de distancia
+oregon trail
 
-- detector de obstáculos (0-10cm)
 
-- echoes of bats and men
-
-- oregon trail
-
-- jugar con graves y agudos para mostrar distintos sonidos de amenaza o diferentes cosas
-
-- acoustic communication
 
 ---
 
