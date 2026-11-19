@@ -296,6 +296,12 @@ https://www.youtube.com/watch?v=FwVf548Ix8I
 Pedal estéreo de degradación de audio y simulación de cinta magnética Recrea con precisión la coloración tonal, la saturación y las fallas mecánicas de videograbadoras VHS, casetes y dictáfonos envejecidos. 
 
 Que rescatamos: Una referencia técnica concreta de qué suena “viejo”: saturación, vaivén de velocidad y fallas de cinta.
+![referente](./imagenes/referente-8-1.jpeg)
+![referente](./imagenes/referente-8-2.jpeg)
+![referente](./imagenes/referente-8-3.jpeg)
+
+
+
 
 **9- Outerwilds | Signalscope (videojuego)**
 
