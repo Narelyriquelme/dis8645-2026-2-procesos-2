@@ -271,7 +271,7 @@ Según esto, los personajes:
 - Si durante la interacción con uno de los personajes, el usuario desea cambiarlo, puede mantener presionado este botón y reiniciar la interacción.
 
  ## 7.  Botón Recordar
-- Para Giliano y Ana María existe una intervención en el audio, el cual representa la nitidez de los recuerdos por el paso de los años, es decir, en la etapa de la vejez y adultez cercana a la vejez de estos personajes es posible que el audio se distorsione, imitando un recuerdo borroso.   
+- Para Giliano y Anita existe una intervención en el audio, el cual representa la nitidez de los recuerdos por el paso de los años, es decir, en la etapa de la vejez, es posible que el audio se distorsione, imitando un recuerdo borroso.   
 - Para recuperar la “nitidez” de la etapa se puede presionar el botón de “recordar”.
 - Creemos que la memoria se pierde de a poco, sin darnos cuenta se va y  “vuelve” gracias a factores externos que activan los recuerdos “escondidos” en la mente, por eso decidimos tener un botón que influya directamente en el audio para representar esta acción.
 
@@ -332,7 +332,7 @@ Sofía (2004) 5 etapas, llega  a la juventud
 //Y el audio está distorsionado
 //Se presiona el botón, toque corto
 //Y se recupera la claridad/nitidez del sonido
-//En el caso de Ana María
+//En el caso de Anita 
 //El audio se distorsiona
 //Llegando al final de la adultez
 
@@ -370,9 +370,9 @@ Sofía (2004) 5 etapas, llega  a la juventud
 //Se dividen los valores de la perilla en cuatro opciones
 //De izquierda a derecha en este orden
 //Giliano
-//Ana María
-//Nicole
+//Anita
 //Sofia
+//Nicolás
 
 //Si ya se escogió personaje 
 //Y se encuentra reproduciendo las etapas del personaje
@@ -397,9 +397,9 @@ Sofía (2004) 5 etapas, llega  a la juventud
 
 //Existen 4 personajes
 //Giliano
-//Ana María 
-//Nicole
-//Sofía
+//Anita
+//Sofia
+//Nicolás
 
 //Cada uno tendrá su audio 
 //Para representar 
