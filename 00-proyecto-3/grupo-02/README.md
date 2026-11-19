@@ -1,13 +1,12 @@
 # grupo-02
 
+![imagenes](./imagenes/lissajous.gif)
+
 ## integrantes
-Antonia Loch
-
-Anaís Marchausen
-
-Carla Nuñez
-
-Hugo Montoya
++ ***Antonia Loch*** @antoloch
++ ***Anaís Marchausen*** @anaisbmg
++ ***Carla Nuñez*** @ccarlabelenn
++ ***Hugo Montoya*** @hugomontoya
 
 ## sobre el proyecto
 
@@ -41,14 +40,14 @@ Hugo Montoya
 cartón
 plástico
 
-#### Texto descriptivo
+## Texto descriptivo
 La propuesta consiste en dos objetos individuales, cada uno con cuatro botones a modo de teclado, que permiten a dos personas interactuar a través de sonidos predeterminados. Cada persona elige y combina los sonidos de su propio teclado, y juntas construyen un sonido que ninguna podría crear por separado.
 Al fusionarse ambos sonidos, la máquina los transforma en una figura única que representa el encuentro entre las dos personas. La forma cambia según los botones que cada una selecciona, de modo que cada encuentro genera una figura distinta e irrepetible.
 Todo ocurre en tiempo real y sin almacenar ningún sonido, convirtiendo la interacción en una experiencia física, visual y sonora.
 Buscamos destacar la relación y la primera interacción humana, las máquinas siendo solo el medio, ya que queremos potenciar el vínculo de las personas. Generar espacios para lograr situaciones a partir de la necesidad del trabajo en pares, la experiencia no se puede completar sola, el resultado solo existe cuando ambas participan. El sonido no se guarda, ya que no buscamos el registro, si no la relación humana y nuevos lazos.
 En una era donde todo se graba, se archiva, se sube a la nube y se viraliza, se propone una rebeldía: tecnología con amnesia. La interacción es radicalmente privada y volátil. Lo que ocurre entre las dos personas les pertenece únicamente a ellas en ese instante y se transforman en vínculos duraderos y verdaderos.
 
-#### Bom
+## Bom
 
 | Cantidad | Componente | Descripción |
 |---|---|---|
@@ -58,7 +57,7 @@ En una era donde todo se graba, se archiva, se sube a la nube y se viraliza, se 
 | 1 | Buzzer | Tomar la vibración |
 | 1 | Láser | Emisión de luz láser |
 
-#### Diagrama de flujo
+## Diagrama de flujo
 
 **Intervenir** cada persona debe conversar y pulsar las opciones que tiene cada una
 **Pulsar** comenzar a darle características al nuevo sonido
@@ -85,13 +84,13 @@ estado = activo
 ```
 —-------------------- FALTA
 
-#### Wokwi
+## Wokwi
 es uno inicial, falta aun
 
 Tenemos preguntas, ya que nos gustaria que cada teclado tenga sonido de notas musicales, eso como se puede representar en wokwi, ademas del laser
 
 https://wokwi.com/projects/480951299269584897
 
-## encargos
+## Referentes 
 
-## lectura
+## Bibliografia

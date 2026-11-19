@@ -213,6 +213,51 @@ Botones
 
 ## Referentes
 
+### [Kaleidoloop](https://forum.critterandguitari.com/t/kaleidoloop-returns/10321)
+
+El Critter & Guitari Kaleidoloop es un sampler y looper portátil diseñado para grabar sonidos, crear bucles con estos y manipularlos en tiempo real. 
+
+Esta fue otra de las máquinas que apenas la vimos nos abrió muchas respuestas como también muchas preguntas. Partiendo desde cómo podría interactuar el usuario con la interfaz, ya sea en el gesto de acercarse a grabar su voz, o incluso abriendo la discusión sobre si el usuario tiende a grabar solo presionando una vez el botón o manteniéndolo presionado.
+
+La disposición de los componentes también nos dio a comprender ciertas importancias, por ejemplo que el micrófono esté extendido físicamente da a entender muy de inmediato que su función principal es grabar. Sin embargo, los botones al ser todos iguales y no tener ningún símbolo que los diferencie uno de otro (viéndolo desde frente) dejan una confusión al usuario al no comprender como se utilizan y tiende a buscar la respuesta en cómo se está reproduciendo el sonido, antes de ver el manual que contiene detrás por ejemplo. 
+
+Otra cosa que rescatamos al estar utilizando este aparato, fue que nos importa mucho que el usuario tenga ambas opciones de reproducir lo que está escuchando desde el mismo objeto o conectarlo a otro dispositivo amplificador.
+
+Además nosotras queremos representar visualmente cómo el sonido se va sumando hasta que ya no quede espacio para más audio. El Kaleidoloop muestra qué tan llena está la memoria a través de una lógica de un rango de 1 a 4 parpadeos de un led. Nosotras seguiremos este premisa de representar la capacidad de audios que se van almacenando, pero a través de una pantalla.
+
+<br>
+
+<img src="./imagenes/kaleidoloop.png" alt="" width="50%">
+
+<br>
+
+También desarmamos este aparato para ver el funcionamiento interno y nos dimos cuenta de que utiliza este chip. Algo que nos demuestra que existen otros tipos de controladores que son capaces de realizar cosas similares a las que estamos haciendo con la Raspi.
+
+#### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
+
+<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="20%">
+
+### [MOOG GRANDMOTHER](https://www.moogmusic.com/synthesizers/grandmother/)
+
+<br>
+
+El Grandmother de Moog, pertenece a una familia de sintetizadores analógicos semimodulares, que quiere decir que tiene 41 puntos de conexión para conectar con otros módulos de sonido, pero que también se puede usar individualmente sin conectar cables.
+Este es uno de nuestros principales referentes porque desde aquí pudimos interactuar de manera tangible para comprender como se modula el sonido a través de los efectos que se aplican a las ondas propias de los osciladores del sintetizador.
+
+Por otra parte, hay varias cosas que al momento de estar utilizando este dispositivo nos hicieron ruido respecto a la accesibilidad y organización de la interfaz, por ejemplo, el hecho de que nos costó demasiado encontrar el volumen general, el cuál estaba en un lugar con poca jerarquía visual y pasaba muy desapercibido al estar contiguo al efecto de reverb y, si bien estaba en la sección de output, habían perillas que parecían ser más importantes que esta.
+
+<img src="./imagenes/grandmother.jpg" alt="" width="50%">
+
+### [Mini Glitch](https://electricmojoguitars.com/products/tkog-mini-glitch)
+
+<br>
+
+Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Lo que rescatamos de este pedal es el funcionamiento que tiene: el bucle, el efecto de glitch y por sobre todo que use su propia señal para repetir es una lógica que nuestro proyecto busca al introducir audios sobre otros.
+
+<img src="./imagenes/mini-glitch.png" alt="" width="50%">
+
+<br>
+
 ### [NYQUIST - Bit Crush](https://notpedals.com/products/nyquist)
 
 <br>
@@ -222,25 +267,3 @@ Este es un pedal de efectos hechos con componentes analógicos. El efecto que pr
 <img src="./imagenes/bit-crusher.webp" alt="" width="50%">
 
 <br>
-
-### [Mini Glitch](https://electricmojoguitars.com/products/tkog-mini-glitch)
-
-<br>
-
-Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Se inspiró en un patch de stutter en Max/MSP que usaba Jonny Greenwood, de Radiohead. Lo que rescatamos de este pedal son las funciones que tiene: el bucle, el efecto de glitch y que use su propia señal para repetir, lo cuál nuestro proyecto.
-
-<img src="./imagenes/mini-glitch.png" alt="" width="50%">
-
-<br>
-
-### [MOOG GRANDMOTHER](https://www.moogmusic.com/synthesizers/grandmother/)
-
-<img src="./imagenes/grandmother.jpg" alt="" width="50%">
-
-### [Kaleidoloop](https://forum.critterandguitari.com/t/kaleidoloop-returns/10321)
-
-<img src="./imagenes/kaleidoloop.png" alt="" width="50%">
-
-### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
-
-<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="50%">
