@@ -17,7 +17,9 @@ La máquina permite escuchar, silenciar y superponer los sonidos de los distinto
 
 ### funcionamento
 
-Habrá un potenciómetro por cada categoría, donde a través de umbrales se reconocerá qué especie fue seleccionada. Además, las categorías irán acompañadas de otro potenciómetro para controlar el volumen de cada una. Así, cada usuario puede construir su paisaje sonoro de especies.
+La máquina tendrá cuatro potenciómetros, uno por cada categoría: mamíferos, aves, insectos y anfibios. Cada uno tendrá la posibilidad de seleccionar uno de tres especies mediante rangos predefinidos. Cada uno de estos potenciómetros estará acompañado de otro potenciómetro que controlará la probabilidad de aparición del sonido. Cada vez que una especie suene, su velocidad, duración y volumen variarán aleatoriamente.
+
+Un noveno potenciómetro controlará el tempo general, definiendo cada cuánto se evalúan estas probabilidades. Además, habrá un botón de encendido y apagado que emitirá un sonido para indicar el estado de la máquina.
 
 **Boceto de la máquina:**
 
