@@ -229,12 +229,17 @@ Una instalación sonora inmersiva y multicanal, del artista danés Jacob Kirkega
 
 Que rescatamos: Escuchar lo que normalmente ignoramos.
 
+![referente](./imagenes/referente-1.jpeg)
+
 
 **2- The Caretaker - Everywhere At The End Of Time**
 
 Proyecto musical que representa las distintas etapas de la demencia o alzheimer (deterioro de la memoria)
 
 Que rescatamos: La degradación por etapas: el mismo material se va deshaciendo de a poco, no de golpe.
+
+![referente](./imagenes/referente-2.jpeg)
+
 
 https://www.youtube.com/watch?v=wJWksPWDKOc
  
@@ -244,11 +249,17 @@ Degradación sonora. 2 grabadoras en una habitación: Una reproduce una voz, el 
 
 Que rescatamo: El espacio y la repetición como método para degradar.
 
+![referente](./imagenes/referente-3.jpeg)
+
+
 **4- The Disintegration Loops (de William Basinski)**
 
 Al intentar digitalizar antiguas grabaciones en cinta magnética de los años 80, el polvo magnético se iba desprendiendo al pasar por los cabezales, haciendo que las melodías se fueran borrando y deshaciendo en tiempo real 
 
 Que rescatamos:La pérdida como proceso físico visible.
+
+![referente](./imagenes/referente-4.jpeg)
+
 
 **5- La fantasmología o Hauntology/Hauntología en general**
 
@@ -260,9 +271,12 @@ Que rescatamos: Sonidos del pasado que vuelven como fantasmas.
  
 Documental sonoro de la UC que busca capturar el ecosistema sonoro chilote y generar un archivo patrimonial. 
 
- la isla de Apiao desde los oídos de niños, niñas y adolescentes 
+La isla de Apiao desde los oídos de niños, niñas y adolescentes 
 
 Que rescatamos: Archivo sonoro de un territorio chileno, hecho con niños y niñas de la isla. 
+
+![referente](./imagenes/referente-6.jpeg)
+
 
 https://open.spotify.com/episode/6S1cDksKuc8zHf0zY7s3zA 
 
@@ -271,6 +285,9 @@ https://open.spotify.com/episode/6S1cDksKuc8zHf0zY7s3zA
 De la artista canadiense Janet Cardiff, es una instalación sonora que deconstruye la monumental obra coral renacentista Spem in alium (1570) de Thomas Tallis mediante 40 altavoces individuales dispuestos en un gran óvalo a la altura del oído humano, cada uno reproduciendo la grabación aislada de un cantante distinto. El verdadero poder del sonido en esta pieza radica en su capacidad para transformar la música en una escultura física y emocional: mientras que en el centro de la sala el espectador percibe la armonía envolvente y celestial de las cuarenta voces unidas, al acercarse a un altavoz específico la masa coral se disuelve en una experiencia profundamente íntima y humana donde se distinguen el timbre único, la respiración y hasta las conversaciones previas de cada intérprete, convirtiendo el desplazamiento del oyente en una mezcla musical personal y catártica.
 
 Que rescatamos: Separar en capas individuales; el público elige a cuál se acerca.
+
+![referente](./imagenes/referente-7.jpeg)
+
 
 https://www.youtube.com/watch?v=FwVf548Ix8I 
 
@@ -286,9 +303,15 @@ Herramienta con la que apuntas y sintonizas frecuencias de audio a la distancia;
  
 Que rescatamos: Apagado y distorsionado cuando estás lejos, nítido cuando sintonizas.
 
+![referente](./imagenes/referente-9.jpeg)
+
+
 
 **10- Critter & Guitari Pocket Piano (2010):**
 
 Se vendió desde 2010, con 16 teclas de arce reales, y trae un parlante incorporado de 3 W, referente fomar.
 
 Que rescatamos: Objeto pequeño, de madera, con parlante incorporado de 3 W.
+
+![referente](./imagenes/referente-10.jpeg)
+
