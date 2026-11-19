@@ -46,7 +46,7 @@ Nuestro proyecto n°3 se basa en crear un juego donde el jugador debe interactua
 
 El juego consiste en controlar una nave espacial que debe sobrevivir a diferentes ataques enemigos, esquivando obstáculos y eliminando adversarios mediante disparos. A medida que transcurre el tiempo, la dificultad aumenta progresivamente, generando nuevos desafíos que exigen mayor atención y capacidad de reacción. A través de diferentes señales sonoras, el jugador podrá identificar la ubicación de los enemigos, anticipar ataques, reconocer daños en su nave y recibir información sobre su desempeño.
 
-El jugador deberá interpretar las señales auditivas para tomar decisiones, desplazarse entre diferentes posiciones y disparar contra los enemigos antes de recibir un ataque.  La partida termina cuando la nave pierde todas sus vidas. El sistema comunicará la información a través de una pantalla, al igual que cuando este inicia o las vidas que tengas. 
+El jugador debe interpretar las señales auditivas para tomar decisiones, desplazarse entre diferentes posiciones y disparar contra los enemigos antes de recibir un ataque.  La partida termina cuando la nave pierde todas sus vidas. El sistema comunicará la información a través de una pantalla, al igual que cuando este inicia o las vidas que tengas. 
 
 ## Proceso
 
@@ -54,7 +54,7 @@ A partir de nuestro proyecto 2, nos interesó seguir trabajando en máquinas que
 
 Esto nos llevó a reflexionar sobre las obras de Christine Sun Kim y como ella vive en un mundo donde solo le guía la visión y el tacto, pero no la audición ¿qué pasa si tu no logras vez que hay a tu alrededor pero debes esquivarlo de todas formas para no morir? Es por eso que nació este juego, con el fin de llevar al humano a entender cuando se limita un sentido. 
 
-Como mencionamos, como grupo nos propusimos a no utilizar pantallas, ya que en los proyectos anteriores y motivación de una de nuestras compañeras de utilizar más de 2 pantallas, un desafío que aún está pendiente, ya que agregamos una pantalla la cual solo menciona cuántas vidas tiene, cuando parte, etc, pero no proyecta nada cuando estás jugando como los enemigos, obstáculos, etc. 
+Es por esto que como grupo nos limitamos al uso de una sola pantalla la cual entrega información relevante para el jugador (ya sea para saber cuando inicia el juego, cuando está en pausa, instrucciones, cuántas vidas tiene, en qué nivel va, y animaciones), mas no lo ayuda a visualizar de dónde viene el sonido, lo que hace el juego más desafiante.
 
 ---
 
