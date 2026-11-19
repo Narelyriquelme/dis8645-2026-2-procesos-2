@@ -230,6 +230,12 @@ El Critter & Guitari Kaleidoloop es un sampler y looper portátil diseñado para
 
 Esta fue otra de las máquinas que apenas la vimos nos abrió muchas respuestas como también muchas preguntas. Partiendo desde cómo podría interactuar el usuario con la interfaz, ya sea en el gesto de acercarse a grabar su voz, o incluso abriendo la discusión sobre si el usuario tiende a grabar solo presionando una vez el botón o manteniéndolo presionado.
 
+La disposición de los componentes también nos dio a comprender ciertas importancias, por ejemplo que el micrófono esté extendido físicamente da a entender muy de inmediato que su función principal es grabar. Sin embargo, los botones al ser todos iguales y no tener ningún símbolo que los diferencie uno de otro (viéndolo desde frente) dejan una confusión al usuario al no comprender como se utilizan y tiende a buscar la respuesta en cómo se está reproduciendo el sonido, antes de ver el manual que contiene detrás por ejemplo. 
+
+Otra cosa que rescatamos al estar utilizando este aparato, fue que nos importa mucho que el usuario tenga ambas opciones de reproducir lo que está escuchando desde el mismo objeto o conectarlo a otro dispositivo amplificador.
+
+Además nosotras queremos representar visualmente cómo el sonido se va sumando hasta que ya no quede espacio para más audio. El Kaleidoloop muestra qué tan llena está la memoria a través de una lógica de un rango de 1 a 4 parpadeos de un led. Nosotras seguiremos este premisa de representar la capacidad de audios que se van almacenando, pero a través de una pantalla.
+
 <br>
 
 <img src="./imagenes/kaleidoloop.png" alt="" width="50%">
