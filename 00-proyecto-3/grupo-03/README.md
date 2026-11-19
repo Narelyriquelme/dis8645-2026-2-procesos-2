@@ -9,7 +9,9 @@
 
 ## sobre el proyecto
 
-El proyecto busca educar en cuanto a biodiversidad de especies que se encuentran amenazadas o en peligro de extinción en nuestro territorio. La máquina sonora constaría de 4 categorías: mamíferos, aves, anfibios e insectos. Dentro de cada categoría, van a haber 3 especies, una por cada parte del país: norte, centro y sur.
+Este proyecto busca educar sobre la biodiversidad de las especies amenazadas o en peligro de extinción que habitan nuestro territorio, a través de una máquina sonora que da visibilidad a sus voces, a su existencia y, como consecuencia, apela a su cuidado, ya que no se puede cuidar lo que no se conoce. La máquina se organiza en cuatro categorías: mamíferos, aves, anfibios e insectos. Cada categoría contiene tres especies, una por cada zona del país (norte, centro y sur). 
+
+La máquina permite escuchar, silenciar y superponer los sonidos de los distintos animales mediante perillas, generando composiciones sonoras que surgen de la combinación de sus voces. Así, el instrumento funciona tanto como un pequeño archivo de biodiversidad sonora como una herramienta de exploración y composición de un paisaje sonoro.
 
 ### funcionamento
 
