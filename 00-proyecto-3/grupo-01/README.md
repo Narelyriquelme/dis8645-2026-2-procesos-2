@@ -207,13 +207,17 @@ Este es un pedal de efectos hechos con componentes analógicos. El efecto que pr
 
 <br>
 
-Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Se inspiró en un patch de stutter en Max/MSP que usaba Jonny Greenwood, de Radiohead. Lo que rescatamos de este pedal son las funciones que tiene: el bucle, el efecto de glitch y que use su propia señal para repetir, lo cuál nuestro proyecto.
+Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Lo que rescatamos de este pedal es el funcionamiento que tiene: el bucle, el efecto de glitch y por sobre todo que use su propia señal para repetir es una lógica que nuestro proyecto busca al introducir audios sobre otros.
 
 <img src="./imagenes/mini-glitch.png" alt="" width="50%">
 
 <br>
 
 ### [MOOG GRANDMOTHER](https://www.moogmusic.com/synthesizers/grandmother/)
+
+<br>
+
+Este es un sintetizador analógico semimodular, que quiere decir que tiene 41 puntos de conexión para conectar con otros módulos de sonido, pero que también se puede usar individualmente sin conectar cables.
 
 <img src="./imagenes/grandmother.jpg" alt="" width="50%">
 
