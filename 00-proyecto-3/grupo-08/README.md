@@ -15,9 +15,6 @@
 
 
 ## sobre el proyecto
-Sound Board (con sonidos propios)
-
-Descripción del proyecto
 
 El proyecto consiste en construir un muestrario interactivo con nueve sonidos grabados por nosotros.
 
@@ -51,7 +48,7 @@ También se contempla una décima grabación sorpresa, integrada por el grupo, y
 ## esquematico
 (nare)
 
-## pseudo - codigo
+## pseudo - código
 
 INICIO
 
@@ -116,4 +113,4 @@ FIN
 
 ## referentes
 
-## bibliografia 
+## bibliografía 
