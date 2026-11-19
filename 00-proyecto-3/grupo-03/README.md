@@ -9,9 +9,11 @@
 
 ## sobre el proyecto
 
-Este proyecto busca educar sobre la biodiversidad de las especies amenazadas o en peligro de extinción que habitan nuestro territorio, a través de una máquina sonora que da visibilidad a sus voces, a su existencia y, como consecuencia, apela a su cuidado, ya que no se puede cuidar lo que no se conoce. La máquina se organiza en cuatro categorías: mamíferos, aves, anfibios e insectos. Cada categoría contiene tres especies, una por cada zona del país (norte, centro y sur). 
+Este proyecto busca acercar y educar sobre la biodiversidad de las especies amenazadas o en peligro de extinción que habitan nuestro territorio chileno, a través de una máquina sonora que da visibilidad y amplifica sus voces y su existencia. Como consecuencia, apela desde la escucha, generar un vínculo sensible a la memoria de estas especies que muchas veces pasan desapercibidas, invitando a reconocer su presencia y reflexionar sobre la fragilidad de su existencia.. 
 
-La máquina permite escuchar, silenciar y superponer los sonidos de los distintos animales mediante perillas, generando composiciones sonoras que surgen de la combinación de sus voces. Así, el instrumento funciona tanto como un pequeño archivo de biodiversidad sonora como una herramienta de exploración y composición de un paisaje sonoro.
+La máquina se organiza en cuatro categorías: mamíferos, aves, anfibios e insectos. Cada categoría contiene tres especies, una por cada zona del país (norte, centro y sur). 
+
+La máquina permite escuchar, silenciar y superponer los sonidos de los distintos animales mediante perillas, generando composiciones sonoras que surgen de la combinación de sus voces. Así, el instrumento funciona tanto como un pequeño archivo de biodiversidad sonora como una herramienta de exploración y composición de un imaginario de paisaje sonoro.
 
 ### funcionamento
 
