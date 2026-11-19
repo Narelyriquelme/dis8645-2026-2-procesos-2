@@ -193,25 +193,29 @@ https://wokwi.com/projects/480724591872061441
 
 ## Referentes
 
-### [NYQUIST - Bit Crush](https://notpedals.com/products/nyquist)
+### [Kaleidoloop](https://forum.critterandguitari.com/t/kaleidoloop-returns/10321)
+
+El Critter & Guitari Kaleidoloop es un sampler y looper portátil diseñado para grabar sonidos, crear bucles con estos y manipularlos en tiempo real. 
+
+Esta fue otra de las máquinas que apenas la vimos nos abrió muchas respuestas como también muchas preguntas. Partiendo desde cómo podría interactuar el usuario con la interfaz, ya sea en el gesto de acercarse a grabar su voz, o incluso abriendo la discusión sobre si el usuario tiende a grabar solo presionando una vez el botón o manteniéndolo presionado.
+
+La disposición de los componentes también nos dio a comprender ciertas importancias, por ejemplo que el micrófono esté extendido físicamente da a entender muy de inmediato que su función principal es grabar. Sin embargo, los botones al ser todos iguales y no tener ningún símbolo que los diferencie uno de otro (viéndolo desde frente) dejan una confusión al usuario al no comprender como se utilizan y tiende a buscar la respuesta en cómo se está reproduciendo el sonido, antes de ver el manual que contiene detrás por ejemplo. 
+
+Otra cosa que rescatamos al estar utilizando este aparato, fue que nos importa mucho que el usuario tenga ambas opciones de reproducir lo que está escuchando desde el mismo objeto o conectarlo a otro dispositivo amplificador.
+
+Además nosotras queremos representar visualmente cómo el sonido se va sumando hasta que ya no quede espacio para más audio. El Kaleidoloop muestra qué tan llena está la memoria a través de una lógica de un rango de 1 a 4 parpadeos de un led. Nosotras seguiremos este premisa de representar la capacidad de audios que se van almacenando, pero a través de una pantalla.
 
 <br>
 
-Este es un pedal de efectos hechos con componentes analógicos. El efecto que produce es como el de pixelar el sonido, haciendo que este pierda nitidez. Nosotras rescatamos el efecto como tal y lo integramos a nuestra sección de edición de audio.
-
-<img src="./imagenes/bit-crusher.webp" alt="" width="50%">
+<img src="./imagenes/kaleidoloop.png" alt="" width="50%">
 
 <br>
 
-### [Mini Glitch](https://electricmojoguitars.com/products/tkog-mini-glitch)
+También desarmamos este aparato para ver el funcionamiento interno y nos dimos cuenta de que utiliza este chip. Algo que nos demuestra que existen otros tipos de controladores que son capaces de realizar cosas similares a las que estamos haciendo con la Raspi.
 
-<br>
+#### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
 
-Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Lo que rescatamos de este pedal es el funcionamiento que tiene: el bucle, el efecto de glitch y por sobre todo que use su propia señal para repetir es una lógica que nuestro proyecto busca al introducir audios sobre otros.
-
-<img src="./imagenes/mini-glitch.png" alt="" width="50%">
-
-<br>
+<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="20%">
 
 ### [MOOG GRANDMOTHER](https://www.moogmusic.com/synthesizers/grandmother/)
 
@@ -224,16 +228,22 @@ Por otra parte, hay varias cosas que al momento de estar utilizando este disposi
 
 <img src="./imagenes/grandmother.jpg" alt="" width="50%">
 
-### [Kaleidoloop](https://forum.critterandguitari.com/t/kaleidoloop-returns/10321)
-
-El Critter & Guitari Kaleidoloop es un sampler y looper portátil diseñado para grabar sonidos, crear bucles con estos y manipularlos en tiempo real. 
-
-Esta fue otra de las máquinas que apenas la vimos nos abrió muchas respuestas como también muchas preguntas. Partiendo desde cómo podría interactuar el usuario con la interfaz, ya sea en el gesto de acercarse a grabar su voz, o incluso abriendo la discusión sobre si el usuario tiende a grabar solo presionando una vez el botón o manteniéndolo presionado.
+### [Mini Glitch](https://electricmojoguitars.com/products/tkog-mini-glitch)
 
 <br>
 
-<img src="./imagenes/kaleidoloop.png" alt="" width="50%">
+Es un pedal que crea un glitch aleatorio en el sonido y sirve también para hacer looping experimental. Funciona capturando una muestra corta de señal y luego la repite, en otras palabras graba por sobre sí mismo y se realiza un feedback. Lo que rescatamos de este pedal es el funcionamiento que tiene: el bucle, el efecto de glitch y por sobre todo que use su propia señal para repetir es una lógica que nuestro proyecto busca al introducir audios sobre otros.
 
-### [Circuito Integrado LPC2138FBD64](https://www.y-ic.com/pdf/Freescale-NXP-Semiconductors/LPC2138FBD64.html)
+<img src="./imagenes/mini-glitch.png" alt="" width="50%">
 
-<img src="./imagenes/lpc2138fbd64.jpg" alt="" width="50%">
+<br>
+
+### [NYQUIST - Bit Crush](https://notpedals.com/products/nyquist)
+
+<br>
+
+Este es un pedal de efectos hechos con componentes analógicos. El efecto que produce es como el de pixelar el sonido, haciendo que este pierda nitidez. Nosotras rescatamos el efecto como tal y lo integramos a nuestra sección de edición de audio.
+
+<img src="./imagenes/bit-crusher.webp" alt="" width="50%">
+
+<br>
