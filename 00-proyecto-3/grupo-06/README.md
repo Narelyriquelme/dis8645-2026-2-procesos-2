@@ -30,7 +30,6 @@
 | 6 | Pulsador | 7 | $100 | $600 | [afel.cl](https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor) |
 | 7 | Pantalla OLED 2,42" 128×64 SPI (controlador SSD1309) | 1 | $23.000 | $23.000 | [afel.cl](https://afel.cl/products/pantalla-oled-2-42-128x64-spi-controlador-ssd1309) |
 
-## Diagrama de flujo
 
 ## Diagramas de flujo
 
@@ -52,7 +51,7 @@ flowchart TD
     H --> F
     G -- Sí --> I["<b>Reproducir paisaje sonoro</b><br/>Capas con Botones 4 a 7<br/>Volumen con Perilla 2"]
 
-    I --> J{"<b>¿Giliano o Ana María<br/>en adultez o vejez?</b>"}
+    I --> J{"<b>Giliano<br/>vejez</b>"}
     J -- Sí --> K["<b>Audio distorsionado</b><br/>Recuerdo borroso"]
     K --> L["<b>Presionar Recordar</b><br/>Botón 3 recupera nitidez"]
     L --> M
@@ -157,9 +156,9 @@ flowchart TD
 flowchart TD
     A([Inicio]) --> B["<b>Menú de personajes</b><br/>Perilla 1: cuatro sectores"]
     B --> P1["<b>Giliano</b><br/>1956"]
-    B --> P2["<b>Ana María</b><br/>1972"]
-    B --> P3["<b>Nicole</b><br/>1987"]
-    B --> P4["<b>Sofía</b><br/>2004"]
+    B --> P2["<b>Anita</b><br/>1972"]
+    B --> P3["<b>Sofía</b><br/>1987"]
+    B --> P4["<b>Nicolás</b><br/>2004"]
 
     P1 --> C
     P2 --> C
@@ -190,7 +189,7 @@ flowchart TD
     G -- Perilla 1 retrocede --> E
     F -- Sí --> H["<b>Reproducir etapa</b><br/>Volumen con Perilla 2"]
 
-    H --> I{"<b>¿Giliano o Ana María<br/>en adultez o vejez?</b>"}
+    H --> I{"<b>Giliano <br/>vejez</b>"}
     I -- Sí --> J["<b>Audio borroso</b><br/>Recuerdo difuso"]
     J --> K["<b>Recordar</b><br/>Botón 3: nitidez"]
     K --> L
@@ -219,6 +218,7 @@ flowchart TD
 
 </details>
 
+
 ## Texto descriptivo del proyecto
 
 “Una vida en sonidos” es una máquina interactiva que recorre, a través del sonido, la vida promedio de una persona chilena, desde el llanto de una guagua hasta el final de la vejez. En un inicio, el usuario escoge un personaje entre cuatro opciones: Giuliano, Ana María, Nicole y Sofía, mientras una pantalla muestra la etapa en la que se encuentra.
@@ -236,10 +236,13 @@ Los personajes fueron separados según las generaciones descritas en:
 
 Lampert, M. P. (2025). Baby Boomers, Generación X, Millennials y Generación Z: Caracterización generacional en trabajo, familia y tecnología. Biblioteca del Congreso Nacional de Chile, Asesoría Técnica Parlamentaria. [Obtiene Archivo](https://obtienearchivo.bcn.cl/obtienearchivo?id=repositorio%2F10221%2F37179%2F1%2FBCN__caracterizacion__Baby_Boomers__X__Millennials_y___Z__FINAL.pdf)
 
+Utilizamos 4 personajes para abarcar las distintas generaciones definidas por la demografía y el marketing conocidas como: “Baby Boomer”, “Millennials”, “Generación Z”, “Generación Alpha”, con la finalidad de alcanzar la nostalgia de más personas y dar a conocer también un poco de la época en la que vivieron estos personajes y sus estilos de vida.
+
+
 Según esto, los personajes:      
 - Giliano. Tiene todas las etapas (1956): hombre nacido en Valparaíso, 70 años, casado, padre de dos hijos. Trabaja como vendedor en la Caleta Portales de Valparaíso. A pesar de su edad, ha decidido no jubilarse, porque trabajar lo mantiene ocupado. Apoya al sector político de derecha. Sus vecinos comentan que en su juventud tuvo aventuras con hombres de la caleta, sin embargo, nunca confirmó ni desmintió su orientación sexual.
 
-- Anita. 6 etapas (1987): Mujer 39 años, vive en Santiago centro. En su juventud participó en la revolución pingüina y continuó su participación política apoyando la izquierda. En esa etapa también fue pokemona y escuchaba reggaeton y es fanática de lo sensual. Clase media, vive en un departamento pequeño frente al museo de las Bellas Artes. Convive con su mascota, un galgo rescatado, llamado Larry.
+- Anita. 6 etapas (1987): Mujer 39 años, vive en Santiago centro. En su juventud participó en la revolución pingüina y continuó su participación política apoyando la izquierda. En esa etapa también fue pokemona y escuchaba reggaeton. Clase media, vive en un departamento pequeño frente al museo de las Bellas Artes. Convive con su mascota, un galgo rescatado, llamado Larry.
 
 - Sofía. 5 etapas (2004): Mujer, 22 años, nacida en Osorno pero se vino a Santiago para estudiar diseño. Tiene 3 hermanos y espera poder ser la primera en entrar a la universidad. Vive en Ñuñoa y trabaja part-time en una cafetería de especialidad en la misma comuna. Se traslada en bicicleta por Santiago. Tiene una gata llamada Kari. Sus papás no creen que pueda sobrevivir al ritmo de la ciudad. Le gustan los boleros y el animé.
 
@@ -512,3 +515,5 @@ Que rescatamos: Objeto pequeño, de madera, con parlante incorporado de 3 W.
 
 ![referente](./imagenes/referente-10.jpeg)
 
+# Bibliografia 
+(https://obtienearchivo.bcn.cl/obtienearchivo?id=repositorio%2F10221%2F37179%2F1%2FBCN__caracterizacion__Baby_Boomers__X__Millennials_y___Z__FINAL.pdf) 
