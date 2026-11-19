@@ -32,9 +32,15 @@ Visualizar proyecto: [https://wokwi.com/projects/480722608786043905](https://wok
 
 scanner sombre
 
+![scanner-sombre](./imagenes/scanner-sombre.jpg)
+
 echoes of bats and men
 
+![echoes-of-bats-and-men](./imagenes/echoes-of-bats-and-men.jpg)
+
 oregon trail
+
+![oregon-trail](./imagenes/oregon-trail.jpg)
 
 
 
