@@ -25,7 +25,7 @@
 | 1 | Raspberry Pi Pico 2W | 1 | $14.990 | $14.990 | [raspberrypi.cl](https://raspberrypi.cl/products/raspberry-pi-pico-2-w-con-headers) |
 | 2 | Módulo reproductor MP3-TF-16P V3.0 (tipo DFPlayer Mini) | 1 | $2.990 | $2.990 | [afel.cl](https://afel.cl/products/modulo-reproductor-mp3-tf-16p-v3-0) |
 | 3 | Tarjeta microSD 2–32 GB  | 1 | $3.500 | $3.500 | [mercadolibre.cl](https://www.mercadolibre.cl/tarjeta-de-memoria-maxell-micro-sd-32gb-clase-10-90mbs/p/MLC19813155) |
-| 4 | Mini parlante 3 W | 1 | — | — | [afel.cl](https://afel.cl/products/mini-parlante-altavoz-de-3w) |
+| 4 | Mini parlante 3 W | 1 | 3.000 | 3.000 | [afel.cl](https://afel.cl/products/mini-parlante-altavoz-de-3w) |
 | 5 | Potenciómetro | 2 | $500 | $1.000 | [afel.cl](https://afel.cl/products/potenciometro-10k-ohm) |
 | 6 | Pulsador | 7 | $100 | $600 | [afel.cl](https://afel.cl/products/boton-tactil-tapa-12x12x7-3-interruptor) |
 | 7 | Pantalla OLED 2,42" 128×64 SPI (controlador SSD1309) | 1 | $23.000 | $23.000 | [afel.cl](https://afel.cl/products/pantalla-oled-2-42-128x64-spi-controlador-ssd1309) |
