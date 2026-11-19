@@ -88,7 +88,6 @@ flowchart TD
 
 ### BOM – Lista de materiales
 
-## BOM – Lista de materiales
 
 | Código | Componente | Especificación | Cantidad | Precio unitario (CLP) | Subtotal (CLP) | Proveedor |
 |---|---|---|---:|---:|---:|---|
