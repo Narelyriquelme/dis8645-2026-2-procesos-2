@@ -109,6 +109,8 @@ La interfaz se organiza en tres zonas principales: reproducción, grabación y e
 | 8 | Potenciometros |
 | 9 | Luces led |
 | 10 | Slider |
+| 11 | 74HC595 |
+| 12 |
 
 ### pseudo - código
 
@@ -224,9 +226,27 @@ Se considera ordenar el código en distintas clases, a continuación se listan a
 
 - SDCard (se encarga de la lógica detrás de la grabación y lectura de datos)
 
+<br>
+
 ### Wokwi
 
+### version_01 
+
 https://wokwi.com/projects/480724591872061441
+
+En este primer acercamiento se buscó replicar el 
+
+### version_02
+
+https://wokwi.com/projects/479151932434500609
+
+Botones
+
+### version_03
+
+
+
+<br>
 
 ## Referentes
 
