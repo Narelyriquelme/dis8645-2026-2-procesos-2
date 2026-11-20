@@ -16,7 +16,6 @@ En la etapa de reproducción las grabaciones se acumulan en una mezcla de unos d
 
 Dentro del funcionamiento interno, este dispositivo es controlado por una Raspberry Pi Pico 2 W, la cual se encarga de gestionar las entradas y salidas de la interfaz física correspondientes a las conexiones con perillas, sliders, botones, leds, altavoz y pantalla, y también gestiona el procesamiento del sonido y su manipulación. Para asegurar un rendimiento continuo y evitar las limitaciones de memoria de la Raspi al trabajar con audios muy largos o con muchas capas, el sistema integra un módulo de tarjeta SD, que permite almacenar y reproducir el conjunto de sonidos grabados de manera fluida.
 
-
 ### Interfaz
 
 ![](./imagenes/estructura.png)
@@ -68,12 +67,16 @@ Son 60 posibilidades donde podría iniciar un audio.
 | 4 | Módulo PAM8302 | 01 | $720<sup><b>2</b> | https://es.aliexpress.com/item/1005007274382818.html | ![](./imagenes/amp.avif) |
 | 5 | Pantalla LCD Oled Azul y Amarillo 0,96 | 01 | $4.500 | https://afel.cl/products/pantalla-lcd-oled-azul-y-amarillo-0-96 | ![](./imagenes/pantalla.jpg)
 | 6 | Módulo Multiplexor CD74HC4067 | 02 | $2.000 | https://afel.cl/products/modulo-multiplexor-cd74hc4067 | ![](./imagenes/multi.webp) |
-| 7 | Botones | 
-| 8 | Potenciometros |
-| 9 | Luces led |
-| 10 | Slider |
-| 11 | 74HC595 |
-| 12 |
+| 7 | Botones | 12 |  |  |
+| 8 | Potenciometros | 2 |
+| 9 | Luces led | 9 |
+| 10 | Slider | 3 |
+| 11 | 74HC595 | 2 | 
+| 12 | 74HC4051 | 1 |
+| 13 | Lector SD Card | 1 |
+| 14 | Parlante | 
+| 15 | PCB perforada |
+| 16 | Pin Header 1 x20 | 2 |
 
 ### pseudo - código
 
@@ -135,6 +138,64 @@ funcionamientoMaquina = 1;}
 
 - Si la máquina es apagada desde el `interruptorGeneral`, el `conjuntoDeAudios` debe quedar almancenado
 
+#### Conexiones
+
+| class | Lugar      | Nombre |   |
+| ----- | ---------- | ------ | - |
+| Boton | HP4067 C0  | `fxAttack` | - |
+| Boton | HP4067 C1  | `fxRelease` | - |
+| Boton | HP4067 C2  | `fxHighPassF` | - |
+| Boton | HP4067 C3  | `fxPitching` | - |
+| Boton | HP4067 C4  | `fxReverb` | - |
+| Boton | HP4067 C5  | `fxTremolo` | - |
+| Boton | HP4067 C6  | `fxBitCrushing` | - |
+| Boton | HP4067 C7  | `fxRingModulator` | - |
+| Boton | HP4067 C8  | `fxVelocidad` | - |
+| Boton | HP4067 C9  | `guardadEfectos` | - |
+| Boton | HP4067 C10 | `botonGrabar` | - |
+| Boton | HP4067 C11 | `botonReproducir` | - |
+| Boton | HP4067 C12 | `botonEncendido` | - |
+| MultiplexorHP4067 | GPIO 14 | `botonesS0` | - |
+| MultiplexorHP4067 | GPIO 15 | `botonesS1` | - |
+| MultiplexorHP4067 | GPIO 10 | `botonesS2` | - |
+| MultiplexorHP4067 | GPIO 17 | `botonesS3` | - |
+| MultiplexorHP4067 | GPIO 18 | `botonesSignal` | - |
+| MultiplexorHP4067 | GND | `botonesEnable` | - |
+| Lucesita | 74HC595 Q0  | `fxAttack` | - |
+| Lucesita | 74HC595 Q1  | `fxRelease` | - |
+| Lucesita | 74HC595 Q2  | `fxHighPassF` | - |
+| Lucesita | 74HC595 Q3  | `fxPitching` | - |
+| Lucesita | 74HC595 Q4  | `fxReverb` | - |
+| Lucesita | 74HC595 Q5  | `fxTremolo` | - |
+| Lucesita | 74HC595 Q6  | `fxBitCrushing` | - |
+| Lucesita | 74HC595 Q7  | `fxRingModulator` | - |
+| Lucesita | 74HC595 Q8  | `fxVelocidad` | - |
+| Multiplexor74HC595 | GPIO 8 | `lucesitasSCHP` | - |
+| Multiplexor74HC595 | GPIO 7 | `lucesitasSTCP` | - |
+| Multiplexor74HC595 | GPIO 6 | `lucesitasDS` | - |
+| Perilla | 74HC4051 Q0 | `volumenGeneral` | - |
+| Perilla | 74HC4051 Q1 | `volumenEspecifico` | - |
+| Perilla | 74HC4051 Q2  | `fx6al8` | - |
+| Perilla | 74HC4051 Q3 | `fx3al5` | - |
+| Perilla | 74HC4051 Q4 | `fx0al2` | - |
+| Multiplexor74HC4051 | GPIO 26 | `perillaSignal` | - |
+| Multiplexor74HC4051 | GPIO 13 | `perillaS0` | - |
+| Multiplexor74HC4051 | GPIO 12 | `perillaS1` | - |
+| Multiplexor74HC4051 | GPIO 11 | `perillaS2` | - |
+| Pantalla | GPIO 4 | `pantallaSDA` | - |
+| Pantalla | GPIO 5 | `pantallaSCL` | - |
+| SDModulo | GPIO 9 | `sdCS` | - |
+| SDModulo | GPIO 3 | `sdDI` | - |
+| SDModulo | GPIO 2 | `sdCLK` | - |
+| SDModulo | GPIO 16 | `sdDO` | - |
+| INMP441 |  GPIO 19 | `micSD` | - |
+| INMP441 | GPIO 28 | `micWS` | - |
+| INMP441 | GPIO 27 | `micCLK` | - |
+| INMP441 | GND | `micLR` | - |
+| PCM5102A | GPIO20 | `ampliDIN` | - | 
+| PCM5102A |GPIO 21 | `ampliBCK` | - |
+| PCM5102A | GND | `ampliSCK` | - |
+
 #### Modo Reproducir
 
 Encargado de la reproducción del `conjuntoDeAudios`, utiliza 2 botones y posee una pantalla para visualizar desde la cantidad de audios que existen dentro del conjunto hasta la frecuencia con la que pueden ingresar cada audio. Los 2 botones son para la reproducción del conjunto y para detener la reproducción.
@@ -155,7 +216,11 @@ Una vez que se detiene la grabación con el segundo _click_ automáticamente se 
 
 ##### Modo Editar
 
-Al entrar a esta sección el sonido grabado, se reproduce en bucle para notar como los efectos interfieren en tiempo real. Para seleccionar alguno de estos se observará que  
+Al entrar a esta sección el sonido grabado se reproduce en bucle para notar como los efectos interfieren en tiempo real, además el brillo de los leds subirá y disminuira una sola vez al inicio por 1.5s para indicar que es esta la sección en la que se debe trabajar. Para seleccionar alguno de estos efectos se seleccionará cualquier botón asociado, su led se encenderá y se bloquearan todos las opciones fuera de este modo. 
+
+Con el efecto deseado listo a editar se cambiará el valor del potenciómetro deslizable y se oíra su intervención en el sonido de manera inmediata, al seleccionar el mismo efecto u otro el valor del pote se guardará automáticamente y como respuesta visual se tendrá su led asociado encendido de manera constante
+
+Una vez se hayan hecho los cambios deseados, se podrá presionar el botón de `guardarEdicion` lo que hace que el sónido editado ingrese a uno de los 60 puntos posibles en los que inicia a sonar con la mezcla / conjunto
 
 <br>
 
@@ -193,21 +258,23 @@ Se considera ordenar el código en distintas clases, a continuación se listan a
 
 ### Wokwi
 
-### version_01 
+### version_01
 
 https://wokwi.com/projects/480724591872061441
 
-En este primer acercamiento se buscó replicar el 
+En este primer acercamiento se buscó replicar la lógica detrás del guardado de audios en la memoria, es por ello que se utlizo el `Serial Monitor` para imprimir mensajes que dan a entender la cantidad de sonidos guardados y su duración, esta se observa según la cantidad de dígitos de cada número
 
 ### version_02
 
 https://wokwi.com/projects/479151932434500609
 
-Botones
+En esta versión nos acercamos a la relación que existen entre los diversos leds y botones al momento de trabajar en la edición de interfaz, estos fueron los primeros acercamienos a ver una interfaz y como dialogar con el usuario
 
 ### version_03
 
+https://wokwi.com/projects/481142445555191809
 
+Finalmente tenemos una versión donde vemos conexiones y funcionamientos, por la imposibilidad de representar la lógica pensada para el sónido se utilizará el `Serial Monitor` para representar lo que ocurre en cada sección y proceso, es importante mencionar que se tuvieron que realizar algunos IC para poder representar funcionamientos, tales como el INMP441, que corresponde a un micrófono
 
 <br>
 
@@ -267,3 +334,9 @@ Este es un pedal de efectos hechos con componentes analógicos. El efecto que pr
 <img src="./imagenes/bit-crusher.webp" alt="" width="50%">
 
 <br>
+
+## Bibliografía
+
+- https://youtube.com/shorts/euH0vpYYxks
+
+- https://electropeak.com/learn/74hc595-with-arduino-how-it-works-how-to-use-full-guide/
