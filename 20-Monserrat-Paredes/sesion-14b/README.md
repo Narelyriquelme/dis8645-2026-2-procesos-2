@@ -21,22 +21,24 @@
 
 ## 2. BOM final (portátil)
 
-| N.º | Componente | Cantidad | Precio (CLP) | Precio (CLP) |
-|:---:|---|:---:|---:|
-| 1 | Raspberry Pi Pico W con pines soldados (hacia abajo) | 1 | $11.290 |[Comprar]([URL](https://raspberrypi.cl/products/raspberry-pi-pico-w-con-conexion-wifi)) |
-| 2 | Pico Audio Pack (Pimoroni PIM544) | 1 | $20.000 | [Comprar]([URL](https://thepihut.com/products/pico-audio-pack-line-out-and-headphone-amp?srsltid=AYCX9vK1tTY8zKseWunwPfP0f0sHdsMd8y_xIhHtjg09X2NUH4LuyGxf)) |
+## BOM final (portátil)
+
+| N.º | Componente | Cantidad | Precio (CLP) | Enlace |
+|:---:|---|:---:|---:|---|
+| 1 | Raspberry Pi Pico W con pines soldados (hacia abajo) | 1 | $11.290 | [Comprar](https://raspberrypi.cl/products/raspberry-pi-pico-w-con-conexion-wifi) |
+| 2 | Pico Audio Pack (Pimoroni PIM544) | 1 | $20.000 | [Comprar](https://thepihut.com/products/pico-audio-pack-line-out-and-headphone-amp?srsltid=AYCX9vK1tTY8zKseWunwPfP0f0sHdsMd8y_xIhHtjg09X2NUH4LuyGxf) |
 | 3 | Audífonos estéreo con jack 3,5 mm | 1 | - | - |
-| 4 | Botones pulsadores  | 2 | $500 | [Comprar]([URL](https://afel.cl/products/kit-boton-tactil-6x6x5-interruptor-5-unidades)) |
-| 5 | Interruptor deslizante | 1 | $300 | [Comprar]([URL](https://www.mechatronicstore.cl/mini-switch-interruptor-proto-3-pin/?attribute_tamano=5.7x19.8mm&gad_source=1&gad_campaignid=22963321414&gbraid=0AAAAAqH0PVPTVAN6fsocfXnAEohDuLlhg&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdMu42zb8HK8XkSLshWaRKeFXZTj4N4wuSPT2Hx-EFNbEUKIZeBDWowaAt3vEALw_wcB)) |
-| 6 | Potenciómetro 10 kΩ | 1 | $500 | [Comprar]([URL](https://afel.cl/products/potenciometro-10k-ohm)) |
-| 7 | Sensor MPU6050 (GY-521) | 1 | $4.000 | [Comprar]([URL](https://afel.cl/products/sensor-giroscopio-acelerometro-gy-521-mpu6050?variant=45125238915224&country=CL&currency=CLP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_term=&utm_campaign=@+Smart+Shopping+2&utm_source=adwords&utm_medium=ppc&hsa_acc=1808722794&hsa_cam=19569174895&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=19560974580&gbraid=0AAAAADBMsFRk1PsXMSeyznFKAyCuN4hvy&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdPDwm8yk8GtXc9UsI5vPKAeW25GfOHtz_r5iiWCksDefua17uIzdc0aAh9LEALw_wcB)) |
-| 8 | LCD 2004 (20x4) con módulo I2C | 1 | $7.853 | [Comprar]([URL](https://www.mercadolibre.cl/modulo-lcd-20x4-con-interfaz-2004-para-display/p/MLC2035293542)) |
-| 9 | Conversor de nivel lógico (traductor) I2C 5V a 3.3V | 1 | $2.000 | [Comprar]([URL](https://afel.cl/products/conversor-de-nivel-logico-i2c-5v-a-3-3v?srsltid=AYCX9vJUmmicTz9JrkdNi7dlYMKtfUp1EhtzUKM3RpkZJUr4pLrNj4Cg)) |
-| 10 | Módulo de carga TP4056 | 1 | $1.990 | [Comprar]([URL](https://mcielectronics.cl/shop/product/modulo-de-cargador-tipo-c-tp4056-5v-1a-tipo-c-usb-placa-de-proteccion-de-bateria-de-litio/?srsltid=AYCX9vIyVNvNyB02mgALR-N4b41AijCS616Gkl80tmAXan_sYdMf-AiB)) |
-| 11 | Batería LiPo 3,7 V, 2000 mAh | 1 | $7.990 | [Comprar]([URL](https://maxelectronica.cl/fuentes-de-alimentacion/910-bateria-li-po-37v-74wh-2000mah-modelo-103450-con-conector-jst-ph20.html)) |
-| 12 | Regulador de voltaje (boost) a 5 V, ajustado a 5 V | 1 | $1.490 | [Comprar]([URL](https://www.mechatronicstore.cl/convertidor-dc-dc-step-up-mt3608-2a-regulable-boost/?gad_source=1&gad_campaignid=22963321414&gbraid=0AAAAAqH0PVPTVAN6fsocfXnAEohDuLlhg&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdPPmZqqtpm79VzlI_cAvMVh0R7eOpORpOEZA6IM7ZCAg5Pc-ZisR5waAuDeEALw_wcB)) |
-| 13 | Protoboard de 830 puntos | 1 | $2.930 | [Comprar]([URL](https://altronics.cl/breadboard-830)) |
-| 14 | Cables Dupont | 1 | $2.000 | [Comprar]([URL](https://afel.cl/products/pack-60-cables-de-conexion)) |
+| 4 | Botones pulsadores | 2 | $500 | [Comprar](https://afel.cl/products/kit-boton-tactil-6x6x5-interruptor-5-unidades) |
+| 5 | Interruptor deslizante | 1 | $300 | [Comprar](https://www.mechatronicstore.cl/mini-switch-interruptor-proto-3-pin/?attribute_tamano=5.7x19.8mm&gad_source=1&gad_campaignid=22963321414&gbraid=0AAAAAqH0PVPTVAN6fsocfXnAEohDuLlhg&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdMu42zb8HK8XkSLshWaRKeFXZTj4N4wuSPT2Hx-EFNbEUKIZeBDWowaAt3vEALw_wcB) |
+| 6 | Potenciómetro 10 kΩ | 1 | $500 | [Comprar](https://afel.cl/products/potenciometro-10k-ohm) |
+| 7 | Sensor MPU6050 (GY-521) | 1 | $4.000 | [Comprar](https://afel.cl/products/sensor-giroscopio-acelerometro-gy-521-mpu6050?variant=45125238915224&country=CL&currency=CLP&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_term=&utm_campaign=@+Smart+Shopping+2&utm_source=adwords&utm_medium=ppc&hsa_acc=1808722794&hsa_cam=19569174895&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=19560974580&gbraid=0AAAAADBMsFRk1PsXMSeyznFKAyCuN4hvy&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdPDwm8yk8GtXc9UsI5vPKAeW25GfOHtz_r5iiWCksDefua17uIzdc0aAh9LEALw_wcB) |
+| 8 | LCD 2004 (20x4) con módulo I2C | 1 | $7.853 | [Comprar](https://www.mercadolibre.cl/modulo-lcd-20x4-con-interfaz-2004-para-display/p/MLC2035293542) |
+| 9 | Conversor de nivel lógico (traductor) I2C 5V a 3.3V | 1 | $2.000 | [Comprar](https://afel.cl/products/conversor-de-nivel-logico-i2c-5v-a-3-3v?srsltid=AYCX9vJUmmicTz9JrkdNi7dlYMKtfUp1EhtzUKM3RpkZJUr4pLrNj4Cg) |
+| 10 | Módulo de carga TP4056 | 1 | $1.990 | [Comprar](https://mcielectronics.cl/shop/product/modulo-de-cargador-tipo-c-tp4056-5v-1a-tipo-c-usb-placa-de-proteccion-de-bateria-de-litio/?srsltid=AYCX9vIyVNvNyB02mgALR-N4b41AijCS616Gkl80tmAXan_sYdMf-AiB) |
+| 11 | Batería LiPo 3,7 V, 2000 mAh | 1 | $7.990 | [Comprar](https://maxelectronica.cl/fuentes-de-alimentacion/910-bateria-li-po-37v-74wh-2000mah-modelo-103450-con-conector-jst-ph20.html) |
+| 12 | Regulador de voltaje (boost) a 5 V, ajustado a 5 V | 1 | $1.490 | [Comprar](https://www.mechatronicstore.cl/convertidor-dc-dc-step-up-mt3608-2a-regulable-boost/?gad_source=1&gad_campaignid=22963321414&gbraid=0AAAAAqH0PVPTVAN6fsocfXnAEohDuLlhg&gclid=Cj0KCQiA2frXBhC_ARIsAPTFcdPPmZqqtpm79VzlI_cAvMVh0R7eOpORpOEZA6IM7ZCAg5Pc-ZisR5waAuDeEALw_wcB) |
+| 13 | Protoboard de 830 puntos | 1 | $2.930 | [Comprar](https://altronics.cl/breadboard-830) |
+| 14 | Cables Dupont | 1 | $2.000 | [Comprar](https://afel.cl/products/pack-60-cables-de-conexion) |
 | 15 | Cable micro-USB de datos | 1 | - | - |
 | 16 | Cable USB-C (cargar la batería por el TP4056) | 1 | - | - |
 | 17 | Soldador, estaño y cables finos | 1 | - | - |
