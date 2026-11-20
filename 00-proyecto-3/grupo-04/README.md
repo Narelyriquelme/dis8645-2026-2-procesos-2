@@ -157,15 +157,13 @@ Nos referenciamos en consolas antiguas porque están más simplificados para el 
 
  4. **Atari 2600 - Atari - 1981 Asteroids:** La idea de juego retro y la simplicidad de ellos, como por ejemplo aquí la meta es disparar y eliminar a la mayoría de enemigos posibles. 
 
-https://www.atarimania.com/games/atari-2600-games-asteroids-7379
-
  5. **Game Boy Advance:** Simplicidad de estructura mecánica del aparato. Tener los botones justos y necesarios para lograr un objetivo sin demasiada dificultad para comprenderlos.
 
-![Nintendo-Game-Boy](./imagenes/Nintendo-Game-Boy.jpg)
+![Nintendo-Game-Boy](./imagenes/nintendo-game-boy.jpg)
 
  6. **Bop It:** Por el uso de sólo audio para realizar una acción; su formato pequeño y transportable.
 
-![Bop-it](./imagenes/Bop-it.jpg)
+![Bop-it](./imagenes/bop-it.jpg)
 
  7. **Bohemian Rhapsody de Queen y Left and Right de Charlie Puth feat. Jungkook:** Elegimos estos dos referentes por el uso del paneo en ambas melodías, esto se refiere a que parte del audio se escucha como que el audio se moviera de izquierda a derecha o viceversa, que es lo que queremos lograr con el juego.
 
@@ -183,7 +181,7 @@ https://www.atarimania.com/games/atari-2600-games-asteroids-7379
 
  10. **Cover de Look What You Made Me Do de Taylor Swift como audio 3D por Officially3D:** Lo escogimos porque es una representación del audio binaural.
 
-![Cover LWYMMD de Taylor Swift](./imagenes/reputation.jpg)
+![Cover LWYMMD de Taylor Swift](./imagenes/reputation.jpeg)
 
 ---
 
