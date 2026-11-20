@@ -1,0 +1,15 @@
+{
+  "name": "PCM5102A",
+  "author": "Custom",
+  "pins": [
+    "VCC",
+    "GND",
+    "SCK",
+    "BCK",
+    "DIN",
+    "LCK",
+    "LOUT",
+    "AGND",
+    "ROUT"
+  ]
+}
