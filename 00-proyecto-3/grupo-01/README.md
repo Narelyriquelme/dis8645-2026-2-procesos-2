@@ -19,21 +19,57 @@ Dentro del funcionamiento interno, este dispositivo es controlado por una Raspbe
 
 ### Interfaz
 
-![](./imagenes/estructura.png)
+La interfaz se organiza en tres zonas principales: reproducción, grabación y edición. Recorrer visualmente el dispositivo de izquierda a derecha, identificando las tres zonas principales: reproducción, grabación y edición.
+![](./imagenes/interfaz-coreografia.png)
 
-La interfaz se organiza en tres zonas principales: reproducción, grabación y edición. La zona de reproducción se ubica a la izquierda e incorpora una pantalla para visualizar los datos del sonido, un parlante y los botones Play y Stop. Se decide incorporar una perilla de volumen en el lateral, ya que, al enfrentarse a la máquina, el usuario encontrará esta primera sección. Por ello, se considera importante disponer de este control cerca del botón Play, facilitando el ajuste del volumen durante la reproducción.
+| Zona | Elemento | Función |
+|---|---|---|
+| **Reproducción** | Parlante | Canal de salida por donde se reproduce el audio. |
+| | Pantalla | Visualiza la información de los audios almacenados. |
+| | Botón reproducción / pausa | Permite iniciar y pausar la reproducción de los audios registrados. |
+| | Perilla de volumen | Regula el volumen general de reproducción. |
+| **Grabación** | Micrófono | Medio de entrada por donde se captura el sonido. |
+| | Botón GRABAR | Activa la captura de sonido durante 10 segundos. |
+| | Pantalla | Muestra la cuenta regresiva de grabación. |
+| **Edición** | 9 botones de efectos | Permiten seleccionar los nueve efectos disponibles. |
+| | 3 perillas | Una por sección, permiten modificar los parámetros de los efectos seleccionados. |
+| | 9 luces LED | Indican el estado de cada efecto: disponible, en edición o aplicado. |
+| | Control de volumen | Regula el volumen específico del audio grabado. |
+| | Botón guardar | Almacena el audio modificado junto con los registros anteriores. |
 
-La zona de grabación se dispone al centro y contiene un micrófono y un botón para iniciar la captura de audio. Finalmente, la zona de edición se ubica a la derecha y reúne perillas deslizantes para modificar los efectos, acompañadas de indicadores luminosos de colores que permiten identificar visualmente sus rangos e intensidades. En el lateral de esta sección se incorpora otra perilla para ajustar el volumen del audio antes de guardarlo.
+#### Coreografía
 
-Con esta distribución se busca generar una lectura intuitiva de izquierda a derecha, como una guía de pasos que orienta al usuario a través de las distintas acciones: reproducir, grabar y editar. De esta manera, se diferencian las funciones, se facilita la lectura de los controles y se hace más intuitiva la interacción con el dispositivo.
+##### 01. Encendido del dispositivo
 
-### Posibilidades dentro del aspecto de audio
+- Activar el interruptor tipo *switch* para iniciar el sistema. La pantalla muestra el nombre del proyecto como presentación inicial.
 
-El tiempo máximo de grabación por cada audio es de 30 segundos.
+## 02. Zona de reproducción
 
-Cada 10 segundos se da la orden de reproducir un audio.
+- Al encender el dispositivo, la pantalla muestra la información de los registros sonoros almacenados, incluyendo la cantidad de audios y sus representaciones gráficas.
+- Presionar el botón de reproducción para escuchar los audios acumulados.
+- Presionar nuevamente el botón de reproducción para pausar o reanudar el sonido.
+- Girar la perilla de volumen para ajustar la intensidad sonora de la reproducción.
 
-Son 60 posibilidades donde podría iniciar un audio.
+## 03. Zona de grabación
+
+- Presionar una vez el botón grabar para activar el micrófono e iniciar la captura de un nuevo sonido.
+- La pantalla muestra una cuenta regresiva de 10 segundos, durante los cuales el micrófono captura el sonido del entorno.
+- Al finalizar la cuenta regresiva, el registro queda almacenado temporalmente y disponible para su posterior edición.
+
+##### 04. zona de edición
+
+- Una vez **finalizada la grabación**, se habilitan los controles de edición para intervenir el nuevo audio.
+- Seleccionar uno de los nueve efectos disponibles, distribuidos en tres secciones.
+- Girar la perilla asociada a la sección correspondiente para modificar el parámetro del efecto y escuchar la transformación del sonido.
+- Repetir el procedimiento con otros efectos para acumular progresivamente modificaciones sobre el audio.
+- Ajustar el volumen específico del audio grabado mediante el control correspondiente.
+- Una vez finalizada la edición, presionar el botón GUARDAR para almacenar el audio intervenido.
+- El dispositivo incorpora el audio modificado junto con los audios anteriores, dejándolo disponible para su reproducción.
+
+#### Luces 
+
+#### Pantalla 
+
 
 <br>
 
