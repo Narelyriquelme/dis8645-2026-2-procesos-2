@@ -1,9 +1,9 @@
 #pragma once
 #include <cstdint>
 #include <vector>
-#include "config.h"
-#include "amenaza.h"
-#include "dificultad.h"
+#include "Config.h"
+#include "Amenaza.h"
+#include "Dificultad.h"
 
 class GestorAmenazas {
  public:

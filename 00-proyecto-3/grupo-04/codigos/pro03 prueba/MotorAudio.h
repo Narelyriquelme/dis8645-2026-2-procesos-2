@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <deque>
-#include "config.h"
+#include "Config.h"
 
 // Reproduce listas de notas por canal SIN BLOQUEO (cola avanzada por tiempo)
 class MotorAudio {

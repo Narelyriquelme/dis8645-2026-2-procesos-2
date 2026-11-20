@@ -1,15 +1,15 @@
 #pragma once
 #include <cstdint>
 #include <vector>
-#include "config.h"
-#include "boton.h"
-#include "perilla.h"
-#include "inclinacion.h"
-#include "pantalla.h"
-#include "motor_audio.h"
-#include "nave.h"
-#include "dificultad.h"
-#include "gestor_amenazas.h"
+#include "Config.h"
+#include "Boton.h"
+#include "Perilla.h"
+#include "Inclinacion.h"
+#include "Pantalla.h"
+#include "MotorAudio.h"
+#include "Nave.h"
+#include "Dificultad.h"
+#include "GestorAmenazas.h"
 
 // Maquina de estados y coordinador: APAGADO -> ESPERA -> JUGANDO <-> PAUSA -> GAME_OVER
 class Juego {

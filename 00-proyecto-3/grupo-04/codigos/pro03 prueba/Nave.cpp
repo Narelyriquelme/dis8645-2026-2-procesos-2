@@ -1,4 +1,4 @@
-#include "nave.h"
+#include "Nave.h"
 
 void Nave::reiniciar(Sector inicial) {
   sector_ = inicial;

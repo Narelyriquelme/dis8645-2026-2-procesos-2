@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include "config.h"
+#include "Config.h"
 
 enum class ModoPantalla { APAGADA, ESPERA, JUEGO, PAUSA, GAME_OVER };
 enum class Animacion { NINGUNA, INICIO, LEVEL_UP };

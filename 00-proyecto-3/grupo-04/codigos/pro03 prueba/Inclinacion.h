@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include "config.h"
+#include "Config.h"
 
 // MPU6050: la inclinacion del control decide el sector (con histeresis)
 class Inclinacion {

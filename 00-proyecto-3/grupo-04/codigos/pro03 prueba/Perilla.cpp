@@ -1,5 +1,5 @@
-#include "perilla.h"
-#include "config.h"
+#include "Perilla.h"
+#include "Config.h"
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
 

@@ -1,5 +1,5 @@
-#include "boton.h"
-#include "config.h"
+#include "Boton.h"
+#include "Config.h"
 #include "pico/stdlib.h"
 
 Boton::Boton(unsigned pin) : pin_(pin) {}

@@ -1,4 +1,4 @@
-#include "gestor_amenazas.h"
+#include "GestorAmenazas.h"
 #include "pico/rand.h"
 
 void GestorAmenazas::limpiar() { amenazas_.clear(); }

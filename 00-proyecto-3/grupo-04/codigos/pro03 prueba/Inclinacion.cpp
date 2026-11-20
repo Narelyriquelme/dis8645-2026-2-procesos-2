@@ -1,4 +1,4 @@
-#include "inclinacion.h"
+#include "Inclinacion.h"
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include <cstdio>

@@ -1,4 +1,4 @@
-#include "pantalla.h"
+#include "Pantalla.h"
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include <cstdio>

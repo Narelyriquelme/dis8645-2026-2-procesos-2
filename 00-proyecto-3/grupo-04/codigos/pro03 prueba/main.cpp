@@ -1,6 +1,6 @@
 #include <cstdio>
 #include "pico/stdlib.h"
-#include "juego.h"
+#include "Juego.h"
 
 int main() {
   stdio_init_all();   // printf por USB (monitor serial)

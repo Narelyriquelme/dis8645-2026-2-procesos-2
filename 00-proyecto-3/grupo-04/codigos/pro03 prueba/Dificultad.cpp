@@ -1,5 +1,5 @@
-#include "dificultad.h"
-#include "config.h"
+#include "Dificultad.h"
+#include "Config.h"
 
 void Dificultad::reiniciar() {
   nivel_ = 1;

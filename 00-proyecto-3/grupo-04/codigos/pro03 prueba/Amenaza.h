@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include "config.h"
+#include "Config.h"
 
 // Enemigo u obstaculo. Ciclo: APARECE -> SE_ACERCA -> LLEGA -> FINALIZADA (o ELIMINADA si la dispararon)
 class Amenaza {

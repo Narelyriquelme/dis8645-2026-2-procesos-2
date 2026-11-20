@@ -1,4 +1,4 @@
-#include "amenaza.h"
+#include "Amenaza.h"
 
 Amenaza::Amenaza(TipoAmenaza tipo, Sector sector, uint32_t t_inicio_ms, uint32_t t_total_ms)
     : tipo_(tipo), sector_(sector), estado_(AM_APARECE), t_inicio_ms_(t_inicio_ms),

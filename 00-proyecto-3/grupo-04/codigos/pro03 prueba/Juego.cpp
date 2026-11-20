@@ -1,4 +1,4 @@
-#include "juego.h"
+#include "Juego.h"
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include "hardware/gpio.h"
