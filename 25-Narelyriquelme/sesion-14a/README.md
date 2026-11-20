@@ -103,3 +103,9 @@ FIN
 ## encargos
 
 ## lectura
+
+- **Qué entendí:** En estas últimas hojas del libro se ve cómo John Cage va cerrando su planteamiento sobre la liberación, la organización colectiva y la ruptura de las estructuras rígidas o autoritarias. En los capitulos 19 y 20 se retoman ideas sobre la acción consciente, el vínculo con la naturaleza, la libertad individual y la idea de construir una sociedad donde las cosas no se impongan desde arriba ni se reduzcan a meras posesiones o control. El texto sigue jugando con esa disposición dispersa y fragmentada que mezcla palabras y mayúsculas irregulares, hasta llegar a la página final con los datos de catalogación del libro de John Cage (*Anarchy*, 1st Wesleyan ed., 2001).
+
+- **Cita interesante:** *"laws of our own individual nature"* (p. 20)[cite: 8].
+
+- **Reflexión personal:** Elegí esta cita porque me llamó la atención cómo cierra el recorrido pensando en vivir o guiarnos desde nuestra propia naturaleza y no desde imposiciones externas que nos aprietan o nos limitan. Para ser sincera, el libro en general tampoco me encantó del todo porque su formato fragmentado y su forma de plantear las ideas a veces se sienten súper abstractas y cuesta enganchar de una, pero sí me pareció muy interesante esta manera de mirar lo que es un sistema complejo y de buscar soluciones bien radicales frente a estructuras que ya no dan más. Destacar esta frase también sirve para conectar con lo que me mueve desde mis ideas de izquierda y mi interés por lo colectivo: pensar que los cambios profundos pasan por cuestionar el orden impuesto, mirar los sistemas desde la raíz y imaginar formas de organizarnos y existir que sean mucho más libres y reales.
