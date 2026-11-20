@@ -33,7 +33,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef __ILI934X_H__
 #define __ILI934X_H__
 
-#include "gfxfont.h"
+#include "Gfxfont.h"
 #include "hardware/spi.h"
 
 #define _RDDSDR 0x0f    // Read Display Self-Diagnostic Result

@@ -2,7 +2,7 @@
 #ifndef _GFXFONT_FreeMono12pt7b_H_
 #define _GFXFONT_FreeMono12pt7b_H_
 
-#include "gfxfont.h"
+#include "Gfxfont.h"
 
 const uint8_t FreeMono12pt7bBitmaps[] = {
     0x49, 0x24, 0x92, 0x48, 0x01, 0xF8, 0xE7, 0xE7, 0x67, 0x42, 0x42, 0x42,

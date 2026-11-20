@@ -2,7 +2,7 @@
 #ifndef _GFXFONT_FreeMono18pt7b_H_
 #define _GFXFONT_FreeMono18pt7b_H_
 
-#include "gfxfont.h"
+#include "Gfxfont.h"
 
 const uint8_t FreeMono18pt7bBitmaps[] = {
     0x27, 0x77, 0x77, 0x77, 0x77, 0x22, 0x22, 0x20, 0x00, 0x6F, 0xF6, 0xF1,

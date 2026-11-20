@@ -21,7 +21,7 @@
 #include <stdint.h>
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
-#include "ili934x.h"
+#include "Ili934x.h"
 
 // qué hay dibujado en la pantalla en este momento
 enum class VistaPantalla {
