@@ -19,7 +19,7 @@ Dentro del funcionamiento interno, este dispositivo es controlado por una Raspbe
 
 ### Interfaz
 
-La interfaz se organiza en tres zonas principales: reproducción, grabación y edición. Recorrer visualmente el dispositivo de izquierda a derecha, identificando las tres zonas principales: reproducción, grabación y edición.
+El dispositivo presenta una interfaz organizada en tres zonas principales: reproducción, grabación y edición, dispuestas de izquierda a derecha para establecer un recorrido visual y facilitar la identificación de sus funciones.
 
 ![](./imagenes/interfaz-coreografia.png)
 
@@ -67,11 +67,60 @@ La interfaz se organiza en tres zonas principales: reproducción, grabación y e
 - Una vez finalizada la edición, presionar el botón GUARDAR para almacenar el audio intervenido.
 - El dispositivo incorpora el audio modificado junto con los audios anteriores, dejándolo disponible para su reproducción.
 
-#### Luces 
-
 #### Pantalla 
 
+##### **1. zona de reproducción**
 
+La pantalla presenta una visualización de píxeles luminosos que se van iluminando progresivamente a medida que se guardan nuevos audios, representando visualmente la acumulación de registros.
+
+En la parte superior se visualiza un contador numérico con la cantidad de audios guardados y la memoria disponible del dispositivo.
+
+##### **2. zona de grabación**
+
+Al iniciar la grabación, la pantalla muestra una cuenta regresiva de 10 a 0 segundos. En la parte superior, una barra de progreso disminuye progresivamente para indicar el tiempo restante de captura.
+
+Al finalizar la grabación, la pantalla vuelve a mostrar la visualización general de los audios acumulados.
+
+##### **3. zona de edición**
+
+Durante la edición, la pantalla mantiene visible la visualización de los píxeles correspondientes a los audios almacenados.
+
+Una vez finalizada la intervención y presionado el botón *guardar*, se incorpora una nueva agrupación de píxeles a la visualización general, actualizando el contador de audios acumulados.
+
+#### Audio 
+
+1. **Duración total**: el dispositivo cuenta con un ciclo de reproducción de 10 minutos, dividido en 60 segmentos de 10 segundos cada uno.
+
+2. **Ingreso del audio**: cada nuevo audio grabado tiene una duración de 10 segundos.
+
+3. **Distribución aleatoria**: al guardar un audio, el sistema le asigna aleatoriamente uno de los 60 segmentos disponibles. Esta distribución permite generar espacios vacíos entre los registros.
+
+4. **Superposición**: si un segmento ya contiene uno o más audios, el nuevo registro puede incorporarse al mismo espacio, reproduciéndose simultáneamente con los anteriores.
+
+5. **Espacios vacíos**: los segmentos que no contienen audios permanecen en silencio, generando pausas dentro de la composición sonora.
+
+6. **Reproducción**: el dispositivo recorre los 60 segmentos durante los 10 minutos, reproduciendo los audios según su distribución y respetando los espacios de silencio.
+
+7. **Loop**: al finalizar los 10 minutos, el ciclo vuelve a comenzar, conservando la distribución aleatoria de los audios almacenados.
+   
+#### Luces 
+
+1. **Distribución:** el dispositivo cuenta con nueve luces LED, distribuidas en tres secciones de tres luces cada una. Cada luz corresponde a uno de los nueve efectos disponibles y está asociada a un botón.
+
+2. **Estado inicial:** al encender el dispositivo, las nueve luces permanecen apagadas.
+
+3. **Activación de la zona:** al finalizar la grabación, las nueve luces se encienden progresivamente, aumentan su brillo y luego se apagan, indicando que la zona de edición está disponible.
+
+4. **Selección del efecto:** al presionar uno de los nueve botones, se activa la luz correspondiente y comienza a parpadear.
+
+5. **Modificación del efecto:** mientras la luz parpadea, se modifica el sonido mediante la perilla asociada a la sección.
+
+6. **Confirmación:** al presionar nuevamente el botón del efecto, la luz deja de parpadear y permanece encendida, indicando que la modificación fue aplicada.
+
+7. **Selección de otro efecto:** al seleccionar otro botón, su luz comienza a parpadear, mientras las luces de los efectos anteriores permanecen encendidas de forma fija.
+
+8. **Finalización:** al terminar la edición, las luces encendidas permiten identificar los efectos que fueron aplicados al audio.
+   
 <br>
 
 #### Modificadores de sonido
