@@ -20,6 +20,7 @@ Dentro del funcionamiento interno, este dispositivo es controlado por una Raspbe
 ### Interfaz
 
 La interfaz se organiza en tres zonas principales: reproducción, grabación y edición. Recorrer visualmente el dispositivo de izquierda a derecha, identificando las tres zonas principales: reproducción, grabación y edición.
+
 ![](./imagenes/interfaz-coreografia.png)
 
 | Zona | Elemento | Función |
@@ -43,14 +44,14 @@ La interfaz se organiza en tres zonas principales: reproducción, grabación y e
 
 - Activar el interruptor tipo *switch* para iniciar el sistema. La pantalla muestra el nombre del proyecto como presentación inicial.
 
-## 02. Zona de reproducción
+##### 02. Zona de reproducción
 
 - Al encender el dispositivo, la pantalla muestra la información de los registros sonoros almacenados, incluyendo la cantidad de audios y sus representaciones gráficas.
 - Presionar el botón de reproducción para escuchar los audios acumulados.
 - Presionar nuevamente el botón de reproducción para pausar o reanudar el sonido.
 - Girar la perilla de volumen para ajustar la intensidad sonora de la reproducción.
 
-## 03. Zona de grabación
+##### 03. Zona de grabación
 
 - Presionar una vez el botón grabar para activar el micrófono e iniciar la captura de un nuevo sonido.
 - La pantalla muestra una cuenta regresiva de 10 segundos, durante los cuales el micrófono captura el sonido del entorno.
@@ -58,7 +59,7 @@ La interfaz se organiza en tres zonas principales: reproducción, grabación y e
 
 ##### 04. zona de edición
 
-- Una vez **finalizada la grabación**, se habilitan los controles de edición para intervenir el nuevo audio.
+- Una vez finalizada la grabación, se habilitan los controles de edición para intervenir el nuevo audio.
 - Seleccionar uno de los nueve efectos disponibles, distribuidos en tres secciones.
 - Girar la perilla asociada a la sección correspondiente para modificar el parámetro del efecto y escuchar la transformación del sonido.
 - Repetir el procedimiento con otros efectos para acumular progresivamente modificaciones sobre el audio.
