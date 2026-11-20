@@ -1,0 +1,13 @@
+{
+  "name": "PAM8302",
+  "author": "Custom",
+  "pins": [
+    "VIN",
+    "GND",
+    "SD",
+    "A+",
+    "A-",
+    "SPK+",
+    "SPK-"
+  ]
+}
