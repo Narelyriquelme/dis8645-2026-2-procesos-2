@@ -1,8 +1,8 @@
-# sesion-14b → 
+# sesion-14b → 20/11/26
 
 ## apuntes sesión
 
-# PROYECTO 03 – Videojuego de nave por sonido (versión física portátil)
+## PROYECTO 03 – Videojuego de nave por sonido (versión física portátil)
 
 ## 1. Las 10 clases
 
@@ -20,8 +20,6 @@
 | 10 | **Juego** | Coordina todo con los estados apagado, espera, jugando, pausa y game over. |
 
 ## 2. BOM final (portátil)
-
-## BOM final (portátil)
 
 | N.º | Componente | Cantidad | Precio (CLP) | Enlace |
 |:---:|---|:---:|---:|---|
