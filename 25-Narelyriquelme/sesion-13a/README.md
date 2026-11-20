@@ -59,6 +59,10 @@ rombo: decisiones o bifurcaación, puntas indican diferentes subprocesos
 - brian dewan
 - <https://bossfightbooks.com/>
 
-
-
 ## lectura
+
+- **Qué entendí:** A estas alturas del libro, el texto gira en torno a liberarnos de la esclavitud y de los lazos coercitivos mediante la acción directa y consciente, apostando por agrupaciones libres según ideas, deseos y gustos compartidos, la autonomía de grupos, comunas y regiones, y la organización de los servicios públicos por quienes trabajan en ellos[cite: 1]. También plantea que cuando la gente entiende que los gobiernos no son necesarios sino dañinos, y pasa de la teoría a una práctica viva donde cada persona vive según su propia naturaleza y libertad, la vida y la sociedad se transforman de raíz[cite: 1, 5].
+
+- **Cita interesante:** *"Not a mere theory for a new society"* .
+
+- **Reflexión personal:** Elegí esta cita porque resume súper bien el punto donde está la lectura y lo que a mí me hace más sentido: no basta con imaginar o teorizar una sociedad distinta si eso no se traduce en algo vivo y concreto. Me parece importante destacarla porque, a medida que sigo avanzando en el libro, conecta directo con lo que me mueve desde mis ideas de izquierda y mi interés por las prácticas colectivas y comunistas: pensar que la transformación real pasa por organizarse desde abajo, compartir lo común y hacer que las cosas funcionen en la práctica, más allá de quedarse solo en discursos o en el papel.
