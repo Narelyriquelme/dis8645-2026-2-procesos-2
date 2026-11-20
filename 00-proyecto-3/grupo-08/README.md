@@ -126,4 +126,22 @@ World Listening Project es una iniciativa que promueve la escucha activa y la va
 
 World Listening Project. (s.f). About us. https://www.worldlisteningproject.org/
 
+**Teenage Engineering PO-33 K.O!**
+
+El PO-33 K.O! es un micro sampler de bolsillo que asigna audios a botones individuales para dispararlos al instante e incorpora perillas para alterar su tono y volumen. Este referente nos sirve a nivel funcional como modelo de interacción directa, inspirándonos en la dinámica de presionar un botón para reproducir un sonido guardado y modificar su tono o volumen de forma inmediata.
+
+Teenage Engineering. (s.f.). PO-33 K.O! guide. https://teenage.engineering/guides/po-33/en
+
+**Roland AIRA Compact P-6**
+
+El Roland AIRA Compact P-6 es un sampler compacto diseñado para organizar muestras precargadas en pads táctiles y manipular su reproducción mediante controles giratorios. Este referente aporta a la lógica funcional de nuestro proyecto, mostrándonos cómo estructurar un sistema donde los sonidos almacenados se activan por botones y se transforman sonoramente al instante con perillas.
+
+Roland. (s.f.). P-6 Creative Sampler. https://www.roland.com/es-es/products/p-6/
+
+**Korg Volca Sample**
+
+El Korg Volca Sample es un reproductor de muestras compacto con memoria interna de sonidos precargados, botones para activar cada pista y perillas para controlar su tono y volumen. Este referente es clave porque pudimos tocarlo e interactuar con él en clases, comprobando en la práctica la respuesta táctil de un sistema que reproduce audios ya guardados sin necesidad de grabar en el momento.
+
+Korg. (s.f.). volca sample - Digital Sample Sequencer. https://www.korg.com/cl/products/dj/volca_sample/index.php
+
 ## bibliografía 
